@@ -127,7 +127,7 @@
       <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="login" sap:VirtualizedContainerService.HintSize="1092,2220" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="login" sap:VirtualizedContainerService.HintSize="1379,2277" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="varPassword" />
       <Variable x:TypeArguments="x:String" Name="varUsername" />
@@ -149,13 +149,13 @@
         </OutArgument>
       </ui:GetRobotCredential.Username>
     </ui:GetRobotCredential>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1092,2022" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1092,2079" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1058,1862" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1058,1919" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="tmp_OrderNo" />
               <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="outputChildren" />
@@ -165,6 +165,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="1024,57" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
             <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1024,628" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <TryCatch.Try>
                 <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="416,276" sap2010:WorkflowViewState.IdRef="Sequence_7">
