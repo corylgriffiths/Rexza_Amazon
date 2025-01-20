@@ -1,9 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="login" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <x:Members>
-    <x:Property Name="In_Browser" Type="InArgument(ui:UiElement)" />
-  </x:Members>
-  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+<Activity mc:Ignorable="sap sap2010" x:Class="login" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -118,19 +113,19 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="login" sap:VirtualizedContainerService.HintSize="992.6,3361.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="login" sap:VirtualizedContainerService.HintSize="1216,3438" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="571.2,3338.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Snapshot Payroll(1)" sap:VirtualizedContainerService.HintSize="574,3415" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="537.6,3178.4" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <Sequence sap:VirtualizedContainerService.HintSize="540,3175" sap2010:WorkflowViewState.IdRef="Sequence_13">
             <Sequence.Variables>
               <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="childAllPayrollList" />
               <Variable x:TypeArguments="ui:UiElement" Name="mainFormElement" />
@@ -140,8 +135,8 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="504,114.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://rexza.fastgem.net/payroll-2/view-payroll" Version="V4" />
-            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'FORM  adminForm'" sap:VirtualizedContainerService.HintSize="504,139.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="506,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://rexza.fastgem.net/payroll-2/view-payroll" Version="V4" />
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'FORM  adminForm'" sap:VirtualizedContainerService.HintSize="506,139" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
               <ui:WaitUiElementAppear.FoundElement>
                 <OutArgument x:TypeArguments="ui:UiElement">
                   <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">mainFormElement</CSharpReference>
@@ -158,7 +153,7 @@
                 </ui:Target>
               </ui:WaitUiElementAppear.Target>
             </ui:WaitUiElementAppear>
-            <ui:FindChildren DisplayName="Find Children 'FORM  adminForm'" Filter="&lt;webctrl css-selector='.ccsub-repeatable-group'/&gt;" sap:VirtualizedContainerService.HintSize="504,139.2" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
+            <ui:FindChildren DisplayName="Find Children 'FORM  adminForm'" Filter="&lt;webctrl css-selector='.ccsub-repeatable-group'/&gt;" sap:VirtualizedContainerService.HintSize="506,139" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
               <ui:FindChildren.Children>
                 <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
                   <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">childAllPayrollList</CSharpReference>
@@ -180,13 +175,13 @@
                 </ui:Target>
               </ui:FindChildren.Target>
             </ui:FindChildren>
-            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each currentChildUiElement" sap:VirtualizedContainerService.HintSize="504,2724" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each currentChildUiElement" sap:VirtualizedContainerService.HintSize="506,2721" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="ui:UiElement">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:UiElement" Name="currentChildUiElement" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="502.4,2600.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="504,2598" sap2010:WorkflowViewState.IdRef="Sequence_16">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="tempTextResult" />
                       <Variable x:TypeArguments="s:DateTime" Name="TodayDateVal" />
@@ -196,7 +191,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="text" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="468.8,220" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" Version="V4">
+                    <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="text" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="470,219" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
                       <uix:NGetAttributeGeneric.InUiElement>
                         <InArgument x:TypeArguments="ui:UiElement">
                           <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">currentChildUiElement</CSharpValue>
@@ -208,7 +203,7 @@
                         </OutArgument>
                       </uix:NGetAttributeGeneric.Result>
                     </uix:NGetAttributeGeneric>
-                    <Assign sap:VirtualizedContainerService.HintSize="468.8,112.8" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign sap:VirtualizedContainerService.HintSize="470,114" sap2010:WorkflowViewState.IdRef="Assign_1">
                       <Assign.To>
                         <OutArgument x:TypeArguments="s:DateTime">
                           <CSharpReference x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">TodayDateVal</CSharpReference>
@@ -220,14 +215,14 @@
                         </InArgument>
                       </Assign.Value>
                     </Assign>
-                    <If sap:VirtualizedContainerService.HintSize="468.8,2208" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If sap:VirtualizedContainerService.HintSize="470,2205" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">tempTextResult.IndexOf("Payroll ("+(TodayDateVal.DayOfWeek == DayOfWeek.Saturday? TodayDateVal :TodayDateVal.AddDays((-7 - ((TodayDateVal.DayOfWeek == DayOfWeek.Saturday ? (DayOfWeek)6 : TodayDateVal.DayOfWeek) - (DayOfWeek)6)))).ToString("yyyy-MM-dd")+")") &gt; -1</CSharpValue>
                         </InArgument>
                       </If.Condition>
                       <If.Then>
-                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467.2,1988.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,1986" sap2010:WorkflowViewState.IdRef="Sequence_17">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="EditNoteUrl" />
                             <Variable x:TypeArguments="ui:UiElement" Name="ParentDropDown" />
@@ -237,7 +232,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="id" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="433.6,220" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" Version="V4">
+                          <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="id" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="434,219" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
                             <uix:NGetAttributeGeneric.InUiElement>
                               <InArgument x:TypeArguments="ui:UiElement">
                                 <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">currentChildUiElement</CSharpValue>
@@ -249,7 +244,7 @@
                               </OutArgument>
                             </uix:NGetAttributeGeneric.Result>
                           </uix:NGetAttributeGeneric>
-                          <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">
                                 <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">EditNoteUrl</CSharpReference>
@@ -261,14 +256,14 @@
                               </InArgument>
                             </Assign.Value>
                           </Assign>
-                          <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Version="V4">
+                          <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Version="V4">
                             <uix:NGoToUrl.Url>
                               <InArgument x:TypeArguments="x:String">
                                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">EditNoteUrl</CSharpValue>
                               </InArgument>
                             </uix:NGoToUrl.Url>
                           </uix:NGoToUrl>
-                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/view-payroll/snapshotform/188" CVScreenId="f8dbcbdd-ac4c-4df5-a91d-aee7de1ee9ed" ContentHash="gkMQ_P8fJEaDgakPGjdBrg" CvElementArea="1750, 656, 43, 32" CvTextArea="1764, 666, 11, 10" CvType="Icon" DesignTimeRectangle="1753, 659, 38, 27" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl id='head_notes' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" Guid="47b794bc-da52-4bf2-87f2-bf6b8248f102" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAAfCAYAAACRdF9FAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARnSURBVFhH1ZjvT1NnFMf3r5n4hpXa0hZa6Q/AbBo7QqfxHdJGk71gIS4zbAMBtYDAIDBkoz/W0PJLI2ZDN7GyUSU1xG46IAorvS3lu+dcbrv23odb4ouCJ/nm5Nx7nnM+fe7T2+fpR/hA7MMF3dvbOxaSWx40lzDzYgbNwWaYB8ww9BvKKupJvYlBDiyC0oVsNgvv7140+BpwYf4CPL96cOXRlbKKelJvYiAWYsrB5kFn47NigucXDy4uXITznhPn750vq6gn9SYGYiGmPGhuNt3TbrhmXDg3dw710/Won2EinxMvjjhgn7TAPGyCoVcH3U09DIPVMI/Xwhbm5B8yJgbXrAvuiDs/qyLo7u4urGNWNM417idHpEEqvi5ogXHIja7FMObjUcQ2Eki8fYlY4jEeRifQ9ZMTlh/sqDtkPblvnG+EddQqsuVBM5kMqkeq0RBpQF24Li9H2MGNHeyxtMz6sbItPhW+ZTewEu3C5bu1bJx6PV58JnIGphGTyFYMOlwNxxRLnGID1HzwE3geLiCRkYBUTUBidQjuIJvZUnU53sSWlALUNGSCPWTPyxFi60/hbWiaG0M0KXEUWmoNq1u8Kd7CytJXaArs11GvX3zfOGRUgtJF+88sKScaIPdTVzES35AAik34J4BbsWVwV0MyiuH7ztL1ZfeNgzzQASNsARtsQaYDvPOBD7GU1FxmwhsGunIAKFsCL/+8js9L1Jd74x0eKLto80tJci+qAV88W2YPkm/ptyHcXl3Bv1Ist62/J/BlWFa3qH5BLHljPwfU0GdAra8WVp81r+LYiWux52xuJMvE4Q/Wo+J6BdPH0PaZYRmrgvYbipm8rfC/yWdD2JhCe0StvjKu6qvigPYy0EmWOMkGcP2naI29+B+UmZDcwvr2uqh4fBQdS/cRf7cfr7N7QlZKZCasB3AtrFZf6at6OaB6rx6nfzytKvfSAv4qaF5owms/epafHbg0Nl/1we3n1z1IxKQEvc1AJ1iCihxz/Vg44CWvCprdxGLUDQenppqISQGqu6WDZdwCy90CKeImdMbXkJb6F5rwahxfP3jKBRXezaMzzKunHutu6jig7KKYWEL26U6EN9V+O2WWXkX4txbYObVKiQt6qvsUasZqYB4zl/TWSAcC65sSiYql/kD4UQvb8Byurtxru7VKUG2XFjWjNYeX7zJ6nj/B2g5nIWS2sfZ6Cj2zZ/ljDyliUoBW3qgUd1DvJV8z2hYHMfikG22Rz/g57yFi4oOyHZSYdEx8ZScHVNOhEXdQpu+ZjonXfKdRghq6DOJuhZJoJ3XkftAE3Q3Ot/7S6CXovDpxF2UYYNBH7OlXiZiKQOlcEnoagrZDu3/GvnPEYgzEQkxFZyY66aXTabSH2nHi6glovtVA36sXdy/lFPWk3sRALMSUP4XSay83q4IgwP/YD1efCxVtFTjZerKsop7UmxiIJTebZEX/lNAN+hSpVAo7OzuikslkWZTrR72JgVhyswkA/wEm+ALoN3IV2QAAAABJRU5ErkJggg==" InformativeScreenshot="8f49ea47a1aaf42a77d9b96a3c78cc6c.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/2nE9u0GoG0uhqpjd58pDvw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive" />
                             </uix:NClick.Target>
@@ -283,7 +278,7 @@
                               </uix:VerifyExecutionOptions>
                             </uix:NClick.VerifyOptions>
                           </uix:NClick>
-                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '---- Rep ----(3)'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="DebuggerApi" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Text="%[k(Down)][k(Enter)]" Version="V4">
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '---- Rep ----(3)'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="DebuggerApi" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Text="%[k(Down)][k(Enter)]" Version="V4">
                             <uix:NTypeInto.Target>
                               <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/view-payroll/snapshotform/185" CVScreenId="7a5b9cb7-7c7b-4519-8501-eea1fb1a7b0f" ContentHash="PJ0s8D9380KvWaRn2R4mTA" CvElementArea="27, 705, 895, 37" CvType="InputBox" DesignTimeRectangle="33, 707, 884, 31" DesignTimeScaleFactor="1.25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='head_notes' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='chzn-single' aaname='---- Rep ----' check:innerText='---- Rep ----' /&gt;" Guid="e9b90b4a-7848-4cb3-a2f3-a57e932f768a" InformativeScreenshot="2307ee94a0f1061b4c2bf3d917c11038.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/6yjIviv3y0eWjCoBGpqbFw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                             </uix:NTypeInto.Target>
@@ -391,13 +386,8 @@
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
-      <uix:NApplicationCard.InUiElement>
-        <InArgument x:TypeArguments="ui:UiElement">
-          <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">In_Browser</CSharpValue>
-        </InArgument>
-      </uix:NApplicationCard.InUiElement>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 0, 0" Version="V1" />
+        <uix:TargetApp Area="468, 237, 1464, 1688" BrowserType="Chrome" ContentHash="lbJo9niRnEeB9TXQSTZ1ug" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGZSURBVDhPrZI76M9hFMbdr6GUy4BMFpsnFqXYpJSMNmWThbKIQpHBLdInBgaxWCS3jC7Lh8El9xgMxOieQUfnpz+5DU6det/3e57nnO/znGHD/ldIKkdKZkpmS2b9lPU2QzKian8FHi3ZILknuSu5L3kuedbnersjWScZ9Z2kweMkW7t4vWSl5JbkgeSJ5IZkhWRTk26UjPlGIpks2S15KlklGS/ZI7ktWShZ0hNsk4yVrOlG1XBCEZyQfJY8lpySXJJ8bFDdT/cU7yTn+14EnySHiuCA5IPknGSH5KLkpWSvZFdn1byWnO2ay5L3kp1FMElyVHJNMqfHfiRZ1PpULpU8lMyXzJPclOyv3x0UlD0XukOR1BTbhxDsk5yRzJVc6fPUgYiDLGYlhyWbJdclUyTTu2NZfFxytYm+4YZaWbm4xTvZwi1rS0vgEq/2YMEP4EEMIVktedEqH5Qc63P5v/yX4EH0x+G9TOXMK8kbyVvJ2j+CB9FFtWVl35fekS0/rO/foklKwBLtiGTiP4MrhugxbWDX7wi+AsmBiI6aESUVAAAAAElFTkSuQmCC" InformativeScreenshot="c75ab77cd260cd7993e94836f3bd85a3.jpg" Reference="edQoiHTr_EubiZ3TXex5dQ/X1-omhlidkSEkMfcAQ49-Q" Selector="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" Title="Snapshot Payroll" Url="https://rexza.fastgem.net/*" Version="V1" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>

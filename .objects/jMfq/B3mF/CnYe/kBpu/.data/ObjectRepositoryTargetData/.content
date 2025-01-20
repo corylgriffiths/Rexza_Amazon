@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="v0IeY9hUYE6Xv5QKrFL-dQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="cd15b446-722a-4c17-b2fa-a21646235b49" CvElementArea="1371, 260, 61, 24" CvTextArea="1379, 266, 44, 10" CvTextArgument="FINALIZE" CvType="Button" DesignTimeRectangle="1373, 261, 58, 21" DesignTimeScaleFactor="0.800000011920929" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='fg_finalize' tag='INPUT' type='button' class='btn btn-success btn-small' aaname='FINALIZE' check:text='FINALIZE' /&gt;" Guid="44655622-0873-420f-bf65-3fe0a56b4943" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="5e6b14d3c9cdd3b573aad2b4253fd3c4.png" xmlns="">0B_LwBynrmkOcIJKHm1CO6Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

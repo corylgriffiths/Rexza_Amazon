@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Snapshot Payroll(2)",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "8KQnCqv6LUeJ8EA1Bmp2qw",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/8KQnCqv6LUeJ8EA1Bmp2qw",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/CnYeffCl1kytm7Rl4eq_wA",
+  "Created": "2025-01-20T15:09:22.1901633Z",
+  "Updated": "2025-01-20T15:09:22.1901633Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

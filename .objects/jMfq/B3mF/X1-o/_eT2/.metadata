@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Payment",
+  "Type": "Element",
+  "TaxonomyType": "Checkbox",
+  "Id": "_eT2BWMnUkmzSm3ZqXEXfg",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/_eT2BWMnUkmzSm3ZqXEXfg",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/X1-omhlidkSEkMfcAQ49-Q",
+  "Created": "2025-01-20T16:58:51.6424897Z",
+  "Updated": "2025-01-20T16:58:51.6424897Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

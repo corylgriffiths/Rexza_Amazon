@@ -1,0 +1,13 @@
+﻿{
+  "Name": "TH",
+  "Type": "Element",
+  "Id": "OsFxlkdXz0-TsAaxr7VApA",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/OsFxlkdXz0-TsAaxr7VApA",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/CdxZJmFKe02hzioLuv_rug",
+  "Created": "2025-01-10T21:51:55.0591497Z",
+  "Updated": "2025-01-10T21:51:55.0591497Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

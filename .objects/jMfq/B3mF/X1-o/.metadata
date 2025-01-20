@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Snapshot Payroll(1)",
+  "Type": "Screen",
+  "Id": "X1-omhlidkSEkMfcAQ49-Q",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/X1-omhlidkSEkMfcAQ49-Q",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/B3mFSTazr0KLyOWOSRBjWA",
+  "Created": "2025-01-20T15:50:13.1407525Z",
+  "Updated": "2025-01-20T15:50:13.1407525Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

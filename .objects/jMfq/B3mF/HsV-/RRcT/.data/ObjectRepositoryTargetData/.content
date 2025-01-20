@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="EhxgzoXxQ0OCxFzOhseVRg" Reference="edQoiHTr_EubiZ3TXex5dQ/RRcTzxG_ik26KmdtFndElg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" DesignTimeRectangle="22, 486, 341, 46" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="903b5d34-2b0d-4732-a240-2eba3dcb2fd4" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.FuzzySelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;webctrl id='rep_payments_"+Repname+"' tag='TABLE' /&gt;&lt;webctrl type='' tag='TH' class='' aaname='Customer' check:innerText='Customer' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.FuzzySelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="15660648902a12b45e43d5b53451e0a6.png" xmlns="">0iGOn4nwIvkuT7NGq3GNxrg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">MouseScrollSearchedElement</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

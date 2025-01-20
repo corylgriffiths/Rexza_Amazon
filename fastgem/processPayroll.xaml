@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="pullPayroll" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="pullPayroll" this:pullPayroll.in_exceptionString="Mansions at Timberland" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="In_Browser" Type="InArgument(ui:UiElement)" />
     <x:Property Name="Out_PullPayrollData" Type="OutArgument(sd:DataTable)" />
@@ -6,6 +6,7 @@
     <x:Property Name="In_PullAccountsData" Type="InArgument(sd:DataTable)" />
     <x:Property Name="In_PullLeasingAgentsData" Type="InArgument(sd:DataTable)" />
     <x:Property Name="In_ProcessedOrderNumber" Type="InArgument(x:String)" />
+    <x:Property Name="in_exceptionString" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -144,22 +145,73 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="pullPayroll" sap:VirtualizedContainerService.HintSize="916,12195" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="pullPayroll" sap:VirtualizedContainerService.HintSize="1216,12848" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="DataTableExceptionLog" />
+      <Variable x:TypeArguments="s:DateTime" Name="TodayDate" />
+      <Variable x:TypeArguments="x:String" Name="StartDate" />
+      <Variable x:TypeArguments="x:String" Name="EndDate" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="666,12172" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V2">
+    <Sequence DisplayName="Setup global Date values" sap:VirtualizedContainerService.HintSize="737,425" sap2010:WorkflowViewState.IdRef="Sequence_54">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_29">
+        <Assign.To>
+          <OutArgument x:TypeArguments="s:DateTime">
+            <CSharpReference x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpReference`1_68">TodayDate</CSharpReference>
+          </OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="s:DateTime">
+            <CSharpValue x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_108">DateTime.Now</CSharpValue>
+          </InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_30">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">
+            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_69">StartDate</CSharpReference>
+          </OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_130">TodayDate.AddDays(-(int)TodayDate.DayOfWeek).ToString("yyyy-MM-dd")</CSharpValue>
+          </InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_31">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">
+            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_70">EndDate</CSharpReference>
+          </OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_127">TodayDate.AddDays((int)DayOfWeek.Saturday - (int)TodayDate.DayOfWeek + (7 % 7)).ToString("yyyy-MM-dd")</CSharpValue>
+          </InArgument>
+        </Assign.Value>
+      </Assign>
+    </Sequence>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="737,12400" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="632,12012" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence sap:VirtualizedContainerService.HintSize="703,12240" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:UiElement" Name="parentDivElement" />
               <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="FoundElements" />
@@ -187,36 +239,21 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Do - Go to Payroll Screen" sap:VirtualizedContainerService.HintSize="598,1554" sap2010:WorkflowViewState.IdRef="Sequence_2">
-              <Sequence.Variables>
-                <Variable x:TypeArguments="s:DateTime" Name="TodayDate" />
-              </Sequence.Variables>
+            <Sequence DisplayName="Do - Go to Payroll Screen" sap:VirtualizedContainerService.HintSize="669,1524" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" Version="V4" />
-              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_29">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="s:DateTime">
-                    <CSharpReference x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpReference`1_65">TodayDate</CSharpReference>
-                  </OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="s:DateTime">
-                    <CSharpValue x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpValue`1_108">DateTime.Now</CSharpValue>
-                  </InArgument>
-                </Assign.Value>
-              </Assign>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '2024-10-14'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
+              <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="418,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" Version="V4" />
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '2024-10-14'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="418,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="91e53704-4c51-4681-9a84-dfd254adab3c" ContentHash="7w9gzBU9A0ibF99PR4y1BA" CvElementArea="20, 318, 185, 36" CvType="InputBox" DesignTimeRectangle="22, 319, 181, 33" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='jform_start_date' tag='INPUT' type='text' class='inputbox date_range_input_calendar payroll-input' aaname='' /&gt;" Guid="0f87eb2a-82ec-4d16-9351-c87eb5dbb2e6" InformativeScreenshot="01a756a8b3d1c1b23775ec75ef1664a1.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/3T64-so5hEOBLpiP_phbyw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
                 <uix:NTypeInto.Text>
                   <InArgument x:TypeArguments="x:String">
-                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_113">(TodayDate.DayOfWeek == DayOfWeek.Saturday? TodayDate.AddDays(-6) :TodayDate.AddDays((-7 - ((TodayDate.DayOfWeek == DayOfWeek.Saturday ? (DayOfWeek)6 : TodayDate.DayOfWeek) - (DayOfWeek)6))).AddDays(-6)).ToString("yyyy-MM-dd")</CSharpValue>
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_128">StartDate</CSharpValue>
                   </InArgument>
                 </uix:NTypeInto.Text>
                 <uix:NTypeInto.VerifyOptions>
@@ -230,13 +267,13 @@
                   </uix:VerifyExecutionTypeIntoOptions>
                 </uix:NTypeInto.VerifyOptions>
               </uix:NTypeInto>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '2024-10-20'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="DebuggerApi" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '2024-10-20'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="418,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="DebuggerApi" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="dc7d7608-3c71-4d8d-ac77-7782968a044a" ContentHash="W68FLSvCWEqzYkjUQu9Bnw" CvElementArea="257, 318, 187, 36" CvType="InputBox" DesignTimeRectangle="259, 319, 181, 33" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='jform_end_date' tag='INPUT' type='text' class='inputbox date_range_input_calendar payroll-input' aaname='' /&gt;" Guid="342b74b6-4927-42c7-9e18-0da473abd375" InformativeScreenshot="c4de63976f28682834c8e57e8b434d0e.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/5-PIvquU0U2xu7cDARrTIA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
                 <uix:NTypeInto.Text>
                   <InArgument x:TypeArguments="x:String">
-                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_114">(TodayDate.DayOfWeek == DayOfWeek.Saturday? TodayDate :TodayDate.AddDays((-7 - ((TodayDate.DayOfWeek == DayOfWeek.Saturday ? (DayOfWeek)6 : TodayDate.DayOfWeek) - (DayOfWeek)6)))).ToString("yyyy-MM-dd")</CSharpValue>
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_129">EndDate</CSharpValue>
                   </InArgument>
                 </uix:NTypeInto.Text>
                 <uix:NTypeInto.VerifyOptions>
@@ -250,7 +287,7 @@
                   </uix:VerifyExecutionTypeIntoOptions>
                 </uix:NTypeInto.VerifyOptions>
               </uix:NTypeInto>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Run'" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Run'" sap:VirtualizedContainerService.HintSize="418,225" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="10ce4732-b66f-422c-b4a9-4667f13fb104" ContentHash="NC8b0i9kxUGF68K0zDWcVQ" CvElementArea="1651, 318, 57, 36" CvTextArea="1664, 329, 30, 13" CvTextArgument="Run" CvType="Button" DesignTimeRectangle="1653, 320, 53, 32" DesignTimeScaleFactor="1.25" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='Run' tag='INPUT' type='button' class='btn btn-info btn-small fg_run_buttons' check:text='Run' /&gt;" Guid="0136d033-eba0-4bdf-8aef-4789ccee07dc" InformativeScreenshot="d6a9c6d4983a782c1a8c2fa58f2ae0fd.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/7aasrETVCkamKOuo5CZiKQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                 </uix:NClick.Target>
@@ -265,7 +302,44 @@
                   </uix:VerifyExecutionOptions>
                 </uix:NClick.VerifyOptions>
               </uix:NClick>
-              <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="434,435" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Snapshot Payroll" sap:VirtualizedContainerService.HintSize="418,84" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="ce0536dd-1cc6-442f-9cf5-842060cb4308" Version="V2">
+                <uix:NApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,323.2" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="416,263.2" sap2010:WorkflowViewState.IdRef="NMouseScroll_6" InteractionMode="HardwareEvents" MovementUnits="10" Version="V4">
+                        <uix:NMouseScroll.SearchedElement>
+                          <uix:SearchedElement>
+                            <uix:SearchedElement.Target>
+                              <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" ContentHash="-N5PqzlV00Ww2GN_668ffw" DesignTimeRectangle="22, 1620, 2268, 45" DesignTimeScaleFactor="1.25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='' aaname='Payroll Total: *' check:innerText='Payroll Total: *' /&gt;" Guid="60e6d792-e443-4984-8d08-686bff2cddf6" ImageBase64="" InformativeScreenshot="44279e4abdf235e0f881302cd06a1c83.png" Reference="edQoiHTr_EubiZ3TXex5dQ/QPtJMr_GskqmXC5Qrh4eiQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                            </uix:SearchedElement.Target>
+                            <uix:SearchedElement.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:SearchedElement.Timeout>
+                          </uix:SearchedElement>
+                        </uix:NMouseScroll.SearchedElement>
+                      </uix:NMouseScroll>
+                    </Sequence>
+                  </ActivityAction>
+                </uix:NApplicationCard.Body>
+                <uix:NApplicationCard.TargetApp>
+                  <uix:TargetApp Area="88, 35, 2331, 2006" BrowserType="Chrome" ContentHash="DPXZpDDaiUS8MtliOCzoGg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGZSURBVDhPrZI76M9hFMbdr6GUy4BMFpsnFqXYpJSMNmWThbKIQpHBLdInBgaxWCS3jC7Lh8El9xgMxOieQUfnpz+5DU6det/3e57nnO/znGHD/ldIKkdKZkpmS2b9lPU2QzKian8FHi3ZILknuSu5L3kuedbnersjWScZ9Z2kweMkW7t4vWSl5JbkgeSJ5IZkhWRTk26UjPlGIpks2S15KlklGS/ZI7ktWShZ0hNsk4yVrOlG1XBCEZyQfJY8lpySXJJ8bFDdT/cU7yTn+14EnySHiuCA5IPknGSH5KLkpWSvZFdn1byWnO2ay5L3kp1FMElyVHJNMqfHfiRZ1PpULpU8lMyXzJPclOyv3x0UlD0XukOR1BTbhxDsk5yRzJVc6fPUgYiDLGYlhyWbJdclUyTTu2NZfFxytYm+4YZaWbm4xTvZwi1rS0vgEq/2YMEP4EEMIVktedEqH5Qc63P5v/yX4EH0x+G9TOXMK8kbyVvJ2j+CB9FFtWVl35fekS0/rO/foklKwBLtiGTiP4MrhugxbWDX7wi+AsmBiI6aESUVAAAAAElFTkSuQmCC" InformativeScreenshot="4b752ce8546b92e68b2f6394ae49555c.jpg" Reference="edQoiHTr_EubiZ3TXex5dQ/CnYeffCl1kytm7Rl4eq_wA" Selector="&lt;html app='chrome.exe' url='https://rexza.fastgem.net/*' /&gt;" Title="Snapshot Payroll" Url="https://rexza.fastgem.net/*" Version="V1" />
+                </uix:NApplicationCard.TargetApp>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NApplicationCard>
+              <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="418,435" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                 <ui:InterruptibleWhile.Body>
                   <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,312" sap2010:WorkflowViewState.IdRef="Sequence_25">
                     <sap:WorkflowViewStateService.ViewState>
@@ -304,21 +378,21 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InterruptibleWhile>
             </Sequence>
-            <ui:BuildDataTable DisplayName="Build Data Table - DataTableExceptionLog" sap:VirtualizedContainerService.HintSize="598,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;AgentName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PropertyName&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;SalesRepName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;AgentName&gt;Agent Name&lt;/AgentName&gt;&#xA;    &lt;PropertyName&gt;Property Name&lt;/PropertyName&gt;&#xA;    &lt;SalesRepName&gt;SalesRep&lt;/SalesRepName&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;">
+            <ui:BuildDataTable DisplayName="Build Data Table - DataTableExceptionLog" sap:VirtualizedContainerService.HintSize="664,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;AgentName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PropertyName&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;SalesRepName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;AgentName&gt;Agent Name&lt;/AgentName&gt;&#xA;    &lt;PropertyName&gt;Property Name&lt;/PropertyName&gt;&#xA;    &lt;SalesRepName&gt;SalesRep&lt;/SalesRepName&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;">
               <ui:BuildDataTable.DataTable>
                 <OutArgument x:TypeArguments="sd:DataTable">
                   <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_58">DataTableExceptionLog</CSharpReference>
                 </OutArgument>
               </ui:BuildDataTable.DataTable>
             </ui:BuildDataTable>
-            <ui:BuildDataTable DisplayName="Build Data Table - PulledDataFromFastgem" sap:VirtualizedContainerService.HintSize="598,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;RowNumber&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Customer&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Property&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Area&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;CreditRisk&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BANOrderNo&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;SubCreated&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;InstallDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ActivationDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ClearedDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Package&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Rep&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Base&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Hold&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Fee&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Payment&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Selected&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+            <ui:BuildDataTable DisplayName="Build Data Table - PulledDataFromFastgem" sap:VirtualizedContainerService.HintSize="664,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_4" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;RowNumber&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Customer&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Property&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Area&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;CreditRisk&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BANOrderNo&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;SubCreated&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;InstallDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ActivationDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ClearedDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Package&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Rep&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Base&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Hold&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Fee&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Payment&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Selected&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
               <ui:BuildDataTable.DataTable>
                 <OutArgument x:TypeArguments="sd:DataTable">
                   <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_46">PulledDataFromFastgem</CSharpReference>
                 </OutArgument>
               </ui:BuildDataTable.DataTable>
             </ui:BuildDataTable>
-            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Parent Element 'DIV'" sap:VirtualizedContainerService.HintSize="598,139" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Parent Element 'DIV'" sap:VirtualizedContainerService.HintSize="664,139" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
               <ui:WaitUiElementAppear.FoundElement>
                 <OutArgument x:TypeArguments="ui:UiElement">
                   <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">parentDivElement</CSharpReference>
@@ -335,7 +409,7 @@
                 </ui:Target>
               </ui:WaitUiElementAppear.Target>
             </ui:WaitUiElementAppear>
-            <ui:FindChildren ContinueOnError="True" DisplayName="Find Children Rows under Parent 'TABLEs'" Filter="&lt;webctrl css-selector='table.fg_root_table'   /&gt;" sap:VirtualizedContainerService.HintSize="598,139" sap2010:WorkflowViewState.IdRef="FindChildren_7" Scope="FIND_DESCENDANTS">
+            <ui:FindChildren ContinueOnError="True" DisplayName="Find Children Rows under Parent 'TABLEs'" Filter="&lt;webctrl css-selector='table.fg_root_table'   /&gt;" sap:VirtualizedContainerService.HintSize="664,139" sap2010:WorkflowViewState.IdRef="FindChildren_7" Scope="FIND_DESCENDANTS">
               <ui:FindChildren.Children>
                 <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
                   <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">FoundTablesAll</CSharpReference>
@@ -357,7 +431,7 @@
                 </ui:Target>
               </ui:FindChildren.Target>
             </ui:FindChildren>
-            <Assign sap:VirtualizedContainerService.HintSize="598,114" sap2010:WorkflowViewState.IdRef="Assign_9">
+            <Assign sap:VirtualizedContainerService.HintSize="669,114" sap2010:WorkflowViewState.IdRef="Assign_9">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">
                   <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">counterRow</CSharpReference>
@@ -367,13 +441,13 @@
                 <InArgument x:TypeArguments="x:Int32">0</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="currentUiElementTable ForEach - Find Child Rows in UI Element Tables - Max_itr -2" sap:VirtualizedContainerService.HintSize="598,7686" sap2010:WorkflowViewState.IdRef="ForEach`1_4" MaxIterations="150">
+            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="currentUiElementTable ForEach - Find Child Rows in UI Element Tables - Max_itr -2" sap:VirtualizedContainerService.HintSize="669,8111" sap2010:WorkflowViewState.IdRef="ForEach`1_4" MaxIterations="150">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="ui:UiElement">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:UiElement" Name="currentUiElementTable" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="596,7556" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="667,7981" sap2010:WorkflowViewState.IdRef="Sequence_9">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="FoundElementRepDetail" />
                       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="FoundElementAddressDetail" />
@@ -383,6 +457,8 @@
                       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="FoundElementTableArea" />
                       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="FoundElementTableFee" />
                       <Variable x:TypeArguments="x:String" Name="row_TempTableFeeText" />
+                      <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="FoundElementTablePropName" />
+                      <Variable x:TypeArguments="x:String" Name="row_TempTablePropName" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -390,7 +466,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="562,114" sap2010:WorkflowViewState.IdRef="Assign_10">
+                    <Assign sap:VirtualizedContainerService.HintSize="633,114" sap2010:WorkflowViewState.IdRef="Assign_10">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:Int32">
                           <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">counterRow</CSharpReference>
@@ -402,7 +478,7 @@
                         </InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:FindChildren ContinueOnError="True" DisplayName="Get Fee Column Val, if its &quot;Referral Fee&quot; then only proceed" Filter="&lt;webctrl css-selector='table.fg_root_table tbody tr:last-child td:nth-child(14)' /&gt;" sap:VirtualizedContainerService.HintSize="562,139" sap2010:WorkflowViewState.IdRef="FindChildren_4" Scope="FIND_DESCENDANTS">
+                    <ui:FindChildren ContinueOnError="True" DisplayName="Get Fee Column Val, if its &quot;Referral Fee&quot; then only proceed" Filter="&lt;webctrl css-selector='table.fg_root_table tbody tr:last-child td:nth-child(14)' /&gt;" sap:VirtualizedContainerService.HintSize="633,139" sap2010:WorkflowViewState.IdRef="FindChildren_4" Scope="FIND_DESCENDANTS">
                       <ui:FindChildren.Children>
                         <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
                           <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_59">FoundElementTableFee</CSharpReference>
@@ -424,7 +500,51 @@
                         </ui:Target>
                       </ui:FindChildren.Target>
                     </ui:FindChildren>
-                    <If sap:VirtualizedContainerService.HintSize="562,573" sap2010:WorkflowViewState.IdRef="If_8">
+                    <ui:FindChildren ContinueOnError="True" DisplayName="Get property name Column Val" Filter="&lt;webctrl css-selector='table.fg_root_table tbody tr:last-child td:nth-child(2)' /&gt;" sap:VirtualizedContainerService.HintSize="633,139" sap2010:WorkflowViewState.IdRef="FindChildren_12" Scope="FIND_DESCENDANTS">
+                      <ui:FindChildren.Children>
+                        <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
+                          <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_66">FoundElementTablePropName</CSharpReference>
+                        </OutArgument>
+                      </ui:FindChildren.Children>
+                      <ui:FindChildren.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Id="46910644-a324-461a-8c92-fac1026b6686" InformativeScreenshot="d5ca8bbff7e43ec0d7b95e20e8b80f38">
+                          <ui:Target.Element>
+                            <InArgument x:TypeArguments="ui:UiElement">
+                              <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_121">currentUiElementTable</CSharpValue>
+                            </InArgument>
+                          </ui:Target.Element>
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:FindChildren.Target>
+                    </ui:FindChildren>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="633,84" sap2010:WorkflowViewState.IdRef="CommentOut_15">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,240.8" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll 'Alex Estrada (0) (HP1)…'" sap:VirtualizedContainerService.HintSize="416,180.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_4" InteractionMode="HardwareEvents" MovementUnits="10" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
+                            <uix:NMouseScroll.Target>
+                              <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="debf56f3-4adb-457b-beda-79267ea88793" ContentHash="RCI7UNJG8UKdQtaFy-SJ-Q" DesignTimeRectangle="18, 670, 232, 37" DesignTimeScaleFactor="1" Guid="7379644a-eaa3-4260-b620-a0030b4fd055" InformativeScreenshot="5efb3c45efa774d3868712a411093336.png" Reference="edQoiHTr_EubiZ3TXex5dQ/pJyF0hCvgUeyf15DW54nqA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                            </uix:NMouseScroll.Target>
+                          </uix:NMouseScroll>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <If sap:VirtualizedContainerService.HintSize="633,792" sap2010:WorkflowViewState.IdRef="If_8">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_102">FoundElementTableFee.Count() &gt; 0</CSharpValue>
@@ -437,13 +557,13 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,270" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,489" sap2010:WorkflowViewState.IdRef="Sequence_36">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="text" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="434,210" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_12" Version="V4">
+                          <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="text" DisplayName="get the referral fee indicator" sap:VirtualizedContainerService.HintSize="434,219" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_12" Version="V4">
                             <uix:NGetAttributeGeneric.InUiElement>
                               <InArgument x:TypeArguments="ui:UiElement">
                                 <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_103">FoundElementTableFee.FirstOrDefault()</CSharpValue>
@@ -452,6 +572,18 @@
                             <uix:NGetAttributeGeneric.Result>
                               <OutArgument x:TypeArguments="x:String">
                                 <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_63">row_TempTableFeeText</CSharpReference>
+                              </OutArgument>
+                            </uix:NGetAttributeGeneric.Result>
+                          </uix:NGetAttributeGeneric>
+                          <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="text" DisplayName="get the property name" sap:VirtualizedContainerService.HintSize="434,210" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_13" Version="V4">
+                            <uix:NGetAttributeGeneric.InUiElement>
+                              <InArgument x:TypeArguments="ui:UiElement">
+                                <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_122">FoundElementTablePropName.FirstOrDefault()</CSharpValue>
+                              </InArgument>
+                            </uix:NGetAttributeGeneric.InUiElement>
+                            <uix:NGetAttributeGeneric.Result>
+                              <OutArgument x:TypeArguments="x:String">
+                                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_67">row_TempTablePropName</CSharpReference>
                               </OutArgument>
                             </uix:NGetAttributeGeneric.Result>
                           </uix:NGetAttributeGeneric>
@@ -465,7 +597,7 @@
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_28">
+                          <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_28">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">
                                 <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_64">row_TempTableFeeText</CSharpReference>
@@ -480,10 +612,10 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <If DisplayName="Only Proceed if Fee coulmn of Table has value &quot;Referral Fee&quot;" sap:VirtualizedContainerService.HintSize="562,6670" sap2010:WorkflowViewState.IdRef="If_7">
+                    <If DisplayName="Only Proceed if Fee coulmn of Table has value &quot;Referral Fee&quot; and property name is not in the exception list" sap:VirtualizedContainerService.HintSize="633,6653" sap2010:WorkflowViewState.IdRef="If_7">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
-                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_104">row_TempTableFeeText.IndexOf("Referral Fee") &gt; 0</CSharpValue>
+                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_123">row_TempTableFeeText.IndexOf("Referral Fee") &gt; 0 &amp;&amp; row_TempTablePropName.Contains(in_exceptionString) == false</CSharpValue>
                         </InArgument>
                       </If.Condition>
                       <sap:WorkflowViewStateService.ViewState>
@@ -493,13 +625,21 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="560,6452" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="631,6215" sap2010:WorkflowViewState.IdRef="Sequence_34">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:FindChildren ContinueOnError="True" DisplayName="Get Agen Name +Phone (under Rep column)" sap:VirtualizedContainerService.HintSize="526,139" sap2010:WorkflowViewState.IdRef="FindChildren_11" Scope="FIND_DESCENDANTS">
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="597,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace">
+                            <ui:LogMessage.Message>
+                              <InArgument x:TypeArguments="x:Object">
+                                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_125">"Processing: " + row_TempTablePropName</CSharpValue>
+                              </InArgument>
+                            </ui:LogMessage.Message>
+                          </ui:LogMessage>
+                          <ui:FindChildren ContinueOnError="True" DisplayName="Get Agen Name +Phone (under Rep column)" sap:VirtualizedContainerService.HintSize="597,139" sap2010:WorkflowViewState.IdRef="FindChildren_11" Scope="FIND_DESCENDANTS">
                             <ui:FindChildren.Children>
                               <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
                                 <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_62">FoundElementRepDetail</CSharpReference>
@@ -526,7 +666,7 @@
                               </ui:Target>
                             </ui:FindChildren.Target>
                           </ui:FindChildren>
-                          <If sap:VirtualizedContainerService.HintSize="526,661" sap2010:WorkflowViewState.IdRef="If_2">
+                          <If sap:VirtualizedContainerService.HintSize="597,1029" sap2010:WorkflowViewState.IdRef="If_2">
                             <If.Condition>
                               <InArgument x:TypeArguments="x:Boolean">
                                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">FoundElementRepDetail.Count() &gt; 0</CSharpValue>
@@ -584,7 +724,7 @@
                               </Sequence>
                             </If.Then>
                             <If.Else>
-                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,25" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,393" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -630,7 +770,7 @@
                               </Sequence>
                             </If.Else>
                           </If>
-                          <ui:FindChildren ContinueOnError="True" DisplayName="Get Property Address from table" Filter="&lt;webctrl css-selector='table.fg_root_table tbody tr:last-child td:nth-child(2)' /&gt;" sap:VirtualizedContainerService.HintSize="526,139" sap2010:WorkflowViewState.IdRef="FindChildren_6" Scope="FIND_DESCENDANTS">
+                          <ui:FindChildren ContinueOnError="True" DisplayName="Get Property Address from table" Filter="&lt;webctrl css-selector='table.fg_root_table tbody tr:last-child td:nth-child(2)' /&gt;" sap:VirtualizedContainerService.HintSize="597,139" sap2010:WorkflowViewState.IdRef="FindChildren_6" Scope="FIND_DESCENDANTS">
                             <ui:FindChildren.Children>
                               <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
                                 <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">FoundElementAddressDetail</CSharpReference>
@@ -652,7 +792,7 @@
                               </ui:Target>
                             </ui:FindChildren.Target>
                           </ui:FindChildren>
-                          <If sap:VirtualizedContainerService.HintSize="526,687" sap2010:WorkflowViewState.IdRef="If_3">
+                          <If sap:VirtualizedContainerService.HintSize="597,687" sap2010:WorkflowViewState.IdRef="If_3">
                             <If.Condition>
                               <InArgument x:TypeArguments="x:Boolean">
                                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">FoundElementAddressDetail.Count() &gt; 0</CSharpValue>
@@ -669,6 +809,7 @@
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="innerHtml" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="434,219" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_6" Version="V4">
@@ -719,7 +860,7 @@
                               </Sequence>
                             </If.Else>
                           </If>
-                          <If DisplayName="If row_AgentPhone, proceed, else exception" sap:VirtualizedContainerService.HintSize="526,4766" sap2010:WorkflowViewState.IdRef="If_5">
+                          <If DisplayName="If row_AgentPhone, proceed, else exception" sap:VirtualizedContainerService.HintSize="597,3986" sap2010:WorkflowViewState.IdRef="If_5">
                             <If.Condition>
                               <InArgument x:TypeArguments="x:Boolean">
                                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_76">row_AgentPhone != "" &amp;&amp; row_AgentPhone != null &amp;&amp; row_AgentPhone.Length &gt; 8</CSharpValue>
@@ -732,15 +873,15 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="524,4368" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="506,3588" sap2010:WorkflowViewState.IdRef="Sequence_28">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:Comment sap:VirtualizedContainerService.HintSize="490,126" sap2010:WorkflowViewState.IdRef="Comment_4" Text="// onlyy proceed if table has agent phone number, else add details of agent in error report&#xA;" />
-                                <ui:FindChildren ContinueOnError="True" DisplayName="Get Total Amount for each table" Filter="&lt;webctrl css-selector='table.fg_root_table tfoot td:nth-child(9)' /&gt;" sap:VirtualizedContainerService.HintSize="490,139" sap2010:WorkflowViewState.IdRef="FindChildren_5" Scope="FIND_DESCENDANTS">
+                                <ui:Comment sap:VirtualizedContainerService.HintSize="472,126" sap2010:WorkflowViewState.IdRef="Comment_4" Text="// onlyy proceed if table has agent phone number, else add details of agent in error report&#xA;" />
+                                <ui:FindChildren ContinueOnError="True" DisplayName="Get Total Amount for each table" Filter="&lt;webctrl css-selector='table.fg_root_table tfoot td:nth-child(9)' /&gt;" sap:VirtualizedContainerService.HintSize="472,139" sap2010:WorkflowViewState.IdRef="FindChildren_5" Scope="FIND_DESCENDANTS">
                                   <ui:FindChildren.Children>
                                     <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
                                       <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_27">FoundElementTotalAmount</CSharpReference>
@@ -762,7 +903,7 @@
                                     </ui:Target>
                                   </ui:FindChildren.Target>
                                 </ui:FindChildren>
-                                <If sap:VirtualizedContainerService.HintSize="490,57" sap2010:WorkflowViewState.IdRef="If_4">
+                                <If sap:VirtualizedContainerService.HintSize="472,687" sap2010:WorkflowViewState.IdRef="If_4">
                                   <If.Condition>
                                     <InArgument x:TypeArguments="x:Boolean">
                                       <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">FoundElementTotalAmount.Count() &gt; 0</CSharpValue>
@@ -770,7 +911,7 @@
                                   </If.Condition>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
@@ -829,8 +970,8 @@
                                     </Sequence>
                                   </If.Else>
                                 </If>
-                                <ui:Comment sap:VirtualizedContainerService.HintSize="490,88" sap2010:WorkflowViewState.IdRef="Comment_5" Text="// get Area from table&#xA;" />
-                                <ui:FindChildren ContinueOnError="True" DisplayName="Get Table Area for each table" Filter="&lt;webctrl css-selector='table.fg_root_table tbody tr:last-child td:nth-child(3)' /&gt;" sap:VirtualizedContainerService.HintSize="490,139" sap2010:WorkflowViewState.IdRef="FindChildren_10" Scope="FIND_DESCENDANTS">
+                                <ui:Comment sap:VirtualizedContainerService.HintSize="472,88" sap2010:WorkflowViewState.IdRef="Comment_5" Text="// get Area from table&#xA;" />
+                                <ui:FindChildren ContinueOnError="True" DisplayName="Get Table Area for each table" Filter="&lt;webctrl css-selector='table.fg_root_table tbody tr:last-child td:nth-child(3)' /&gt;" sap:VirtualizedContainerService.HintSize="472,139" sap2010:WorkflowViewState.IdRef="FindChildren_10" Scope="FIND_DESCENDANTS">
                                   <ui:FindChildren.Children>
                                     <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
                                       <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_49">FoundElementTableArea</CSharpReference>
@@ -852,7 +993,7 @@
                                     </ui:Target>
                                   </ui:FindChildren.Target>
                                 </ui:FindChildren>
-                                <If sap:VirtualizedContainerService.HintSize="490,687" sap2010:WorkflowViewState.IdRef="If_6">
+                                <If sap:VirtualizedContainerService.HintSize="472,547" sap2010:WorkflowViewState.IdRef="If_6">
                                   <If.Condition>
                                     <InArgument x:TypeArguments="x:Boolean">
                                       <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_91">FoundElementTableArea.Count() &gt; 0</CSharpValue>
@@ -872,6 +1013,7 @@
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="text" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="434,219" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_10" Version="V4">
@@ -901,13 +1043,14 @@
                                     </Sequence>
                                   </If.Then>
                                   <If.Else>
-                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="468,25" sap2010:WorkflowViewState.IdRef="Sequence_33">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_21">
+                                      <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_21">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:String">
                                             <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_56">row_PropertyArea</CSharpReference>
@@ -922,7 +1065,7 @@
                                     </Sequence>
                                   </If.Else>
                                 </If>
-                                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="490,556" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="472,556" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -980,21 +1123,28 @@
                                     </Sequence>
                                   </TryCatch.Finally>
                                 </TryCatch>
-                                <ui:Comment sap:VirtualizedContainerService.HintSize="490,107" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Perform amazon order for each Table and Add Amazon order nunmber to Fastgem&#xA;" />
-                                <If sap:VirtualizedContainerService.HintSize="490,2409" sap2010:WorkflowViewState.IdRef="If_10">
+                                <ui:Comment sap:VirtualizedContainerService.HintSize="472,107" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Perform amazon order for each Table and Add Amazon order nunmber to Fastgem&#xA;" />
+                                <If sap:VirtualizedContainerService.HintSize="472,1139" sap2010:WorkflowViewState.IdRef="If_10">
                                   <If.Condition>
                                     <InArgument x:TypeArguments="x:Boolean">
                                       <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_107">row_TotalAmountVal != "0.00" &amp;&amp; row_TotalAmountVal != "00.00"</CSharpValue>
                                     </InArgument>
                                   </If.Condition>
                                   <If.Then>
-                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="488,2191" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="470,921" sap2010:WorkflowViewState.IdRef="Sequence_46">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="454,512" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+                                        <ui:LogMessage.Message>
+                                          <InArgument x:TypeArguments="x:Object">
+                                            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_120">"processing:" + row_RepNameForProperty + "-&gt;" + row_TotalAmountVal</CSharpValue>
+                                          </InArgument>
+                                        </ui:LogMessage.Message>
+                                      </ui:LogMessage>
+                                      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436,512" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                                         <TryCatch.Try>
                                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="addCard - Invoke Workflow File (amazon\addCard.xaml)" sap:VirtualizedContainerService.HintSize="434,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="amazon\addCard.xaml">
                                             <ui:InvokeWorkflowFile.Arguments>
@@ -1060,21 +1210,27 @@
                                           </Sequence>
                                         </TryCatch.Finally>
                                       </TryCatch>
-                                      <ui:Comment sap:VirtualizedContainerService.HintSize="454,126" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Go to each row inside table, click on customer name, edit each page and add order number and order date&#xA;&#xA;&#xA;&#xA;&#xA;" />
-                                      <If sap:VirtualizedContainerService.HintSize="454,1493" sap2010:WorkflowViewState.IdRef="If_9">
+                                      <ui:Comment sap:VirtualizedContainerService.HintSize="436,126" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Go to each row inside table, click on customer name, edit each page and add order number and order date&#xA;&#xA;&#xA;&#xA;&#xA;" />
+                                      <If sap:VirtualizedContainerService.HintSize="436,48" sap2010:WorkflowViewState.IdRef="If_9">
                                         <If.Condition>
                                           <InArgument x:TypeArguments="x:Boolean">
                                             <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_105">In_ProcessedOrderNumber != "AddCardFailed"</CSharpValue>
                                           </InArgument>
                                         </If.Condition>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
                                         <If.Then>
-                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="452,1275" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="519,1606" sap2010:WorkflowViewState.IdRef="Sequence_44">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:FindChildren ContinueOnError="True" DisplayName="Find Children Rows under Parent 'TABLEs'" sap:VirtualizedContainerService.HintSize="418,139" sap2010:WorkflowViewState.IdRef="FindChildren_8" Scope="FIND_DESCENDANTS">
+                                            <ui:FindChildren ContinueOnError="True" DisplayName="Find Children Rows under Parent 'TABLEs'" sap:VirtualizedContainerService.HintSize="485,139" sap2010:WorkflowViewState.IdRef="FindChildren_8" Scope="FIND_DESCENDANTS">
                                               <ui:FindChildren.Children>
                                                 <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
                                                   <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_39">FoundAllCustomerLinksOfTable</CSharpReference>
@@ -1101,7 +1257,7 @@
                                                 </ui:Target>
                                               </ui:FindChildren.Target>
                                             </ui:FindChildren>
-                                            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each currentUiElementAppointment" sap:VirtualizedContainerService.HintSize="418,577" sap2010:WorkflowViewState.IdRef="ForEach`1_5">
+                                            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each currentUiElementAppointment" sap:VirtualizedContainerService.HintSize="485,577" sap2010:WorkflowViewState.IdRef="ForEach`1_5">
                                               <ui:ForEach.Body>
                                                 <ActivityAction x:TypeArguments="ui:UiElement">
                                                   <ActivityAction.Argument>
@@ -1157,8 +1313,8 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                             </ui:ForEach>
-                                            <ui:Comment sap:VirtualizedContainerService.HintSize="418,107" sap2010:WorkflowViewState.IdRef="Comment_3" Text="//  Click on Payment check box for current table at top right, then click on finalize table&#xA;&#xA;&#xA;" />
-                                            <ui:FindChildren ContinueOnError="True" DisplayName="Find Children Rows under Parent 'TABLEs'" Filter="&lt;webctrl css-selector='.checkbox_check_all' /&gt;" sap:VirtualizedContainerService.HintSize="418,139" sap2010:WorkflowViewState.IdRef="FindChildren_9" Scope="FIND_DESCENDANTS">
+                                            <ui:Comment sap:VirtualizedContainerService.HintSize="485,107" sap2010:WorkflowViewState.IdRef="Comment_3" Text="//  Click on Payment check box for current table at top right, then click on finalize table&#xA;&#xA;&#xA;" />
+                                            <ui:FindChildren ContinueOnError="True" DisplayName="Find Children Rows under Parent 'TABLEs'" Filter="&lt;webctrl css-selector='.checkbox_check_all' /&gt;" sap:VirtualizedContainerService.HintSize="485,139" sap2010:WorkflowViewState.IdRef="FindChildren_9" Scope="FIND_DESCENDANTS">
                                               <ui:FindChildren.Children>
                                                 <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
                                                   <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_45">CheckAllPaymentButton</CSharpReference>
@@ -1180,7 +1336,7 @@
                                                 </ui:Target>
                                               </ui:FindChildren.Target>
                                             </ui:FindChildren>
-                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="418,205" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" Version="V4">
+                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="484.8,205.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" Version="V4">
                                               <uix:NClick.InUiElement>
                                                 <InArgument x:TypeArguments="ui:UiElement">
                                                   <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">CheckAllPaymentButton.FirstOrDefault()</CSharpValue>
@@ -1197,15 +1353,15 @@
                                                 </uix:VerifyExecutionOptions>
                                               </uix:NClick.VerifyOptions>
                                             </uix:NClick>
-                                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="418,48" sap2010:WorkflowViewState.IdRef="CommentOut_11">
+                                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484.8,378.4" sap2010:WorkflowViewState.IdRef="CommentOut_11">
                                               <ui:CommentOut.Body>
-                                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,276" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,276.8" sap2010:WorkflowViewState.IdRef="Sequence_38">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'FINALIZE'" sap:VirtualizedContainerService.HintSize="416,216" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
+                                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'FINALIZE'" sap:VirtualizedContainerService.HintSize="416,216.8" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
                                                     <uix:NClick.Target>
                                                       <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="16425e13-54ba-44c4-8415-38100f7bfd89" ContentHash="x9RZ0BNL30eb4gQVc-seFg" CvElementArea="1803, 351, 94, 35" CvTextArea="1816, 361, 66, 13" CvTextArgument="FINALIZE" CvType="Button" DesignTimeRectangle="1805, 353, 91, 32" DesignTimeScaleFactor="1.25" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='fg_finalize' tag='INPUT' type='button' class='btn btn-success btn-small' aaname='FINALIZE' check:text='FINALIZE' /&gt;" Guid="e847dbb9-8fa8-462f-b585-793db08c0fa4" InformativeScreenshot="f6804087e9b8a3cc42469827d6520fc3.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/N6qNW4eYBECG4jj7Ce3t9w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                                                     </uix:NClick.Target>
@@ -1238,7 +1394,7 @@
                                           </Sequence>
                                         </If.Then>
                                         <If.Else>
-                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="452,89" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="518.4,89.6" sap2010:WorkflowViewState.IdRef="Sequence_45">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1250,7 +1406,7 @@
                                     </Sequence>
                                   </If.Then>
                                   <If.Else>
-                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="488,89" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="470,89" sap2010:WorkflowViewState.IdRef="Sequence_47">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1262,13 +1418,13 @@
                               </Sequence>
                             </If.Then>
                             <If.Else>
-                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="524,269" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="506,269" sap2010:WorkflowViewState.IdRef="Sequence_29">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:AddDataRow DataRow="{x:Null}" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="490,209" sap2010:WorkflowViewState.IdRef="AddDataRow_3">
+                                <ui:AddDataRow DataRow="{x:Null}" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="472,209" sap2010:WorkflowViewState.IdRef="AddDataRow_3">
                                   <ui:AddDataRow.ArrayRow>
                                     <InArgument x:TypeArguments="s:Object[]">
                                       <CSharpValue x:TypeArguments="s:Object[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_77" xml:space="preserve">new object[] { 
@@ -1290,13 +1446,33 @@
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="560,89" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="631,309" sap2010:WorkflowViewState.IdRef="Sequence_35">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
+                          <Sequence sap:VirtualizedContainerService.HintSize="597,249" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace">
+                              <ui:LogMessage.Message>
+                                <InArgument x:TypeArguments="x:Object">
+                                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_124">"skipping: " + row_TempTablePropName</CSharpValue>
+                                </InArgument>
+                              </ui:LogMessage.Message>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:LogMessage>
+                          </Sequence>
                         </Sequence>
                       </If.Else>
                     </If>
@@ -1315,37 +1491,71 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEach>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="598,225" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="328f6d9f-2577-4ded-89ee-c12ba0efbf5e" ContentHash="l6fXjYsVjUmYUvbpesnCxA" CvElementArea="1746, 352, 55, 36" CvType="Button" DesignTimeRectangle="1764, 362, 17, 17" DesignTimeScaleFactor="1.25" FuzzySelectorArgument="&lt;webctrl parentid='finalize_date_btn' tag='SPAN' type='' class='icon-calendar' aaname='' /&gt;" Guid="63d0ddf5-e7bf-4fbc-bc03-2fba6bbbc466" InformativeScreenshot="53b200fd38a9439d47e80d94912f6ed3.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/vz8dSNYbsEC0JuPfccnuIw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
-              </uix:NClick.Target>
-              <uix:NClick.VerifyOptions>
-                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                  <uix:VerifyExecutionOptions.Retry>
-                    <InArgument x:TypeArguments="x:Boolean" />
-                  </uix:VerifyExecutionOptions.Retry>
-                  <uix:VerifyExecutionOptions.Timeout>
-                    <InArgument x:TypeArguments="x:Double" />
-                  </uix:VerifyExecutionOptions.Timeout>
-                </uix:VerifyExecutionOptions>
-              </uix:NClick.VerifyOptions>
-            </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Today'" sap:VirtualizedContainerService.HintSize="598,225" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="4bd15e33-58ce-4440-bf80-030bae94979a" ContentHash="cOSxmEMhyUKvspdPwbUmMQ" CvElementArea="1638, 719, 71, 40" CvTextArea="1654, 731, 40, 16" CvTextArgument="Today" CvType="Button" DesignTimeRectangle="1639, 720, 71, 37" DesignTimeScaleFactor="1.25" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='Today' parentid='fg_finalize_block' tag='BUTTON' type='button' class='js-btn btn btn-today' check:innerText='Today' /&gt;" Guid="c7a69710-686a-4bfc-bafd-da36e9f3616d" InformativeScreenshot="8b603d8315dd54f9335c2746828391cb.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/EeLVnLUApEWj6Nv1Yjy6ew" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
-              </uix:NClick.Target>
-              <uix:NClick.VerifyOptions>
-                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                  <uix:VerifyExecutionOptions.Retry>
-                    <InArgument x:TypeArguments="x:Boolean" />
-                  </uix:VerifyExecutionOptions.Retry>
-                  <uix:VerifyExecutionOptions.Timeout>
-                    <InArgument x:TypeArguments="x:Double" />
-                  </uix:VerifyExecutionOptions.Timeout>
-                </uix:VerifyExecutionOptions>
-              </uix:NClick.VerifyOptions>
-            </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'FINALIZE'" sap:VirtualizedContainerService.HintSize="598,225" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="663.2,84.8" sap2010:WorkflowViewState.IdRef="CommentOut_12">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,276.8" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="416,216.8" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="328f6d9f-2577-4ded-89ee-c12ba0efbf5e" ContentHash="l6fXjYsVjUmYUvbpesnCxA" CvElementArea="1746, 352, 55, 36" CvType="Button" DesignTimeRectangle="1764, 362, 17, 17" DesignTimeScaleFactor="1.25" FuzzySelectorArgument="&lt;webctrl parentid='finalize_date_btn' tag='SPAN' type='' class='icon-calendar' aaname='' /&gt;" Guid="63d0ddf5-e7bf-4fbc-bc03-2fba6bbbc466" InformativeScreenshot="53b200fd38a9439d47e80d94912f6ed3.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/vz8dSNYbsEC0JuPfccnuIw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="663.2,84.8" sap2010:WorkflowViewState.IdRef="CommentOut_13">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,276.8" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Today'" sap:VirtualizedContainerService.HintSize="416,216.8" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="4bd15e33-58ce-4440-bf80-030bae94979a" ContentHash="cOSxmEMhyUKvspdPwbUmMQ" CvElementArea="1638, 719, 71, 40" CvTextArea="1654, 731, 40, 16" CvTextArgument="Today" CvType="Button" DesignTimeRectangle="1639, 720, 71, 37" DesignTimeScaleFactor="1.25" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='Today' parentid='fg_finalize_block' tag='BUTTON' type='button' class='js-btn btn btn-today' check:innerText='Today' /&gt;" Guid="c7a69710-686a-4bfc-bafd-da36e9f3616d" InformativeScreenshot="8b603d8315dd54f9335c2746828391cb.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/EeLVnLUApEWj6Nv1Yjy6ew" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'FINALIZE'" sap:VirtualizedContainerService.HintSize="663.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="16425e13-54ba-44c4-8415-38100f7bfd89" ContentHash="x9RZ0BNL30eb4gQVc-seFg" CvElementArea="1803, 351, 94, 35" CvTextArea="1816, 361, 66, 13" CvTextArgument="FINALIZE" CvType="Button" DesignTimeRectangle="1805, 353, 91, 32" DesignTimeScaleFactor="1.25" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='fg_finalize' tag='INPUT' type='button' class='btn btn-success btn-small' aaname='FINALIZE' check:text='FINALIZE' /&gt;" Guid="e847dbb9-8fa8-462f-b585-793db08c0fa4" InformativeScreenshot="f6804087e9b8a3cc42469827d6520fc3.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/N6qNW4eYBECG4jj7Ce3t9w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
               </uix:NClick.Target>
@@ -1360,22 +1570,22 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="598,122" sap2010:WorkflowViewState.IdRef="Delay_2" />
-            <TryCatch DisplayName="Try Catch - click on OK dialog" sap:VirtualizedContainerService.HintSize="598,854" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+            <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="663.2,122.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
+            <TryCatch DisplayName="Try Catch - click on OK dialog" sap:VirtualizedContainerService.HintSize="663.2,854.4" sap2010:WorkflowViewState.IdRef="TryCatch_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="416,337" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="416,337.6" sap2010:WorkflowViewState.IdRef="Sequence_43">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'OK Cancel'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,277" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="HardwareEvents" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Text="%[k(Enter)]" Version="V4">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'OK Cancel'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,277.6" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="HardwareEvents" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Text="%[k(Enter)]" Version="V4">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable ContentHash="QbCv55QQGEqCeyAke1aUIQ" DesignTimeRectangle="689, 222, 560, 74" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl name='rexza.fastgem.net says' role='dialog' /&gt;&lt;ctrl idx='6' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl name='rexza.fastgem.net says' role='dialog' /&gt;&lt;ctrl automationid='' role='pane' check:fulltext='OK&amp;#xD;&amp;#xA;Cancel' /&gt;" Guid="65cf1443-9acd-4297-9424-f797ad02d397" InformativeScreenshot="c9773ce5338f877413d1bfcd28de1764.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/Mjec0WpSZUaLtNzaiRKvnA" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Snapshot Payroll - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
                     </uix:NTypeInto.Target>
@@ -1404,7 +1614,7 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'OK Cancel'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,254" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="HardwareEvents" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Text="%[k(Enter)]" Version="V4">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'OK Cancel'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,253.6" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="HardwareEvents" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Text="%[k(Enter)]" Version="V4">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable ContentHash="QbCv55QQGEqCeyAke1aUIQ" DesignTimeRectangle="689, 222, 560, 74" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl name='rexza.fastgem.net says' role='dialog' /&gt;&lt;ctrl idx='6' role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl name='rexza.fastgem.net says' role='dialog' /&gt;&lt;ctrl automationid='' role='pane' check:fulltext='OK&amp;#xD;&amp;#xA;Cancel' /&gt;" Guid="65cf1443-9acd-4297-9424-f797ad02d397" InformativeScreenshot="c9773ce5338f877413d1bfcd28de1764.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/Mjec0WpSZUaLtNzaiRKvnA" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Snapshot Payroll - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
                       </uix:NTypeInto.Target>
@@ -1423,7 +1633,7 @@
                 </Catch>
               </TryCatch.Catches>
               <TryCatch.Finally>
-                <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_48">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1432,7 +1642,7 @@
                 </Sequence>
               </TryCatch.Finally>
             </TryCatch>
-            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="598,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Data">
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="663.2,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Data">
               <ui:WriteRange.DataTable>
                 <InArgument x:TypeArguments="sd:DataTable">
                   <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_80">DataTableExceptionLog</CSharpValue>
@@ -1440,19 +1650,19 @@
               </ui:WriteRange.DataTable>
               <ui:WriteRange.WorkbookPath>
                 <InArgument x:TypeArguments="x:String">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">"AgentPhoneNotExists" + DateTime.Now.ToString("MM-dd-yyyy") + ".xlsx"</CSharpValue>
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_116">"Data\\AgentPhoneNotExists" + DateTime.Now.ToString("MM-dd-yyyy") + ".xlsx"</CSharpValue>
                 </InArgument>
               </ui:WriteRange.WorkbookPath>
             </ui:WriteRange>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="598,57" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="663.2,84.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,190" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,190.4" sap2010:WorkflowViewState.IdRef="Sequence_19">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:FindChildren ContinueOnError="True" DisplayName="Find Children Rows under Parent 'DIV'" Filter="&lt;webctrl css-selector='table.fg_root_table tr'   /&gt;" sap:VirtualizedContainerService.HintSize="382,130" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
+                  <ui:FindChildren ContinueOnError="True" DisplayName="Find Children Rows under Parent 'DIV'" Filter="&lt;webctrl css-selector='table.fg_root_table tr'   /&gt;" sap:VirtualizedContainerService.HintSize="416,130.4" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
                     <ui:FindChildren.Children>
                       <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
                         <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">FoundElements</CSharpReference>
@@ -1479,19 +1689,19 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="598,57" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="663.2,84.8" sap2010:WorkflowViewState.IdRef="CommentOut_5">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,143" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,143.2" sap2010:WorkflowViewState.IdRef="Sequence_20">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:BuildDataTable DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="382,83" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;RowNumber&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Customer&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Property&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Area&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;CreditRisk&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BANOrderNo&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;SubCreated&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;InstallDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ActivationDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ClearedDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Package&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Rep&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Base&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Hold&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Fee&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Payment&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Selected&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+                  <ui:BuildDataTable DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="416,83.2" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;RowNumber&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Customer&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Property&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Area&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;CreditRisk&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BANOrderNo&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;SubCreated&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;InstallDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ActivationDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ClearedDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Package&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Rep&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Base&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Hold&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Fee&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Payment&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Selected&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
                     <ui:BuildDataTable.DataTable>
                       <OutArgument x:TypeArguments="sd:DataTable">
                         <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">ExtractDataTable</CSharpReference>
@@ -1503,19 +1713,19 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="598,57" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="663.2,84.8" sap2010:WorkflowViewState.IdRef="CommentOut_6">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="467.2,164.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">
                         <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">counterRow</CSharpReference>
@@ -1530,25 +1740,25 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="598,57" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="663.2,84.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
               <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="672,2346" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="606.4,2296.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each currentUiElementTr" sap:VirtualizedContainerService.HintSize="638,2286" sap2010:WorkflowViewState.IdRef="ForEach`1_1" MaxIterations="7">
+                  <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each currentUiElementTr" sap:VirtualizedContainerService.HintSize="572.8,2236.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1" MaxIterations="7">
                     <ui:ForEach.Body>
                       <ActivityAction x:TypeArguments="ui:UiElement">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="ui:UiElement" Name="currentUiElementTr" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="604,2149" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="571.2,2115.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="FoundElementsTd" />
                           </Sequence.Variables>
@@ -1558,7 +1768,7 @@
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="570,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign sap:VirtualizedContainerService.HintSize="537.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_2">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Int32">
                                 <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">counterRow</CSharpReference>
@@ -1570,7 +1780,7 @@
                               </InArgument>
                             </Assign.Value>
                           </Assign>
-                          <ui:FindChildren DisplayName="Find Children" Filter="&lt;webctrl css-selector='td'   /&gt;" sap:VirtualizedContainerService.HintSize="570,119" sap2010:WorkflowViewState.IdRef="FindChildren_2" Scope="FIND_CHILDREN">
+                          <ui:FindChildren DisplayName="Find Children" Filter="&lt;webctrl css-selector='td'   /&gt;" sap:VirtualizedContainerService.HintSize="537.6,118.4" sap2010:WorkflowViewState.IdRef="FindChildren_2" Scope="FIND_CHILDREN">
                             <ui:FindChildren.Children>
                               <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
                                 <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">FoundElementsTd</CSharpReference>
@@ -1592,14 +1802,14 @@
                               </ui:Target>
                             </ui:FindChildren.Target>
                           </ui:FindChildren>
-                          <If sap:VirtualizedContainerService.HintSize="570,1856" sap2010:WorkflowViewState.IdRef="If_1">
+                          <If sap:VirtualizedContainerService.HintSize="537.6,1823.2" sap2010:WorkflowViewState.IdRef="If_1">
                             <If.Condition>
                               <InArgument x:TypeArguments="x:Boolean">
                                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">FoundElementsTd.Count() == 16</CSharpValue>
                               </InArgument>
                             </If.Condition>
                             <If.Then>
-                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="536,1606" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="536,1604.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="s:String[]" Name="currentRowArray" />
                                   <Variable x:TypeArguments="scg:Dictionary(x:Int32, x:String)" Name="RowArray">
@@ -1613,7 +1823,7 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="502,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                <Assign sap:VirtualizedContainerService.HintSize="502.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:Int32">
                                       <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">counterCol</CSharpReference>
@@ -1783,11 +1993,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <Assign sap:VirtualizedContainerService.HintSize="598,107" sap2010:WorkflowViewState.IdRef="Assign_8">
+            <Assign sap:VirtualizedContainerService.HintSize="663.2,107.2" sap2010:WorkflowViewState.IdRef="Assign_8">
               <Assign.To>
                 <OutArgument x:TypeArguments="sd:DataTable">
                   <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">Out_PullPayrollData</CSharpReference>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="-3YRzJPIzUeae2Jn7gNWXQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="01ab0642-b0bf-44fd-876c-71459d027bd6" CvTextArea="24, 682, 57, 12" CvTextArgument="Customer" CvType="Text" DesignTimeRectangle="18, 670, 225, 37" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='rep_payments_12985' tag='TABLE' /&gt;&lt;webctrl type='' tag='TH' class='' aaname='Customer' check:innerText='Customer' /&gt;" Guid="3ebdf597-f3f0-49a3-b7c3-82aeeed66a0b" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="6fe2058ccc8eb12fe6a7cbdba926a4d9.png" xmlns="">0gR-EONTgu0yGU0Bt7Yq_3g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">MouseScrollSearchedElement</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome FastGem - CRM(2)",
+  "Type": "Screen",
+  "Id": "HsV-4kRYWEG6ZrzKXFe6yQ",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/HsV-4kRYWEG6ZrzKXFe6yQ",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/B3mFSTazr0KLyOWOSRBjWA",
+  "Created": "2025-01-19T16:34:01.692571Z",
+  "Updated": "2025-01-19T16:34:01.692571Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

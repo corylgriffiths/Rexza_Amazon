@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="qdqhnEUnXk2xZm5M_Dy4oQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" DesignTimeRectangle="259, 353, 181, 33" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='jform_end_date' tag='INPUT' type='text' class='inputbox date_range_input_calendar payroll-input' aaname='' /&gt;" Guid="ad7f0b71-193d-4139-bc5c-5226eba06dc5" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="439, 353, 53, 33" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='jform_end_date_btn' tag='BUTTON' type='button' class='btn btn-secondary' aaname='Open the calendar' /&gt;" Guid="5d1ac458-aec7-47c2-bd7e-be3c023c6d44" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="3120fdf4780361b46cb2eb921714a2c5.png" xmlns="">0xwgsJybIIEeHzeDfTCJxSw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

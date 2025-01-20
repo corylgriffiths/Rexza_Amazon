@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="kQuJZdv6ikasfG7U2ofVHQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="878f6742-8fc7-448b-864d-2ff35f6286ab" CvTextArea="20, 238, 120, 17" CvTextArgument="Snapshot Payroll" CvType="Text" DesignTimeRectangle="20, 235, 1424, 22" DesignTimeScaleFactor="0.800000011920929" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H4' type='' class='' aaname='                                                     Snapshot Payroll                                            ' check:innerText='Snapshot Payroll' /&gt;" Guid="d84157c9-1053-4be5-8baf-643c122d0129" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="50da83612cc15a476f4fb0b18c250e06.png" xmlns="">0OsD1inajxU22ocmHTqxwFg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -132,7 +132,7 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="addCard" sap:VirtualizedContainerService.HintSize="1379,9248" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="addCard" sap:VirtualizedContainerService.HintSize="1216,9926" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="DataTableResendReport" />
     </Sequence.Variables>
@@ -141,14 +141,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="574,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Write your comments in the Text property" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="574,9137" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V2">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="572,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Write your comments in the Text property" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Amazon.com. Spend less. Smile more." sap:VirtualizedContainerService.HintSize="572,9815" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="540,8977" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="538,9655" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:UiElement" Name="IsVerifyCardExists" />
               <Variable x:TypeArguments="ui:UiElement" Name="EnterAmountTxtBoxExists" />
@@ -162,9 +162,9 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="506,57" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="506,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://www.amazon.com/gp/product/B086FNYH28/ref=sw_img_1?smid=ATVPDKIKX0DER&amp;psc=1" Version="V4" />
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="506,952" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1" MaxIterations="15">
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="504,57" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="504,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://www.amazon.com/gp/product/B086FNYH28/ref=sw_img_1?smid=ATVPDKIKX0DER&amp;psc=1" Version="V4" />
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="504,952" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1" MaxIterations="15">
               <ui:InterruptibleWhile.Body>
                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="452,822" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
@@ -251,8 +251,8 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InterruptibleWhile>
-            <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="506,122" sap2010:WorkflowViewState.IdRef="Delay_8" />
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into '&lt;span id=&quot;gc-nojs-aster…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="506,286" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="DebuggerApi" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Timeout="60" Version="V4">
+            <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="504,122" sap2010:WorkflowViewState.IdRef="Delay_8" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into '&lt;span id=&quot;gc-nojs-aster…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="504,286" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="DebuggerApi" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Timeout="60" Version="V4">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="amazon.com/gp/product/B086FNYH28/ref=sw_img_1" CVScreenId="5aa96ba2-d830-4cce-a22f-2669cb439f70" ContentHash="b4SLisDgekytGnUSW99cDA" DesignTimeRectangle="1265, 879, 143, 38" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl id='gc-order-form-custom-amount' tag='INPUT' type='text' class='a-input-text gc-order-form-custom-amount' aaname='          &amp;lt;span id=&amp;quot;gc-nojs-asterisk&amp;quot; class=&amp;quot;a-color-error gc-requires-no-js-inline&amp;quot;&amp;gt;&amp;lt;a:text textColor=&amp;quot;${&amp;apos;error&amp;apos;}&amp;quot;&amp;gt;*&amp;lt;/a:text&amp;gt;&amp;lt;/span&amp;gt;    Amount ' /&gt;" Guid="f5b52eac-01f8-4d47-9219-d7699d16bba6" InformativeScreenshot="08eb203627b8c047fd5da2acad810305.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/J6yOlEVZb0yfE7O7L9iIxw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - We Appreciate You (Email): Gift Cards' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
               </uix:NTypeInto.Target>
@@ -272,7 +272,7 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Text Message'" sap:VirtualizedContainerService.HintSize="506,225" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Text Message'" sap:VirtualizedContainerService.HintSize="504,225" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="amazon.com/dp/B09KXRPW9G" CVScreenId="b722faac-c873-4a54-ab12-c675d4e433e9" ContentHash="9qG113h85k6DA6hOGIlqRw" CvElementArea="874, 534, 131, 45" CvTextArea="889, 547, 101, 18" CvTextArgument="Text Message" CvType="Button" DesignTimeRectangle="877, 536, 125, 39" DesignTimeScaleFactor="1.25" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='gc-delivery-mechanism-button-MobileSMS-announce' tag='BUTTON' type='button' class='a-button-text' aaname='               Text Message             ' check:innerText='Text Message' /&gt;" Guid="dc01136c-d890-4c03-b221-b7d421ae7a0d" InformativeScreenshot="9babfbdb5db3952a578595c0796ce294.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/OOgN7pGIv0GHCjBAmqPSBw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - Slices of Cake: Gift Cards' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
               </uix:NClick.Target>
@@ -287,7 +287,7 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'To (required)'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="506,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'To (required)'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="504,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="amazon.com/dp/B09KXRPW9G" CVScreenId="0a1db1b2-d8c2-4dad-9acf-23d84bfa6425" ContentHash="CmyX9LL-hUWqnVZmAerTOw" CvElementArea="834, 500, 323, 42" CvType="InputBox" DesignTimeRectangle="835, 501, 321, 39" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='gc-order-form-recipients-sms-input' tag='INPUT' type='text' class='a-input-text a-declarative gc-requires-js-inline' placeholder='Enter U.S. mobile phone number' aaname='' /&gt;" Guid="ad894a3a-a052-4a3d-b064-5e5b31ea3d51" InformativeScreenshot="b43854f37d9201ff9c97759fc18a143f.png" IsResponsive="True" Reference="j3RPm-lsJUOk5qq-VZvaQA/Uhy7cL6UxUemXkKk5onaow" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - Slices of Cake: Gift Cards' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -313,7 +313,7 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Your Name (required)'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="506,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="DebuggerApi" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Your Name (required)'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="504,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="DebuggerApi" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="amazon.com/dp/B09KXRPW9G" CVScreenId="9bca7501-4b19-4c1c-9d3c-8b0294080c3c" ContentHash="l9BOoCtUjUOrrkZhWo_n3g" CvElementArea="794, 559, 364, 41" CvType="InputBox" DesignTimeRectangle="796, 560, 360, 38" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='gc-order-form-sms-senderName' tag='INPUT' type='text' class='a-declarative gc-border-square-bottom' placeholder='Your name' aaname='' /&gt;" Guid="d068436b-3ac9-47f7-8f25-1c1c6c0dc2b4" InformativeScreenshot="8236e085f18a2ea576f52e31cbef089f.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/oJ8xkRVktkWT8KVeiZJDJQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - Slices of Cake: Gift Cards' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -339,7 +339,7 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Gift Message'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="506,286" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="DebuggerApi" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Gift Message'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="504,286" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="DebuggerApi" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="amazon.com/dp/B09KXRPW9G" CVScreenId="0a1db1b2-d8c2-4dad-9acf-23d84bfa6425" ContentHash="9yuVgU90lkKUsMqbhR1L2Q" CvElementArea="794, 606, 362, 94" CvType="InputBox" DesignTimeRectangle="796, 606, 360, 94" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='gc-order-form-sms-message' tag='TEXTAREA' type='' class='' placeholder='Add a message (optional)' aaname='       Gift Message:     ' /&gt;" Guid="85d9ca14-b412-4e65-8bd2-d2cc7fdf0c42" InformativeScreenshot="0c929e78d29c7fd197aec1e64d349f80.png" IsResponsive="True" Reference="j3RPm-lsJUOk5qq-VZvaQA/bztZV4EIok2icgPJ73Anmg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - Slices of Cake: Gift Cards' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -365,8 +365,8 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="506,122" sap2010:WorkflowViewState.IdRef="Delay_9" />
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="506,84" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="504,122" sap2010:WorkflowViewState.IdRef="Delay_9" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="504,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,276.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
                   <sap:WorkflowViewStateService.ViewState>
@@ -398,7 +398,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'INPUT gc-buy-box-atc'" sap:VirtualizedContainerService.HintSize="506,225" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'INPUT gc-buy-box-atc'" sap:VirtualizedContainerService.HintSize="504,225" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="amazon.com/gp/product/B086FNYH28/ref=sw_img_1" CVScreenId="fc280343-facd-4265-b680-5378ffbb113f" ContentHash="7yIJVm4tNkO9YVpMvKWC7g" CvElementArea="1610, 513, 245, 44" CvTextArea="1690, 526, 85, 16" CvTextArgument="Add to cart" CvType="Button" DesignTimeRectangle="1613, 517, 239, 36" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl id='gc-buy-box-atc' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='gc-buy-box-atc' tag='INPUT' type='submit' class='a-button-input' /&gt;" Guid="56d86215-f87c-4b3e-a39b-d3aacca0c2b7" ImageBase64="" InformativeScreenshot="d54aaed41e34c3489707804af69c9a45.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/Mpr-pcXLDk6Xh_ExnWHPAQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - We Appreciate You (Email): Gift Cards' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
               </uix:NClick.Target>
@@ -413,8 +413,8 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="506,122" sap2010:WorkflowViewState.IdRef="Delay_3" />
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Proceed to checkout'" sap:VirtualizedContainerService.HintSize="506,225" sap2010:WorkflowViewState.IdRef="NClick_18" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
+            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="504,122" sap2010:WorkflowViewState.IdRef="Delay_3" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Proceed to checkout'" sap:VirtualizedContainerService.HintSize="504,225" sap2010:WorkflowViewState.IdRef="NClick_18" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="amazon.com/cart/smart-wagon" CVScreenId="be6b48c8-b2f2-42a5-b0ed-b8a921efd1d2" ContentHash="hV-by0xmnEmWbDIlbSnGHw" CvElementArea="1375, 391, 323, 44" CvTextArea="1429, 404, 213, 18" CvTextArgument="Proceed to checkout (1 item)" CvType="Button" DesignTimeRectangle="1377, 395, 318, 36" DesignTimeScaleFactor="1.25" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aria-labelledby='sc-buy-box-ptc-button-announce' tag='INPUT' type='submit' class='a-button-input' aaname='Proceed to checkout' check:text='Proceed to checkout' /&gt;" Guid="431f4630-5d43-4492-8da4-8b8070c3b2dc" InformativeScreenshot="12627f64431cf8c2f66d81b3112d77ad.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/J6yhDGUPjEq55ePREMjA5w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com Shopping Cart' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
               </uix:NClick.Target>
@@ -429,8 +429,8 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="506,122" sap2010:WorkflowViewState.IdRef="Delay_11" />
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="506,891" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_7" MaxIterations="4">
+            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="504,122" sap2010:WorkflowViewState.IdRef="Delay_11" />
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="504,891" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_7" MaxIterations="4">
               <ui:InterruptibleWhile.Body>
                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="452,761" sap2010:WorkflowViewState.IdRef="Sequence_9">
                   <sap:WorkflowViewStateService.ViewState>
@@ -523,7 +523,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InterruptibleWhile>
-            <If sap:VirtualizedContainerService.HintSize="506,605" sap2010:WorkflowViewState.IdRef="If_6">
+            <If sap:VirtualizedContainerService.HintSize="504,607" sap2010:WorkflowViewState.IdRef="If_6">
               <If.Condition>
                 <InArgument x:TypeArguments="x:Boolean">
                   <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">useThisPaymentButtonExists != null</CSharpValue>
@@ -536,7 +536,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,378" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,379" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -559,11 +559,11 @@
                       </uix:VerifyExecutionOptions>
                     </uix:NClick.VerifyOptions>
                   </uix:NClick>
-                  <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="Delay_7" />
+                  <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="382.4,113.6" sap2010:WorkflowViewState.IdRef="Delay_7" />
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -572,7 +572,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="506,649" sap2010:WorkflowViewState.IdRef="TryCatch_10">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="504,651.2" sap2010:WorkflowViewState.IdRef="TryCatch_10">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -580,7 +580,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'BUTTON  pp-yYtHiq-91-an...'" sap:VirtualizedContainerService.HintSize="416,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+                <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'BUTTON  pp-yYtHiq-91-an...'" sap:VirtualizedContainerService.HintSize="416,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
                   <ui:WaitUiElementAppear.FoundElement>
                     <OutArgument x:TypeArguments="ui:UiElement">
                       <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">IsVerifyCardExists</CSharpReference>
@@ -607,7 +607,7 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <Sequence sap2010:Annotation.AnnotationText="log exception and assign tmpVal to 0" DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,257" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                    <Sequence sap2010:Annotation.AnnotationText="log exception and assign tmpVal to 0" DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,258.4" sap2010:WorkflowViewState.IdRef="Sequence_35">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:Int32" Name="tmpVal" />
                       </Sequence.Variables>
@@ -617,7 +617,7 @@
                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log exception message" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error">
+                      <ui:LogMessage DisplayName="Log exception message" sap:VirtualizedContainerService.HintSize="382.4,167.2" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error">
                         <ui:LogMessage.Message>
                           <InArgument x:TypeArguments="x:Object">
                             <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_47">exception.Message</CSharpValue>
@@ -629,7 +629,7 @@
                 </Catch>
               </TryCatch.Catches>
               <TryCatch.Finally>
-                <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -638,7 +638,7 @@
                 </Sequence>
               </TryCatch.Finally>
             </TryCatch>
-            <If sap:VirtualizedContainerService.HintSize="506,1929" sap2010:WorkflowViewState.IdRef="If_7">
+            <If sap:VirtualizedContainerService.HintSize="504,1932.8" sap2010:WorkflowViewState.IdRef="If_7">
               <If.Condition>
                 <InArgument x:TypeArguments="x:Boolean">
                   <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">IsVerifyCardExists != null</CSharpValue>
@@ -651,13 +651,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="504,1702" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="502.4,1704.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT pp-yYtHiq-90'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="470,286" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InteractionMode="DebuggerApi" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Text="4246 3154 1737 1257" Version="V4">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT pp-yYtHiq-90'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="468.8,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InteractionMode="DebuggerApi" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Text="4246 3154 1737 1257" Version="V4">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="amazon.com/gp/buy/payselect/handlers/display.html" CVScreenId="62dc6f2d-1788-416f-a5ae-1a20b41a4714" ContentHash="yOQvRP9UAkGjOffmXoI8cA" CvElementArea="380, 813, 220, 42" CvType="InputBox" DesignTimeRectangle="381, 814, 218, 38" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='pp-QpVxxO-90' tag='INPUT' type='text' class='a-input-text a-form-normal a-width-medium' placeholder='ending in 1257' aaname='' /&gt;" Guid="2d271f28-6a4b-42b1-9d3c-1f45cd33c575" InformativeScreenshot="189c50313b0a5dd980b2352fc987acda.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/O5TBLJEE0k-RHxahNRU1JQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com Checkout' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                     </uix:NTypeInto.Target>
@@ -672,7 +672,7 @@
                       </uix:VerifyExecutionTypeIntoOptions>
                     </uix:NTypeInto.VerifyOptions>
                   </uix:NTypeInto>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Verify card'" sap:VirtualizedContainerService.HintSize="470,225" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Verify card'" sap:VirtualizedContainerService.HintSize="468.8,225.6" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="amazon.com/gp/buy/payselect/handlers/display.html" CVScreenId="62dc6f2d-1788-416f-a5ae-1a20b41a4714" ContentHash="sfK6cBzRmUGb9rKks-F9qQ" CvElementArea="608, 808, 126, 50" CvTextArea="631, 824, 81, 18" CvTextArgument="Verify card" CvType="Button" DesignTimeRectangle="619, 815, 106, 36" DesignTimeScaleFactor="1.25" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='a-button-text' aaname='Verify card' check:innerText='Verify card' /&gt;" Guid="b6351a35-b5d1-4bd1-a5ca-48648a29bb7e" InformativeScreenshot="b10760d03b6fd21977ee9c655224a093.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/pr12gcFU_0K3JqD3m8ZT6g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com Checkout' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                     </uix:NClick.Target>
@@ -687,7 +687,7 @@
                       </uix:VerifyExecutionOptions>
                     </uix:NClick.VerifyOptions>
                   </uix:NClick>
-                  <TryCatch DisplayName="Try Catch - if use this payment exists, click on it" sap:VirtualizedContainerService.HintSize="470,1131" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+                  <TryCatch DisplayName="Try Catch - if use this payment exists, click on it" sap:VirtualizedContainerService.HintSize="468.8,1132.8" sap2010:WorkflowViewState.IdRef="TryCatch_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -695,13 +695,13 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <TryCatch.Try>
-                      <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="468,787" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                      <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="467.2,788" sap2010:WorkflowViewState.IdRef="Sequence_14">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_2">
+                        <Assign sap:VirtualizedContainerService.HintSize="433.6,112.8" sap2010:WorkflowViewState.IdRef="Assign_2">
                           <Assign.To>
                             <OutArgument x:TypeArguments="ui:UiElement">
                               <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">useThisPaymentButtonExists</CSharpReference>
@@ -713,7 +713,7 @@
                             </InArgument>
                           </Assign.Value>
                         </Assign>
-                        <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'BUTTON  pp-yYtHiq-91-an...'" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_7">
+                        <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'BUTTON  pp-yYtHiq-91-an...'" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_7">
                           <ui:WaitUiElementAppear.FoundElement>
                             <OutArgument x:TypeArguments="ui:UiElement">
                               <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">useThisPaymentButtonExists</CSharpReference>
@@ -730,20 +730,20 @@
                             </ui:Target>
                           </ui:WaitUiElementAppear.Target>
                         </ui:WaitUiElementAppear>
-                        <If sap:VirtualizedContainerService.HintSize="434,474" sap2010:WorkflowViewState.IdRef="If_3">
+                        <If sap:VirtualizedContainerService.HintSize="433.6,476" sap2010:WorkflowViewState.IdRef="If_3">
                           <If.Condition>
                             <InArgument x:TypeArguments="x:Boolean">
                               <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">useThisPaymentButtonExists != null</CSharpValue>
                             </InArgument>
                           </If.Condition>
                           <If.Then>
-                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,256" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,256.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="382,196" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" Version="V4">
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="382.4,196.8" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" Version="V4">
                                 <uix:NClick.InUiElement>
                                   <InArgument x:TypeArguments="ui:UiElement">
                                     <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">useThisPaymentButtonExists</CSharpValue>
@@ -763,7 +763,7 @@
                             </Sequence>
                           </If.Then>
                           <If.Else>
-                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -786,7 +786,7 @@
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                           </ActivityAction.Argument>
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="468,90" sap2010:WorkflowViewState.IdRef="WriteLine_6">
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="467.2,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_6">
                             <InArgument x:TypeArguments="x:String">
                               <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">exception.Message</CSharpValue>
                             </InArgument>
@@ -795,7 +795,7 @@
                       </Catch>
                     </TryCatch.Catches>
                     <TryCatch.Finally>
-                      <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="468,89" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                      <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="467.2,89.6" sap2010:WorkflowViewState.IdRef="Sequence_30">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -807,7 +807,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="504,89" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="502.4,89.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -816,9 +816,15 @@
                 </Sequence>
               </If.Else>
             </If>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="506,225" sap2010:WorkflowViewState.IdRef="NClick_16" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Timeout="10" Version="V4">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="504,225.6" sap2010:WorkflowViewState.IdRef="NClick_16" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Timeout="10" Version="V4">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="amazon.com/checkout/p/p-106-4269115-7952232/spc" CVScreenId="77dbe4b0-ed8a-4fb9-ba6e-2ef9246a8257" ContentHash="kIVQ9GAvCU-1Z83nw8JQew" CvElementArea="1292, 298, 320, 47" CvTextArea="1390, 314, 122, 15" CvTextArgument="Place your order" CvType="Button" DesignTimeRectangle="1293, 297, 317, 47" DesignTimeScaleFactor="1.25" ElementType="Button" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl id='placeOrder'  check:text='Place your order' /&gt;" Guid="bdb06348-98ea-455c-9d88-8c77427472c9" InformativeScreenshot="eb07e19fb1509f1fc1fe00c8add00275.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/HXWJYAihCEKQVXdK0Qgd-w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Place Your Order - Amazon Checkout' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                <uix:TargetAnchorable BrowserURL="amazon.com/checkout/p/p-106-5243759-8463454/spc" CVScreenId="4a153a02-0efc-4bc6-bc1f-7dbca2bc62c3" CvElementArea="1169, 213, 255, 38" CvTextArea="1248, 225, 97, 13" CvTextArgument="Place your order" CvType="Button" DesignTimeRectangle="1172, 216, 248, 32" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='placeOrder' tag='INPUT' type='submit' class='a-button-input place-your-order-button' aaname='Place your order' check:text='Place your order' /&gt;" Guid="12a1fd27-3975-4388-93e8-63aee6996cd4" InformativeScreenshot="cf8bc79b9a7391056e2f4903f92992da.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Place Your Order - Amazon Checkout' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="4a153a02-0efc-4bc6-bc1f-7dbca2bc62c3" CvTextArea="1063, 350, 49, 16" CvTextArgument="Change" CvType="Text" DesignTimeRectangle="1063, 348, 48, 18" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-label='Change payment method' tag='A' type='' class='a-link-normal expand-panel-button celwidget' aaname='                                                                                                  Change                                             ' check:innerText='Change' /&gt;" Guid="5667cb36-2914-4ef7-bba6-b06ccb35e091" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
               </uix:NClick.Target>
               <uix:NClick.VerifyOptions>
                 <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -831,8 +837,8 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="506,122" sap2010:WorkflowViewState.IdRef="Delay_12" />
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Returns &amp; Orders'" sap:VirtualizedContainerService.HintSize="506,225" sap2010:WorkflowViewState.IdRef="NClick_17" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
+            <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="504,122.4" sap2010:WorkflowViewState.IdRef="Delay_12" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Returns &amp; Orders'" sap:VirtualizedContainerService.HintSize="504,225.6" sap2010:WorkflowViewState.IdRef="NClick_17" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="amazon.com/gp/buy/thankyou/handlers/display.html" ContentHash="G8d5mMQQAE-kjBDDWEHupg" DesignTimeRectangle="1691, 188, 96, 63" DesignTimeScaleFactor="1.25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='nav-orders' tag='A' type='' class='nav-a nav-a-2   nav-progressive-attribute' aaname='   Returns   &amp;amp; Orders ' check:innerText='Returns&amp;#xA;&amp;amp; Orders' /&gt;" Guid="6810db68-c39e-460b-9966-9810e16f935f" InformativeScreenshot="bf8aee9b5769b751fb214f6d06c5abfa.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/_o7H8z55bk6mwYDDOaRRRA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Place Your Order - Amazon Checkout' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
               </uix:NClick.Target>
@@ -847,15 +853,15 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="506,84" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_6" MaxIterations="15">
+            <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="504,776.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_6" MaxIterations="15">
               <ui:InterruptibleWhile.Body>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="470.4,544" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="451.2,646.4" sap2010:WorkflowViewState.IdRef="Sequence_21">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <TryCatch DisplayName="Find Edit button - Try Catch" sap:VirtualizedContainerService.HintSize="436.8,370.4" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+                  <TryCatch DisplayName="Find Edit button - Try Catch" sap:VirtualizedContainerService.HintSize="417.6,472.8" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -863,7 +869,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <TryCatch.Try>
-                      <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'Standard' button on page" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_9">
+                      <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'Standard' button on page" sap:VirtualizedContainerService.HintSize="416,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_9">
                         <ui:WaitUiElementAppear.FoundElement>
                           <OutArgument x:TypeArguments="ui:UiElement">
                             <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">YourOrderPageExists</CSharpReference>
@@ -893,8 +899,17 @@
                         </ActivityAction>
                       </Catch>
                     </TryCatch.Catches>
+                    <TryCatch.Finally>
+                      <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </TryCatch.Finally>
                   </TryCatch>
-                  <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="436.8,113.6" sap2010:WorkflowViewState.IdRef="Delay_13" />
+                  <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="417.6,113.6" sap2010:WorkflowViewState.IdRef="Delay_13" />
                 </Sequence>
               </ui:InterruptibleWhile.Body>
               <ui:InterruptibleWhile.Condition>
@@ -902,12 +917,12 @@
               </ui:InterruptibleWhile.Condition>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InterruptibleWhile>
-            <ui:FindChildren DisplayName="Find Children 'BDI'" Filter="&lt;webctrl css-selector='.js-order-card .yohtmlc-order-id .value'/&gt;" sap:VirtualizedContainerService.HintSize="506,139" sap2010:WorkflowViewState.IdRef="FindChildren_2" Scope="FIND_DESCENDANTS">
+            <ui:FindChildren DisplayName="Find Children 'BDI'" Filter="&lt;webctrl css-selector='.js-order-card .yohtmlc-order-id .value'/&gt;" sap:VirtualizedContainerService.HintSize="504,139.2" sap2010:WorkflowViewState.IdRef="FindChildren_2" Scope="FIND_DESCENDANTS">
               <ui:FindChildren.Children>
                 <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
                   <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">outpuptAllChildOrderNumbers</CSharpReference>
@@ -924,7 +939,7 @@
                 </ui:Target>
               </ui:FindChildren.Target>
             </ui:FindChildren>
-            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="text" DisplayName="Get Attribute '114-5179440-1621813'" sap:VirtualizedContainerService.HintSize="506,219" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
+            <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="text" DisplayName="Get Attribute '114-5179440-1621813'" sap:VirtualizedContainerService.HintSize="504,220" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
               <uix:NGetAttributeGeneric.InUiElement>
                 <InArgument x:TypeArguments="ui:UiElement">
                   <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">outpuptAllChildOrderNumbers.FirstOrDefault()</CSharpValue>
@@ -936,7 +951,7 @@
                 </OutArgument>
               </uix:NGetAttributeGeneric.Result>
             </uix:NGetAttributeGeneric>
-            <Assign sap:VirtualizedContainerService.HintSize="506,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign sap:VirtualizedContainerService.HintSize="504,114.4" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">Out_OrderNumber</CSharpReference>
@@ -948,12 +963,12 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="506,122" sap2010:WorkflowViewState.IdRef="WriteLine_2">
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="504,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_2">
               <InArgument x:TypeArguments="x:String">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">"Out_OrderNumber-" +Out_OrderNumber</CSharpValue>
               </InArgument>
             </WriteLine>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="506,77" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="504,77.6" sap2010:WorkflowViewState.IdRef="CommentOut_6">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="504,1592" sap2010:WorkflowViewState.IdRef="Sequence_26">
                   <sap:WorkflowViewStateService.ViewState>
@@ -1231,7 +1246,7 @@
         </InArgument>
       </uix:NApplicationCard.InUiElement>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 0, 0" Version="V1" />
+        <uix:TargetApp Area="230, 94, 1464, 1688" BrowserType="Chrome" ContentHash="n84tot7kyUajZUdW_LghTQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF0SURBVDhPlZMxS8NAGIYD2vwBR80P0Knt7qTZRZr8A9u9Q3+ASIWCULG4ClnqUi10EWy7qx0cLKQuOrQpOGhJ1cGhr7y5XHokReoLR7jv3u/5vrvcaQB0ACcAhlhe9DJH1wAcx1cHgwFKpRJylgXLtuE4TtwiVSFgrEZ6vR5WUimsxgaBCzQmYKJG8oVCkLBrmnBdN5pvGIZqk5okAJ7nBV10Oh1cN5vBFmQXC5QEcP/pbDaxhaUBsiIh7OasVvsfQJqPyuVgfpDPRzHf91UrlQSkM5kogQep/hF2E1MI+PKiCA9w3TCCBH6ZlLNt7Jgmpu9jzFwHuC+KEQFaW8CHq5IXq7svEh8PgTpTJWDUBi414K4ITOfdJPQ5Al4aolhjjRHlDF6vBITjZltU6VeBpyrQPwW6e6IqfSzI9RAwv8pvD8JICM11DbPwi9YmMLwVvh9fjPAqVyKAFFt8vph3MGzHHVLBY+JzPgfwHV/9Q/QyR/8FZNBNQChmFy8AAAAASUVORK5CYII=" InformativeScreenshot="1eb5af95fc5a8a8f169739ad0f79e34f.jpg" Reference="edQoiHTr_EubiZ3TXex5dQ/KfClGJ4uuE-CNRrLiCAA7w" Selector="&lt;html app='chrome.exe' title='Amazon.com. Spend less. Smile more.' /&gt;" Title="Amazon.com. Spend less. Smile more." Url="https://www.amazon.com/" Version="V1" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>

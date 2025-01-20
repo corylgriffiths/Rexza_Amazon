@@ -138,26 +138,26 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="pullPayroll" sap:VirtualizedContainerService.HintSize="916,2650" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="pullPayroll" sap:VirtualizedContainerService.HintSize="1278,1881.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="536,2627" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="588,1751" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="502,2467" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence sap:VirtualizedContainerService.HintSize="554,1591" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="468,57" sap2010:WorkflowViewState.IdRef="CommentOut_16">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,84" sap2010:WorkflowViewState.IdRef="CommentOut_16">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="468,237" sap2010:WorkflowViewState.IdRef="Sequence_39">
                   <sap:WorkflowViewStateService.ViewState>
@@ -192,7 +192,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="468,57" sap2010:WorkflowViewState.IdRef="CommentOut_17">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,84" sap2010:WorkflowViewState.IdRef="CommentOut_17">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="468,237" sap2010:WorkflowViewState.IdRef="Sequence_40">
                   <sap:WorkflowViewStateService.ViewState>
@@ -221,75 +221,86 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <Sequence DisplayName="Do - Go to Payroll Screen - Download Leasing Agents" sap:VirtualizedContainerService.HintSize="468,1149" sap2010:WorkflowViewState.IdRef="Sequence_41">
-              <Sequence.Variables>
-                <Variable x:TypeArguments="upr:ILocalResource" Name="DownloadedAccountsFile" />
-              </Sequence.Variables>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Url="https://rexza.fastgem.net/accounts/leasing-agents" Version="V4" />
-              <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="Delay_4" />
-              <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="DeleteFileX_3">
-                <ui:DeleteFileX.Path>
-                  <InArgument x:TypeArguments="x:String">
-                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">Environment.ExpandEnvironmentVariables("%USERPROFILE%\\Downloads\\data.csv")</CSharpValue>
-                  </InArgument>
-                </ui:DeleteFileX.Path>
-              </ui:DeleteFileX>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Excel'" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
-                <uix:NClick.Target>
-                  <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/accounts/leasing-agents" CVScreenId="5efe0f56-ba71-4c82-a986-d1c04f147973" ContentHash="JMVD73YwKUizHOly8eRvkg" CvElementArea="808, 204, 66, 35" CvTextArea="820, 214, 38, 15" CvTextArgument="Excel" CvType="Button" DesignTimeRectangle="810, 205, 62, 32" DesignTimeScaleFactor="1.25" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='button' class='btn btn-small btn-info' aaname='Excel' check:text='Excel' /&gt;" Guid="e43637f7-a96c-4bc3-b20d-f36f3449b837" InformativeScreenshot="e1ed1faa91e67e39d174532b8f67055d.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/DIQtUo58lkmfbYIogqVQCw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Leasing Agents' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
-                </uix:NClick.Target>
-                <uix:NClick.VerifyOptions>
-                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                    <uix:VerifyExecutionOptions.Retry>
-                      <InArgument x:TypeArguments="x:Boolean" />
-                    </uix:VerifyExecutionOptions.Retry>
-                    <uix:VerifyExecutionOptions.Timeout>
-                      <InArgument x:TypeArguments="x:Double" />
-                    </uix:VerifyExecutionOptions.Timeout>
-                  </uix:VerifyExecutionOptions>
-                </uix:NClick.VerifyOptions>
-              </uix:NClick>
-              <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="434,303" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
-                <ui:InterruptibleWhile.Body>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,173" sap2010:WorkflowViewState.IdRef="Sequence_17">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,219" sap2010:WorkflowViewState.IdRef="CommentOut_18">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484,108" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Sequence DisplayName="Do - Go to Payroll Screen - Download Leasing Agents" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="upr:ILocalResource" Name="DownloadedAccountsFile" />
+                    </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                    <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Url="https://rexza.fastgem.net/accounts/leasing-agents" Version="V4" />
+                    <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                    <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="DeleteFileX_3">
+                      <ui:DeleteFileX.Path>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">Environment.ExpandEnvironmentVariables("%USERPROFILE%\\Downloads\\data.csv")</CSharpValue>
+                        </InArgument>
+                      </ui:DeleteFileX.Path>
+                    </ui:DeleteFileX>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Excel'" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/accounts/leasing-agents" CVScreenId="5efe0f56-ba71-4c82-a986-d1c04f147973" ContentHash="JMVD73YwKUizHOly8eRvkg" CvElementArea="808, 204, 66, 35" CvTextArea="820, 214, 38, 15" CvTextArgument="Excel" CvType="Button" DesignTimeRectangle="810, 205, 62, 32" DesignTimeScaleFactor="1.25" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='button' class='btn btn-small btn-info' aaname='Excel' check:text='Excel' /&gt;" Guid="e43637f7-a96c-4bc3-b20d-f36f3449b837" InformativeScreenshot="e1ed1faa91e67e39d174532b8f67055d.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/DIQtUo58lkmfbYIogqVQCw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Leasing Agents' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                    <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="434,303" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+                      <ui:InterruptibleWhile.Body>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,173" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="382,113" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                        </Sequence>
+                      </ui:InterruptibleWhile.Body>
+                      <ui:InterruptibleWhile.Condition>
+                        <CSharpValue x:TypeArguments="x:Boolean" DisplayName="C sharp value" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">File.Exists(Environment.ExpandEnvironmentVariables("%USERPROFILE%\\Downloads\\data.csv")) == false</CSharpValue>
+                      </ui:InterruptibleWhile.Condition>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:InterruptibleWhile>
+                    <ui:ReadCsvFile PathResource="{x:Null}" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV" sap:VirtualizedContainerService.HintSize="434,179" sap2010:WorkflowViewState.IdRef="ReadCsvFile_2" IncludeColumnNames="False">
+                      <ui:ReadCsvFile.DataTable>
+                        <OutArgument x:TypeArguments="sd:DataTable">
+                          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">Out_PullLeasingAgentsData</CSharpReference>
+                        </OutArgument>
+                      </ui:ReadCsvFile.DataTable>
+                      <ui:ReadCsvFile.FilePath>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">Environment.ExpandEnvironmentVariables("%USERPROFILE%\\Downloads\\data.csv")</CSharpValue>
+                        </InArgument>
+                      </ui:ReadCsvFile.FilePath>
+                    </ui:ReadCsvFile>
                   </Sequence>
-                </ui:InterruptibleWhile.Body>
-                <ui:InterruptibleWhile.Condition>
-                  <CSharpValue x:TypeArguments="x:Boolean" DisplayName="C sharp value" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">File.Exists(Environment.ExpandEnvironmentVariables("%USERPROFILE%\\Downloads\\data.csv")) == false</CSharpValue>
-                </ui:InterruptibleWhile.Condition>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ui:InterruptibleWhile>
-              <ui:ReadCsvFile PathResource="{x:Null}" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV" sap:VirtualizedContainerService.HintSize="434,179" sap2010:WorkflowViewState.IdRef="ReadCsvFile_2" IncludeColumnNames="False">
-                <ui:ReadCsvFile.DataTable>
-                  <OutArgument x:TypeArguments="sd:DataTable">
-                    <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">Out_PullLeasingAgentsData</CSharpReference>
-                  </OutArgument>
-                </ui:ReadCsvFile.DataTable>
-                <ui:ReadCsvFile.FilePath>
-                  <InArgument x:TypeArguments="x:String">
-                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">Environment.ExpandEnvironmentVariables("%USERPROFILE%\\Downloads\\data.csv")</CSharpValue>
-                  </InArgument>
-                </ui:ReadCsvFile.FilePath>
-              </ui:ReadCsvFile>
-            </Sequence>
-            <Sequence DisplayName="Do - Go to Payroll Screen - Download Accounts Excel" sap:VirtualizedContainerService.HintSize="468,1142" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <Sequence DisplayName="Do - Go to Payroll Screen - Download Accounts Excel" sap:VirtualizedContainerService.HintSize="520,1142" sap2010:WorkflowViewState.IdRef="Sequence_42">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>

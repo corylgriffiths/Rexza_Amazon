@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Payroll Total $34,078.…",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "kWiNDiyGRUuSYAU1PD1DCw",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/kWiNDiyGRUuSYAU1PD1DCw",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/CdxZJmFKe02hzioLuv_rug",
+  "Created": "2025-01-19T07:41:52.9739049Z",
+  "Updated": "2025-01-19T07:41:52.9739049Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

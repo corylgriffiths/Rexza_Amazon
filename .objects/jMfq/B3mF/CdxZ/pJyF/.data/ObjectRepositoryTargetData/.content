@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="RCI7UNJG8UKdQtaFy-SJ-Q" Reference="edQoiHTr_EubiZ3TXex5dQ/pJyF0hCvgUeyf15DW54nqA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="debf56f3-4adb-457b-beda-79267ea88793" DesignTimeRectangle="18, 670, 232, 37" DesignTimeScaleFactor="1" Guid="7379644a-eaa3-4260-b620-a0030b4fd055" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="5efb3c45efa774d3868712a411093336.png" xmlns="">0RMNy1pBbeECO2S-ma_XlZw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">MouseScroll</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

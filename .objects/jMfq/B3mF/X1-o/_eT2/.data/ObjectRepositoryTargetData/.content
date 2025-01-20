@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Z9D29iPIh0ua_xdKe2ckPA" Reference="edQoiHTr_EubiZ3TXex5dQ/_eT2BWMnUkmzSm3ZqXEXfg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="c503c3ff-7141-456e-bd6f-69f40ece0e18" CvElementArea="1407, 461, 14, 14" CvType="CheckBox" DesignTimeRectangle="1409, 463, 11, 11" DesignTimeScaleFactor="0.800000011920929" ElementType="CheckBox" Guid="91b5aabf-7bc5-4bee-9d21-24d9e16ffc71" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target CVScreenId="c503c3ff-7141-456e-bd6f-69f40ece0e18" CvTextArea="1346, 460, 41, 12" CvTextArgument="Payment" CvType="Text" DesignTimeRectangle="1341, 451, 62, 30" ElementType="Text" Guid="973f058b-b998-4d97-a0db-b8ab537294ae" SearchSteps="FuzzySelector, CV">
+            <Target.FuzzySelectorArgument>
+              <p:InArgument x:TypeArguments="x:String">
+                <p:CSharpValue x:TypeArguments="x:String">"&lt;webctrl id='rep_payments_"+RepID+"' tag='TABLE' /&gt;&lt;webctrl aaname='Payment' type='' tag='TH' class='' check:innerText='Payment' /&gt;"</p:CSharpValue>
+              </p:InArgument>
+            </Target.FuzzySelectorArgument>
+          </Target>
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <TargetAnchorable.FuzzySelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;webctrl id='rep_payments_"+RepID+"' tag='TABLE' /&gt;&lt;webctrl id='fg_all_chk_"+RepID+"' type='checkbox' tag='INPUT' class='checkbox_hidden checkbox_check_all' aaname='' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.FuzzySelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="f189dc4b2687b3d1088de8e0ab4e686c.png" xmlns="">0tPwyrHMAXkKpdsm8DxaxfA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="q6AGrVZdGkyJ7_xRDEaicA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="21d6ebc1-fcd7-42d1-a545-0c391b955009" CvTextArea="1399, 1663, 66, 12" CvTextArgument="Referral Fee" CvType="Text" DesignTimeRectangle="1399, 1663, 66, 12" DesignTimeScaleFactor="1" ElementType="Text" Guid="de444c27-2c7e-4ef1-8290-33bf81068217" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="abcdbc81cc1b5114483bda87bb32a4cf.png" xmlns="">0XE0bQFprAkiFw6bfzmIHeg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
