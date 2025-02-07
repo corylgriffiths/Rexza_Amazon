@@ -1,0 +1,13 @@
+﻿{
+  "Name": "chrome.exe",
+  "Type": "Screen",
+  "Id": "d7ZTkdIihkGFLqFOAuEq6A",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/d7ZTkdIihkGFLqFOAuEq6A",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/_CMcXe81L0Wmtca6zHi9QA",
+  "Created": "2025-01-23T23:53:20.2834309Z",
+  "Updated": "2025-01-23T23:53:20.2834309Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

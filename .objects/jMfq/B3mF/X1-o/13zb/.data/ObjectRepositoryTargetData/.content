@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Crlhh9_sHUCUOZFxFaZb8w" Reference="edQoiHTr_EubiZ3TXex5dQ/13zb3ZfdlEiOK3hU03AZ_w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" DesignTimeRectangle="1695, 1206, 79, 58" DesignTimeScaleFactor="1" ElementType="Text" Guid="537c73ff-68bb-40e7-a9f7-750a57180a6a" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target DesignTimeRectangle="26, 1219, 91, 12" ElementType="Text" Guid="a7733e36-0963-4f76-bd81-340fd835eb37" ImageBase64="" SearchSteps="Selector">
+            <Target.FullSelectorArgument>
+              <p:InArgument x:TypeArguments="x:String">
+                <p:CSharpValue x:TypeArguments="x:String">"&lt;webctrl id='rep_payments_"+RepID+"' tag='TABLE' /&gt;&lt;webctrl tag='A' tableCol='1' href='"+link+"' /&gt;"</p:CSharpValue>
+              </p:InArgument>
+            </Target.FullSelectorArgument>
+          </Target>
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <TargetAnchorable.FullSelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;webctrl id='rep_payments_"+RepID+"' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableCol='15' tag='TD' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.FullSelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="4fd571c2ff7f2af83c1584b20f5d22f8.png" xmlns="">0dLrb5oGxyEOBID1lzxb-0Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

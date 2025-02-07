@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="cLFk96dNP0Cvjs2oKrXOEw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="7f35027d-d952-4ac9-892e-09be76a473be" CvElementArea="1454, 263, 15, 17" CvType="ArrowButton" DesignTimeRectangle="1446, 258, 32, 26" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl parentid='fg_finalize_block' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class=' nav' aaname='' check:innerText='‹' /&gt;" Guid="1b8c0c81-b404-49ed-babf-02b7da7464a0" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="7f35027d-d952-4ac9-892e-09be76a473be" CvElementArea="1445, 230, 147, 28" CvType="InputBox" DesignTimeRectangle="1446, 231, 145, 27" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='finalize_date' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="46465c86-d977-4755-81c5-6f1e1fb52a0d" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="4738967e2a9c7544cc131bf4122ceaca.png" xmlns="">0aHuAOlikv06ZN0EgicfkBQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

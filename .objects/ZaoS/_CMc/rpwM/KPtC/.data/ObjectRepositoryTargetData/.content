@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Lv7jGtUaoU6SnAu0vEqHZg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/orders-2/appointment/7152" CVScreenId="acfd5f97-6ffc-490f-8fcf-ff7c9339d301" CvElementArea="16, 192, 90, 28" CvTextArea="48, 199, 47, 12" CvTextArgument="Edit Item" CvType="Button" DesignTimeRectangle="18, 193, 87, 26" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='g-mainbar' tag='A' type='' class='btn btn-small' aaname='                                  Edit Item            ' check:innerText='Edit Item' /&gt;" Guid="8a4fc687-2afe-4bda-9650-d721229f0a02" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Orders' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="acfd5f97-6ffc-490f-8fcf-ff7c9339d301" CvElementArea="107, 191, 93, 29" CvTextArea="118, 199, 71, 14" CvTextArgument="Toggle Slides" CvType="Button" DesignTimeRectangle="109, 193, 90, 26" ElementType="Button" FuzzySelectorArgument="&lt;webctrl parentid='g-mainbar' tag='BUTTON' type='' class='btn btn-info btn-small .fg-toggle-slides' aaname='Toggle Slides' check:innerText='Toggle Slides' /&gt;" Guid="0b4c50a0-0e60-42b6-9606-67a19987d4fd" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="c4df02c01b557984c8c3ae30a077c587.png" xmlns="">0Wp9OsWZJyEKq90RFLmWGUA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

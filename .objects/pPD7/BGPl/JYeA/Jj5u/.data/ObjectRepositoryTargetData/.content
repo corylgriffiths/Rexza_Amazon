@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="W8pKmzp4i06-xsaZ-8TsHA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gp/your-account/order-details" CVScreenId="98056148-25e2-4787-9f89-7914e54f7a0f" CvTextArea="382, 754, 38, 16" CvType="AnyWordGroup" DesignTimeRectangle="383, 752, 79, 20" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='orderDetails' parentname='a-cardui-deck-autoname-0-card0' tag='DIV' type='' class='a-column a-span2' /&gt;" Guid="3931105b-c40e-434a-a7e8-2fb322a70dfa" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Order Details' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="98056148-25e2-4787-9f89-7914e54f7a0f" CvTextArea="381, 731, 54, 13" CvTextArgument="Amount" CvType="Text" DesignTimeRectangle="383, 729, 51, 18" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Amount' class='a-color-secondary' parentid='orderDetails' tag='SPAN' type='' check:innerText='Amount' /&gt;" Guid="96740054-2e4a-4b9c-a7e5-355f3d9f3675" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="c612f431c340ccd77b6c83a396ed461c.png" xmlns="">0xy5BEA6-cUC5AlrARHqoZA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

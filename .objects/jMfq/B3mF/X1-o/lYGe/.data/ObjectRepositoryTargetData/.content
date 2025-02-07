@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="JjOdPli0jEySxMPD5u3hRw" Reference="edQoiHTr_EubiZ3TXex5dQ/lYGee1xfsk-RF77eeDu3JA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="dev.fastgem.net/payroll-2/view-payroll" CVScreenId="cf1b248b-bc72-4f79-afc0-5412c312015f" CvTextArea="137, 410, 105, 14" CvType="Text" DesignTimeRectangle="138, 411, 103, 12" DesignTimeScaleFactor="1" ElementType="Text" Guid="6076f28b-b87d-4e99-87c3-209d684b5d2a" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.CvTextArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">payrollNote</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.CvTextArgument>
+      <TargetAnchorable.FuzzySelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;webctrl id='snapshotList' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='fg_link' aaname='"+payrollNote+"' check:innerText='"+payrollNote+"' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.FuzzySelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="c1a336fb105706c2280ec0579dfbcb2f.png" xmlns="">0ggO7hOhHi0Cdfq71xI5ZuA</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData Name="payrollNote" />
+    </scg:List>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

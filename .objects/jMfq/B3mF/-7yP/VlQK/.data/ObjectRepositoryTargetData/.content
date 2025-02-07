@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="czZBkZjsCk2-8H3kH7RRwQ" Reference="edQoiHTr_EubiZ3TXex5dQ/VlQKFfyuaUOBvkcZnPuLuA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/accounts" CVScreenId="745d1aa6-bc83-42df-ad38-5cb57da5ff97" CvElementArea="1013, 1489, 45, 34" CvType="Button" DesignTimeRectangle="1028, 1499, 12, 13" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl type='' class='icon-step-forward icon-next' parentid='tw-content-wrapper' tag='SPAN' aaname='' /&gt;" Guid="8ca81046-e216-4c1b-bf94-b921f766169f" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="745d1aa6-bc83-42df-ad38-5cb57da5ff97" CvElementArea="1056, 1489, 46, 35" CvType="Button" DesignTimeRectangle="1058, 1490, 43, 33" FuzzySelectorArgument="&lt;webctrl class='hasTooltip' type='' parentid='tw-content-wrapper' tag='A' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' /&gt;" Guid="032a5b68-1adc-468d-bc97-8ab1864fde87" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="780cffef993a2855f15204a554a984cb.png" xmlns="">0iGcDorbVn0ufIvRY_kLw6Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

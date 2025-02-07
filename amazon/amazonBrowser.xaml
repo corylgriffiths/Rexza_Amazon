@@ -107,7 +107,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="amazon" sap:VirtualizedContainerService.HintSize="916,495" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="amazon" sap:VirtualizedContainerService.HintSize="1605,1208.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -125,11 +125,9 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="login - Invoke Workflow File (amazon\login.xaml)" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="amazon\login2.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="login2 - Invoke Workflow File (amazon\\login2.xaml)" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="amazon\\login2.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="ui:UiElement" x:Key="In_Browser">
-                  <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">Out_BrowserAmazon</CSharpValue>
-                </InArgument>
+                <scg:Dictionary x:TypeArguments="x:String, Argument" />
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Sequence>

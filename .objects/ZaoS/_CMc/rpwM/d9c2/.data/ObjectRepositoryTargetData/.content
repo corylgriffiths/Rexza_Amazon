@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="tmkqD6uhckuuWSSOwcfS0Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/orders-2/appointmentform/7152" CVScreenId="e71f9580-adff-451f-91b6-cbd40974830a" CvElementArea="1464, 321, 196, 28" CvType="InputBox" DesignTimeRectangle="1465, 322, 419, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='jform_custom_data__gift_card_paid_date' tag='INPUT' type='text' class='' aaname=' &amp;#x9;Gift Card Paid Date' /&gt;" Guid="add810a3-e468-42a6-a581-0850d38fffd2" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Orders' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="e71f9580-adff-451f-91b6-cbd40974830a" CvTextArea="1464, 306, 102, 12" CvTextArgument="Gift Card Paid Date" CvType="Text" DesignTimeRectangle="1465, 305, 419, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='jform_custom_data__gift_card_paid_date-lbl' tag='LABEL' type='' class='' aaname=' &amp;#x9;Gift Card Paid Date' check:innerText='Gift Card Paid Date' /&gt;" Guid="91e53a40-cb5d-4963-9e79-79ab0de0f070" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="0cbe840eadc2a3e039b9e7cab833f954.png" xmlns="">0Efl-Q7kGvkeusWMOPnQ71g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

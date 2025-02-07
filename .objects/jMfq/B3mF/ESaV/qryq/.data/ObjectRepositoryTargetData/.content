@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="S8VCazPVZEe0RSChnKCPlQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="e54552e3-fc64-42f7-856d-93a49b5e32eb" CvTextArea="665, 139, 80, 12" CvTextArgument="Are you sure?" CvType="Text" DesignTimeRectangle="667, 135, 408, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl name='rexza.fastgem.net says' role='dialog' /&gt;&lt;ctrl name='Are you sure?' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='rexza.fastgem.net says' role='dialog' /&gt;&lt;ctrl name='Are you sure?' role='text' automationid='' check:fulltext='Are you sure?' /&gt;" Guid="a75ba1ae-c491-4249-9883-dc985a065282" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Snapshot Payroll - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="e54552e3-fc64-42f7-856d-93a49b5e32eb" CvElementArea="919, 166, 82, 49" CvTextArea="949, 184, 21, 12" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="925, 171, 71, 38" ElementType="Button" FullSelectorArgument="&lt;ctrl name='rexza.fastgem.net says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='rexza.fastgem.net says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' check:fulltext='OK' /&gt;" Guid="4d8aafbb-c6f1-4fd0-a38c-5d7f3a51f6e6" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e074f94637a5e8a03fc7305800a412d2.png" xmlns="">0BUnup0RD206g9UIhU_XExw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="uNg4frvDmUCtCBDRzL_njQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/accounts" DesignTimeRectangle="346, 231, 79, 21" DesignTimeScaleFactor="0.800000011920929" ElementType="Button" FuzzySelectorArgument="&lt;webctrl parentid='adminForm' tag='BUTTON' type='button' class='btn btn-small js-stools-btn-filter' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Search Tools                          ' check:innerText='Search Tools' /&gt;" Guid="38613321-60e0-4a79-b694-245326fab5d6" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="25b0ae0b79df420113c5c458cea5f87e.png" xmlns="">0GM6BFEOmQE-U3mjNykj7FQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

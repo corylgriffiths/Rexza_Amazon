@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Resend",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "ucanLLXiPkGossEn2Kz_Eg",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/ucanLLXiPkGossEn2Kz_Eg",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/JYeA4V8g_0a8BZbsWd0jnw",
+  "Created": "2025-01-31T01:46:37.0695846Z",
+  "Updated": "2025-01-31T01:46:37.0695846Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="AY1DaH5aWEqlB2v_4v-7TQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/checkout/p/p-106-9587241-7199401/spc" CVScreenId="334e0a4e-1e90-477d-b566-312f3fe94e45" CvElementArea="1134, 213, 254, 38" CvTextArea="1211, 225, 98, 13" CvTextArgument="Place your order" CvType="Button" DesignTimeRectangle="1136, 216, 248, 32" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='placeOrder' tag='INPUT' type='submit' class='a-button-input place-your-order-button' aaname='Place your order' check:text='Place your order' /&gt;" Guid="140d1467-a95f-4d82-a01c-3577520edae1" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Place Your Order - Amazon Checkout' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="334e0a4e-1e90-477d-b566-312f3fe94e45" CvTextArea="1026, 350, 50, 16" CvTextArgument="Change" CvType="Text" DesignTimeRectangle="1027, 348, 48, 18" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-label='Change payment method' tag='A' type='' class='a-link-normal expand-panel-button celwidget' aaname='                                                                                                  Change                                             ' check:innerText='Change' /&gt;" Guid="25fc1c28-2eb6-4e99-91e7-dd9424f40459" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="b7b2300acb40a8b06ff15588626d19ff.png" xmlns="">0x3C6xG9Y0Emiyyj4w0dSlA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

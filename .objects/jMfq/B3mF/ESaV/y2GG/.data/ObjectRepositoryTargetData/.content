@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="OQN1tYDO5kagTBB8q0G_0Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="e54552e3-fc64-42f7-856d-93a49b5e32eb" CvElementArea="919, 166, 82, 49" CvTextArea="949, 184, 21, 12" CvTextArgument="OK" CvType="Button" DesignTimeRectangle="925, 171, 71, 38" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='rexza.fastgem.net says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='rexza.fastgem.net says' role='dialog' /&gt;&lt;ctrl name='OK' role='push button' automationid='' check:fulltext='OK' /&gt;" Guid="b55769bb-21dd-4199-8496-5cb94c3fd8f1" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Snapshot Payroll - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="e54552e3-fc64-42f7-856d-93a49b5e32eb" CvElementArea="1002, 169, 75, 43" CvTextArea="1019, 183, 41, 13" CvTextArgument="Cancel" CvType="Button" DesignTimeRectangle="1004, 171, 71, 38" ElementType="Button" FullSelectorArgument="&lt;ctrl name='rexza.fastgem.net says' role='dialog' /&gt;&lt;ctrl name='Cancel' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='rexza.fastgem.net says' role='dialog' /&gt;&lt;ctrl name='Cancel' role='push button' automationid='' check:fulltext='Cancel' /&gt;" Guid="ba681a43-75ff-4960-80a0-d3812c1f861f" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="87c6db6421f7d1d0b19d3f86ed4d222d.png" xmlns="">0vtRAmzmJhE-0PaL3RejGyw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

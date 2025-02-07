@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Proceed to checkout",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "wfQ7dgyqPEKHIw9WD0vUWg",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/wfQ7dgyqPEKHIw9WD0vUWg",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/KfClGJ4uuE-CNRrLiCAA7w",
+  "Created": "2025-01-30T23:55:07.6766399Z",
+  "Updated": "2025-01-30T23:55:07.6766399Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

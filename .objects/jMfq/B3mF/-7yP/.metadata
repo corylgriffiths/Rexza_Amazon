@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome rexza.fastgem.netproperty-no-giftsfilt",
+  "Type": "Screen",
+  "Id": "-7yPghsNoEeEcPneMbBhvA",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/-7yPghsNoEeEcPneMbBhvA",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/B3mFSTazr0KLyOWOSRBjWA",
+  "Created": "2025-01-23T22:20:55.0035003Z",
+  "Updated": "2025-01-23T22:20:55.0035003Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

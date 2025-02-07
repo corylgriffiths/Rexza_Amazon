@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="5kO4ZuvuMkaeZ2KpetQidA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/property-no-gifts" DesignTimeRectangle="14, 179, 1582, 29" DesignTimeScaleFactor="0.800000011920929" FullSelectorArgument="&lt;webctrl tag='TEXT' /&gt;" Guid="4b812cab-5398-4193-89c7-de1df4f4ed77" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='rexza.fastgem.net/property-no-gifts?filter_json[gift_card]=no' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="564d14b2153c83dca709631f3784a2f1.png" xmlns="">0AaDjJ1_SokqwGDHvrWPIVQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

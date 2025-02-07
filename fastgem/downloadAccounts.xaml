@@ -138,26 +138,26 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="pullPayroll" sap:VirtualizedContainerService.HintSize="1278,1881.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="pullPayroll" sap:VirtualizedContainerService.HintSize="1594,2971" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="588,1751" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1594,2948" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="554,1591" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence sap:VirtualizedContainerService.HintSize="1560,2788" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,84" sap2010:WorkflowViewState.IdRef="CommentOut_16">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1526,84" sap2010:WorkflowViewState.IdRef="CommentOut_16">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="468,237" sap2010:WorkflowViewState.IdRef="Sequence_39">
                   <sap:WorkflowViewStateService.ViewState>
@@ -192,7 +192,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,84" sap2010:WorkflowViewState.IdRef="CommentOut_17">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1526,84" sap2010:WorkflowViewState.IdRef="CommentOut_17">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="468,237" sap2010:WorkflowViewState.IdRef="Sequence_40">
                   <sap:WorkflowViewStateService.ViewState>
@@ -221,7 +221,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="520,219" sap2010:WorkflowViewState.IdRef="CommentOut_18">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1526,84" sap2010:WorkflowViewState.IdRef="CommentOut_18">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484,108" sap2010:WorkflowViewState.IdRef="Sequence_43">
                   <sap:WorkflowViewStateService.ViewState>
@@ -299,24 +299,30 @@
                   </Sequence>
                 </Sequence>
               </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <Sequence DisplayName="Do - Go to Payroll Screen - Download Accounts Excel" sap:VirtualizedContainerService.HintSize="520,1142" sap2010:WorkflowViewState.IdRef="Sequence_42">
+            <Sequence DisplayName="Do - Go to Payroll Screen - Download Accounts Excel" sap:VirtualizedContainerService.HintSize="1526,2474" sap2010:WorkflowViewState.IdRef="Sequence_42">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="https://rexza.fastgem.net/accounts" Version="V4" />
-              <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="Delay_5" />
-              <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="DeleteFileX_2">
+              <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="1492,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="https://rexza.fastgem.net/accounts" Version="V4" />
+              <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="1492,122" sap2010:WorkflowViewState.IdRef="Delay_5" />
+              <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="1492,112" sap2010:WorkflowViewState.IdRef="DeleteFileX_2">
                 <ui:DeleteFileX.Path>
                   <InArgument x:TypeArguments="x:String">
                     <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">Environment.ExpandEnvironmentVariables("%USERPROFILE%\\Downloads\\data.csv")</CSharpValue>
                   </InArgument>
                 </ui:DeleteFileX.Path>
               </ui:DeleteFileX>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Excel'" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Excel'" sap:VirtualizedContainerService.HintSize="1492,225" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/accounts" CVScreenId="155fb477-d337-4626-83e3-64ba882f21d8" ContentHash="B1eXhu8ozkKXyRlX7o-c5g" CvElementArea="979, 204, 67, 35" CvTextArea="994, 214, 38, 13" CvTextArgument="Excel" CvType="Button" DesignTimeRectangle="982, 206, 63, 32" DesignTimeScaleFactor="1.25" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='button' class='btn btn-small btn-info' aaname='Excel' check:text='Excel' /&gt;" Guid="fc0d8eee-0ec6-4a92-b4fb-945885c61ae9" InformativeScreenshot="47fc3dfd46d5fbf34dc4d35f947308f0.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/WTbhjbW-ckiJqwB2fUOm7g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                 </uix:NClick.Target>
@@ -331,7 +337,123 @@
                   </uix:VerifyExecutionOptions>
                 </uix:NClick.VerifyOptions>
               </uix:NClick>
-              <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="434,303" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+              <uix:NCheckState DisplayName="Check App State 'File name'" sap:VirtualizedContainerService.HintSize="1492,1332" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Timeout="60" Version="V4">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="988,1043" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NSetText DisplayName="Set Text 'File name'" sap:VirtualizedContainerService.HintSize="954,194" sap2010:WorkflowViewState.IdRef="NSetText_1" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
+                      <uix:NSetText.Target>
+                        <uix:TargetAnchorable CVScreenId="4ee7a521-aca5-483c-8b71-aab1e516f45e" ContentHash="IUYirAo-oEeBi7vbJUyaaw" CvElementArea="132, 325, 626, 25" CvType="InputBox" DesignTimeRectangle="136, 329, 599, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="f331d1bf-d4a3-46d9-a4d5-69275ce8b4f1" InformativeScreenshot="44dccae13d7ccca0a21f349900cf12e0.png" IsResponsive="True" Reference="edQoiHTr_EubiZ3TXex5dQ/xD6cP9STV0Ooq6TC1Ons8Q" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="4ee7a521-aca5-483c-8b71-aab1e516f45e" CvTextArea="73, 331, 55, 12" CvTextArgument="File name:" CvType="Text" DesignTimeRectangle="18, 326, 115, 23" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer Pane' role='pane' /&gt;&lt;ctrl name='Folder Layout Pane' role='pane' /&gt;&lt;ctrl name='Details Pane' role='pane' /&gt;&lt;ctrl name='File name:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer Pane' role='pane' /&gt;&lt;ctrl name='Folder Layout Pane' role='pane' /&gt;&lt;ctrl name='Details Pane' role='pane' /&gt;&lt;ctrl name='File name:' role='text' automationid='' check:text='File name:' /&gt;" Guid="7171a7f9-59b1-4e64-9ba7-4afff905089c" SearchSteps="Selector, FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NSetText.Target>
+                      <uix:NSetText.Text>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">Environment.ExpandEnvironmentVariables("%USERPROFILE%\\Downloads\\data.csv")</CSharpValue>
+                        </InArgument>
+                      </uix:NSetText.Text>
+                    </uix:NSetText>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Save'" sap:VirtualizedContainerService.HintSize="954,225" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable CVScreenId="4ee7a521-aca5-483c-8b71-aab1e516f45e" ContentHash="-NVo7oTW10OOHP9lfOqLVw" CvElementArea="555, 429, 88, 26" CvTextArea="586, 435, 26, 12" CvTextArgument="Save" CvType="Button" DesignTimeRectangle="555, 429, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' check:text='&amp;amp;Save' /&gt;" Guid="37c1dbc4-0996-496e-93cc-54fd5ca45532" InformativeScreenshot="bf2f636c7fb031cf046e655ede9d2017.png" Reference="edQoiHTr_EubiZ3TXex5dQ/cyMhIsfLv0Kyw_SqQh694g" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="4ee7a521-aca5-483c-8b71-aab1e516f45e" CvElementArea="655, 429, 88, 26" CvTextArea="680, 435, 37, 12" CvTextArgument="Cancel" CvType="Button" DesignTimeRectangle="655, 429, 88, 26" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='2' title='Cancel' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='2' title='Cancel' check:text='Cancel' /&gt;" Guid="5f312dcd-ac90-409e-ae92-289f4bda32fa" SearchSteps="Selector, FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                    <uix:NCheckState DisplayName="Check App State 'data.csv already exists…'" sap:VirtualizedContainerService.HintSize="954,562" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Timeout="2" Version="V4">
+                      <uix:NCheckState.IfExists>
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,280" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Yes'" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable CVScreenId="aa8beade-53e6-4c82-baee-f9d260b7d77e" ContentHash="kv6G04Vknkq7OgDyUcbi_w" CvElementArea="206, 100, 67, 22" CvTextArea="230, 105, 19, 12" CvTextArgument="Yes" CvType="Button" DesignTimeRectangle="206, 100, 68, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Yes' cls='Button' title='&amp;amp;Yes' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Yes' cls='Button' title='&amp;amp;Yes' check:text='&amp;amp;Yes' /&gt;" Guid="c7b44c06-d01a-4656-a2f6-fa21fd8d0519" InformativeScreenshot="061edbc88130adf0e954cd9c9e9710ff.png" Reference="edQoiHTr_EubiZ3TXex5dQ/cvSNC6MPVk6IENSAtZWQ2Q" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Confirm Save As' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="60, 46, 288, 30" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;ctrl name='Confirm Save As' role='pane' /&gt;&lt;ctrl name='data.csv already exists.  Do you want to replace it?' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;ctrl name='Confirm Save As' role='pane' /&gt;&lt;ctrl name='data.csv already exists.  Do you want to replace it?' role='text' automationid='' check:text='data.csv already exists.&amp;#xD;&amp;#xA;Do you want to replace it?' /&gt;" Guid="4bff3dfc-4d95-42cd-8143-7be63ccbc8f0" SearchSteps="Selector, FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                        </Sequence>
+                      </uix:NCheckState.IfExists>
+                      <uix:NCheckState.IfNotExists>
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,91" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </uix:NCheckState.IfNotExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable ContentHash="rzOLoQ50XkyVicgSJ5dSIQ" DesignTimeRectangle="60, 46, 288, 30" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;ctrl name='Confirm Save As' role='pane' /&gt;&lt;ctrl name='data.csv already exists.  Do you want to replace it?' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;ctrl name='Confirm Save As' role='pane' /&gt;&lt;ctrl name='data.csv already exists.  Do you want to replace it?' role='text' automationid='' check:text='data.csv already exists.&amp;#xD;&amp;#xA;Do you want to replace it?' /&gt;" Guid="14c911dd-429c-4793-b507-053310afc0c0" InformativeScreenshot="a763c6c76d9d72b8a160f7f01322a98a.png" Reference="edQoiHTr_EubiZ3TXex5dQ/AmOZjOWp50uqX_yW1elscA" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Confirm Save As' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="aa8beade-53e6-4c82-baee-f9d260b7d77e" CvElementArea="206, 100, 67, 22" CvTextArea="230, 105, 19, 12" CvTextArgument="Yes" CvType="Button" DesignTimeRectangle="206, 100, 68, 23" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Yes' cls='Button' title='&amp;amp;Yes' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Yes' cls='Button' title='&amp;amp;Yes' check:text='&amp;amp;Yes' /&gt;" Guid="cb8e1b97-14cc-4f84-97ab-1a1b21021dde" SearchSteps="Selector, FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NCheckState.Target>
+                    </uix:NCheckState>
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,91" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable CVScreenId="4ee7a521-aca5-483c-8b71-aab1e516f45e" ContentHash="5XmdwEHfikiOWCl-9zo3rw" CvTextArea="73, 331, 55, 12" CvTextArgument="File name:" CvType="Text" DesignTimeRectangle="18, 326, 115, 23" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer Pane' role='pane' /&gt;&lt;ctrl name='Folder Layout Pane' role='pane' /&gt;&lt;ctrl name='Details Pane' role='pane' /&gt;&lt;ctrl name='File name:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer Pane' role='pane' /&gt;&lt;ctrl name='Folder Layout Pane' role='pane' /&gt;&lt;ctrl name='Details Pane' role='pane' /&gt;&lt;ctrl name='File name:' role='text' automationid='' check:text='File name:' /&gt;" Guid="261d22d5-3fc3-4f07-947b-9611f810c1d1" InformativeScreenshot="a52b786c0561f204a281b6ba94964954.png" Reference="edQoiHTr_EubiZ3TXex5dQ/0Gp29Sf_V0-nB6DUn2_2qg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="4ee7a521-aca5-483c-8b71-aab1e516f45e" CvTextArea="60, 356, 68, 15" CvTextArgument="Save as type:" CvType="Text" DesignTimeRectangle="18, 351, 115, 23" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer Pane' role='pane' /&gt;&lt;ctrl name='Folder Layout Pane' role='pane' /&gt;&lt;ctrl name='Details Pane' role='pane' /&gt;&lt;ctrl name='Save as type:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer Pane' role='pane' /&gt;&lt;ctrl name='Folder Layout Pane' role='pane' /&gt;&lt;ctrl name='Details Pane' role='pane' /&gt;&lt;ctrl name='Save as type:' role='text' automationid='' check:text='Save as type:' /&gt;" Guid="e83ac2a0-0920-4ce6-9eb3-b47d79a36018" SearchSteps="Selector, FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NCheckState.Target>
+              </uix:NCheckState>
+              <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="1492,303" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                 <ui:InterruptibleWhile.Body>
                   <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,173" sap2010:WorkflowViewState.IdRef="Sequence_15">
                     <sap:WorkflowViewStateService.ViewState>
@@ -352,7 +474,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InterruptibleWhile>
-              <ui:ReadCsvFile PathResource="{x:Null}" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV" sap:VirtualizedContainerService.HintSize="434,179" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" IncludeColumnNames="False">
+              <ui:ReadCsvFile PathResource="{x:Null}" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV" sap:VirtualizedContainerService.HintSize="1492,179" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" IncludeColumnNames="False">
                 <ui:ReadCsvFile.DataTable>
                   <OutArgument x:TypeArguments="sd:DataTable">
                     <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">Out_PullAccountsData</CSharpReference>

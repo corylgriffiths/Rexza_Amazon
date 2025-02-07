@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="RfSe2-gObUS1TtXyHqvqPA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gp/your-account/order-details" CVScreenId="98056148-25e2-4787-9f89-7914e54f7a0f" CvTextArea="695, 731, 42, 13" CvTextArgument="Status" CvType="Text" DesignTimeRectangle="696, 729, 40, 18" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Status' class='a-color-secondary' parentid='orderDetails' tag='SPAN' type='' check:innerText='Status' /&gt;" Guid="41a9e4ad-cb66-485c-954d-dc8e6f75d28e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Order Details' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="98056148-25e2-4787-9f89-7914e54f7a0f" CvTextArea="738, 755, 47, 13" CvTextArgument="Resend" CvType="Text" DesignTimeRectangle="739, 753, 46, 18" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='         Resend     ' parentid='orderDetails' tag='A' type='' class='a-link-normal gcItemAction' check:innerText='Resend' /&gt;" Guid="6bf678e7-a9b2-4b37-9e77-a30e3628d100" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="b77db15795c105800dca186676941437.png" xmlns="">0FgIJvbeN4E6IU43p4RYjGg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="LzMdj12iK0OhQpKYkUZ1bA" Reference="edQoiHTr_EubiZ3TXex5dQ/uC0gjuWu_Eicb7fdBVcjGQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gp/css/order-history" CVScreenId="0c7967b9-7d02-4d4d-90b4-1ebf2f33f345" CvTextArea="986, 476, 130, 11" CvType="AnyWordGroup" DesignTimeRectangle="986, 474, 129, 15" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='a-color-secondary' parentid='a-page' tag='SPAN' type='' /&gt;" Guid="f0462d14-f6d2-47fe-90c7-68286986307d" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Your Orders' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="0c7967b9-7d02-4d4d-90b4-1ebf2f33f345" CvTextArea="933, 476, 51, 11" CvTextArgument="ORDER #" CvType="Text" DesignTimeRectangle="934, 474, 49, 15" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Order #' parentid='a-page' tag='SPAN' type='' class='a-color-secondary a-text-caps' check:innerText='ORDER #' /&gt;" Guid="b06edc58-1b1a-419f-9caa-c875f1d0ce78" SearchSteps="FuzzySelector, CV" />
+          <Target CVScreenId="449d98df-ccbb-44d6-bbf6-c952e2ad36f3" CvElementArea="352, 415, 127, 34" CvType="InputBox" DesignTimeRectangle="355, 417, 122, 29" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='SPAN' type='' class='a-button-text a-declarative' aaname='' check:innerText='past 3 months' /&gt;" Guid="5844becf-3209-47d4-b4cd-0ad6352b8723" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="8d7ddc1c3a7065fd29095997e7a33013.png" xmlns="">0M-ynjLZwQkyNxeCp8M4WqQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

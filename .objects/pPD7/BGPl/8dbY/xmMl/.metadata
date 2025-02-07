@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Account & Lists",
+  "Type": "Element",
+  "Id": "xmMltxU3VkyuT5ykBq9b0g",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/xmMltxU3VkyuT5ykBq9b0g",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/8dbYdeOmTkWCM7eVjIidOg",
+  "Created": "2025-01-31T22:37:46.9244328Z",
+  "Updated": "2025-01-31T22:37:46.9244328Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

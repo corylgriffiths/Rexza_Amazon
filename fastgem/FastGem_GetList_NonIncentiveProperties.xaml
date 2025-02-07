@@ -1,0 +1,607 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="FastGem_GetList_NonIncentiveProperties" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Out_NonIncentiveProperties_DT" Type="OutArgument(sd:DataTable)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Xml.ReaderWriter</AssemblyReference>
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="1628,4871" sap2010:WorkflowViewState.IdRef="Sequence_101">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="pull json from API" sap:VirtualizedContainerService.HintSize="1628,4848" sap2010:WorkflowViewState.IdRef="Sequence_100">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="nonIncetiveAccountsAPI" />
+        <Variable x:TypeArguments="sd:DataTable" Name="NonGiftCardProperties_DT" />
+        <Variable x:TypeArguments="x:String" Name="Result" />
+        <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="Header" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Chrome rexza.fastgem.netproperty-no-giftsfilt" sap:VirtualizedContainerService.HintSize="1594,4765" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="e307072e-c652-492c-8322-18601c2e2d5a" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1560,4525" sap2010:WorkflowViewState.IdRef="Sequence_102">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="HTML_Response" />
+                <Variable x:TypeArguments="njl:JObject" Name="html_response_json" />
+                <Variable x:TypeArguments="scg:List(scg:Dictionary(x:String, x:String))" Name="Data" />
+                <Variable x:TypeArguments="njl:JObject" Name="jsonData" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1526,175" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+                <ui:LogMessage.Message>
+                  <InArgument x:TypeArguments="x:Object">
+                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"getting property list"</CSharpValue>
+                  </InArgument>
+                </ui:LogMessage.Message>
+              </ui:LogMessage>
+              <Sequence DisplayName="Set Filter" sap:VirtualizedContainerService.HintSize="1526,3988" sap2010:WorkflowViewState.IdRef="Sequence_104">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NCheckState DisplayName="Check App State 'Search Tools(1)'" sap:VirtualizedContainerService.HintSize="1492,3894" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="e307072e-c652-492c-8322-18601c2e2d5a" Timeout="5" Version="V4">
+                  <uix:NCheckState.IfExists>
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="988,3612" sap2010:WorkflowViewState.IdRef="Sequence_108">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search Tools'" sap:VirtualizedContainerService.HintSize="954,225" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e307072e-c652-492c-8322-18601c2e2d5a" Version="V4">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/accounts" ContentHash="ZZcvpHato06X-iUWCHcY7g" DesignTimeRectangle="346, 231, 79, 21" DesignTimeScaleFactor="0.800000011920929" ElementType="Button" FuzzySelectorArgument="&lt;webctrl parentid='adminForm' tag='BUTTON' type='button' class='btn btn-small js-stools-btn-filter btn-info' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Search Tools                          ' check:innerText='Search Tools' /&gt;" Guid="eecbf3aa-3399-4540-8beb-257422bbba84" InformativeScreenshot="0bdfdc1bf0eefb236a6a92619b4ec935.png" Reference="edQoiHTr_EubiZ3TXex5dQ/eL8gOnn2K0iAnskNnb1k1w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                        <uix:NClick.VerifyOptions>
+                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                            <uix:VerifyExecutionOptions.Retry>
+                              <InArgument x:TypeArguments="x:Boolean" />
+                            </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Timeout>
+                              <InArgument x:TypeArguments="x:Double" />
+                            </uix:VerifyExecutionOptions.Timeout>
+                          </uix:VerifyExecutionOptions>
+                        </uix:NClick.VerifyOptions>
+                      </uix:NClick>
+                      <uix:NCheckState DisplayName="check if gift card filter is already set to no" sap:VirtualizedContainerService.HintSize="954,979" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e307072e-c652-492c-8322-18601c2e2d5a" Version="V4">
+                        <uix:NCheckState.IfExists>
+                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,91" sap2010:WorkflowViewState.IdRef="Sequence_105">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </uix:NCheckState.IfExists>
+                        <uix:NCheckState.IfNotExists>
+                          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,730" sap2010:WorkflowViewState.IdRef="Sequence_106">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Gift Card'" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e307072e-c652-492c-8322-18601c2e2d5a" Version="V4">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/accounts" CVScreenId="94fb5c4e-1566-4d16-b51c-1eafbe8902dc" ContentHash="wDhonFfmnUCM_e4iip2gyQ" CvElementArea="327, 264, 151, 22" CvType="InputBox" DesignTimeRectangle="463, 266, 14, 18" DesignTimeScaleFactor="0.800000011920929" FuzzySelectorArgument="&lt;webctrl parentid='filter_json_gift_card_chzn' tag='B' type='' class='' aaname='' /&gt;" Guid="badc5567-6122-4590-8287-76b0d4493f86" InformativeScreenshot="87b3c3ded62720d6012c2c6168cac667.png" Reference="edQoiHTr_EubiZ3TXex5dQ/V6n1gwkhjkeuepuB8ZZBUg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CVScreenId="94fb5c4e-1566-4d16-b51c-1eafbe8902dc" CvElementArea="327, 264, 151, 22" CvType="InputBox" DesignTimeRectangle="336, 266, 111, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='filter_json_gift_card_chzn' tag='SPAN' type='' class='' aaname='Gift Card' check:innerText='Gift Card' /&gt;" Guid="a2f0cea8-7a41-4fa4-af9d-c1da5228e2b5" SearchSteps="FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                              <uix:NClick.VerifyOptions>
+                                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                  <uix:VerifyExecutionOptions.Retry>
+                                    <InArgument x:TypeArguments="x:Boolean" />
+                                  </uix:VerifyExecutionOptions.Retry>
+                                  <uix:VerifyExecutionOptions.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:VerifyExecutionOptions.Timeout>
+                                </uix:VerifyExecutionOptions>
+                              </uix:NClick.VerifyOptions>
+                            </uix:NClick>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'No'" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e307072e-c652-492c-8322-18601c2e2d5a" Version="V4">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/accounts" CVScreenId="0ec56128-8d23-4cc4-a25d-7dc9321abc53" ContentHash="_59qREE29UmBveDzw_MQEw" CvTextArea="336, 309, 14, 10" CvTextArgument="No" CvType="Text" DesignTimeRectangle="333, 305, 141, 20" DesignTimeScaleFactor="0.800000011920929" ElementType="ListItem" FuzzySelectorArgument="&lt;webctrl type='' parentid='filter_json_gift_card_chzn' tag='LI' class='active-result' aaname='No' check:innerText='No' /&gt;" Guid="88ec3743-5a1d-4093-9a7c-a3c55034fba3" InformativeScreenshot="14e5a5b8ead7bd234ab9b247d289d45f.png" Reference="edQoiHTr_EubiZ3TXex5dQ/GWAaWypPrEKXfcFOZmyzDg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CVScreenId="0ec56128-8d23-4cc4-a25d-7dc9321abc53" CvTextArea="336, 289, 17, 10" CvTextArgument="Yes" CvType="Text" DesignTimeRectangle="333, 285, 141, 20" ElementType="ListItem" FuzzySelectorArgument="&lt;webctrl parentid='filter_json_gift_card_chzn' tag='LI' type='' class='active-result' aaname='Yes' check:innerText='Yes' /&gt;" Guid="5a93e634-48ef-4a44-aa9e-da770faf9c81" SearchSteps="FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                              <uix:NClick.VerifyOptions>
+                                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                  <uix:VerifyExecutionOptions.Retry>
+                                    <InArgument x:TypeArguments="x:Boolean" />
+                                  </uix:VerifyExecutionOptions.Retry>
+                                  <uix:VerifyExecutionOptions.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:VerifyExecutionOptions.Timeout>
+                                </uix:VerifyExecutionOptions>
+                              </uix:NClick.VerifyOptions>
+                            </uix:NClick>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e307072e-c652-492c-8322-18601c2e2d5a" Version="V4">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/accounts" CVScreenId="1072ae96-41af-4a63-91c5-3330a811929a" ContentHash="B1LoIr-cC0CHLA6nhhSB0w" CvElementArea="303, 231, 34, 23" CvType="Button" DesignTimeRectangle="304, 231, 32, 22" DesignTimeScaleFactor="0.800000011920929" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-small js-stools-btn-search' aaname='                                                      ' /&gt;" Guid="0165e92c-ba3a-44b5-8d6f-5e48c2bc07a2" InformativeScreenshot="262f34ba700f4ad114204e44e0846689.png" Reference="edQoiHTr_EubiZ3TXex5dQ/RpfsfiQGe0CZty5sMiog5g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CVScreenId="1072ae96-41af-4a63-91c5-3330a811929a" CvElementArea="142, 230, 165, 24" CvType="InputBox" DesignTimeRectangle="143, 231, 162, 22" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='filter_search' tag='INPUT' type='text' class='' placeholder='Search' aaname='Submit' /&gt;" Guid="07cc394b-f78e-4dbd-b357-d18841384783" SearchSteps="FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                              <uix:NClick.VerifyOptions>
+                                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                  <uix:VerifyExecutionOptions.Retry>
+                                    <InArgument x:TypeArguments="x:Boolean" />
+                                  </uix:VerifyExecutionOptions.Retry>
+                                  <uix:VerifyExecutionOptions.Timeout>
+                                    <InArgument x:TypeArguments="x:Double" />
+                                  </uix:VerifyExecutionOptions.Timeout>
+                                </uix:VerifyExecutionOptions>
+                              </uix:NClick.VerifyOptions>
+                            </uix:NClick>
+                          </Sequence>
+                        </uix:NCheckState.IfNotExists>
+                        <uix:NCheckState.Target>
+                          <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/accounts" CVScreenId="d3253408-fcef-4877-a6fa-86e0795848f6" ContentHash="M8a5zx7Uq0SqCK5hn-yHxw" CvElementArea="327, 264, 151, 22" CvType="InputBox" DesignTimeRectangle="336, 266, 111, 20" DesignTimeScaleFactor="0.800000011920929" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='filter_json_gift_card_chzn' tag='SPAN' type='' class='' aaname='No' check:innerText='No' /&gt;" Guid="22e9d7eb-f50c-44e5-8ccc-7dbc8784c399" InformativeScreenshot="83e04adf42cccd48b6d91d0dda2bb19f.png" Reference="edQoiHTr_EubiZ3TXex5dQ/p0kdlqPHY0q2t9A2-E81UQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                        </uix:NCheckState.Target>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </uix:NCheckState>
+                      <Sequence DisplayName="set the recs per page" sap:VirtualizedContainerService.HintSize="954,2346" sap2010:WorkflowViewState.IdRef="Sequence_111">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="PropCountText" />
+                          <Variable x:TypeArguments="x:Int32" Name="propCount" />
+                          <Variable x:TypeArguments="x:Int32" Name="rowCount" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="486,114" sap2010:WorkflowViewState.IdRef="Assign_62">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">
+                              <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_75">rowCount</CSharpReference>
+                            </OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <uix:NGetText DisplayName="Get Text 'Current Page Propertie…'" sap:VirtualizedContainerService.HintSize="486,189" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="e307072e-c652-492c-8322-18601c2e2d5a" Version="V4">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/accounts" CVScreenId="bdf2e57e-df7d-4c1c-946b-372325202cbb" ContentHash="c-mt03nH4UqF485UXUOUtA" DesignTimeRectangle="1484, 200, 217, 19" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl class='btn-wrapper' type='' parentid='adminForm' tag='DIV' aaname='                          Properties*' /&gt;" Guid="4e471e3e-204d-49c8-8c7a-15e6db458102" ImageBase64="" InformativeScreenshot="cea64cd270d99f7ffe47ff6b8bac8c50.png" Reference="edQoiHTr_EubiZ3TXex5dQ/PHy2UW5Hw0yZy6iBYpwSzQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                          </uix:NGetText.Target>
+                          <uix:NGetText.TextString>
+                            <OutArgument x:TypeArguments="x:String">
+                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_73">PropCountText</CSharpReference>
+                            </OutArgument>
+                          </uix:NGetText.TextString>
+                        </uix:NGetText>
+                        <Assign sap:VirtualizedContainerService.HintSize="486,114" sap2010:WorkflowViewState.IdRef="Assign_61">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">
+                              <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_74">propCount</CSharpReference>
+                            </OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">
+                              <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">int.Parse(PropCountText.Split(":",System.StringSplitOptions.None).LastOrDefault().Trim())</CSharpValue>
+                            </InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '20'" sap:VirtualizedContainerService.HintSize="486,225" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e307072e-c652-492c-8322-18601c2e2d5a" Version="V4">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/accounts" ContentHash="QKR9AZcKzEGnNDyyV8tjQw" DesignTimeRectangle="1640, 1518, 66, 26" DesignTimeScaleFactor="1.100000023841858" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='limit' tag='SELECT' type='' class='inputbox input-mini' aaname='' /&gt;" Guid="897bcd41-0a22-4cb2-a9bb-377347ed8c11" InformativeScreenshot="2e1cee80ad31b9fe1705c45644022d0a.png" Reference="edQoiHTr_EubiZ3TXex5dQ/zhwFI5Duj06NZ-WBcXDmgg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DisplayName="Click '100'" sap:VirtualizedContainerService.HintSize="486,225" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e307072e-c652-492c-8322-18601c2e2d5a" Version="V4">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable CVScreenId="3fdbb4f2-a8e3-415a-b013-fd31fc872c10" ContentHash="HZJ_70wiTUSuID_LsaZ1GA" CvTextArea="10, 198, 17, 13" CvTextArgument="All" CvType="Text" DesignTimeRectangle="10, 198, 17, 13" DesignTimeScaleFactor="1" ElementType="Text" Guid="e1649702-b873-4b52-bdb5-1b1a386a8ddd" InformativeScreenshot="1d8c821c9d0d68df388cf192b0278c9e.png" Reference="edQoiHTr_EubiZ3TXex5dQ/JvZWDnUuYk6Lpn4ljbxMog" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CVScreenId="8a7642f0-ff9e-4dae-b3a1-e83352cadb09" CvTextArea="11, 174, 22, 13" CvTextArgument="100" CvType="Text" DesignTimeRectangle="11, 174, 22, 13" ElementType="Text" Guid="0f84781a-4391-4c18-8584-82072a3bf489" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,246" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                          <ui:CommentOut.Body>
+                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,135" sap2010:WorkflowViewState.IdRef="Sequence_114">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="limit" sap:VirtualizedContainerService.HintSize="416,75" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" ScopeGuid="e09f418b-5616-4c27-baae-206684effcf6" Version="V2">
+                                <uix:NApplicationCard.Body>
+                                  <ActivityAction x:TypeArguments="x:Object">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,280" sap2010:WorkflowViewState.IdRef="Sequence_112">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '100'" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e09f418b-5616-4c27-baae-206684effcf6" Version="V4">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable CVScreenId="3fdbb4f2-a8e3-415a-b013-fd31fc872c10" ContentHash="HZJ_70wiTUSuID_LsaZ1GA" CvTextArea="10, 198, 17, 13" CvTextArgument="All" CvType="Text" DesignTimeRectangle="10, 198, 17, 13" DesignTimeScaleFactor="1" ElementType="Text" Guid="e1649702-b873-4b52-bdb5-1b1a386a8ddd" InformativeScreenshot="1d8c821c9d0d68df388cf192b0278c9e.png" Reference="edQoiHTr_EubiZ3TXex5dQ/JvZWDnUuYk6Lpn4ljbxMog" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target CVScreenId="8a7642f0-ff9e-4dae-b3a1-e83352cadb09" CvTextArea="11, 174, 22, 13" CvTextArgument="100" CvType="Text" DesignTimeRectangle="11, 174, 22, 13" ElementType="Text" Guid="0f84781a-4391-4c18-8584-82072a3bf489" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                        <uix:NClick.VerifyOptions>
+                                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                            <uix:VerifyExecutionOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionOptions.Retry>
+                                            <uix:VerifyExecutionOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionOptions.Timeout>
+                                          </uix:VerifyExecutionOptions>
+                                        </uix:NClick.VerifyOptions>
+                                      </uix:NClick>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </uix:NApplicationCard.Body>
+                                <uix:NApplicationCard.TargetApp>
+                                  <uix:TargetApp Area="1384, 1751, 48, 218" ContentHash="Fwc0DglsOkuWbrYoWiCRYQ" FilePath="C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" IconBase64="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" InformativeScreenshot="813ebb0c8856a29d913e1fc1166b2086.png" Reference="edQoiHTr_EubiZ3TXex5dQ/d7ZTkdIihkGFLqFOAuEq6A" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" Version="V1" />
+                                </uix:NApplicationCard.TargetApp>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NApplicationCard>
+                            </Sequence>
+                          </ui:CommentOut.Body>
+                        </ui:CommentOut>
+                        <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="486,1146" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                          <ui:InterruptibleWhile.Body>
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,1023" sap2010:WorkflowViewState.IdRef="Sequence_113">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NExtractData ContinueOnError="True" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Name'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Address'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='SalesReps'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='tr' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='3' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='6' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='fulltext'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='11' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="e307072e-c652-492c-8322-18601c2e2d5a" Version="V4">
+                                <uix:NExtractData.DataTable>
+                                  <InOutArgument x:TypeArguments="sd:DataTable">
+                                    <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_70">NonGiftCardProperties_DT</CSharpReference>
+                                  </InOutArgument>
+                                </uix:NExtractData.DataTable>
+                                <uix:NExtractData.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://rexza.fastgem.net/accounts" DesignTimeRectangle="20, -2019, 1686, 7340" DesignTimeScaleFactor="1.100000023841858" FullSelectorArgument="&lt;webctrl id='accountList' tag='TABLE' /&gt;&lt;webctrl tag='TBODY' /&gt;" Guid="c490f6fe-d666-4fb7-be0f-1472515e5156" InformativeScreenshot="2fa0cc632e0d8e4d7570f6aa7825d1a5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                </uix:NExtractData.Target>
+                              </uix:NExtractData>
+                              <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_63">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Int32">
+                                    <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_76">rowCount</CSharpReference>
+                                  </OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Int32">
+                                    <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">NonGiftCardProperties_DT.RowCount()</CSharpValue>
+                                  </InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="434,269" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" Version="V4">
+                                <uix:NMouseScroll.SearchedElement>
+                                  <uix:SearchedElement>
+                                    <uix:SearchedElement.Target>
+                                      <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/accounts" CVScreenId="efe0bfea-b9a9-46c5-b884-70b9ac7d2243" ContentHash="hHvovZfFBUqrd_6k56Gzpw" CvElementArea="866, 1760, 45, 34" CvType="Button" DesignTimeRectangle="881, 1769, 12, 13" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' parentid='tw-content-wrapper' tag='SPAN' class='icon-step-forward icon-next' aaname='' /&gt;" Guid="1a8d8a25-4b18-40e4-8d68-30e548b160be" InformativeScreenshot="e64cffb59697096f650e4c741550bfd1.png" Reference="edQoiHTr_EubiZ3TXex5dQ/v1Ha0YKtREyGGnmUsLoM5A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target CVScreenId="efe0bfea-b9a9-46c5-b884-70b9ac7d2243" CvElementArea="866, 1760, 45, 34" CvType="Button" DesignTimeRectangle="868, 1760, 43, 33" FuzzySelectorArgument="&lt;webctrl class='hasTooltip' parentid='tw-content-wrapper' tag='A' type='' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' /&gt;" Guid="ab416015-2cd4-4bae-a2dc-8b8e52b204b6" SearchSteps="FuzzySelector, CV" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:SearchedElement.Target>
+                                    <uix:SearchedElement.Timeout>
+                                      <InArgument x:TypeArguments="x:Double" />
+                                    </uix:SearchedElement.Timeout>
+                                  </uix:SearchedElement>
+                                </uix:NMouseScroll.SearchedElement>
+                              </uix:NMouseScroll>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DisplayName="click next page" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e307072e-c652-492c-8322-18601c2e2d5a" Version="V4">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/accounts" CVScreenId="745d1aa6-bc83-42df-ad38-5cb57da5ff97" ContentHash="czZBkZjsCk2-8H3kH7RRwQ" CvElementArea="1013, 1489, 45, 34" CvType="Button" DesignTimeRectangle="1028, 1499, 12, 13" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl type='' class='icon-step-forward icon-next' parentid='tw-content-wrapper' tag='SPAN' aaname='' /&gt;" Guid="8ca81046-e216-4c1b-bf94-b921f766169f" InformativeScreenshot="780cffef993a2855f15204a554a984cb.png" Reference="edQoiHTr_EubiZ3TXex5dQ/VlQKFfyuaUOBvkcZnPuLuA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target CVScreenId="745d1aa6-bc83-42df-ad38-5cb57da5ff97" CvElementArea="1056, 1489, 46, 35" CvType="Button" DesignTimeRectangle="1058, 1490, 43, 33" FuzzySelectorArgument="&lt;webctrl class='hasTooltip' type='' parentid='tw-content-wrapper' tag='A' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' /&gt;" Guid="032a5b68-1adc-468d-bc97-8ab1864fde87" SearchSteps="FuzzySelector, CV" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NClick.Target>
+                                <uix:NClick.VerifyOptions>
+                                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                    <uix:VerifyExecutionOptions.Retry>
+                                      <InArgument x:TypeArguments="x:Boolean" />
+                                    </uix:VerifyExecutionOptions.Retry>
+                                    <uix:VerifyExecutionOptions.Timeout>
+                                      <InArgument x:TypeArguments="x:Double" />
+                                    </uix:VerifyExecutionOptions.Timeout>
+                                  </uix:VerifyExecutionOptions>
+                                </uix:NClick.VerifyOptions>
+                              </uix:NClick>
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="LogMessage_4">
+                                <ui:LogMessage.Message>
+                                  <InArgument x:TypeArguments="x:Object">
+                                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">"done"</CSharpValue>
+                                  </InArgument>
+                                </ui:LogMessage.Message>
+                              </ui:LogMessage>
+                            </Sequence>
+                          </ui:InterruptibleWhile.Body>
+                          <ui:InterruptibleWhile.Condition>
+                            <CSharpValue x:TypeArguments="x:Boolean" DisplayName="C sharp value" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">rowCount &lt; propCount</CSharpValue>
+                          </ui:InterruptibleWhile.Condition>
+                        </ui:InterruptibleWhile>
+                      </Sequence>
+                    </Sequence>
+                  </uix:NCheckState.IfExists>
+                  <uix:NCheckState.IfNotExists>
+                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,230" sap2010:WorkflowViewState.IdRef="Sequence_109">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="LogMessage_3">
+                        <ui:LogMessage.Message>
+                          <InArgument x:TypeArguments="x:Object">
+                            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">"Page didnt load"</CSharpValue>
+                          </InArgument>
+                        </ui:LogMessage.Message>
+                      </ui:LogMessage>
+                    </Sequence>
+                  </uix:NCheckState.IfNotExists>
+                  <uix:NCheckState.Target>
+                    <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/accounts" ContentHash="uNg4frvDmUCtCBDRzL_njQ" DesignTimeRectangle="346, 231, 79, 21" DesignTimeScaleFactor="0.800000011920929" ElementType="Button" FuzzySelectorArgument="&lt;webctrl parentid='adminForm' tag='BUTTON' type='button' class='btn btn-small js-stools-btn-filter' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Search Tools                          ' check:innerText='Search Tools' /&gt;" Guid="38613321-60e0-4a79-b694-245326fab5d6" InformativeScreenshot="25b0ae0b79df420113c5c458cea5f87e.png" Reference="edQoiHTr_EubiZ3TXex5dQ/HEtvyInVpEGX-feK01sCGg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                  </uix:NCheckState.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NCheckState>
+              </Sequence>
+              <ui:FilterDataTable DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="1526,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" SelectColumnsMode="Remove">
+                <ui:FilterDataTable.DataTable>
+                  <InArgument x:TypeArguments="sd:DataTable">
+                    <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">NonGiftCardProperties_DT</CSharpValue>
+                  </InArgument>
+                </ui:FilterDataTable.DataTable>
+                <ui:FilterDataTable.Filters>
+                  <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                    <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
+                      <ui:FilterOperationArgument.Column>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">"Name"</CSharpValue>
+                        </InArgument>
+                      </ui:FilterOperationArgument.Column>
+                    </ui:FilterOperationArgument>
+                  </scg:List>
+                </ui:FilterDataTable.Filters>
+                <ui:FilterDataTable.OutputDataTable>
+                  <OutArgument x:TypeArguments="sd:DataTable">
+                    <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_77">NonGiftCardProperties_DT</CSharpReference>
+                  </OutArgument>
+                </ui:FilterDataTable.OutputDataTable>
+                <ui:FilterDataTable.SelectColumns>
+                  <scg:List x:TypeArguments="InArgument" Capacity="4">
+                    <x:Null />
+                  </scg:List>
+                </ui:FilterDataTable.SelectColumns>
+              </ui:FilterDataTable>
+              <Assign sap:VirtualizedContainerService.HintSize="1526,107" sap2010:WorkflowViewState.IdRef="Assign_64">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="sd:DataTable">
+                    <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_78">Out_NonIncentiveProperties_DT</CSharpReference>
+                  </OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="sd:DataTable">
+                    <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">NonGiftCardProperties_DT</CSharpValue>
+                  </InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="153, 248, 1303, 1722" BrowserType="Chrome" ContentHash="tGUQbHvHQUu3K-IQJ1insQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGZSURBVDhPrZI76M9hFMbdr6GUy4BMFpsnFqXYpJSMNmWThbKIQpHBLdInBgaxWCS3jC7Lh8El9xgMxOieQUfnpz+5DU6det/3e57nnO/znGHD/ldIKkdKZkpmS2b9lPU2QzKian8FHi3ZILknuSu5L3kuedbnersjWScZ9Z2kweMkW7t4vWSl5JbkgeSJ5IZkhWRTk26UjPlGIpks2S15KlklGS/ZI7ktWShZ0hNsk4yVrOlG1XBCEZyQfJY8lpySXJJ8bFDdT/cU7yTn+14EnySHiuCA5IPknGSH5KLkpWSvZFdn1byWnO2ay5L3kp1FMElyVHJNMqfHfiRZ1PpULpU8lMyXzJPclOyv3x0UlD0XukOR1BTbhxDsk5yRzJVc6fPUgYiDLGYlhyWbJdclUyTTu2NZfFxytYm+4YZaWbm4xTvZwi1rS0vgEq/2YMEP4EEMIVktedEqH5Qc63P5v/yX4EH0x+G9TOXMK8kbyVvJ2j+CB9FFtWVl35fekS0/rO/foklKwBLtiGTiP4MrhugxbWDX7wi+AsmBiI6aESUVAAAAAElFTkSuQmCC" InformativeScreenshot="7f047a88383847a14ba9ab1aaccaefd3.jpg" Reference="edQoiHTr_EubiZ3TXex5dQ/-7yPghsNoEeEcPneMbBhvA" Selector="&lt;html app='chrome.exe' title='Properties' /&gt;" Title="Properties" Url="https://rexza.fastgem.net/accounts" Version="V1" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>

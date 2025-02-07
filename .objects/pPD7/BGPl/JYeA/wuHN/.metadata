@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Message",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "wuHNn0M10kOOMGgT9ECm5A",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/wuHNn0M10kOOMGgT9ECm5A",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/JYeA4V8g_0a8BZbsWd0jnw",
+  "Created": "2025-02-01T22:03:45.0093275Z",
+  "Updated": "2025-02-01T22:03:45.0093275Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

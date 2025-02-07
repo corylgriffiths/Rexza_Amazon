@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="g-hrB-Gvbk2GrU5Kdh4ccw" Reference="edQoiHTr_EubiZ3TXex5dQ/ucanLLXiPkGossEn2Kz_Eg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gp/legacy/order-details/ref=ppx_hzod_rd_dt_b_gp_rd" CVScreenId="9cf988cc-734f-428b-bebc-50b276930b79" CvTextArea="538, 1084, 43, 15" CvType="AnyWordGroup" DesignTimeRectangle="537, 1082, 79, 20" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl type='' parentid='orderDetails' tag='DIV' class='a-column a-span2' /&gt;" Guid="2ec7cf28-6085-4ebb-a70d-ded339ef9831" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Order Details' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="1">
+          <Target CVScreenId="eb45c769-f754-40ef-8786-54126bde790b" DesignTimeRectangle="893, 1083, 46, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='         Resend     ' parentid='orderDetails' tag='A' href='gp/css/gc-reissue/email-selection.html?ie=UTF8&amp;amp;gcID=A0511353107IG52DCGG4C&amp;amp;orderID=114-8724606-9019442' /&gt;" Guid="6b0994cd-09b7-41e7-83b8-e53f07e18f05" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="6e2461251a7d0c40e20a17ab0ca861c0.png" xmlns="">0BWEwm2oU5E-341TMx0dnYA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

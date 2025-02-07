@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="JaRW97AgoEuB0pTuD71BIw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="64, 0, 1743, 2119" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGZSURBVDhPrZI76M9hFMbdr6GUy4BMFpsnFqXYpJSMNmWThbKIQpHBLdInBgaxWCS3jC7Lh8El9xgMxOieQUfnpz+5DU6det/3e57nnO/znGHD/ldIKkdKZkpmS2b9lPU2QzKian8FHi3ZILknuSu5L3kuedbnersjWScZ9Z2kweMkW7t4vWSl5JbkgeSJ5IZkhWRTk26UjPlGIpks2S15KlklGS/ZI7ktWShZ0hNsk4yVrOlG1XBCEZyQfJY8lpySXJJ8bFDdT/cU7yTn+14EnySHiuCA5IPknGSH5KLkpWSvZFdn1byWnO2ay5L3kp1FMElyVHJNMqfHfiRZ1PpULpU8lMyXzJPclOyv3x0UlD0XukOR1BTbhxDsk5yRzJVc6fPUgYiDLGYlhyWbJdclUyTTu2NZfFxytYm+4YZaWbm4xTvZwi1rS0vgEq/2YMEP4EEMIVktedEqH5Qc63P5v/yX4EH0x+G9TOXMK8kbyVvJ2j+CB9FFtWVl35fekS0/rO/foklKwBLtiGTiP4MrhugxbWDX7wi+AsmBiI6aESUVAAAAAElFTkSuQmCC" Selector="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" Title="Snapshot Payroll" Url="https://rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" Version="V1">
+      <imageRef attrName="InformativeScreenshot" originalValue="f56c22851c34576d20187249a8d6170d.jpg" xmlns="">0h7rWwdiyNk6bdki2SyV68w</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

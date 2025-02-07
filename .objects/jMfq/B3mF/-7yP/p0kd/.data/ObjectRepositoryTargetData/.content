@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="M8a5zx7Uq0SqCK5hn-yHxw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/accounts" CVScreenId="d3253408-fcef-4877-a6fa-86e0795848f6" CvElementArea="327, 264, 151, 22" CvType="InputBox" DesignTimeRectangle="336, 266, 111, 20" DesignTimeScaleFactor="0.800000011920929" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='filter_json_gift_card_chzn' tag='SPAN' type='' class='' aaname='No' check:innerText='No' /&gt;" Guid="22e9d7eb-f50c-44e5-8ccc-7dbc8784c399" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="83e04adf42cccd48b6d91d0dda2bb19f.png" xmlns="">0muqlaK_ryUyijMBdDcyLAg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

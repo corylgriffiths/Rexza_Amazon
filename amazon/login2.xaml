@@ -1,9 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="login" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <x:Members>
-    <x:Property Name="In_Browser" Type="InArgument(ui:UiElement)" />
-  </x:Members>
-  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+<Activity mc:Ignorable="sap sap2010" x:Class="login" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -127,7 +122,7 @@
       <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="login" sap:VirtualizedContainerService.HintSize="1379,2277" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="login" sap:VirtualizedContainerService.HintSize="1605,1208.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ss:SecureString" Name="varPassword" />
       <Variable x:TypeArguments="x:String" Name="varUsername" />
@@ -137,155 +132,41 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Amazon" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Rexza" sap:VirtualizedContainerService.HintSize="1092,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2">
-      <ui:GetRobotCredential.Password>
-        <OutArgument x:TypeArguments="ss:SecureString">
-          <CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">varPassword</CSharpReference>
-        </OutArgument>
-      </ui:GetRobotCredential.Password>
-      <ui:GetRobotCredential.Username>
-        <OutArgument x:TypeArguments="x:String">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">varUsername</CSharpReference>
-        </OutArgument>
-      </ui:GetRobotCredential.Username>
-    </ui:GetRobotCredential>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1092,2079" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Your Orders(1)" sap:VirtualizedContainerService.HintSize="1022,1136" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="de4ed5c7-215d-4bdd-a991-cceb86274966" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1058,1919" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="tmp_OrderNo" />
-              <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="outputChildren" />
-            </Sequence.Variables>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,896" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="1024,57" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1024,628" sap2010:WorkflowViewState.IdRef="TryCatch_1">
-              <TryCatch.Try>
-                <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="416,276" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="954,259" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_13">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Hello, sign in Account …'" sap:VirtualizedContainerService.HintSize="382,216" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="amazon.com" ContentHash="fh8LmTA5WUqtKB_Qrbf-Bg" DesignTimeRectangle="1729, 152, 77, 50" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='nav-orders' tag='A' type='' class='nav-a nav-a-2   nav-progressive-attribute' aaname='   Returns   &amp;amp; Orders ' check:innerText='Returns&amp;#xA;&amp;amp; Orders' /&gt;" Guid="59ddbab1-64e6-49f0-8f43-143f6d2d13b5" InformativeScreenshot="79bfb93d5693f32e87e42e814c2b3c1f.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/wdwv6ldgwEifKfCHW3IIuw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com. Spend less. Smile more.' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
-                    </uix:NClick.Target>
-                    <uix:NClick.VerifyOptions>
-                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                        <uix:VerifyExecutionOptions.Retry>
-                          <InArgument x:TypeArguments="x:Boolean" />
-                        </uix:VerifyExecutionOptions.Retry>
-                        <uix:VerifyExecutionOptions.Timeout>
-                          <InArgument x:TypeArguments="x:Double" />
-                        </uix:VerifyExecutionOptions.Timeout>
-                      </uix:VerifyExecutionOptions>
-                    </uix:NClick.VerifyOptions>
-                  </uix:NClick>
+                  <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
                 </Sequence>
-              </TryCatch.Try>
-              <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
-                  <ActivityAction x:TypeArguments="s:Exception">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                    </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </Sequence>
-                  </ActivityAction>
-                </Catch>
-              </TryCatch.Catches>
-              <TryCatch.Finally>
-                <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </Sequence>
-              </TryCatch.Finally>
-            </TryCatch>
-            <uix:NCheckState DisplayName="Check App State 'Email or mobile phone n…'" sap:VirtualizedContainerService.HintSize="1024,1172" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <uix:NCheckState DisplayName="Check App State 'Hello, sign in'" sap:VirtualizedContainerService.HintSize="954,527" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="de4ed5c7-215d-4bdd-a991-cceb86274966" Timeout="3" Version="V4">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,930" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,278" sap2010:WorkflowViewState.IdRef="Sequence_14">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email or mobile phone n…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
-                    <uix:NTypeInto.Target>
-                      <uix:TargetAnchorable BrowserURL="amazon.com/ap/signin" CVScreenId="03a4d1ec-02c8-493d-afee-b70d7cafee4b" ContentHash="hBXVwSn6VEW5DG_bf0T7sA" CvElementArea="783, 307, 372, 41" CvType="InputBox" DesignTimeRectangle="784, 308, 370, 38" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='ap_email' tag='INPUT' type='email' class='a-input-text a-span12 auth-autofocus auth-required-field auth-require-claim-validation' aaname='               Email or mobile phone number             ' /&gt;" Guid="67f8b498-c19b-4957-9fa9-7fd2744037a3" InformativeScreenshot="255198259f01aa6359c8830fd3d9d222.png" IsResponsive="True" Reference="j3RPm-lsJUOk5qq-VZvaQA/u4yNceBz5Uqy3iSZNAFICQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon Sign-In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target CVScreenId="03a4d1ec-02c8-493d-afee-b70d7cafee4b" CvTextArea="785, 284, 239, 16" CvTextArgument="Email or mobile phone number" CvType="Text" DesignTimeRectangle="784, 281, 370, 27" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='a-form-label' aaname='               Email or mobile phone number             ' check:innerText='Email or mobile phone number' /&gt;" Guid="82ce38a0-602c-4572-9e98-54ea7f2cb688" SearchSteps="FuzzySelector, CV" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NTypeInto.Target>
-                    <uix:NTypeInto.Text>
-                      <InArgument x:TypeArguments="x:String">
-                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">varUsername</CSharpValue>
-                      </InArgument>
-                    </uix:NTypeInto.Text>
-                    <uix:NTypeInto.VerifyOptions>
-                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                        <uix:VerifyExecutionTypeIntoOptions.Retry>
-                          <InArgument x:TypeArguments="x:Boolean" />
-                        </uix:VerifyExecutionTypeIntoOptions.Retry>
-                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                          <InArgument x:TypeArguments="x:Double" />
-                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                      </uix:VerifyExecutionTypeIntoOptions>
-                    </uix:NTypeInto.VerifyOptions>
-                  </uix:NTypeInto>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'INPUT continue'" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Account &amp; Lists'" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de4ed5c7-215d-4bdd-a991-cceb86274966" Version="V4">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="amazon.com/ap/signin" CVScreenId="1c533991-541c-4dff-9628-2fafe640bd62" ContentHash="5csyPwvpK06dAZO1HatfRg" CvElementArea="782, 362, 374, 42" CvTextArea="935, 375, 68, 15" CvTextArgument="Continue" CvType="Button" DesignTimeRectangle="785, 365, 368, 36" DesignTimeScaleFactor="1.25" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='continue' tag='INPUT' type='submit' class='a-button-input' aaname='' /&gt;" Guid="19ab9588-ab9d-4413-b975-ee05ffd1ab20" InformativeScreenshot="d4f62c172fa2c15015c23c878714a48e.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/1RHzVymSX0q8_PxN4Hiy_Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon Sign-In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
-                    </uix:NClick.Target>
-                    <uix:NClick.VerifyOptions>
-                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                        <uix:VerifyExecutionOptions.Retry>
-                          <InArgument x:TypeArguments="x:Boolean" />
-                        </uix:VerifyExecutionOptions.Retry>
-                        <uix:VerifyExecutionOptions.Timeout>
-                          <InArgument x:TypeArguments="x:Double" />
-                        </uix:VerifyExecutionOptions.Timeout>
-                      </uix:VerifyExecutionOptions>
-                    </uix:NClick.VerifyOptions>
-                  </uix:NClick>
-                  <ui:TypeSecureText AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Secure Text 'INPUT  ap_password'" sap:VirtualizedContainerService.HintSize="416,139" sap2010:WorkflowViewState.IdRef="TypeSecureText_1">
-                    <ui:TypeSecureText.SecureText>
-                      <InArgument x:TypeArguments="ss:SecureString">
-                        <CSharpValue x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">varPassword</CSharpValue>
-                      </InArgument>
-                    </ui:TypeSecureText.SecureText>
-                    <ui:TypeSecureText.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="92a95f11-090a-4edb-bfb4-dcc19ac1a05b" InformativeScreenshot="3a78e670360964877a731c8e7f6e146b" Selector="&lt;html app='chrome.exe' title='Amazon Sign-In' /&gt;&lt;webctrl id='ap_password' tag='INPUT' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:TypeSecureText.Target>
-                  </ui:TypeSecureText>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'INPUT signInSubmit'" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="amazon.com/ap/signin" CVScreenId="499f3601-7e4b-4f9e-baac-e5a133e73453" ContentHash="CBaO70Ru_kKgsycfSydzEg" CvElementArea="782, 514, 373, 43" CvTextArea="942, 526, 53, 18" CvTextArgument="Sign in" CvType="Button" DesignTimeRectangle="785, 517, 368, 37" DesignTimeScaleFactor="1.25" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='signInSubmit' tag='INPUT' type='submit' class='a-button-input' aaname='' /&gt;" Guid="86bdd20e-083e-423d-882a-1dd5bcbb79e6" InformativeScreenshot="24982bc83265900ca2ce6faf4b43f773.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/VwE06cue8EWKiKc-c1IdcQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon Sign-In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="amazon.com" CVScreenId="449ce8ba-5490-4ef8-9f90-31ae9a1a85a3" ContentHash="aKfNh_m2uUWWn1aNNV0DcA" CvElementArea="1522, 200, 18, 18" CvTextArea="1419, 201, 104, 14" CvTextArgument="Account &amp; Lists" CvType="ArrowButton" DesignTimeRectangle="1422, 202, 113, 15" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl aaname='Account &amp;amp; Lists   ' parentid='nav-link-accountList' tag='SPAN' type='' class='nav-line-2 ' check:innerText='Account &amp;amp; Lists' /&gt;" Guid="d4294f17-2693-4e3c-8f4e-1b7af213c3cd" InformativeScreenshot="b719ae61fd258c2046ed5f4861d9242c.png" Reference="edQoiHTr_EubiZ3TXex5dQ/xmMltxU3VkyuT5ykBq9b0g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com. Spend less. Smile more.' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                     </uix:NClick.Target>
                     <uix:NClick.VerifyOptions>
                       <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -301,21 +182,144 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="520,334" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,91" sap2010:WorkflowViewState.IdRef="Sequence_15">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,272" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                    <ui:CommentOut.Body>
-                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,168" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="amazon.com" CVScreenId="449ce8ba-5490-4ef8-9f90-31ae9a1a85a3" ContentHash="8tnti4lAeUm0i3kmLL9d5g" CvTextArea="1420, 188, 72, 14" CvTextArgument="Hello, sign in" CvType="Text" DesignTimeRectangle="1422, 188, 70, 14" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='nav-link-accountList-nav-line-1' tag='SPAN' type='' class='nav-line-1 nav-progressive-content' aaname='Hello, sign in' check:innerText='Hello, sign in' /&gt;" Guid="810dd02f-27ac-4af9-a79d-f6b3360fba45" InformativeScreenshot="b652a384f5b7fa6d01c9fbfa7706e32f.png" Reference="edQoiHTr_EubiZ3TXex5dQ/5PhQNyiTjEy8njoXE5oDuw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com. Spend less. Smile more.' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="449ce8ba-5490-4ef8-9f90-31ae9a1a85a3" CvElementArea="1522, 200, 18, 18" CvTextArea="1419, 201, 104, 14" CvTextArgument="Account &amp; Lists" CvType="ArrowButton" DesignTimeRectangle="1422, 202, 113, 15" FuzzySelectorArgument="&lt;webctrl aaname='Account &amp;amp; Lists   ' parentid='nav-link-accountList' tag='SPAN' type='' class='nav-line-2 ' check:innerText='Account &amp;amp; Lists' /&gt;" Guid="7fbeb1ac-8073-475c-b952-dcbe0ab6fbc0" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <uix:NCheckState DisplayName="Check App State 'Sign in'" sap:VirtualizedContainerService.HintSize="954,50" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="de4ed5c7-215d-4bdd-a991-cceb86274966" Version="V4">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="988,1556" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NCheckState DisplayName="Check App State 'Email or mobile phone n…'" sap:VirtualizedContainerService.HintSize="954,1494" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="de4ed5c7-215d-4bdd-a991-cceb86274966" Version="V4">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,1252" sap2010:WorkflowViewState.IdRef="Sequence_4">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="MessageBox_1">
+                        <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Amazon" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Rexza" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3">
+                          <ui:GetRobotCredential.Password>
+                            <OutArgument x:TypeArguments="ss:SecureString">
+                              <CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">varPassword</CSharpReference>
+                            </OutArgument>
+                          </ui:GetRobotCredential.Password>
+                          <ui:GetRobotCredential.Username>
+                            <OutArgument x:TypeArguments="x:String">
+                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">varUsername</CSharpReference>
+                            </OutArgument>
+                          </ui:GetRobotCredential.Username>
+                        </ui:GetRobotCredential>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email or mobile phone n…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="de4ed5c7-215d-4bdd-a991-cceb86274966" Version="V4">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="amazon.com/ap/signin" CVScreenId="03a4d1ec-02c8-493d-afee-b70d7cafee4b" ContentHash="hBXVwSn6VEW5DG_bf0T7sA" CvElementArea="783, 307, 372, 41" CvType="InputBox" DesignTimeRectangle="731, 273, 296, 31" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='ap_email' tag='INPUT' type='email' class='a-input-text a-span12 auth-autofocus auth-required-field auth-require-claim-validation' aaname='               Email or mobile phone number             ' /&gt;" Guid="67f8b498-c19b-4957-9fa9-7fd2744037a3" InformativeScreenshot="706987cbde71d9e55ae6cd54a75bf5f9.png" IsResponsive="True" Reference="j3RPm-lsJUOk5qq-VZvaQA/u4yNceBz5Uqy3iSZNAFICQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon Sign-In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CVScreenId="03a4d1ec-02c8-493d-afee-b70d7cafee4b" CvTextArea="785, 284, 239, 16" CvTextArgument="Email or mobile phone number" CvType="Text" DesignTimeRectangle="731, 251, 296, 22" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='a-form-label' aaname='               Email or mobile phone number             ' check:innerText='Email or mobile phone number' /&gt;" Guid="82ce38a0-602c-4572-9e98-54ea7f2cb688" SearchSteps="FuzzySelector, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                          <uix:NTypeInto.Text>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">varUsername</CSharpValue>
+                            </InArgument>
+                          </uix:NTypeInto.Text>
+                          <uix:NTypeInto.VerifyOptions>
+                            <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            </uix:VerifyExecutionTypeIntoOptions>
+                          </uix:NTypeInto.VerifyOptions>
+                        </uix:NTypeInto>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'INPUT continue'" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de4ed5c7-215d-4bdd-a991-cceb86274966" Version="V4">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="amazon.com/ap/signin" CVScreenId="1c533991-541c-4dff-9628-2fafe640bd62" ContentHash="5csyPwvpK06dAZO1HatfRg" CvElementArea="782, 362, 374, 42" CvTextArea="935, 375, 68, 15" CvTextArgument="Continue" CvType="Button" DesignTimeRectangle="732, 317, 294, 29" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='continue' tag='INPUT' type='submit' class='a-button-input' aaname='' /&gt;" Guid="19ab9588-ab9d-4413-b975-ee05ffd1ab20" InformativeScreenshot="abdbf8785f48b57050adc20d463e436e.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/1RHzVymSX0q8_PxN4Hiy_Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon Sign-In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="de4ed5c7-215d-4bdd-a991-cceb86274966" Version="V4">
+                          <uix:NTypeInto.SecureText>
+                            <InArgument x:TypeArguments="ss:SecureString">
+                              <CSharpValue x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">varPassword</CSharpValue>
+                            </InArgument>
+                          </uix:NTypeInto.SecureText>
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="amazon.com/ap/signin" CVScreenId="46e1001f-fd7c-4f28-a88e-2d9b3d5fbeab" ContentHash="s-rpTcLBB0iF9VK-RgDvrA" CvElementArea="730, 314, 297, 34" CvTextArea="852, 325, 55, 12" CvTextArgument="Continue" CvType="Button" DesignTimeRectangle="731, 305, 296, 31" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FuzzySelectorArgument="&lt;webctrl id='ap_password' tag='INPUT' type='password' class='a-input-text a-span12 auth-autofocus auth-required-field' aaname='                                 Password                                      ' /&gt;" Guid="d9fb5ba5-a9c8-46dc-9aa4-d9dc106b73a5" InformativeScreenshot="1af4230fc5fec66eb9ac58936976611f.png" Reference="edQoiHTr_EubiZ3TXex5dQ/kteEnShXyE6YRQClSwLqpQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon Sign-In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CVScreenId="46e1001f-fd7c-4f28-a88e-2d9b3d5fbeab" CvElementArea="730, 271, 299, 35" CvType="InputBox" DesignTimeRectangle="731, 283, 119, 22" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='a-form-label' aaname='                                 Password                                      ' check:innerText='Password' /&gt;" Guid="f3199bcd-e086-4344-9286-b3bbd3b20486" SearchSteps="FuzzySelector, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                          <uix:NTypeInto.VerifyOptions>
+                            <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            </uix:VerifyExecutionTypeIntoOptions>
+                          </uix:NTypeInto.VerifyOptions>
+                        </uix:NTypeInto>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'INPUT signInSubmit'" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="de4ed5c7-215d-4bdd-a991-cceb86274966" Version="V4">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="amazon.com/ap/signin" CVScreenId="499f3601-7e4b-4f9e-baac-e5a133e73453" ContentHash="CBaO70Ru_kKgsycfSydzEg" CvElementArea="782, 514, 373, 43" CvTextArea="942, 526, 53, 18" CvTextArgument="Sign in" CvType="Button" DesignTimeRectangle="732, 361, 294, 29" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='signInSubmit' tag='INPUT' type='submit' class='a-button-input' aaname='' /&gt;" Guid="86bdd20e-083e-423d-882a-1dd5bcbb79e6" InformativeScreenshot="53996ae0cdfda0e0a463d36289055dd5.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/VwE06cue8EWKiKc-c1IdcQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon Sign-In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,172" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,110" sap2010:WorkflowViewState.IdRef="MessageBox_1">
                           <ui:MessageBox.Text>
                             <InArgument x:TypeArguments="x:Object">
                               <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">"Already Loggedin"</CSharpValue>
@@ -323,22 +327,46 @@
                           </ui:MessageBox.Text>
                         </ui:MessageBox>
                       </Sequence>
-                    </ui:CommentOut.Body>
-                  </ui:CommentOut>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="amazon.com/ap/signin" CVScreenId="03a4d1ec-02c8-493d-afee-b70d7cafee4b" ContentHash="hBXVwSn6VEW5DG_bf0T7sA" CvElementArea="783, 307, 372, 41" CvType="InputBox" DesignTimeRectangle="731, 273, 296, 31" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='ap_email' tag='INPUT' type='email' class='a-input-text a-span12 auth-autofocus auth-required-field auth-require-claim-validation' aaname='               Email or mobile phone number             ' /&gt;" Guid="67f8b498-c19b-4957-9fa9-7fd2744037a3" InformativeScreenshot="8ada73f06ac94cb8552650be73ac95c7.png" IsResponsive="True" Reference="j3RPm-lsJUOk5qq-VZvaQA/u4yNceBz5Uqy3iSZNAFICQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon Sign-In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="03a4d1ec-02c8-493d-afee-b70d7cafee4b" CvTextArea="785, 284, 239, 16" CvTextArgument="Email or mobile phone number" CvType="Text" DesignTimeRectangle="731, 251, 296, 22" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='a-form-label' aaname='               Email or mobile phone number             ' check:innerText='Email or mobile phone number' /&gt;" Guid="82ce38a0-602c-4572-9e98-54ea7f2cb688" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,91" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="amazon.com/ap/signin" CVScreenId="03a4d1ec-02c8-493d-afee-b70d7cafee4b" ContentHash="hBXVwSn6VEW5DG_bf0T7sA" CvElementArea="783, 307, 372, 41" CvType="InputBox" DesignTimeRectangle="784, 308, 370, 38" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='ap_email' tag='INPUT' type='email' class='a-input-text a-span12 auth-autofocus auth-required-field auth-require-claim-validation' aaname='               Email or mobile phone number             ' /&gt;" Guid="67f8b498-c19b-4957-9fa9-7fd2744037a3" InformativeScreenshot="255198259f01aa6359c8830fd3d9d222.png" IsResponsive="True" Reference="j3RPm-lsJUOk5qq-VZvaQA/u4yNceBz5Uqy3iSZNAFICQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon Sign-In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="amazon.com/ap/signin" CVScreenId="ab7263b8-0187-4e61-9c3c-8d9e1900aa4b" ContentHash="KWV-IBXFpUeMwYR5bR5Mig" CvTextArea="729, 208, 88, 30" CvTextArgument="Sign in" CvType="Text" DesignTimeRectangle="731, 203, 296, 40" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='a-spacing-small' aaname='             Sign in           ' check:innerText='Sign in' /&gt;" Guid="24b66a42-3d1a-4c48-90ce-833c4ede3cce" InformativeScreenshot="551ed7ae4353b4fb398c2bad48895c38.png" Reference="edQoiHTr_EubiZ3TXex5dQ/W6A761ESr0WHpFnBVdpRtg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon Sign-In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CVScreenId="03a4d1ec-02c8-493d-afee-b70d7cafee4b" CvTextArea="785, 284, 239, 16" CvTextArgument="Email or mobile phone number" CvType="Text" DesignTimeRectangle="784, 281, 370, 27" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='a-form-label' aaname='               Email or mobile phone number             ' check:innerText='Email or mobile phone number' /&gt;" Guid="82ce38a0-602c-4572-9e98-54ea7f2cb688" SearchSteps="FuzzySelector, CV" />
+                      <uix:Target CVScreenId="ab7263b8-0187-4e61-9c3c-8d9e1900aa4b" CvTextArea="732, 254, 207, 13" CvTextArgument="Email or mobile phone number" CvType="Text" DesignTimeRectangle="731, 251, 296, 22" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='a-form-label' aaname='               Email or mobile phone number             ' check:innerText='Email or mobile phone number' /&gt;" Guid="cd035c29-4cbb-477b-baee-a51fe48f2cc6" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NCheckState.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -346,13 +374,8 @@
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
-      <uix:NApplicationCard.InUiElement>
-        <InArgument x:TypeArguments="ui:UiElement">
-          <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">In_Browser</CSharpValue>
-        </InArgument>
-      </uix:NApplicationCard.InUiElement>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 0, 0" Version="V1" />
+        <uix:TargetApp Area="61, 40, 1757, 1833" BrowserType="Chrome" ContentHash="Ex7p0ARSH0G9G6IZtvcFRg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF0SURBVDhPlZMxS8NAGIYD2vwBR80P0Knt7qTZRZr8A9u9Q3+ASIWCULG4ClnqUi10EWy7qx0cLKQuOrQpOGhJ1cGhr7y5XHokReoLR7jv3u/5vrvcaQB0ACcAhlhe9DJH1wAcx1cHgwFKpRJylgXLtuE4TtwiVSFgrEZ6vR5WUimsxgaBCzQmYKJG8oVCkLBrmnBdN5pvGIZqk5okAJ7nBV10Oh1cN5vBFmQXC5QEcP/pbDaxhaUBsiIh7OasVvsfQJqPyuVgfpDPRzHf91UrlQSkM5kogQep/hF2E1MI+PKiCA9w3TCCBH6ZlLNt7Jgmpu9jzFwHuC+KEQFaW8CHq5IXq7svEh8PgTpTJWDUBi414K4ITOfdJPQ5Al4aolhjjRHlDF6vBITjZltU6VeBpyrQPwW6e6IqfSzI9RAwv8pvD8JICM11DbPwi9YmMLwVvh9fjPAqVyKAFFt8vph3MGzHHVLBY+JzPgfwHV/9Q/QyR/8FZNBNQChmFy8AAAAASUVORK5CYII=" InformativeScreenshot="f731dab6f2131a1b17e0ff12f9a83ed9.jpg" Reference="edQoiHTr_EubiZ3TXex5dQ/8dbYdeOmTkWCM7eVjIidOg" Selector="&lt;html app='chrome.exe' omit:title='Your Orders' /&gt;" Title="Your Orders" Url="https://www.amazon.com/*" Version="V1" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="wUH7kG_460qtOfTWj-ELnA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="230, 94, 1464, 1688" BrowserType="Chrome" ContentHash="l6GZxwiue0ulMJXdjkZLbg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGZSURBVDhPrZI76M9hFMbdr6GUy4BMFpsnFqXYpJSMNmWThbKIQpHBLdInBgaxWCS3jC7Lh8El9xgMxOieQUfnpz+5DU6det/3e57nnO/znGHD/ldIKkdKZkpmS2b9lPU2QzKian8FHi3ZILknuSu5L3kuedbnersjWScZ9Z2kweMkW7t4vWSl5JbkgeSJ5IZkhWRTk26UjPlGIpks2S15KlklGS/ZI7ktWShZ0hNsk4yVrOlG1XBCEZyQfJY8lpySXJJ8bFDdT/cU7yTn+14EnySHiuCA5IPknGSH5KLkpWSvZFdn1byWnO2ay5L3kp1FMElyVHJNMqfHfiRZ1PpULpU8lMyXzJPclOyv3x0UlD0XukOR1BTbhxDsk5yRzJVc6fPUgYiDLGYlhyWbJdclUyTTu2NZfFxytYm+4YZaWbm4xTvZwi1rS0vgEq/2YMEP4EEMIVktedEqH5Qc63P5v/yX4EH0x+G9TOXMK8kbyVvJ2j+CB9FFtWVl35fekS0/rO/foklKwBLtiGTiP4MrhugxbWDX7wi+AsmBiI6aESUVAAAAAElFTkSuQmCC" Selector="&lt;html app='chrome.exe' url='https://rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls' /&gt;" Title="New Tab" Version="V1">
+      <TargetApp.Url>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"https://rexza.fastgem.net/" + In_ApointmentUrl</p:CSharpValue>
+        </p:InArgument>
+      </TargetApp.Url>
+      <imageRef attrName="InformativeScreenshot" originalValue="8d0c5acbfa7ef673a16bc25b04c99a0d.jpg" xmlns="">0ayNMUUDYQEqk1fkMeRqLgQ</imageRef>
+    </TargetApp>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData IsVariable="False" Name="In_ApointmentUrl" />
+    </scg:List>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="KWV-IBXFpUeMwYR5bR5Mig" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/ap/signin" CVScreenId="ab7263b8-0187-4e61-9c3c-8d9e1900aa4b" CvTextArea="729, 208, 88, 30" CvTextArgument="Sign in" CvType="Text" DesignTimeRectangle="731, 203, 296, 40" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='a-spacing-small' aaname='             Sign in           ' check:innerText='Sign in' /&gt;" Guid="24b66a42-3d1a-4c48-90ce-833c4ede3cce" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon Sign-In' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="ab7263b8-0187-4e61-9c3c-8d9e1900aa4b" CvTextArea="732, 254, 207, 13" CvTextArgument="Email or mobile phone number" CvType="Text" DesignTimeRectangle="731, 251, 296, 22" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='a-form-label' aaname='               Email or mobile phone number             ' check:innerText='Email or mobile phone number' /&gt;" Guid="cd035c29-4cbb-477b-baee-a51fe48f2cc6" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="551ed7ae4353b4fb398c2bad48895c38.png" xmlns="">0vtuesZRnKUC6VrzjP4zUhA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

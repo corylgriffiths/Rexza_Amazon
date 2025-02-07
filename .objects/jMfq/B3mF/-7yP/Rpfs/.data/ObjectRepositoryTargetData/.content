@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="B1LoIr-cC0CHLA6nhhSB0w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/accounts" CVScreenId="1072ae96-41af-4a63-91c5-3330a811929a" CvElementArea="303, 231, 34, 23" CvType="Button" DesignTimeRectangle="304, 231, 32, 22" DesignTimeScaleFactor="0.800000011920929" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-small js-stools-btn-search' aaname='                                                      ' /&gt;" Guid="0165e92c-ba3a-44b5-8d6f-5e48c2bc07a2" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="1072ae96-41af-4a63-91c5-3330a811929a" CvElementArea="142, 230, 165, 24" CvType="InputBox" DesignTimeRectangle="143, 231, 162, 22" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='filter_search' tag='INPUT' type='text' class='' placeholder='Search' aaname='Submit' /&gt;" Guid="07cc394b-f78e-4dbd-b357-d18841384783" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="262f34ba700f4ad114204e44e0846689.png" xmlns="">0XKggW4y-Xk2dmaumw481Wg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="aKfNh_m2uUWWn1aNNV0DcA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com" CVScreenId="449ce8ba-5490-4ef8-9f90-31ae9a1a85a3" CvElementArea="1522, 200, 18, 18" CvTextArea="1419, 201, 104, 14" CvTextArgument="Account &amp; Lists" CvType="ArrowButton" DesignTimeRectangle="1422, 202, 113, 15" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl aaname='Account &amp;amp; Lists   ' parentid='nav-link-accountList' tag='SPAN' type='' class='nav-line-2 ' check:innerText='Account &amp;amp; Lists' /&gt;" Guid="d4294f17-2693-4e3c-8f4e-1b7af213c3cd" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com. Spend less. Smile more.' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="b719ae61fd258c2046ed5f4861d9242c.png" xmlns="">0xgR32TLcMEaW9-BXuuH8fg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

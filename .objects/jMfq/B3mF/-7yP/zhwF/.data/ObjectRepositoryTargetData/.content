@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="QKR9AZcKzEGnNDyyV8tjQw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/accounts" DesignTimeRectangle="1640, 1518, 66, 26" DesignTimeScaleFactor="1.100000023841858" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='limit' tag='SELECT' type='' class='inputbox input-mini' aaname='' /&gt;" Guid="897bcd41-0a22-4cb2-a9bb-377347ed8c11" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="2e1cee80ad31b9fe1705c45644022d0a.png" xmlns="">0TXvqUN0NQ0mj74lEV-PoUA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

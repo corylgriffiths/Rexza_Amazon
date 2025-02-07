@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="JHNybjwYykeFyxzYXneXFw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gp/legacy/order-details/ref=ppx_hzod_rd_dt_b_gp_rd" CVScreenId="bffc2eb5-5f61-410e-b718-71f57901d0be" CvTextArea="686, 372, 154, 13" CvType="AnyWordGroup" DesignTimeRectangle="688, 370, 150, 18" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='BDI' type='' class='' /&gt;" Guid="253a78a1-a927-4168-adef-1bf6e27d3ca3" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Order Details' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="bffc2eb5-5f61-410e-b718-71f57901d0be" CvTextArea="638, 372, 202, 13" CvTextArgument="Order# *" CvType="Text" DesignTimeRectangle="639, 369, 199, 20" FuzzySelectorArgument="&lt;webctrl class='order-date-invoice-item' type='' parentid='orderDetails' tag='SPAN' aaname='                 Order#                              ' check:innerText='Order# *' /&gt;" Guid="9b522bfb-780b-40fc-9aa0-80e15367a96b" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="b50a5261074993fb391ba2d2e8a12986.png" xmlns="">0N02zGjlIAEa2_eDYFlsiGQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

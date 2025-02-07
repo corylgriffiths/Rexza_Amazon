@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="pullPayroll" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="pullPayroll" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="In_ApointmentUrl" Type="InArgument(x:String)" />
     <x:Property Name="in_OrderNumber" Type="InArgument(x:String)" />
@@ -244,13 +244,13 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="pullPayroll" sap:VirtualizedContainerService.HintSize="1216,3992" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="pullPayroll" sap:VirtualizedContainerService.HintSize="2132,2382" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="658,3969" sap2010:WorkflowViewState.IdRef="Sequence_30">
+    <Sequence sap:VirtualizedContainerService.HintSize="2132,2359" sap2010:WorkflowViewState.IdRef="Sequence_30">
       <Sequence.Variables>
         <Variable x:TypeArguments="ui:UiElement" Name="cancelButtonFound" />
         <Variable x:TypeArguments="ui:UiElement" Name="newWinodwTab" />
@@ -261,13 +261,13 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Chrome New Tab" sap:VirtualizedContainerService.HintSize="624,3886" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="b3978ccf-df83-4849-aba3-a7381e3578ce" Version="V2">
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Chrome New Tab" sap:VirtualizedContainerService.HintSize="2098,2276" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="b3978ccf-df83-4849-aba3-a7381e3578ce" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="590,3646" sap2010:WorkflowViewState.IdRef="Sequence_25">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2064,2035" sap2010:WorkflowViewState.IdRef="Sequence_25">
               <Sequence.Variables>
                 <Variable x:TypeArguments="ui:UiElement" Name="orderNumBox" />
                 <Variable x:TypeArguments="ui:UiElement" Name="paidDateBox" />
@@ -278,330 +278,201 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Attach window" sap:VirtualizedContainerService.HintSize="556,2434" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="60dde797-b1af-469a-9852-91dd70495de5" Version="V2">
-                <uix:NApplicationCard.AutoGenerationOptions>
-                  <uix:GenerationOptions ExpectedInputs="{x:Null}" Prompt="{x:Null}" Url="{x:Null}">
-                    <uix:GenerationOptions.ExpectedOutputs>
-                      <scg:List x:TypeArguments="x:String" Capacity="4">
-                        <x:Null />
-                      </scg:List>
-                    </uix:GenerationOptions.ExpectedOutputs>
-                  </uix:GenerationOptions>
-                </uix:NApplicationCard.AutoGenerationOptions>
-                <uix:NApplicationCard.Body>
-                  <ActivityAction x:TypeArguments="x:Object">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                    </ActivityAction.Argument>
-                    <Sequence DisplayName="" sap:VirtualizedContainerService.HintSize="522,2265" sap2010:WorkflowViewState.IdRef="Sequence_33">
+              <uix:NCheckState DisplayName="Check App State 'Details'" sap:VirtualizedContainerService.HintSize="2030,1973" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="b3978ccf-df83-4849-aba3-a7381e3578ce" Timeout="5" Version="V4">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1526,1731" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NCheckState DisplayName="Check App State 'Edit Item'" sap:VirtualizedContainerService.HintSize="1492,1671" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="b3978ccf-df83-4849-aba3-a7381e3578ce" Timeout="10" Version="V4">
+                      <uix:NCheckState.IfExists>
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="988,1387" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit Item(1)'" sap:VirtualizedContainerService.HintSize="954,227" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b3978ccf-df83-4849-aba3-a7381e3578ce" Version="V4">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/orders-2/appointment/7152" CVScreenId="b73fae95-f8c2-499e-bcff-d89bb321f84a" ContentHash="jy6qBjl3Uk-yESf2rjaaog" CvElementArea="16, 191, 90, 29" CvTextArea="48, 199, 47, 12" CvTextArgument="Edit Item" CvType="Button" DesignTimeRectangle="18, 193, 87, 26" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='g-mainbar' tag='A' type='' class='btn btn-small' aaname='                                  Edit Item            ' check:innerText='Edit Item' /&gt;" Guid="64acab34-1949-494e-be07-4b0481488210" InformativeScreenshot="e85fa5430c6c47dd2db68a603468d303.png" Reference="edQoiHTr_EubiZ3TXex5dQ/kqwYoT0670CC5ERz1w3STg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Orders' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <uix:Target CVScreenId="b73fae95-f8c2-499e-bcff-d89bb321f84a" CvElementArea="107, 191, 93, 29" CvTextArea="118, 199, 71, 14" CvTextArgument="Toggle Slides" CvType="Button" DesignTimeRectangle="109, 193, 90, 26" ElementType="Button" FuzzySelectorArgument="&lt;webctrl parentid='g-mainbar' tag='BUTTON' type='' class='btn btn-info btn-small .fg-toggle-slides' aaname='Toggle Slides' check:innerText='Toggle Slides' /&gt;" Guid="7efffa5f-c87e-44e7-ad42-763457b8cb11" SearchSteps="FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NClick.Target>
+                            <uix:NClick.VerifyOptions>
+                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                <uix:VerifyExecutionOptions.Retry>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </uix:VerifyExecutionOptions.Retry>
+                                <uix:VerifyExecutionOptions.Timeout>
+                                  <InArgument x:TypeArguments="x:Double" />
+                                </uix:VerifyExecutionOptions.Timeout>
+                              </uix:VerifyExecutionOptions>
+                            </uix:NClick.VerifyOptions>
+                          </uix:NClick>
+                          <uix:NCheckState DisplayName="chck for page load" sap:VirtualizedContainerService.HintSize="954,1098" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="b3978ccf-df83-4849-aba3-a7381e3578ce" Version="V4">
+                            <uix:NCheckState.IfExists>
+                              <Sequence DisplayName="Enter the order info" sap:VirtualizedContainerService.HintSize="450,856" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Order Num'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,288" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="b3978ccf-df83-4849-aba3-a7381e3578ce" Version="V4">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/orders-2/appointmentform/7152" CVScreenId="e71f9580-adff-451f-91b6-cbd40974830a" ContentHash="jO1tj36lykeMFwlgn4KwOQ" CvElementArea="1017, 321, 424, 28" CvType="InputBox" DesignTimeRectangle="1019, 322, 419, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='jform_custom_data__order_num' tag='INPUT' type='text' class='' aaname=' &amp;#x9;Order Num' /&gt;" Guid="2740de5c-8e79-4ce9-bbf1-5b512961f2a0" InformativeScreenshot="6a7735a106469186b7f7b85382827170.png" IsResponsive="True" Reference="edQoiHTr_EubiZ3TXex5dQ/K08iEFl88UmtEy0LgT4n4w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Orders' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                          <uix:Target CVScreenId="e71f9580-adff-451f-91b6-cbd40974830a" CvTextArea="1018, 306, 59, 12" CvTextArgument="Order Num" CvType="Text" DesignTimeRectangle="1019, 305, 419, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='jform_custom_data__order_num-lbl' tag='LABEL' type='' class='' aaname=' &amp;#x9;Order Num' check:innerText='Order Num' /&gt;" Guid="3f3df989-939e-47f5-90ec-d25252b430cd" SearchSteps="FuzzySelector, CV" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                  <uix:NTypeInto.Text>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">in_OrderNumber</CSharpValue>
+                                    </InArgument>
+                                  </uix:NTypeInto.Text>
+                                  <uix:NTypeInto.VerifyOptions>
+                                    <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                      <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                        <InArgument x:TypeArguments="x:Boolean" />
+                                      </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                      <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                        <InArgument x:TypeArguments="x:Double" />
+                                      </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                    </uix:VerifyExecutionTypeIntoOptions>
+                                  </uix:NTypeInto.VerifyOptions>
+                                </uix:NTypeInto>
+                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Gift Card Paid Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,288" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="b3978ccf-df83-4849-aba3-a7381e3578ce" Version="V4">
+                                  <uix:NTypeInto.Target>
+                                    <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/orders-2/appointmentform/7152" CVScreenId="e71f9580-adff-451f-91b6-cbd40974830a" ContentHash="tmkqD6uhckuuWSSOwcfS0Q" CvElementArea="1464, 321, 196, 28" CvType="InputBox" DesignTimeRectangle="1465, 322, 419, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='jform_custom_data__gift_card_paid_date' tag='INPUT' type='text' class='' aaname=' &amp;#x9;Gift Card Paid Date' /&gt;" Guid="add810a3-e468-42a6-a581-0850d38fffd2" InformativeScreenshot="0cbe840eadc2a3e039b9e7cab833f954.png" IsResponsive="True" Reference="edQoiHTr_EubiZ3TXex5dQ/d9c28UYWz0GmgYKJpSRzyg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Orders' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                          <uix:Target CVScreenId="e71f9580-adff-451f-91b6-cbd40974830a" CvTextArea="1464, 306, 102, 12" CvTextArgument="Gift Card Paid Date" CvType="Text" DesignTimeRectangle="1465, 305, 419, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='jform_custom_data__gift_card_paid_date-lbl' tag='LABEL' type='' class='' aaname=' &amp;#x9;Gift Card Paid Date' check:innerText='Gift Card Paid Date' /&gt;" Guid="91e53a40-cb5d-4963-9e79-79ab0de0f070" SearchSteps="FuzzySelector, CV" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NTypeInto.Target>
+                                  <uix:NTypeInto.Text>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_68">DateTime.Now.ToString("MM/dd/yyyy")</CSharpValue>
+                                    </InArgument>
+                                  </uix:NTypeInto.Text>
+                                  <uix:NTypeInto.VerifyOptions>
+                                    <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                      <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                        <InArgument x:TypeArguments="x:Boolean" />
+                                      </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                      <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                        <InArgument x:TypeArguments="x:Double" />
+                                      </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                    </uix:VerifyExecutionTypeIntoOptions>
+                                  </uix:NTypeInto.VerifyOptions>
+                                </uix:NTypeInto>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b3978ccf-df83-4849-aba3-a7381e3578ce" Version="V4">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/orders-2/appointmentform/7152" CVScreenId="d234f060-3ad2-44d3-92f8-d20de8af71d6" ContentHash="rCUbyXQl3ker6T0NaRApCQ" CvElementArea="1655, 281, 142, 36" CvTextArea="1691, 291, 91, 13" CvTextArgument="Save &amp; Close" CvType="Button" DesignTimeRectangle="1780, 203, 112, 26" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='                                                          Save &amp;amp; Close                        ' tag='BUTTON' type='submit' class='btn btn-primary btn-small fg_save' check:innerText='Save &amp;amp; Close' /&gt;" Guid="948f1b9a-aba6-461e-a6e5-7d260ea8cc9b" InformativeScreenshot="1674e7735b4eec74ef0297574ef3d603.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/lmPjQltQZEyIkuvumrxoKA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Orders' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                          <uix:Target CVScreenId="ad154d41-daf9-4e9c-b200-2cd680dcde03" CvElementArea="1894, 201, 81, 29" CvType="Button" DesignTimeRectangle="1895, 203, 78, 26" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='                                                  Cancel                    ' parentid='form-appointmentform' tag='A' type='' class='btn btn-small fg_cancel_button' check:innerText='Cancel' /&gt;" Guid="9dc24577-c15f-4842-ae6d-a0668aa46bd5" SearchSteps="FuzzySelector, CV" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NClick.Target>
+                                  <uix:NClick.VerifyOptions>
+                                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                      <uix:VerifyExecutionOptions.Retry>
+                                        <InArgument x:TypeArguments="x:Boolean" />
+                                      </uix:VerifyExecutionOptions.Retry>
+                                      <uix:VerifyExecutionOptions.Timeout>
+                                        <InArgument x:TypeArguments="x:Double" />
+                                      </uix:VerifyExecutionOptions.Timeout>
+                                    </uix:VerifyExecutionOptions>
+                                  </uix:NClick.VerifyOptions>
+                                </uix:NClick>
+                              </Sequence>
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,92" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Sequence>
+                            </uix:NCheckState.IfNotExists>
+                            <uix:NCheckState.Target>
+                              <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/orders-2/appointmentform/7152" CVScreenId="526c4267-8057-471e-a01a-30a1fd5e73bd" ContentHash="TQYe_btgGkWgW5ovUbGG3A" CvElementArea="1925, 201, 80, 29" CvType="Button" DesignTimeRectangle="1926, 203, 78, 26" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='                                                  Cancel                    ' parentid='form-appointmentform' tag='A' type='' class='btn btn-small fg_cancel_button' check:innerText='Cancel' /&gt;" Guid="75800e83-b35a-49fd-84f8-81db210d5e57" InformativeScreenshot="11d026ef996fc778e4cde6fdc68ee3f1.png" Reference="edQoiHTr_EubiZ3TXex5dQ/cc5N8rh3Gk6CjEzc2ntHjQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Orders' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <uix:Target CVScreenId="526c4267-8057-471e-a01a-30a1fd5e73bd" CvElementArea="1810, 201, 115, 29" CvTextArea="1840, 209, 73, 12" CvTextArgument="Save &amp; Close" CvType="Button" DesignTimeRectangle="1811, 203, 112, 26" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='                                                          Save &amp;amp; Close                        ' tag='BUTTON' type='submit' class='btn btn-primary btn-small fg_save' check:innerText='Save &amp;amp; Close' /&gt;" Guid="c72ff069-ef2f-4209-9727-60ad8eaa3445" SearchSteps="FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NCheckState.Target>
+                          </uix:NCheckState>
+                        </Sequence>
+                      </uix:NCheckState.IfExists>
+                      <uix:NCheckState.IfNotExists>
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,92" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </uix:NCheckState.IfNotExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/orders-2/appointment/7152" CVScreenId="acfd5f97-6ffc-490f-8fcf-ff7c9339d301" ContentHash="Lv7jGtUaoU6SnAu0vEqHZg" CvElementArea="16, 192, 90, 28" CvTextArea="48, 199, 47, 12" CvTextArgument="Edit Item" CvType="Button" DesignTimeRectangle="18, 193, 87, 26" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='g-mainbar' tag='A' type='' class='btn btn-small' aaname='                                  Edit Item            ' check:innerText='Edit Item' /&gt;" Guid="8a4fc687-2afe-4bda-9650-d721229f0a02" InformativeScreenshot="c4df02c01b557984c8c3ae30a077c587.png" Reference="edQoiHTr_EubiZ3TXex5dQ/KPtCQiqBZ0yH23EMxuBQVA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Orders' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CVScreenId="acfd5f97-6ffc-490f-8fcf-ff7c9339d301" CvElementArea="107, 191, 93, 29" CvTextArea="118, 199, 71, 14" CvTextArgument="Toggle Slides" CvType="Button" DesignTimeRectangle="109, 193, 90, 26" ElementType="Button" FuzzySelectorArgument="&lt;webctrl parentid='g-mainbar' tag='BUTTON' type='' class='btn btn-info btn-small .fg-toggle-slides' aaname='Toggle Slides' check:innerText='Toggle Slides' /&gt;" Guid="0b4c50a0-0e60-42b6-9606-67a19987d4fd" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NCheckState.Target>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="&lt;sequence generation insert locus&gt;" sap:VirtualizedContainerService.HintSize="488,2203" sap2010:WorkflowViewState.IdRef="Sequence_32">
-                        <Sequence.Variables>
-                          <Variable x:TypeArguments="ui:UiElement" Name="editButton" />
-                        </Sequence.Variables>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="454,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_4" Version="V4">
-                          <uix:NGoToUrl.Url>
-                            <InArgument x:TypeArguments="x:String">
-                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">"https://rexza.fastgem.net/" + In_ApointmentUrl</CSharpValue>
-                            </InArgument>
-                          </uix:NGoToUrl.Url>
-                        </uix:NGoToUrl>
-                        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="454,122" sap2010:WorkflowViewState.IdRef="Delay_11" />
-                        <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="454,780" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2" MaxIterations="15">
-                          <ui:InterruptibleWhile.Body>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="452,650" sap2010:WorkflowViewState.IdRef="Sequence_34">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <TryCatch DisplayName="Find Edit button - Try Catch" sap:VirtualizedContainerService.HintSize="418,477" sap2010:WorkflowViewState.IdRef="TryCatch_2">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <TryCatch.Try>
-                                  <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'INPUT  jform_custom_dat...'" sap:VirtualizedContainerService.HintSize="416,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_7">
-                                    <ui:WaitUiElementAppear.FoundElement>
-                                      <OutArgument x:TypeArguments="ui:UiElement">
-                                        <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">editButton</CSharpReference>
-                                      </OutArgument>
-                                    </ui:WaitUiElementAppear.FoundElement>
-                                    <ui:WaitUiElementAppear.Target>
-                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="338603ea-7288-4c6f-b349-28431202cc73" InformativeScreenshot="e88f0dbfe9d775c384fadc1829074b60" Selector="&lt;webctrl parentid='g-mainbar' tag='A' /&gt;" TimeoutMS="5000">
-                                        <ui:Target.WaitForReady>
-                                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                                        </ui:Target.WaitForReady>
-                                      </ui:Target>
-                                    </ui:WaitUiElementAppear.Target>
-                                  </ui:WaitUiElementAppear>
-                                </TryCatch.Try>
-                                <TryCatch.Catches>
-                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,105" sap2010:WorkflowViewState.IdRef="Catch`1_1">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <ActivityAction x:TypeArguments="s:Exception">
-                                      <ActivityAction.Argument>
-                                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                                      </ActivityAction.Argument>
-                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,85" sap2010:WorkflowViewState.IdRef="MessageBox_1">
-                                        <ui:MessageBox.Text>
-                                          <InArgument x:TypeArguments="x:Object">
-                                            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">exception.Message</CSharpValue>
-                                          </InArgument>
-                                        </ui:MessageBox.Text>
-                                      </ui:MessageBox>
-                                    </ActivityAction>
-                                  </Catch>
-                                </TryCatch.Catches>
-                                <TryCatch.Finally>
-                                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_36">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </Sequence>
-                                </TryCatch.Finally>
-                              </TryCatch>
-                              <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="418,113" sap2010:WorkflowViewState.IdRef="Delay_10" />
-                            </Sequence>
-                          </ui:InterruptibleWhile.Body>
-                          <ui:InterruptibleWhile.Condition>
-                            <CSharpValue x:TypeArguments="x:Boolean" DisplayName="C sharp value" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">editButton == null</CSharpValue>
-                          </ui:InterruptibleWhile.Condition>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </ui:InterruptibleWhile>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit Item'" sap:VirtualizedContainerService.HintSize="454,205" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="60dde797-b1af-469a-9852-91dd70495de5" Version="V4">
-                          <uix:NClick.InUiElement>
-                            <InArgument x:TypeArguments="ui:UiElement">
-                              <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">editButton</CSharpValue>
-                            </InArgument>
-                          </uix:NClick.InUiElement>
-                          <uix:NClick.Target>
-                            <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/orders-2/appointment/7327" CVScreenId="ccf9e689-7d1b-4c0e-aeb5-c2b9da4a6de1" ContentHash="HF_mJXyGjUaiAhzGPVooKA" CvElementArea="19, 203, 112, 36" CvTextArea="59, 214, 56, 13" CvTextArgument="Edit Item" CvType="Button" DesignTimeRectangle="22, 205, 108, 32" DesignTimeScaleFactor="1.25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='g-mainbar' tag='A' type='' class='btn btn-small' aaname='                                  Edit Item            ' check:innerText='Edit Item' /&gt;" Guid="734da090-4821-4859-a0ea-4bd5538183cb" InformativeScreenshot="ae217be101485b1a82c9081b982434c9.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/UJTH5BxdI0WMxvy7NeIoyg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Orders' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
-                              <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                  <uix:Target CVScreenId="ccf9e689-7d1b-4c0e-aeb5-c2b9da4a6de1" CvElementArea="19, 203, 112, 36" CvType="Button" DesignTimeRectangle="35, 211, 18, 18" FuzzySelectorArgument="&lt;webctrl parentid='g-mainbar' tag='SPAN' type='' class='icon-edit' aaname='' /&gt;" Guid="686ad637-66aa-4c0d-960a-437ec86e02b8" SearchSteps="FuzzySelector, CV" />
-                                </scg:List>
-                              </uix:TargetAnchorable.Anchors>
-                            </uix:TargetAnchorable>
-                          </uix:NClick.Target>
-                          <uix:NClick.VerifyOptions>
-                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                              <uix:VerifyExecutionOptions.Retry>
-                                <InArgument x:TypeArguments="x:Boolean" />
-                              </uix:VerifyExecutionOptions.Retry>
-                              <uix:VerifyExecutionOptions.Timeout>
-                                <InArgument x:TypeArguments="x:Double" />
-                              </uix:VerifyExecutionOptions.Timeout>
-                            </uix:VerifyExecutionOptions>
-                          </uix:NClick.VerifyOptions>
-                        </uix:NClick>
-                        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="454,122" sap2010:WorkflowViewState.IdRef="Delay_12" />
-                        <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="454,773" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1" MaxIterations="15">
-                          <ui:InterruptibleWhile.Body>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="452,650" sap2010:WorkflowViewState.IdRef="Sequence_31">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <TryCatch DisplayName=" Find Cancel Button-Try Catch" sap:VirtualizedContainerService.HintSize="418,477" sap2010:WorkflowViewState.IdRef="TryCatch_1">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <TryCatch.Try>
-                                  <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Parent Element 'DIV'" sap:VirtualizedContainerService.HintSize="416,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
-                                    <ui:WaitUiElementAppear.FoundElement>
-                                      <OutArgument x:TypeArguments="ui:UiElement">
-                                        <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">cancelButtonFound</CSharpReference>
-                                      </OutArgument>
-                                    </ui:WaitUiElementAppear.FoundElement>
-                                    <ui:WaitUiElementAppear.Target>
-                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="db0a341a-896a-46bd-b770-c3d7079961cb" InformativeScreenshot="e42dd39fe7c2a7d4b0d87336e22326ae" Selector="&lt;webctrl aaname='                                                  Cancel                    ' parentid='form-appointmentform' tag='A' /&gt;" TimeoutMS="5000">
-                                        <ui:Target.WaitForReady>
-                                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                                        </ui:Target.WaitForReady>
-                                      </ui:Target>
-                                    </ui:WaitUiElementAppear.Target>
-                                  </ui:WaitUiElementAppear>
-                                </TryCatch.Try>
-                                <TryCatch.Catches>
-                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,105" sap2010:WorkflowViewState.IdRef="Catch`1_2">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <ActivityAction x:TypeArguments="s:Exception">
-                                      <ActivityAction.Argument>
-                                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                                      </ActivityAction.Argument>
-                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,85" sap2010:WorkflowViewState.IdRef="MessageBox_2">
-                                        <ui:MessageBox.Text>
-                                          <InArgument x:TypeArguments="x:Object">
-                                            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">exception.Message</CSharpValue>
-                                          </InArgument>
-                                        </ui:MessageBox.Text>
-                                      </ui:MessageBox>
-                                    </ActivityAction>
-                                  </Catch>
-                                </TryCatch.Catches>
-                                <TryCatch.Finally>
-                                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_35">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </Sequence>
-                                </TryCatch.Finally>
-                              </TryCatch>
-                              <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="418,113" sap2010:WorkflowViewState.IdRef="Delay_9" />
-                            </Sequence>
-                          </ui:InterruptibleWhile.Body>
-                          <ui:InterruptibleWhile.Condition>
-                            <CSharpValue x:TypeArguments="x:Boolean" DisplayName="C sharp value" sap2010:WorkflowViewState.IdRef="CSharpValue`1_48">cancelButtonFound == null</CSharpValue>
-                          </ui:InterruptibleWhile.Condition>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </ui:InterruptibleWhile>
-                      </Sequence>
-                    </Sequence>
-                  </ActivityAction>
-                </uix:NApplicationCard.Body>
-                <uix:NApplicationCard.InUiElement>
-                  <InArgument x:TypeArguments="ui:UiElement">
-                    <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">newWinodwTab</CSharpValue>
-                  </InArgument>
-                </uix:NApplicationCard.InUiElement>
-                <uix:NApplicationCard.TargetApp>
-                  <uix:TargetApp Area="0, 0, 0, 0" Version="V1" />
-                </uix:NApplicationCard.TargetApp>
-              </uix:NApplicationCard>
-              <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'INPUT  jform_custom_dat...'" sap:VirtualizedContainerService.HintSize="556,139" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_3">
-                <ui:WaitUiElementAppear.FoundElement>
-                  <OutArgument x:TypeArguments="ui:UiElement">
-                    <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">orderNumBox</CSharpReference>
-                  </OutArgument>
-                </ui:WaitUiElementAppear.FoundElement>
-                <ui:WaitUiElementAppear.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="338603ea-7288-4c6f-b349-28431202cc73" InformativeScreenshot="ea4ae71f0cff1d94b3268a378937c8a9" Selector="&lt;webctrl id='jform_custom_data__order_num' tag='INPUT' /&gt;">
-                    <ui:Target.TimeoutMS>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:Target.TimeoutMS>
-                    <ui:Target.WaitForReady>
-                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                    </ui:Target.WaitForReady>
-                  </ui:Target>
-                </ui:WaitUiElementAppear.Target>
-              </ui:WaitUiElementAppear>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Order Num'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="556,266" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="b3978ccf-df83-4849-aba3-a7381e3578ce" Version="V4">
-                <uix:NTypeInto.InUiElement>
-                  <InArgument x:TypeArguments="ui:UiElement">
-                    <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">orderNumBox</CSharpValue>
-                  </InArgument>
-                </uix:NTypeInto.InUiElement>
-                <uix:NTypeInto.Text>
-                  <InArgument x:TypeArguments="x:String">
-                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52">in_OrderNumber</CSharpValue>
-                  </InArgument>
-                </uix:NTypeInto.Text>
-                <uix:NTypeInto.VerifyOptions>
-                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                    <uix:VerifyExecutionTypeIntoOptions.Retry>
-                      <InArgument x:TypeArguments="x:Boolean" />
-                    </uix:VerifyExecutionTypeIntoOptions.Retry>
-                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                      <InArgument x:TypeArguments="x:Double" />
-                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                  </uix:VerifyExecutionTypeIntoOptions>
-                </uix:NTypeInto.VerifyOptions>
-              </uix:NTypeInto>
-              <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'INPUT  jform_custom_dat...'" sap:VirtualizedContainerService.HintSize="556,139" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_4">
-                <ui:WaitUiElementAppear.FoundElement>
-                  <OutArgument x:TypeArguments="ui:UiElement">
-                    <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">paidDateBox</CSharpReference>
-                  </OutArgument>
-                </ui:WaitUiElementAppear.FoundElement>
-                <ui:WaitUiElementAppear.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="338603ea-7288-4c6f-b349-28431202cc73" InformativeScreenshot="ca5ca480971c63ed5338268422c11435" Selector="&lt;webctrl id='jform_custom_data__gift_card_paid_date' tag='INPUT' /&gt;">
-                    <ui:Target.TimeoutMS>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:Target.TimeoutMS>
-                    <ui:Target.WaitForReady>
-                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                    </ui:Target.WaitForReady>
-                  </ui:Target>
-                </ui:WaitUiElementAppear.Target>
-              </ui:WaitUiElementAppear>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Gift Card Paid Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="556,266" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="b3978ccf-df83-4849-aba3-a7381e3578ce" Version="V4">
-                <uix:NTypeInto.InUiElement>
-                  <InArgument x:TypeArguments="ui:UiElement">
-                    <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">paidDateBox</CSharpValue>
-                  </InArgument>
-                </uix:NTypeInto.InUiElement>
-                <uix:NTypeInto.Text>
-                  <InArgument x:TypeArguments="x:String">
-                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">DateTime.Now.ToString("MM/dd/yyyy")</CSharpValue>
-                  </InArgument>
-                </uix:NTypeInto.Text>
-                <uix:NTypeInto.VerifyOptions>
-                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                    <uix:VerifyExecutionTypeIntoOptions.Retry>
-                      <InArgument x:TypeArguments="x:Boolean" />
-                    </uix:VerifyExecutionTypeIntoOptions.Retry>
-                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                      <InArgument x:TypeArguments="x:Double" />
-                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                  </uix:VerifyExecutionTypeIntoOptions>
-                </uix:NTypeInto.VerifyOptions>
-              </uix:NTypeInto>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="556,225" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b3978ccf-df83-4849-aba3-a7381e3578ce" Version="V4">
-                <uix:NClick.Target>
-                  <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/orders-2/appointmentform/7152" CVScreenId="d234f060-3ad2-44d3-92f8-d20de8af71d6" ContentHash="rCUbyXQl3ker6T0NaRApCQ" CvElementArea="1655, 281, 142, 36" CvTextArea="1691, 291, 91, 13" CvTextArgument="Save &amp; Close" CvType="Button" DesignTimeRectangle="1656, 283, 139, 32" DesignTimeScaleFactor="1.25" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='                                                          Save &amp;amp; Close                        ' tag='BUTTON' type='submit' class='btn btn-primary btn-small fg_save' check:innerText='Save &amp;amp; Close' /&gt;" Guid="948f1b9a-aba6-461e-a6e5-7d260ea8cc9b" InformativeScreenshot="f9b813236e9287a31becaa15380dcde3.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/lmPjQltQZEyIkuvumrxoKA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Orders' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
-                </uix:NClick.Target>
-                <uix:NClick.VerifyOptions>
-                  <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                    <uix:VerifyExecutionOptions.Retry>
-                      <InArgument x:TypeArguments="x:Boolean" />
-                    </uix:VerifyExecutionOptions.Retry>
-                    <uix:VerifyExecutionOptions.Timeout>
-                      <InArgument x:TypeArguments="x:Double" />
-                    </uix:VerifyExecutionOptions.Timeout>
-                  </uix:VerifyExecutionOptions>
-                </uix:NClick.VerifyOptions>
-              </uix:NClick>
-              <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="556,115" sap2010:WorkflowViewState.IdRef="Delay_5" />
+                    </uix:NCheckState>
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,232" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+                      <ui:LogMessage.Message>
+                        <InArgument x:TypeArguments="x:Object">
+                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">'Details page was not found"</CSharpValue>
+                        </InArgument>
+                      </ui:LogMessage.Message>
+                    </ui:LogMessage>
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/orders-2/appointment/14262" ContentHash="TrZWqg75Z0iKYsXuj_MMSA" DesignTimeRectangle="18, 241, 61, 38" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='myTabTabs' tag='A' type='' class='' aaname='Details' check:innerText='Details' /&gt;" Guid="4240970c-07c6-4acd-9eee-5647f987ba88" InformativeScreenshot="df068b1cac71a7ddeda472f6b26bdb60.png" Reference="edQoiHTr_EubiZ3TXex5dQ/42ujgsxXHE6_x7kSvBz2hw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Orders' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="81, 241, 57, 38" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Billing' parentid='myTabTabs' tag='A' type='' class='' check:innerText='Billing' /&gt;" Guid="8a06457b-342e-4a8d-aa86-c460c3a666a5" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NCheckState.Target>
+              </uix:NCheckState>
             </Sequence>
           </ActivityAction>
         </uix:NApplicationCard.Body>
@@ -611,7 +482,13 @@
           </OutArgument>
         </uix:NApplicationCard.OutUiElement>
         <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="230, 94, 1464, 1688" BrowserType="Chrome" ContentHash="l6GZxwiue0ulMJXdjkZLbg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGZSURBVDhPrZI76M9hFMbdr6GUy4BMFpsnFqXYpJSMNmWThbKIQpHBLdInBgaxWCS3jC7Lh8El9xgMxOieQUfnpz+5DU6det/3e57nnO/znGHD/ldIKkdKZkpmS2b9lPU2QzKian8FHi3ZILknuSu5L3kuedbnersjWScZ9Z2kweMkW7t4vWSl5JbkgeSJ5IZkhWRTk26UjPlGIpks2S15KlklGS/ZI7ktWShZ0hNsk4yVrOlG1XBCEZyQfJY8lpySXJJ8bFDdT/cU7yTn+14EnySHiuCA5IPknGSH5KLkpWSvZFdn1byWnO2ay5L3kp1FMElyVHJNMqfHfiRZ1PpULpU8lMyXzJPclOyv3x0UlD0XukOR1BTbhxDsk5yRzJVc6fPUgYiDLGYlhyWbJdclUyTTu2NZfFxytYm+4YZaWbm4xTvZwi1rS0vgEq/2YMEP4EEMIVktedEqH5Qc63P5v/yX4EH0x+G9TOXMK8kbyVvJ2j+CB9FFtWVl35fekS0/rO/foklKwBLtiGTiP4MrhugxbWDX7wi+AsmBiI6aESUVAAAAAElFTkSuQmCC" InformativeScreenshot="8d0c5acbfa7ef673a16bc25b04c99a0d.jpg" Selector="&lt;html app='chrome.exe' url='https://rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls' /&gt;" Title="New Tab" Url="https://rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" Version="V1" />
+          <uix:TargetApp Area="230, 94, 1464, 1688" BrowserType="Chrome" ContentHash="wUH7kG_460qtOfTWj-ELnA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGZSURBVDhPrZI76M9hFMbdr6GUy4BMFpsnFqXYpJSMNmWThbKIQpHBLdInBgaxWCS3jC7Lh8El9xgMxOieQUfnpz+5DU6det/3e57nnO/znGHD/ldIKkdKZkpmS2b9lPU2QzKian8FHi3ZILknuSu5L3kuedbnersjWScZ9Z2kweMkW7t4vWSl5JbkgeSJ5IZkhWRTk26UjPlGIpks2S15KlklGS/ZI7ktWShZ0hNsk4yVrOlG1XBCEZyQfJY8lpySXJJ8bFDdT/cU7yTn+14EnySHiuCA5IPknGSH5KLkpWSvZFdn1byWnO2ay5L3kp1FMElyVHJNMqfHfiRZ1PpULpU8lMyXzJPclOyv3x0UlD0XukOR1BTbhxDsk5yRzJVc6fPUgYiDLGYlhyWbJdclUyTTu2NZfFxytYm+4YZaWbm4xTvZwi1rS0vgEq/2YMEP4EEMIVktedEqH5Qc63P5v/yX4EH0x+G9TOXMK8kbyVvJ2j+CB9FFtWVl35fekS0/rO/foklKwBLtiGTiP4MrhugxbWDX7wi+AsmBiI6aESUVAAAAAElFTkSuQmCC" InformativeScreenshot="8d0c5acbfa7ef673a16bc25b04c99a0d.jpg" Reference="edQoiHTr_EubiZ3TXex5dQ/rpwMsmhvY0CEO7XGwpSwtQ" Selector="&lt;html app='chrome.exe' url='https://rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls' /&gt;" Title="New Tab" Version="V1">
+            <uix:TargetApp.Url>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">"https://rexza.fastgem.net/" + In_ApointmentUrl</CSharpValue>
+              </InArgument>
+            </uix:TargetApp.Url>
+          </uix:TargetApp>
         </uix:NApplicationCard.TargetApp>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">

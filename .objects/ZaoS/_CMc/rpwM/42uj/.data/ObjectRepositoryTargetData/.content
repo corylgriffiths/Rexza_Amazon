@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="TrZWqg75Z0iKYsXuj_MMSA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/orders-2/appointment/14262" DesignTimeRectangle="18, 241, 61, 38" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='myTabTabs' tag='A' type='' class='' aaname='Details' check:innerText='Details' /&gt;" Guid="4240970c-07c6-4acd-9eee-5647f987ba88" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Orders' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="81, 241, 57, 38" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Billing' parentid='myTabTabs' tag='A' type='' class='' check:innerText='Billing' /&gt;" Guid="8a06457b-342e-4a8d-aa86-c460c3a666a5" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="df068b1cac71a7ddeda472f6b26bdb60.png" xmlns="">0wRpDlxmWREqfd1NDwCzbig</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

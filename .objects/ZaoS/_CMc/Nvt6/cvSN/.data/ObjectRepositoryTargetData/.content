@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="kv6G04Vknkq7OgDyUcbi_w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="aa8beade-53e6-4c82-baee-f9d260b7d77e" CvElementArea="206, 100, 67, 22" CvTextArea="230, 105, 19, 12" CvTextArgument="Yes" CvType="Button" DesignTimeRectangle="206, 100, 68, 23" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Yes' cls='Button' title='&amp;amp;Yes' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Yes' cls='Button' title='&amp;amp;Yes' check:text='&amp;amp;Yes' /&gt;" Guid="c7b44c06-d01a-4656-a2f6-fa21fd8d0519" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Confirm Save As' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="60, 46, 288, 30" ElementType="Text" FullSelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;ctrl name='Confirm Save As' role='pane' /&gt;&lt;ctrl name='data.csv already exists.  Do you want to replace it?' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;ctrl name='Confirm Save As' role='pane' /&gt;&lt;ctrl name='data.csv already exists.  Do you want to replace it?' role='text' automationid='' check:text='data.csv already exists.&amp;#xD;&amp;#xA;Do you want to replace it?' /&gt;" Guid="4bff3dfc-4d95-42cd-8143-7be63ccbc8f0" SearchSteps="Selector, FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="061edbc88130adf0e954cd9c9e9710ff.png" xmlns="">0rYKKP_bkEUyinYPnN2WUcA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

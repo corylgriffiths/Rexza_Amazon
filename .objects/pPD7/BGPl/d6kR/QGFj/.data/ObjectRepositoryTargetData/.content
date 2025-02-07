@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="uS92oBpZGEmYoTfWO8m1Dg" Reference="edQoiHTr_EubiZ3TXex5dQ/QGFjWL1yW0WrciQ1q5PuDQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gp/your-account/order-details/ref=_or" DesignTimeRectangle="383, 616, 526, 20" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='a-row' type='' isleaf='1' parentid='orderDetails' parentname='a-cardui-deck-autoname-0-card0' tag='DIV' check:text='I Appreciate your continued*' /&gt;" Guid="34de89d9-3302-42c6-bf64-e8518d5ff7d6" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Order Details' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="3">
+          <Target DesignTimeRectangle="383, 764, 79, 20" ElementType="Text" Guid="7a4f933c-3e0f-441d-9932-0a3f9f17ff22" SearchSteps="FuzzySelector">
+            <Target.FuzzySelectorArgument>
+              <p:InArgument x:TypeArguments="x:String">
+                <p:CSharpValue x:TypeArguments="x:String">"&lt;webctrl aaname='*"+cardAmount+"*' type='' parentid='orderDetails' parentname='a-cardui-deck-autoname-0-card0' tag='DIV' class='a-column a-span2' check:innerText='"+cardAmount+"' /&gt;"</p:CSharpValue>
+              </p:InArgument>
+            </Target.FuzzySelectorArgument>
+          </Target>
+          <Target DesignTimeRectangle="472, 764, 213, 20" ElementType="Text" Guid="dad3c453-a964-40d4-9284-34781f76112c" SearchSteps="FuzzySelector">
+            <Target.FuzzySelectorArgument>
+              <p:InArgument x:TypeArguments="x:String">
+                <p:CSharpValue x:TypeArguments="x:String">"&lt;webctrl type='' class='a-column a-span5 recipient' isleaf='1' parentid='orderDetails' parentname='a-cardui-deck-autoname-0-card0' tag='DIV' aaname='*"+cardPhone+"*' check:innerText='"+cardPhone+"' /&gt;"</p:CSharpValue>
+              </p:InArgument>
+            </Target.FuzzySelectorArgument>
+          </Target>
+          <Target DesignTimeRectangle="739, 765, 46, 18" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='         Resend     ' parentid='orderDetails' tag='A' type='' class='a-link-normal gcItemAction' check:innerText='Resend' /&gt;" Guid="cf9f4717-8e14-4f8a-8d26-4b7f04450f28" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="b2278c6488e2d5aefb26d593d2a222a7.png" xmlns="">0v9v2UZ5sw0ichg_dOkEP2g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

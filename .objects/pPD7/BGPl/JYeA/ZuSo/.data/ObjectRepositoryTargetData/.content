@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="PSCbnXq3mkC0Nrtre60Ihg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gp/css/order-history" CVScreenId="b89090c2-0429-4e23-abc8-a73b7339db8a" CvTextArea="417, 320, 154, 25" CvTextArgument="Your Orders" CvType="Text" DesignTimeRectangle="419, 316, 450, 36" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='' aaname='Your Orders' check:innerText='Your Orders' /&gt;" Guid="92bd0d24-0949-43bd-b9e9-704f371c6e5c" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Your Orders' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="b89090c2-0429-4e23-abc8-a73b7339db8a" CvTextArea="418, 283, 85, 13" CvTextArgument="Your Account" CvType="Text" DesignTimeRectangle="419, 281, 84, 18" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='a-link-normal' parentid='a-page' tag='A' type='' aaname='Your Account' check:innerText='Your Account' /&gt;" Guid="fc10cf1b-2fa0-4242-95b9-c1c1e29e8ed2" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="b9ef3552709b9c2d7dd878941a80e8d8.png" xmlns="">0pALcpb4bZEK6xOUf4T9dTA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

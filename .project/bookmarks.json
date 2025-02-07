@@ -1,0 +1,15 @@
+{
+  "Value": {
+    "fastgem/updatePayrollNotes_new.xaml": [
+      {
+        "IsEnabled": true,
+        "Annotation": null,
+        "Id": "ab95409f-d0c1-4656-80b7-a2b431a5920e",
+        "ActivityIdRef": "NClick_7",
+        "ActivityId": "1.107",
+        "ActivityName": "Click 'Edit Item'",
+        "IsTransient": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="MsX_ItIRQUWWOisDsL0d0A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/accounts" CVScreenId="43c4dee1-e5df-4073-acb0-3cbe4c0d22da" CvElementArea="1220, 1474, 49, 20" CvType="InputBox" DesignTimeRectangle="1221, 1475, 48, 18" DesignTimeScaleFactor="0.800000011920929" ElementType="DropDown" FuzzySelectorArgument="&lt;webctrl id='limit' tag='SELECT' type='' class='inputbox input-mini' aaname='' /&gt;" Guid="2e68e401-7dbe-4510-9b2d-6f0538f3144e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="43c4dee1-e5df-4073-acb0-3cbe4c0d22da" CvElementArea="1250, 1475, 17, 18" CvType="ArrowButton" DesignTimeRectangle="1250, 1475, 18, 18" ElementType="ArrowButton" Guid="ebd298ca-6e87-42b0-80ba-e90fda81d1b7" SearchSteps="CV" TargetType="ComputerVisionBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="1eed7234adf38d44168b2ebabea2f964.png" xmlns="">0_TGHENGzsEaihGWTbMNRXg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

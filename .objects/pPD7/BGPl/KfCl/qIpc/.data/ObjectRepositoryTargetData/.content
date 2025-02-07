@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="sarTkdmA7UmjejOt-662AA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gp/product/B086FNYH28/ref=sw_img_1" CVScreenId="d7377aed-f998-4fa1-a372-6a086a2caad1" CvElementArea="1508, 437, 196, 36" CvTextArea="1572, 448, 68, 13" CvTextArgument="Add to cart" CvType="Button" DesignTimeRectangle="1511, 441, 190, 29" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='gc-buy-box-atc' tag='INPUT' type='submit' class='a-button-input gc-buy-box-disabled' aaname='' /&gt;" Guid="0d842393-8ec2-47dc-ac57-8ca93091ec02" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - We Appreciate You (Email): Gift Cards' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="e10324d6a5df98a7ecac253094868494.png" xmlns="">0HNK4fj3-fkK8r_UTZPEU2w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

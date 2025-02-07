@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="-qksVoexskyRn3_3DM2Lig" Reference="edQoiHTr_EubiZ3TXex5dQ/wfQ7dgyqPEKHIw9WD0vUWg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/cart/smart-wagon" CVScreenId="97f8ae50-7098-4732-b1c2-989d42fe73a2" DesignTimeRectangle="999, 343, 254, 29" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aria-labelledby='sc-buy-box-ptc-button-announce' tag='INPUT' type='submit' class='a-button-input' aaname='Proceed to checkout' check:text='Proceed to checkout*' /&gt;" Guid="ec6d8d05-d551-4c3d-aaed-8a54264cbc21" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com Shopping Cart' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="97f8ae50-7098-4732-b1c2-989d42fe73a2" CvElementArea="1323, 383, 259, 34" CvTextArea="1421, 394, 63, 12" CvTextArgument="Go to Cart" CvType="Button" DesignTimeRectangle="999, 386, 254, 29" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='sw-gtc' tag='A' type='' class='a-button-text' aaname='     Go to Cart ' check:innerText='Go to Cart' /&gt;" Guid="85fd3d6d-608e-4bd4-9efc-baa0aa5be878" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="d4a5601b84c839a8eb5f76effceebf94.png" xmlns="">0y8VHrV1fcEmFkMrPCdO5-g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

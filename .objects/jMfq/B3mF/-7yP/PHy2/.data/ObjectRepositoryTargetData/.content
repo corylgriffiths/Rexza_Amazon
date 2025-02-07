@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="c-mt03nH4UqF485UXUOUtA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/accounts" CVScreenId="bdf2e57e-df7d-4c1c-946b-372325202cbb" DesignTimeRectangle="1484, 200, 217, 19" DesignTimeScaleFactor="1.100000023841858" FuzzySelectorArgument="&lt;webctrl class='btn-wrapper' type='' parentid='adminForm' tag='DIV' aaname='                          Properties*' /&gt;" Guid="4e471e3e-204d-49c8-8c7a-15e6db458102" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="cea64cd270d99f7ffe47ff6b8bac8c50.png" xmlns="">0r9GY6gVSckSM1qGTBlyIHw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

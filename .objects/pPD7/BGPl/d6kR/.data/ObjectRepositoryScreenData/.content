@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="_pSFaV7j3USIE8jknXXblw" Reference="edQoiHTr_EubiZ3TXex5dQ/d6kR6H1uvE-ZbXF-ntS45g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="106, 47, 1449, 1833" BrowserType="Chrome" ContentHash="GCHUo6odT0eCFKhisL5rRg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF0SURBVDhPlZMxS8NAGIYD2vwBR80P0Knt7qTZRZr8A9u9Q3+ASIWCULG4ClnqUi10EWy7qx0cLKQuOrQpOGhJ1cGhr7y5XHokReoLR7jv3u/5vrvcaQB0ACcAhlhe9DJH1wAcx1cHgwFKpRJylgXLtuE4TtwiVSFgrEZ6vR5WUimsxgaBCzQmYKJG8oVCkLBrmnBdN5pvGIZqk5okAJ7nBV10Oh1cN5vBFmQXC5QEcP/pbDaxhaUBsiIh7OasVvsfQJqPyuVgfpDPRzHf91UrlQSkM5kogQep/hF2E1MI+PKiCA9w3TCCBH6ZlLNt7Jgmpu9jzFwHuC+KEQFaW8CHq5IXq7svEh8PgTpTJWDUBi414K4ITOfdJPQ5Al4aolhjjRHlDF6vBITjZltU6VeBpyrQPwW6e6IqfSzI9RAwv8pvD8JICM11DbPwi9YmMLwVvh9fjPAqVyKAFFt8vph3MGzHHVLBY+JzPgfwHV/9Q/QyR/8FZNBNQChmFy8AAAAASUVORK5CYII=" Reference="edQoiHTr_EubiZ3TXex5dQ/d6kR6H1uvE-ZbXF-ntS45g" Selector="&lt;html app='chrome.exe' title='Order Details' /&gt;" Title="Order Details" Url="https://www.amazon.com/*" Version="V1">
+      <imageRef attrName="InformativeScreenshot" originalValue="d89bd7277b91b0af766a02b88e913807.jpg" xmlns="">0LjOqhs3VvkuQC9k4NcPlNA</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="0_kOuHMP9EK80yxtiIzmJA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gp/css/gc-reissue/email-selection.html" CVScreenId="2f4c0934-78be-4e88-88ef-a05f3c70f741" CvElementArea="235, 546, 19, 19" CvType="RadioButton" DesignTimeRectangle="238, 549, 14, 14" DesignTimeScaleFactor="1" ElementType="RadioButton" FuzzySelectorArgument="&lt;webctrl id='gc-resend-radio-same-recipient' tag='INPUT' type='radio' class='' aaname='       To the same phone number:*' /&gt;" Guid="d2f41074-806f-4661-bb7e-243aad84ae55" ScopeSelectorArgument="&lt;html app='chrome.exe' title='amazon.com/gp/css/gc-reissue/email-selection.html?ie=UTF8&amp;amp;gcID=A0424908UWOWQ1ASU1KE&amp;amp;orderID=114-5729054-7442647' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="2f4c0934-78be-4e88-88ef-a05f3c70f741" DesignTimeRectangle="238, 546, 959, 32" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='gc-resend-form' tag='LABEL' type='' class='' aaname='' check:innerText='To the same phone number: *' /&gt;" Guid="fb43bbb8-d8a9-4e9c-8c63-8db120593aaf" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="0b42a60bbcb7c1d41e942bdb828bbfd6.png" xmlns="">0TJ8df-b6t0uzAcnhNHkIoA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

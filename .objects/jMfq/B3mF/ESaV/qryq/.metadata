@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Are you sure",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "qryqlKP6nUSuKuelFSsVgg",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/qryqlKP6nUSuKuelFSsVgg",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/ESaVsNKNU0-TgJdwVTsFAw",
+  "Created": "2025-01-24T04:19:40.1644846Z",
+  "Updated": "2025-01-24T04:19:40.1644846Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

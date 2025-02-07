@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="TQYe_btgGkWgW5ovUbGG3A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/orders-2/appointmentform/7152" CVScreenId="526c4267-8057-471e-a01a-30a1fd5e73bd" CvElementArea="1925, 201, 80, 29" CvType="Button" DesignTimeRectangle="1926, 203, 78, 26" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='                                                  Cancel                    ' parentid='form-appointmentform' tag='A' type='' class='btn btn-small fg_cancel_button' check:innerText='Cancel' /&gt;" Guid="75800e83-b35a-49fd-84f8-81db210d5e57" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Orders' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="526c4267-8057-471e-a01a-30a1fd5e73bd" CvElementArea="1810, 201, 115, 29" CvTextArea="1840, 209, 73, 12" CvTextArgument="Save &amp; Close" CvType="Button" DesignTimeRectangle="1811, 203, 112, 26" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='                                                          Save &amp;amp; Close                        ' tag='BUTTON' type='submit' class='btn btn-primary btn-small fg_save' check:innerText='Save &amp;amp; Close' /&gt;" Guid="c72ff069-ef2f-4209-9727-60ad8eaa3445" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="11d026ef996fc778e4cde6fdc68ee3f1.png" xmlns="">0bOU-5dMoMUaTHOFlFPK_Ww</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

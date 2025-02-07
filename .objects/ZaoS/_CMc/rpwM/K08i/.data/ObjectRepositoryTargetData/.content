@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="jO1tj36lykeMFwlgn4KwOQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/orders-2/appointmentform/7152" CVScreenId="e71f9580-adff-451f-91b6-cbd40974830a" CvElementArea="1017, 321, 424, 28" CvType="InputBox" DesignTimeRectangle="1019, 322, 419, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='jform_custom_data__order_num' tag='INPUT' type='text' class='' aaname=' &amp;#x9;Order Num' /&gt;" Guid="2740de5c-8e79-4ce9-bbf1-5b512961f2a0" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Orders' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="e71f9580-adff-451f-91b6-cbd40974830a" CvTextArea="1018, 306, 59, 12" CvTextArgument="Order Num" CvType="Text" DesignTimeRectangle="1019, 305, 419, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='jform_custom_data__order_num-lbl' tag='LABEL' type='' class='' aaname=' &amp;#x9;Order Num' check:innerText='Order Num' /&gt;" Guid="3f3df989-939e-47f5-90ec-d25252b430cd" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="6a7735a106469186b7f7b85382827170.png" xmlns="">0UCE8GzvSB0Kr34cGpBAVrg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

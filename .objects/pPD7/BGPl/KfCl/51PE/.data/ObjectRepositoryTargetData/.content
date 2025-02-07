@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="p-_900Bj-0-VRnPo5PjaFg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gp/product/B086FNYH28/ref=sw_img_1" CVScreenId="d7377aed-f998-4fa1-a372-6a086a2caad1" CvElementArea="1067, 863, 140, 34" CvTextArea="1098, 873, 89, 13" CvTextArgument="Enter amount" CvType="Button" DesignTimeRectangle="1091, 864, 114, 31" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='gc-order-form-custom-amount' tag='INPUT' type='text' class='a-input-text gc-order-form-custom-amount' placeholder='Enter amount' aaname='          &amp;lt;span id=&amp;quot;gc-nojs-asterisk&amp;quot; class=&amp;quot;a-color-error gc-requires-no-js-inline&amp;quot;&amp;gt;&amp;lt;a:text textColor=&amp;quot;${&amp;apos;error&amp;apos;}&amp;quot;&amp;gt;*&amp;lt;/a:text&amp;gt;&amp;lt;/span&amp;gt;    Amount ' /&gt;" Guid="d29606c8-5553-4210-964e-02fad43f46e0" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - We Appreciate You (Email): Gift Cards' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="d7377aed-f998-4fa1-a372-6a086a2caad1" CvTextArea="645, 873, 56, 13" CvTextArgument="Amount" CvType="Text" DesignTimeRectangle="599, 863, 100, 35" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='gc-order-form-amount-label' tag='LABEL' type='' class='a-form-label' aaname='          Amount ' check:innerText='Amount' /&gt;" Guid="847c78d4-96cd-4618-8a1b-d3785994944c" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="6b5e7bf4e503685104a54321954a13cc.png" xmlns="">0j1NgUxKqikm6b-meVBfmdw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

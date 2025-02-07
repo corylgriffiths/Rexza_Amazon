@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Your Orders",
+  "Type": "Screen",
+  "Id": "JYeA4V8g_0a8BZbsWd0jnw",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/JYeA4V8g_0a8BZbsWd0jnw",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/BGPlO2wQ2U217jaXnVUl7g",
+  "Created": "2025-01-31T00:26:27.5596233Z",
+  "Updated": "2025-01-31T00:26:27.5596233Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

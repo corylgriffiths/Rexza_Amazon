@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="8tnti4lAeUm0i3kmLL9d5g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com" CVScreenId="449ce8ba-5490-4ef8-9f90-31ae9a1a85a3" CvTextArea="1420, 188, 72, 14" CvTextArgument="Hello, sign in" CvType="Text" DesignTimeRectangle="1422, 188, 70, 14" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='nav-link-accountList-nav-line-1' tag='SPAN' type='' class='nav-line-1 nav-progressive-content' aaname='Hello, sign in' check:innerText='Hello, sign in' /&gt;" Guid="810dd02f-27ac-4af9-a79d-f6b3360fba45" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com. Spend less. Smile more.' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="449ce8ba-5490-4ef8-9f90-31ae9a1a85a3" CvElementArea="1522, 200, 18, 18" CvTextArea="1419, 201, 104, 14" CvTextArgument="Account &amp; Lists" CvType="ArrowButton" DesignTimeRectangle="1422, 202, 113, 15" FuzzySelectorArgument="&lt;webctrl aaname='Account &amp;amp; Lists   ' parentid='nav-link-accountList' tag='SPAN' type='' class='nav-line-2 ' check:innerText='Account &amp;amp; Lists' /&gt;" Guid="7fbeb1ac-8073-475c-b952-dcbe0ab6fbc0" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="b652a384f5b7fa6d01c9fbfa7706e32f.png" xmlns="">0-W-kDOSDQkmRSTcGZav0tA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

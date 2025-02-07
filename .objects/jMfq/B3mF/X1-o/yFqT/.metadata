@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Payroll (01202025)",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "yFqTxtXAy0yHo9kY3DTEBg",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/yFqTxtXAy0yHo9kY3DTEBg",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/X1-omhlidkSEkMfcAQ49-Q",
+  "Created": "2025-01-30T23:15:47.6217503Z",
+  "Updated": "2025-01-30T23:15:47.6217503Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

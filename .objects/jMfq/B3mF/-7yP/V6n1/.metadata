@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Gift Card",
+  "Type": "Element",
+  "Id": "V6n1gwkhjkeuepuB8ZZBUg",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/V6n1gwkhjkeuepuB8ZZBUg",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/-7yPghsNoEeEcPneMbBhvA",
+  "Created": "2025-01-23T23:35:40.8583001Z",
+  "Updated": "2025-01-23T23:35:40.8583001Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

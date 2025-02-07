@@ -16,6 +16,30 @@
       "IsPrincipal": true,
       "ArgumentType": 0,
       "DataSourceItems": null
+    },
+    {
+      "Name": "in_weekOffset",
+      "DisplayName": "in_weekOffset",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_nonIncentive_YearOffset",
+      "DisplayName": "in_nonIncentive_YearOffset",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "50",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
     }
   ]
 }

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="bjHjixsZ-0amA8xwJ56p6g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gp/css/order-history" DesignTimeRectangle="1568, 178, 77, 50" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='nav-orders' tag='A' type='' class='nav-a nav-a-2   nav-progressive-attribute' aaname='   Returns   &amp;amp; Orders ' check:innerText='Returns&amp;#xA;&amp;amp; Orders' /&gt;" Guid="a29bc96b-db8f-462c-806f-0f89eebac50a" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Your Orders' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="c026025bf4b2c6d9c9905b4bc5f4685f.png" xmlns="">0o55UjOi7KUSBSa06IA8zNA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

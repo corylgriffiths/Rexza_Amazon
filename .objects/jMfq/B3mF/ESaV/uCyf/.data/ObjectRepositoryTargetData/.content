@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="rav7Ye2CLUumQ0twleZcfA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="52a8f21a-8afa-41ad-9bdc-9bc8638a0dbf" CvElementArea="1590, 230, 43, 29" CvType="Button" DesignTimeRectangle="1603, 238, 14, 14" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl parentid='finalize_date_btn' tag='SPAN' type='' class='icon-calendar' aaname='' /&gt;" Guid="9e35dc56-2035-4c01-975b-e0ab8b155930" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="52a8f21a-8afa-41ad-9bdc-9bc8638a0dbf" CvElementArea="1590, 230, 43, 29" CvType="Button" DesignTimeRectangle="1590, 231, 42, 27" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='finalize_date_btn' tag='BUTTON' type='button' class='btn btn-secondary' aaname='Open the calendar' /&gt;" Guid="3b52c558-f8d8-4708-8577-e59eb43b540f" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="61fd7b10c5287a16864ff9fb2da7c979.png" xmlns="">0d_W4Japnh0eF6GrO-9R4kQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="HZJ_70wiTUSuID_LsaZ1GA" Reference="edQoiHTr_EubiZ3TXex5dQ/JvZWDnUuYk6Lpn4ljbxMog" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="3fdbb4f2-a8e3-415a-b013-fd31fc872c10" CvTextArea="10, 198, 17, 13" CvTextArgument="All" CvType="Text" DesignTimeRectangle="10, 198, 17, 13" DesignTimeScaleFactor="1" ElementType="Text" Guid="e1649702-b873-4b52-bdb5-1b1a386a8ddd" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="8a7642f0-ff9e-4dae-b3a1-e83352cadb09" CvTextArea="11, 174, 22, 13" CvTextArgument="100" CvType="Text" DesignTimeRectangle="11, 174, 22, 13" ElementType="Text" Guid="0f84781a-4391-4c18-8584-82072a3bf489" SearchSteps="CV" TargetType="ComputerVisionBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="1d8c821c9d0d68df388cf192b0278c9e.png" xmlns="">0SyJOj_-bXku_sHHyWcKWpQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

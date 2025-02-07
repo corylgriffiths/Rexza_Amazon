@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="_59qREE29UmBveDzw_MQEw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/accounts" CVScreenId="0ec56128-8d23-4cc4-a25d-7dc9321abc53" CvTextArea="336, 309, 14, 10" CvTextArgument="No" CvType="Text" DesignTimeRectangle="333, 305, 141, 20" DesignTimeScaleFactor="0.800000011920929" ElementType="ListItem" FuzzySelectorArgument="&lt;webctrl type='' parentid='filter_json_gift_card_chzn' tag='LI' class='active-result' aaname='No' check:innerText='No' /&gt;" Guid="88ec3743-5a1d-4093-9a7c-a3c55034fba3" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="0ec56128-8d23-4cc4-a25d-7dc9321abc53" CvTextArea="336, 289, 17, 10" CvTextArgument="Yes" CvType="Text" DesignTimeRectangle="333, 285, 141, 20" ElementType="ListItem" FuzzySelectorArgument="&lt;webctrl parentid='filter_json_gift_card_chzn' tag='LI' type='' class='active-result' aaname='Yes' check:innerText='Yes' /&gt;" Guid="5a93e634-48ef-4a44-aa9e-da770faf9c81" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="14e5a5b8ead7bd234ab9b247d289d45f.png" xmlns="">00NljiY9n3UKz7JzBJ19gxQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

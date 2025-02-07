@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Returns & Orders",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "PKzqUWFONUm4oONjfS5anA",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/PKzqUWFONUm4oONjfS5anA",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/KfClGJ4uuE-CNRrLiCAA7w",
+  "Created": "2025-02-07T20:33:45.5120219Z",
+  "Updated": "2025-02-07T20:33:45.5120219Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
