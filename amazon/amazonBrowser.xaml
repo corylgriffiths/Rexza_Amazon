@@ -107,7 +107,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="amazon" sap:VirtualizedContainerService.HintSize="1605,1208.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="amazon" sap:VirtualizedContainerService.HintSize="1277,686.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -139,7 +139,7 @@
         </OutArgument>
       </uix:NApplicationCard.OutUiElement>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-1929, -9, 1938, 1038" BrowserType="Chrome" ContentHash="8IuHibDK_Uqx_1JHIyR7hA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF5SURBVDhPlVM9S8NQFBW0+QOO2h+gU9vdSbuLNP0HprtDfoBIhYKgWFyFLLpUC10EjbvawcFC4qJDm4CDllQdHHq9JzdfbYLUA4e8d98959738t4cESnMA2afOSuQC40Cg31EkrBtm3Rdp4qqklqtkmEYwUoKDRi4MhZ0u12az+VoYYowzIALg6GMBVqt5gs2ymWyLCuaL+fzQcYEhikDx3H8LkzTpMt2299C2EUG0gbYf6FUikRJZiBtEFaECbo5bjb/ZxAm79Xr/nxb06KY53l+LIG0QaFYjAQ4yOQfQTdTCAy+HJkycIBLfOIQ4AtRhbe1zmajd5fGFt+J+x1hZNBZJfqwEPgbt1sifNwlOoM0NBjcEJ3z8I4XR3E3KXwOiF5aUqy1iEjiDF4vxAS8WpMqvUOiJ2bviKtvSlXkoSDWA4P4Kr89SCJMkMwcB1/qrPATupa8H/4bYHCVGxhNAC0+n8Yd9LliNvzHhOd8wvxGZEYglzWk/AJk0E1AkKBI3AAAAABJRU5ErkJggg==" InformativeScreenshot="8a0c29f62b3b749aa8916e4a32205081.jpg" Reference="j3RPm-lsJUOk5qq-VZvaQA/Qa7qbb3DcEmRr-UPZcJcKQ" Selector="&lt;html app='chrome.exe' title='Amazon.com. Spend less. Smile more.' /&gt;" Title="Amazon.com. Spend less. Smile more." Url="https://www.amazon.com/" Version="V1" />
+        <uix:TargetApp Area="1753, 0, 2095, 2119" BrowserType="Chrome" ContentHash="8IuHibDK_Uqx_1JHIyR7hA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF0SURBVDhPlZMxS8NAGIYD2vwBR80P0Knt7qTZRZr8A9u9Q3+ASIWCULG4ClnqUi10EWy7qx0cLKQuOrQpOGhJ1cGhr7y5XHokReoLR7jv3u/5vrvcaQB0ACcAhlhe9DJH1wAcx1cHgwFKpRJylgXLtuE4TtwiVSFgrEZ6vR5WUimsxgaBCzQmYKJG8oVCkLBrmnBdN5pvGIZqk5okAJ7nBV10Oh1cN5vBFmQXC5QEcP/pbDaxhaUBsiIh7OasVvsfQJqPyuVgfpDPRzHf91UrlQSkM5kogQep/hF2E1MI+PKiCA9w3TCCBH6ZlLNt7Jgmpu9jzFwHuC+KEQFaW8CHq5IXq7svEh8PgTpTJWDUBi414K4ITOfdJPQ5Al4aolhjjRHlDF6vBITjZltU6VeBpyrQPwW6e6IqfSzI9RAwv8pvD8JICM11DbPwi9YmMLwVvh9fjPAqVyKAFFt8vph3MGzHHVLBY+JzPgfwHV/9Q/QyR/8FZNBNQChmFy8AAAAASUVORK5CYII=" InformativeScreenshot="5d3db16310bfc456e1495bcf7218ef1f.jpg" Selector="&lt;html app='chrome.exe' title='Amazon.com. Spend less. Smile more.' /&gt;" Title="Amazon.com. Spend less. Smile more." Url="https://www.amazon.com/" Version="V1" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>

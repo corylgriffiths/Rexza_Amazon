@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="AkaxVBueD0yDT9rvuO_3Fw" Reference="edQoiHTr_EubiZ3TXex5dQ/-N1vlq5kUUi-1ViDz0Fwnw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="f97d8648-230c-461c-94bc-49f5c95a4641" CvElementArea="909, 371, 269, 81" CvType="InputBox" DesignTimeRectangle="914, 421, 259, 25" DesignTimeScaleFactor="1" ElementType="ListItem" FuzzySelectorArgument="&lt;webctrl type='' parentid='jform_custom_data__sti_chzn' tag='LI' class='active-result' /&gt;" Guid="de8c3155-bddc-4701-a799-0a1c3a99c42f" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Orders - FastGem - CorServe' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="f97d8648-230c-461c-94bc-49f5c95a4641" CvElementArea="909, 371, 269, 81" CvType="InputBox" DesignTimeRectangle="914, 396, 259, 25" ElementType="ListItem" FuzzySelectorArgument="&lt;webctrl parentid='jform_custom_data__sti_chzn' tag='LI' type='' class='active-result' aaname='Yes' check:innerText='Yes' /&gt;" Guid="c0e6fd9b-60d8-4210-9cec-8682093ee65b" SearchSteps="FuzzySelector, CV" />
+          <Target CVScreenId="f97d8648-230c-461c-94bc-49f5c95a4641" CvTextArea="908, 356, 19, 12" CvTextArgument="STI" CvType="Text" DesignTimeRectangle="909, 355, 269, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='jform_custom_data__sti-lbl' tag='LABEL' type='' class='required' aaname=' &amp;#x9;STI' check:innerText='STI *' /&gt;" Guid="28a81653-af28-43dd-a411-777e0e12f9dc" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="32f2a951212dd7a105464f6a7fc5f9ef.png" xmlns="">0Txu3G9GThE-GHZ35VRpsmg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

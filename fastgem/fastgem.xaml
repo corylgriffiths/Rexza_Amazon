@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="fastgem" this:fastgem.in_ExceptionString="Mansions at Timberland" this:fastgem.in_weekOffset="-1" this:fastgem.in_nonIncentiveFinalize_YearOffset="50" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="fastgem" this:fastgem.in_ExceptionString="Mansions at Timberland" this:fastgem.in_weekOffset="-1" this:fastgem.in_nonIncentiveFinalize_YearOffset="50" this:fastgem.in_SkipNonIncentiveCheck="False" this:fastgem.in_batchSize="150" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Out_PullPayrollData" Type="OutArgument(sd:DataTable)" />
     <x:Property Name="Out_PullLeasingAgentsData" Type="OutArgument(sd:DataTable)" />
@@ -8,6 +8,8 @@
     <x:Property Name="in_ExceptionString" Type="InArgument(x:String)" />
     <x:Property Name="in_weekOffset" Type="InArgument(x:Int32)" />
     <x:Property Name="in_nonIncentiveFinalize_YearOffset" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_SkipNonIncentiveCheck" Type="InArgument(x:Boolean)" />
+    <x:Property Name="in_batchSize" Type="InArgument(x:Int32)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -149,7 +151,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="fastgem" sap:VirtualizedContainerService.HintSize="1761,1412.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="fastgem" sap:VirtualizedContainerService.HintSize="1570,1760" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="varUsername" />
       <Variable x:TypeArguments="ss:SecureString" Name="varPassword" />
@@ -159,7 +161,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Fastgem" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Rexza" sap:VirtualizedContainerService.HintSize="518,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Fastgem" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Rexza" sap:VirtualizedContainerService.HintSize="520,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2">
       <ui:GetRobotCredential.Password>
         <OutArgument x:TypeArguments="ss:SecureString">
           <CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">varPassword</CSharpReference>
@@ -171,36 +173,37 @@
         </OutArgument>
       </ui:GetRobotCredential.Username>
     </ui:GetRobotCredential>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome FastGem - CRM" sap:VirtualizedContainerService.HintSize="518,1147" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="856efba4-8bba-4af3-ba3d-0ab11934dcb2" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome FastGem - CRM" sap:VirtualizedContainerService.HintSize="520,1562" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="856efba4-8bba-4af3-ba3d-0ab11934dcb2" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="484,907" sap2010:WorkflowViewState.IdRef="Sequence_18">
+          <Sequence sap:VirtualizedContainerService.HintSize="486,1322" sap2010:WorkflowViewState.IdRef="Sequence_18">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-            <Sequence sap:VirtualizedContainerService.HintSize="450,788" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <Sequence sap:VirtualizedContainerService.HintSize="452,1203" sap2010:WorkflowViewState.IdRef="Sequence_9">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="PayrollData_DT" />
+                <Variable x:TypeArguments="x:Boolean" Name="hasMoreRecs" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="login - Invoke Workflow File (fastgem\login.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="fastgem\login.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="login - Invoke Workflow File (fastgem\login.xaml)" sap:VirtualizedContainerService.HintSize="418,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="fastgem\login.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="ui:UiElement" x:Key="In_Browser">
                     <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">Out_BrowserFastGem</CSharpValue>
                   </InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="downloadAccounts - Invoke Workflow File (fastgem\downloadAccounts.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="fastgem\downloadAccounts.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="downloadAccounts - Invoke Workflow File (fastgem\downloadAccounts.xaml)" sap:VirtualizedContainerService.HintSize="418,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="fastgem\downloadAccounts.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="ui:UiElement" x:Key="In_Browser">
                     <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">Out_BrowserFastGem</CSharpValue>
@@ -213,7 +216,7 @@
                   </OutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ProcessParoll_new - Invoke Workflow File (fastgem\\ProcessParoll_new.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="fastgem\\ProcessParoll_new.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ProcessParoll_new - Invoke Workflow File (fastgem\\ProcessParoll_new.xaml)" sap:VirtualizedContainerService.HintSize="418,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="fastgem\\ProcessParoll_new.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:Int32" x:Key="in_WeekOffSet">
                     <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_66">in_weekOffset</CSharpValue>
@@ -232,17 +235,59 @@
                   <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_PullPayrollData">
                     <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_46">PayrollData_DT</CSharpReference>
                   </OutArgument>
-                  <InArgument x:TypeArguments="x:Int32" x:Key="in_decrementalYears">50</InArgument>
-                  <InArgument x:TypeArguments="x:Boolean" x:Key="in_SkipNonIncentiveCheck">False</InArgument>
-                </ui:InvokeWorkflowFile.Arguments>
-              </ui:InvokeWorkflowFile>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="updatePayrollNotes_new - Invoke Workflow File (fastgem\updatePayrollNotes_new.xaml)" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="fastgem\updatePayrollNotes_new.xaml">
-                <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="x:Int32" x:Key="in_WeekOffSet">
-                    <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_70">in_weekOffset</CSharpValue>
+                  <InArgument x:TypeArguments="x:Int32" x:Key="in_decrementalYears">
+                    <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">in_nonIncentiveFinalize_YearOffset</CSharpValue>
                   </InArgument>
+                  <InArgument x:TypeArguments="x:Boolean" x:Key="in_SkipNonIncentiveCheck">
+                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">in_SkipNonIncentiveCheck</CSharpValue>
+                  </InArgument>
+                  <InArgument x:TypeArguments="x:Int32" x:Key="in_batchSize">
+                    <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_72">in_batchSize</CSharpValue>
+                  </InArgument>
+                  <OutArgument x:TypeArguments="x:Boolean" x:Key="out_hasMoreRecs">
+                    <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_47">hasMoreRecs</CSharpReference>
+                  </OutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
+              <If sap:VirtualizedContainerService.HintSize="418,585" sap2010:WorkflowViewState.IdRef="If_1">
+                <If.Condition>
+                  <InArgument x:TypeArguments="x:Boolean">
+                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_74">hasMoreRecs == false</CSharpValue>
+                  </InArgument>
+                </If.Condition>
+                <If.Then>
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,228" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="updatePayrollNotes_new - Invoke Workflow File (fastgem\updatePayrollNotes_new.xaml)" sap:VirtualizedContainerService.HintSize="382,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="fastgem\updatePayrollNotes_new.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:Int32" x:Key="in_WeekOffSet">
+                          <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_70">in_weekOffset</CSharpValue>
+                        </InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,226" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+                      <ui:LogMessage.Message>
+                        <InArgument x:TypeArguments="x:Object">
+                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_76">"there are still records to process.. Skipping renaming the payroll"</CSharpValue>
+                        </InArgument>
+                      </ui:LogMessage.Message>
+                    </ui:LogMessage>
+                  </Sequence>
+                </If.Else>
+              </If>
             </Sequence>
           </Sequence>
         </ActivityAction>

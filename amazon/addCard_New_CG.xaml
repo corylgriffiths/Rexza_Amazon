@@ -132,7 +132,7 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="addCard" sap:VirtualizedContainerService.HintSize="1390,2738" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="addCard" sap:VirtualizedContainerService.HintSize="1056,5598" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="DataTableResendReport" />
     </Sequence.Variables>
@@ -142,13 +142,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:Comment sap:VirtualizedContainerService.HintSize="1056,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Write your comments in the Text property" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Amazon.com. Spend less. Smile more." sap:VirtualizedContainerService.HintSize="1056,2627" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Amazon.com. Spend less. Smile more." sap:VirtualizedContainerService.HintSize="1056,5487" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1022,2387" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1022,5247" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:UiElement" Name="IsVerifyCardExists" />
               <Variable x:TypeArguments="ui:UiElement" Name="EnterAmountTxtBoxExists" />
@@ -180,8 +180,8 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="988,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://www.amazon.com/gp/product/B086FNYH28/ref=sw_img_1?smid=ATVPDKIKX0DER&amp;psc=1" Version="V4" />
-            <uix:NCheckState DisplayName="Enter the gift card inf" sap:VirtualizedContainerService.HintSize="988,57" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Timeout="10" Version="V4">
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="988,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://www.amazon.com/Amazon-eGift-Card-Logo-Animated/dp/B07PCMWTSG/ref=sr_1_1?th=1" Version="V4" />
+            <uix:NCheckState DisplayName="Enter the gift card inf" sap:VirtualizedContainerService.HintSize="988,1673" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Timeout="10" Version="V4">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,1424" sap2010:WorkflowViewState.IdRef="Sequence_38">
                   <sap:WorkflowViewStateService.ViewState>
@@ -191,7 +191,13 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="True" DisplayName="Type Into '&lt;span id=&quot;gc-nojs-aster…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="DebuggerApi" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Timeout="60" Version="V4">
                     <uix:NTypeInto.Target>
-                      <uix:TargetAnchorable BrowserURL="amazon.com/gp/product/B086FNYH28/ref=sw_img_1" CVScreenId="5aa96ba2-d830-4cce-a22f-2669cb439f70" ContentHash="b4SLisDgekytGnUSW99cDA" DesignTimeRectangle="1091, 864, 114, 31" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl id='gc-order-form-custom-amount' tag='INPUT' type='text' class='a-input-text gc-order-form-custom-amount' aaname='          &amp;lt;span id=&amp;quot;gc-nojs-asterisk&amp;quot; class=&amp;quot;a-color-error gc-requires-no-js-inline&amp;quot;&amp;gt;&amp;lt;a:text textColor=&amp;quot;${&amp;apos;error&amp;apos;}&amp;quot;&amp;gt;*&amp;lt;/a:text&amp;gt;&amp;lt;/span&amp;gt;    Amount ' /&gt;" Guid="f5b52eac-01f8-4d47-9219-d7699d16bba6" InformativeScreenshot="930b1f3cb9edd3887d9eba724b906958.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/J6yOlEVZb0yfE7O7L9iIxw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - We Appreciate You (Email): Gift Cards' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="amazon.com/Amazon-eGift-Card-Logo-Animated/dp/B07PCMWTSG/ref=sr_1_1" CVScreenId="1bddea66-c492-4bbd-9dd4-7c69f734e569" DesignTimeRectangle="629, 926, 250, 31" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='gc-order-form-custom-amount' tag='INPUT' type='text' class='a-input-text a-width-large' placeholder='Enter amount' aaname='' /&gt;" Guid="4d9cadec-3ba5-41b5-8a24-30d109e80fe2" InformativeScreenshot="863fc8817b4ec6d9615d7e018ef9b276.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - Amazon Logo (Animated) : Gift Cards' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="1bddea66-c492-4bbd-9dd4-7c69f734e569" DesignTimeRectangle="606, 909, 234, 15" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='gc-amount-custom-denom-wrapper' tag='SPAN' type='' class='a-size-small a-text-bold' aaname=' Custom amount *' check:innerText='Custom amount *' /&gt;" Guid="fdd68cc7-4386-4ff3-bd00-58ba8db687fe" SearchSteps="FuzzySelector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                     <uix:NTypeInto.Text>
                       <InArgument x:TypeArguments="x:String">
@@ -211,7 +217,7 @@
                   </uix:NTypeInto>
                   <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Text Message'" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="amazon.com/dp/B09KXRPW9G" CVScreenId="b722faac-c873-4a54-ab12-c675d4e433e9" ContentHash="9qG113h85k6DA6hOGIlqRw" CvElementArea="874, 534, 131, 45" CvTextArea="889, 547, 101, 18" CvTextArgument="Text Message" CvType="Button" DesignTimeRectangle="779, 909, 99, 31" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='gc-delivery-mechanism-button-MobileSMS-announce' tag='BUTTON' type='button' class='a-button-text' aaname='               Text Message             ' check:innerText='Text Message' /&gt;" Guid="dc01136c-d890-4c03-b221-b7d421ae7a0d" InformativeScreenshot="ac091fb1b129ec269ee81e98914478ee.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/OOgN7pGIv0GHCjBAmqPSBw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - Slices of Cake: Gift Cards' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                      <uix:TargetAnchorable BrowserURL="amazon.com/dp/B09KXRPW9G" CVScreenId="b722faac-c873-4a54-ab12-c675d4e433e9" ContentHash="9qG113h85k6DA6hOGIlqRw" CvElementArea="874, 534, 131, 45" CvTextArea="889, 547, 101, 18" CvTextArgument="Text Message" CvType="Button" DesignTimeRectangle="676, 994, 103, 30" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='gc-delivery-mechanism-button-MobileSMS-announce' tag='BUTTON' type='button' class='a-button-text' aaname='               Text Message             ' check:innerText='Text Message' /&gt;" Guid="dc01136c-d890-4c03-b221-b7d421ae7a0d" InformativeScreenshot="216937b5eba45fc16261aa0d4f1350e6.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/OOgN7pGIv0GHCjBAmqPSBw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - Slices of Cake: Gift Cards' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                     </uix:NClick.Target>
                     <uix:NClick.VerifyOptions>
                       <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -226,10 +232,10 @@
                   </uix:NClick>
                   <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'To (required)'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
                     <uix:NTypeInto.Target>
-                      <uix:TargetAnchorable BrowserURL="amazon.com/dp/B09KXRPW9G" CVScreenId="0a1db1b2-d8c2-4dad-9acf-23d84bfa6425" ContentHash="CmyX9LL-hUWqnVZmAerTOw" CvElementArea="834, 500, 323, 42" CvType="InputBox" DesignTimeRectangle="713, 1035, 290, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='gc-order-form-recipients-sms-input' tag='INPUT' type='text' class='a-input-text a-declarative gc-requires-js-inline' placeholder='Enter U.S. mobile phone number' aaname='' /&gt;" Guid="ad894a3a-a052-4a3d-b064-5e5b31ea3d51" InformativeScreenshot="2914e9c9edebac03133cf2b5511f51b4.png" IsResponsive="True" Reference="j3RPm-lsJUOk5qq-VZvaQA/Uhy7cL6UxUemXkKk5onaow" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - Slices of Cake: Gift Cards' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                      <uix:TargetAnchorable BrowserURL="amazon.com/Amazon-eGift-Card-Logo-Animated/dp/B07PCMWTSG/ref=sr_1_1" CVScreenId="f7be8f35-8837-470c-8504-a950e26c0f1d" CvElementArea="640, 1060, 258, 32" CvType="InputBox" DesignTimeRectangle="640, 1061, 257, 31" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='gc-phone-number-input' tag='INPUT' type='tel' class='a-input-text a-input-text-wrapper a-form-error' placeholder='Enter U.S. mobile phone number' aaname='' /&gt;" Guid="e0db0da2-8566-428b-97fe-5d53ca4fc5f9" InformativeScreenshot="cb4cec337b520f9ca20e2d91f3e4837b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - Amazon Logo (Animated) : Gift Cards' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
                           <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target CVScreenId="0a1db1b2-d8c2-4dad-9acf-23d84bfa6425" CvTextArea="664, 511, 115, 21" CvTextArgument="To (required):" CvType="Text" DesignTimeRectangle="628, 1058, 72, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='gc-order-form-sms-recipients-label' tag='LABEL' type='' class='a-form-label' aaname='       To (required):      ' check:innerText='To (required):' /&gt;" Guid="0e2472fb-3c23-46cc-b41a-b6d3a694e2b4" SearchSteps="FuzzySelector, CV" />
+                            <uix:Target CVScreenId="f7be8f35-8837-470c-8504-a950e26c0f1d" DesignTimeRectangle="609, 1034, 236, 18" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='heading' parentid='gc-recipients-form-label-MobileSMS' tag='SPAN' type='' class='a-text-bold' aaname='Recipient phone number (required):' check:innerText='Recipient phone number (required):' /&gt;" Guid="292dcb69-f267-4d97-bd8d-752380bd5213" SearchSteps="FuzzySelector" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
                       </uix:TargetAnchorable>
@@ -252,10 +258,10 @@
                   </uix:NTypeInto>
                   <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Your Name (required)'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="DebuggerApi" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
                     <uix:NTypeInto.Target>
-                      <uix:TargetAnchorable BrowserURL="amazon.com/dp/B09KXRPW9G" CVScreenId="9bca7501-4b19-4c1c-9d3c-8b0294080c3c" ContentHash="l9BOoCtUjUOrrkZhWo_n3g" CvElementArea="794, 559, 364, 41" CvType="InputBox" DesignTimeRectangle="713, 1036, 288, 31" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='gc-order-form-sms-senderName' tag='INPUT' type='text' class='a-declarative gc-border-square-bottom' placeholder='Your name' aaname='' /&gt;" Guid="d068436b-3ac9-47f7-8f25-1c1c6c0dc2b4" InformativeScreenshot="937c4a7b774f379b5b9781018765231e.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/oJ8xkRVktkWT8KVeiZJDJQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - Slices of Cake: Gift Cards' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                      <uix:TargetAnchorable BrowserURL="amazon.com/Amazon-eGift-Card-Logo-Animated/dp/B07PCMWTSG/ref=sr_1_1" CVScreenId="27e4ff49-8589-41cb-85e6-8a3d1cecaf86" DesignTimeRectangle="757, 1293, 136, 31" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='gc-from-input-Email' tag='INPUT' type='text' class='a-input-text' aaname='' /&gt;" Guid="41e4e5de-eb93-4318-a440-ea103c2623f2" InformativeScreenshot="cd6ad1fc9d2ea228ea1c81e25938cc45.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - Amazon Logo (Animated) : Gift Cards' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
                           <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target DesignTimeRectangle="599, 1036, 100, 42" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='gc-order-form-sms-senderName-label' tag='LABEL' type='' class='a-form-label' aaname='       Your Name (required):      ' check:innerText='Your Name (required):' /&gt;" Guid="2cd8021b-99f0-4f0a-bf8d-c31090230e33" SearchSteps="FuzzySelector" />
+                            <uix:Target CVScreenId="27e4ff49-8589-41cb-85e6-8a3d1cecaf86" CvElementArea="604, 1292, 155, 33" CvTextArea="611, 1301, 140, 16" CvTextArgument="Your name (required):" CvType="Button" DesignTimeRectangle="605, 1293, 152, 31" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='gc-from-input-section-Email' tag='SPAN' type='' class='a-input-text-addon' aaname='Your name (required): ' check:innerText='Your name (required):' /&gt;" Guid="f63831ee-41d9-4b3e-adfc-049bda4c4912" SearchSteps="FuzzySelector, CV" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
                       </uix:TargetAnchorable>
@@ -278,10 +284,10 @@
                   </uix:NTypeInto>
                   <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Gift Message'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,279" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InteractionMode="DebuggerApi" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
                     <uix:NTypeInto.Target>
-                      <uix:TargetAnchorable BrowserURL="amazon.com/dp/B09KXRPW9G" CVScreenId="0a1db1b2-d8c2-4dad-9acf-23d84bfa6425" ContentHash="9yuVgU90lkKUsMqbhR1L2Q" CvElementArea="794, 606, 362, 94" CvType="InputBox" DesignTimeRectangle="713, 1090, 288, 50" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='gc-order-form-sms-message' tag='TEXTAREA' type='' class='' placeholder='Add a message (optional)' aaname='       Gift Message:     ' /&gt;" Guid="85d9ca14-b412-4e65-8bd2-d2cc7fdf0c42" InformativeScreenshot="74735161b4932e3f03afd7b35a391825.png" IsResponsive="True" Reference="j3RPm-lsJUOk5qq-VZvaQA/bztZV4EIok2icgPJ73Anmg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - Slices of Cake: Gift Cards' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                      <uix:TargetAnchorable BrowserURL="amazon.com/Amazon-eGift-Card-Logo-Animated/dp/B07PCMWTSG/ref=sr_1_1" CVScreenId="4e4d52eb-2f57-4664-acd8-9e8a11c34c07" DesignTimeRectangle="609, 1181, 288, 69" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='gc-message-input-MobileSMS' tag='TEXTAREA' type='' class='' placeholder='Add a message (optional)' aaname='' /&gt;" Guid="0e3f4835-e9dd-4e77-81e0-e3068ebf2524" InformativeScreenshot="4bd26b06a386cd7986f406cfbcdd7e98.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - Amazon Logo (Animated) : Gift Cards' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
                           <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target CVScreenId="0a1db1b2-d8c2-4dad-9acf-23d84bfa6425" CvTextArea="666, 624, 112, 20" CvTextArgument="Gift Message:" CvType="Text" DesignTimeRectangle="599, 1090, 100, 35" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='gc-order-form-message-sms-label' tag='LABEL' type='' class='a-form-label' aaname='       Gift Message:     ' check:innerText='Gift Message:' /&gt;" Guid="a037c5a4-3b98-471c-8659-7c5e9052ab19" SearchSteps="FuzzySelector, CV" />
+                            <uix:Target CVScreenId="4e4d52eb-2f57-4664-acd8-9e8a11c34c07" DesignTimeRectangle="609, 1158, 89, 18" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='gc-message-title' tag='SPAN' type='' class='a-text-bold' aaname='Gift message:' check:innerText='Gift message:' /&gt;" Guid="1fc0262d-44d8-404c-96dc-ea62e9767788" SearchSteps="FuzzySelector" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
                       </uix:TargetAnchorable>
@@ -321,25 +327,25 @@
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="amazon.com/gp/product/B086FNYH28/ref=sw_img_1" CVScreenId="d7377aed-f998-4fa1-a372-6a086a2caad1" ContentHash="p-_900Bj-0-VRnPo5PjaFg" CvElementArea="1067, 863, 140, 34" CvTextArea="1098, 873, 89, 13" CvTextArgument="Enter amount" CvType="Button" DesignTimeRectangle="1091, 864, 114, 31" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='gc-order-form-custom-amount' tag='INPUT' type='text' class='a-input-text gc-order-form-custom-amount' placeholder='Enter amount' aaname='          &amp;lt;span id=&amp;quot;gc-nojs-asterisk&amp;quot; class=&amp;quot;a-color-error gc-requires-no-js-inline&amp;quot;&amp;gt;&amp;lt;a:text textColor=&amp;quot;${&amp;apos;error&amp;apos;}&amp;quot;&amp;gt;*&amp;lt;/a:text&amp;gt;&amp;lt;/span&amp;gt;    Amount ' /&gt;" Guid="d29606c8-5553-4210-964e-02fad43f46e0" InformativeScreenshot="6b5e7bf4e503685104a54321954a13cc.png" IsResponsive="True" Reference="edQoiHTr_EubiZ3TXex5dQ/51PECgsRHECkCxE36sVGFQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - We Appreciate You (Email): Gift Cards' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="amazon.com/gp/product/B086FNYH28/ref=sw_img_1" CVScreenId="d7377aed-f998-4fa1-a372-6a086a2caad1" ContentHash="8SDAEt-knUO5K9CG02AjvQ" CvElementArea="1067, 863, 140, 34" CvTextArea="1098, 873, 89, 13" CvTextArgument="Enter amount" CvType="Button" DesignTimeRectangle="629, 926, 250, 31" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='gc-order-form-custom-amount' tag='INPUT' type='text' class='a-input-text gc-order-form-custom-amount' placeholder='Enter amount' aaname='          &amp;lt;span id=&amp;quot;gc-nojs-asterisk&amp;quot; class=&amp;quot;a-color-error gc-requires-no-js-inline&amp;quot;&amp;gt;&amp;lt;a:text textColor=&amp;quot;${&amp;apos;error&amp;apos;}&amp;quot;&amp;gt;*&amp;lt;/a:text&amp;gt;&amp;lt;/span&amp;gt;    Amount ' /&gt;" Guid="d29606c8-5553-4210-964e-02fad43f46e0" InformativeScreenshot="863fc8817b4ec6d9615d7e018ef9b276.png" Reference="edQoiHTr_EubiZ3TXex5dQ/51PECgsRHECkCxE36sVGFQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - We Appreciate You (Email): Gift Cards' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CVScreenId="d7377aed-f998-4fa1-a372-6a086a2caad1" CvTextArea="645, 873, 56, 13" CvTextArgument="Amount" CvType="Text" DesignTimeRectangle="599, 863, 100, 35" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='gc-order-form-amount-label' tag='LABEL' type='' class='a-form-label' aaname='          Amount ' check:innerText='Amount' /&gt;" Guid="847c78d4-96cd-4618-8a1b-d3785994944c" SearchSteps="FuzzySelector, CV" />
+                      <uix:Target CVScreenId="1bddea66-c492-4bbd-9dd4-7c69f734e569" CvTextArea="605, 909, 236, 15" CvTextArgument="Custom amount from ($5.00 - $2,000.00):" CvType="Text" DesignTimeRectangle="606, 909, 234, 15" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='gc-amount-custom-denom-wrapper' tag='SPAN' type='' class='a-size-small a-text-bold' aaname=' Custom amount*' check:innerText='Custom amount*' /&gt;" Guid="0e738759-042a-44de-8f8f-9d25999e8e34" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NCheckState.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <Sequence DisplayName="Add to Cart" sap:VirtualizedContainerService.HintSize="988,57" sap2010:WorkflowViewState.IdRef="Sequence_40">
+            <Sequence DisplayName="Add to Cart" sap:VirtualizedContainerService.HintSize="988,616" sap2010:WorkflowViewState.IdRef="Sequence_40">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -353,7 +359,13 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'INPUT gc-buy-box-atc'" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V4">
                       <uix:NClick.Target>
-                        <uix:TargetAnchorable BrowserURL="amazon.com/gp/product/B086FNYH28/ref=sw_img_1" CVScreenId="fc280343-facd-4265-b680-5378ffbb113f" ContentHash="7yIJVm4tNkO9YVpMvKWC7g" CvElementArea="1610, 513, 245, 44" CvTextArea="1690, 526, 85, 16" CvTextArgument="Add to cart" CvType="Button" DesignTimeRectangle="1511, 441, 190, 29" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl id='gc-buy-box-atc' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='gc-buy-box-atc' tag='INPUT' type='submit' class='a-button-input' /&gt;" Guid="56d86215-f87c-4b3e-a39b-d3aacca0c2b7" ImageBase64="" InformativeScreenshot="f8c0dfec3993d3a9b9c8638296704eec.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/Mpr-pcXLDk6Xh_ExnWHPAQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - We Appreciate You (Email): Gift Cards' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                        <uix:TargetAnchorable BrowserURL="amazon.com/Amazon-eGift-Card-Logo-Animated/dp/B07PCMWTSG/ref=sr_1_1" CVScreenId="dc95c82e-7234-434a-90af-0a88d1f52ab2" DesignTimeRectangle="1360, 619, 204, 30" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='add-to-cart-button' tag='INPUT' type='submit' class='a-button-input' aaname='Add to Shopping Cart' check:text='Add to Cart' /&gt;" Guid="02227e9f-adeb-4701-9231-2fe6d2e20312" InformativeScreenshot="e9c38bfc5da25b9222a67fd42ac6691c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - Amazon Logo (Animated) : Gift Cards' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CVScreenId="dc95c82e-7234-434a-90af-0a88d1f52ab2" DesignTimeRectangle="1360, 659, 204, 30" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='buy-now-button' tag='INPUT' type='submit' class='a-button-input' aaname='Buy Now' /&gt;" Guid="3b9fd5e6-c1b4-4f7a-8e8e-ecbcfba99bb2" SearchSteps="FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
                       </uix:NClick.Target>
                       <uix:NClick.VerifyOptions>
                         <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -378,14 +390,20 @@
                   </Sequence>
                 </uix:NCheckState.IfNotExists>
                 <uix:NCheckState.Target>
-                  <uix:TargetAnchorable BrowserURL="amazon.com/gp/product/B086FNYH28/ref=sw_img_1" CVScreenId="d7377aed-f998-4fa1-a372-6a086a2caad1" ContentHash="sarTkdmA7UmjejOt-662AA" CvElementArea="1508, 437, 196, 36" CvTextArea="1572, 448, 68, 13" CvTextArgument="Add to cart" CvType="Button" DesignTimeRectangle="1511, 441, 190, 29" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='gc-buy-box-atc' tag='INPUT' type='submit' class='a-button-input gc-buy-box-disabled' aaname='' /&gt;" Guid="0d842393-8ec2-47dc-ac57-8ca93091ec02" InformativeScreenshot="e10324d6a5df98a7ecac253094868494.png" Reference="edQoiHTr_EubiZ3TXex5dQ/qIpcSlUEHUqMVV8LyH8PeQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - We Appreciate You (Email): Gift Cards' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                  <uix:TargetAnchorable BrowserURL="amazon.com/Amazon-eGift-Card-Logo-Animated/dp/B07PCMWTSG/ref=sr_1_1" CVScreenId="9cb61c04-9d9a-42c8-91dd-a2e3579eccf7" ContentHash="vbRvb4Zd-ESNIQshFiqszA" DesignTimeRectangle="1360, 619, 204, 30" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='add-to-cart-button' tag='INPUT' type='submit' class='a-button-input' aaname='Add to Shopping Cart' check:text='Add to Cart' /&gt;" Guid="30428842-4b74-47a9-ba35-1fab76409187" InformativeScreenshot="e9c38bfc5da25b9222a67fd42ac6691c.png" Reference="edQoiHTr_EubiZ3TXex5dQ/qIpcSlUEHUqMVV8LyH8PeQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - Amazon Logo (Animated) : Gift Cards' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CVScreenId="9cb61c04-9d9a-42c8-91dd-a2e3579eccf7" DesignTimeRectangle="1360, 659, 204, 30" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='buy-now-button' tag='INPUT' type='submit' class='a-button-input' aaname='Buy Now' /&gt;" Guid="fbbfb9a5-e6dd-4560-82a2-bcc876fe9a02" SearchSteps="FuzzySelector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
                 </uix:NCheckState.Target>
               </uix:NCheckState>
             </Sequence>
-            <Sequence DisplayName="proceed to checkout" sap:VirtualizedContainerService.HintSize="988,57" sap2010:WorkflowViewState.IdRef="Sequence_43">
+            <Sequence DisplayName="proceed to checkout" sap:VirtualizedContainerService.HintSize="988,616" sap2010:WorkflowViewState.IdRef="Sequence_43">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -421,7 +439,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Error">
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace">
                       <ui:LogMessage.Message>
                         <InArgument x:TypeArguments="x:Object">
                           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">"Proceed to checkout didnt show up."</CSharpValue>
@@ -447,7 +465,7 @@
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NCheckState>
             </Sequence>
-            <uix:NCheckState DisplayName="Place your order" sap:VirtualizedContainerService.HintSize="988,619" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Timeout="6" Version="V4">
+            <uix:NCheckState DisplayName="Place your order" sap:VirtualizedContainerService.HintSize="988,691" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Timeout="6" Version="V4">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,402" sap2010:WorkflowViewState.IdRef="Sequence_50">
                   <sap:WorkflowViewStateService.ViewState>
@@ -886,23 +904,23 @@
               <uix:NCheckState.Target>
                 <uix:TargetAnchorable BrowserURL="amazon.com/checkout/p/p-106-9587241-7199401/spc" CVScreenId="334e0a4e-1e90-477d-b566-312f3fe94e45" ContentHash="AY1DaH5aWEqlB2v_4v-7TQ" CvElementArea="1134, 213, 254, 38" CvTextArea="1211, 225, 98, 13" CvTextArgument="Place your order" CvType="Button" DesignTimeRectangle="1136, 216, 248, 32" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='placeOrder' tag='INPUT' type='submit' class='a-button-input place-your-order-button' aaname='Place your order' check:text='Place your order' /&gt;" Guid="140d1467-a95f-4d82-a01c-3577520edae1" InformativeScreenshot="b7b2300acb40a8b06ff15588626d19ff.png" Reference="edQoiHTr_EubiZ3TXex5dQ/V-L7wAeKDkCcmt8htfpLdg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Place Your Order - Amazon Checkout' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="334e0a4e-1e90-477d-b566-312f3fe94e45" CvTextArea="1026, 350, 50, 16" CvTextArgument="Change" CvType="Text" DesignTimeRectangle="1027, 348, 48, 18" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-label='Change payment method' tag='A' type='' class='a-link-normal expand-panel-button celwidget' aaname='                                                                                                  Change                                             ' check:innerText='Change' /&gt;" Guid="25fc1c28-2eb6-4e99-91e7-dd9424f40459" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NCheckState.Target>
             </uix:NCheckState>
-            <Sequence DisplayName="Get the order ID" sap:VirtualizedContainerService.HintSize="988,1105" sap2010:WorkflowViewState.IdRef="Sequence_47">
+            <Sequence DisplayName="Get the order ID" sap:VirtualizedContainerService.HintSize="988,1189" sap2010:WorkflowViewState.IdRef="Sequence_47">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NCheckState DisplayName="Check App State 'Returns &amp; Orders'" sap:VirtualizedContainerService.HintSize="954,527" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Timeout="5" Version="V4">
+              <uix:NCheckState DisplayName="Check App State 'Returns &amp; Orders'" sap:VirtualizedContainerService.HintSize="954,569" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Timeout="5" Version="V4">
                 <uix:NCheckState.IfExists>
-                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,278" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,280" sap2010:WorkflowViewState.IdRef="Sequence_52">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -938,7 +956,7 @@
                   <uix:TargetAnchorable BrowserURL="amazon.com/gp/cart/view.html" ContentHash="5vRMtR9f_E2vVIExmTjV6w" DesignTimeRectangle="1542, 126, 77, 50" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='nav-orders' tag='A' type='' class='nav-a nav-a-2   nav-progressive-attribute' aaname='   Returns   &amp;amp; Orders ' check:innerText='Returns&amp;#xA;&amp;amp; Orders' /&gt;" Guid="08f91cc2-172a-4b6e-a45b-a0c1809cdc20" InformativeScreenshot="b14a481d16995b25c7d2f05d922e9926.png" Reference="edQoiHTr_EubiZ3TXex5dQ/PKzqUWFONUm4oONjfS5anA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com Shopping Cart' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
                 </uix:NCheckState.Target>
               </uix:NCheckState>
-              <uix:NCheckState DisplayName="Check App State 'Your Orders'" sap:VirtualizedContainerService.HintSize="954,486" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Timeout="5" Version="V4">
+              <uix:NCheckState DisplayName="Check App State 'Your Orders'" sap:VirtualizedContainerService.HintSize="954,526" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Timeout="5" Version="V4">
                 <uix:NCheckState.IfExists>
                   <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,244" sap2010:WorkflowViewState.IdRef="Sequence_48">
                     <sap:WorkflowViewStateService.ViewState>

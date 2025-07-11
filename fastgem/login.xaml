@@ -110,7 +110,7 @@
       <AssemblyReference>fd01998238266.uPsLo2BfC4O1A9ka64kngjU1</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="login" sap:VirtualizedContainerService.HintSize="1160,2111" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="login" sap:VirtualizedContainerService.HintSize="1401,1932" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="varUsername" />
       <Variable x:TypeArguments="ss:SecureString" Name="varPassword" />
@@ -132,19 +132,19 @@
         </OutArgument>
       </ui:GetRobotCredential.Username>
     </ui:GetRobotCredential>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1160,1913" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1160,1734" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="1126,1753" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <Sequence sap:VirtualizedContainerService.HintSize="1126,1574" sap2010:WorkflowViewState.IdRef="Sequence_13">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Properties'" sap:VirtualizedContainerService.HintSize="1092,1691" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
+            <uix:NCheckState DisplayName="Check App State 'Properties'" sap:VirtualizedContainerService.HintSize="1092,1512" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="520,334" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
@@ -173,20 +173,20 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="518,1409" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="518,1270" sap2010:WorkflowViewState.IdRef="Sequence_12">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence sap:VirtualizedContainerService.HintSize="484,1347" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <Sequence sap:VirtualizedContainerService.HintSize="484,1208" sap2010:WorkflowViewState.IdRef="Sequence_10">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1260" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1121" sap2010:WorkflowViewState.IdRef="Sequence_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -213,23 +213,6 @@
                           </uix:VerifyExecutionTypeIntoOptions>
                         </uix:NTypeInto.VerifyOptions>
                       </uix:NTypeInto>
-                      <ui:TypeSecureText AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Secure Text 'INPUT  modlgn-passwd'" sap:VirtualizedContainerService.HintSize="416,139" sap2010:WorkflowViewState.IdRef="TypeSecureText_1">
-                        <ui:TypeSecureText.SecureText>
-                          <InArgument x:TypeArguments="ss:SecureString">
-                            <CSharpValue x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">varPassword</CSharpValue>
-                          </InArgument>
-                        </ui:TypeSecureText.SecureText>
-                        <ui:TypeSecureText.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="091251a5-7e8b-4b8a-8510-52d7379d38f4" InformativeScreenshot="9e32c21a5540180f8a374faefc87872b" Selector="&lt;html app='chrome.exe' title='FastGem - CRM' /&gt;&lt;webctrl id='modlgn-passwd' tag='INPUT' /&gt;">
-                            <ui:Target.TimeoutMS>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:Target.TimeoutMS>
-                            <ui:Target.WaitForReady>
-                              <InArgument x:TypeArguments="ui:WaitForReady" />
-                            </ui:Target.WaitForReady>
-                          </ui:Target>
-                        </ui:TypeSecureText.Target>
-                      </ui:TypeSecureText>
                       <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'LetsGoBots!!'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
                         <uix:NTypeInto.SecureText>
                           <InArgument x:TypeArguments="ss:SecureString">

@@ -40,6 +40,54 @@
       "IsPrincipal": true,
       "ArgumentType": 0,
       "DataSourceItems": null
+    },
+    {
+      "Name": "in_SkipNonIncentiveCheck",
+      "DisplayName": "in_SkipNonIncentiveCheck",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "True",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_alertEmail",
+      "DisplayName": "in_alertEmail",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "cory@fastgem.net",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_exceptionEmailList",
+      "DisplayName": "in_exceptionEmailList",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "nicole.north@ftr-rep.com; joel.luciano@rexza.com; jennifer.gill@ftr-rep.com",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_BatchSize",
+      "DisplayName": "in_BatchSize",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "150",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
     }
   ]
 }

@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="sarTkdmA7UmjejOt-662AA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="vbRvb4Zd-ESNIQshFiqszA" Reference="edQoiHTr_EubiZ3TXex5dQ/qIpcSlUEHUqMVV8LyH8PeQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gp/product/B086FNYH28/ref=sw_img_1" CVScreenId="d7377aed-f998-4fa1-a372-6a086a2caad1" CvElementArea="1508, 437, 196, 36" CvTextArea="1572, 448, 68, 13" CvTextArgument="Add to cart" CvType="Button" DesignTimeRectangle="1511, 441, 190, 29" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='gc-buy-box-atc' tag='INPUT' type='submit' class='a-button-input gc-buy-box-disabled' aaname='' /&gt;" Guid="0d842393-8ec2-47dc-ac57-8ca93091ec02" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - We Appreciate You (Email): Gift Cards' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="e10324d6a5df98a7ecac253094868494.png" xmlns="">0HNK4fj3-fkK8r_UTZPEU2w</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/Amazon-eGift-Card-Logo-Animated/dp/B07PCMWTSG/ref=sr_1_1" CVScreenId="9cb61c04-9d9a-42c8-91dd-a2e3579eccf7" DesignTimeRectangle="1360, 619, 204, 30" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='add-to-cart-button' tag='INPUT' type='submit' class='a-button-input' aaname='Add to Shopping Cart' check:text='Add to Cart' /&gt;" Guid="30428842-4b74-47a9-ba35-1fab76409187" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com: Amazon eGift Card - Amazon Logo (Animated) : Gift Cards' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="9cb61c04-9d9a-42c8-91dd-a2e3579eccf7" DesignTimeRectangle="1360, 659, 204, 30" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='buy-now-button' tag='INPUT' type='submit' class='a-button-input' aaname='Buy Now' /&gt;" Guid="fbbfb9a5-e6dd-4560-82a2-bcc876fe9a02" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e9c38bfc5da25b9222a67fd42ac6691c.png" xmlns="">0bqZwb_ss4kCgF1TWrDqGBw</imageRef>
     </TargetAnchorable>
-    <x:String x:Key="ActivityType">CheckState</x:String>
+    <x:String x:Key="ActivityType">None</x:String>
   </ObjectRepositoryTargetData.Data>
 </ObjectRepositoryTargetData>

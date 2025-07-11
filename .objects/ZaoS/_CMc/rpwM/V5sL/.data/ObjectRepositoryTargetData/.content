@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="EWAldDDR10aj-9em9fOuhQ" Reference="edQoiHTr_EubiZ3TXex5dQ/V5sL7cjz00udqj70HNwHlg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/orders-2/appointmentform/22193" CVScreenId="d663f6b7-c33c-4a05-a36f-21bf62c26bf1" DesignTimeRectangle="918, 373, 130, 24" DesignTimeScaleFactor="1" ElementType="Text" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl parentid='jform_custom_data__sti_chzn' tag='SPAN' type='' class='' aaname='STI' check:innerText='STI' /&gt;" Guid="50a6c18c-083a-4da6-9f22-370a8a046d81" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Orders - FastGem - CorServe' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="d663f6b7-c33c-4a05-a36f-21bf62c26bf1" CvTextArea="908, 356, 28, 12" CvTextArgument="STI *" CvType="Text" DesignTimeRectangle="909, 355, 269, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='jform_custom_data__sti-lbl' tag='LABEL' type='' class='required' aaname=' &amp;#x9;STI' check:innerText='STI *' /&gt;" Guid="1908d01f-940c-455d-9f8e-35011fd4fb34" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e5f99d7b7ad907bf573830d011e572e4.png" xmlns="">0HeI8NLqF40iC9wNPo54O0A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

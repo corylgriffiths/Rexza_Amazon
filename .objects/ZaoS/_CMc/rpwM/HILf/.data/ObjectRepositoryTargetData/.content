@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="yQJVSkSo_U6AoZctzV9RSw" Reference="edQoiHTr_EubiZ3TXex5dQ/HILfE7WCdE25W4DUEEGwoQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/orders-2/appointmentform/22193" CVScreenId="63ab88e5-9dc6-45a2-9fc7-7e21684e9fd8" DesignTimeRectangle="1159, 373, 18, 23" DesignTimeScaleFactor="1" FuzzyAccuracy="1" FuzzySelectorArgument="&lt;webctrl parentid='jform_custom_data__sti_chzn' tag='B' type='' class='' aaname='' /&gt;" Guid="a2e88bcd-8751-40d4-99f4-f187d7f82a50" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Orders - FastGem - CorServe' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="63ab88e5-9dc6-45a2-9fc7-7e21684e9fd8" DesignTimeRectangle="918, 373, 130, 24" ElementType="Text" FuzzyAccuracy="0.91" FuzzySelectorArgument="&lt;webctrl parentid='jform_custom_data__sti_chzn' tag='SPAN' type='' class='' aaname='STI' check:innerText='STI' /&gt;" Guid="5f0ad816-fed0-463c-bcf6-9cf4e4170b5b" ImageBase64="" SearchSteps="FuzzySelector" />
+          <Target CVScreenId="63ab88e5-9dc6-45a2-9fc7-7e21684e9fd8" DesignTimeRectangle="909, 355, 269, 17" ElementType="Text" FuzzyAccuracy="0.86" FuzzySelectorArgument="&lt;webctrl id='jform_custom_data__sti-lbl' tag='LABEL' type='' class='required' aaname=' &amp;#x9;STI' check:innerText='STI *' /&gt;" Guid="305eeb5c-4f0e-4e96-8103-df65f3eb7bc8" ImageBase64="" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="1ec01c32ee55d14e55e3973ee179fc46.png" xmlns="">0RgwRvqPyQ0mYNIN4nneGkw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
