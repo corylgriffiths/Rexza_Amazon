@@ -143,7 +143,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="1145,3759" sap2010:WorkflowViewState.IdRef="Sequence_41">
+  <Sequence sap:VirtualizedContainerService.HintSize="1292,10887" sap2010:WorkflowViewState.IdRef="Sequence_41">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="StartDate" />
       <Variable x:TypeArguments="x:String" Name="EndDate" />
@@ -158,7 +158,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Set up Globals" sap:VirtualizedContainerService.HintSize="590,723" sap2010:WorkflowViewState.IdRef="Sequence_42">
+    <Sequence DisplayName="Set up Globals" sap:VirtualizedContainerService.HintSize="1124,723" sap2010:WorkflowViewState.IdRef="Sequence_42">
       <Sequence.Variables>
         <Variable x:TypeArguments="s:DateTime" Name="TodayDate" />
       </Sequence.Variables>
@@ -230,7 +230,7 @@
         </Assign.Value>
       </Assign>
     </Sequence>
-    <If DisplayName="Check to see if you want to run the skip non-incentive records" sap:VirtualizedContainerService.HintSize="590,2189" sap2010:WorkflowViewState.IdRef="If_13">
+    <If DisplayName="Check to see if you want to run the skip non-incentive records" sap:VirtualizedContainerService.HintSize="1124,652" sap2010:WorkflowViewState.IdRef="If_13">
       <If.Condition>
         <InArgument x:TypeArguments="x:Boolean">
           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_239">in_SkipNonIncentiveCheck == false</CSharpValue>
@@ -243,14 +243,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="588,1962" sap2010:WorkflowViewState.IdRef="Sequence_164">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484,425" sap2010:WorkflowViewState.IdRef="Sequence_164">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="get list of NON-Incentive accounts" sap:VirtualizedContainerService.HintSize="554,260" sap2010:WorkflowViewState.IdRef="Sequence_99">
+          <Sequence DisplayName="get list of NON-Incentive accounts" sap:VirtualizedContainerService.HintSize="450,260" sap2010:WorkflowViewState.IdRef="Sequence_99">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -265,7 +265,7 @@
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Sequence>
-          <Sequence DisplayName="Nav to payroll snapshot and run report" sap:VirtualizedContainerService.HintSize="554,57" sap2010:WorkflowViewState.IdRef="Sequence_44">
+          <Sequence DisplayName="Nav to payroll snapshot and run report" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_44">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -416,17 +416,17 @@
               </sap:WorkflowViewStateService.ViewState>
             </uix:NApplicationCard>
           </Sequence>
-          <Sequence DisplayName="finalize all non incentive records" sap:VirtualizedContainerService.HintSize="554,1585" sap2010:WorkflowViewState.IdRef="Sequence_100">
+          <Sequence DisplayName="finalize all non incentive records" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_100">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="MasterRepList_DT" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="get master list of all Rep ID's" sap:VirtualizedContainerService.HintSize="520,769" sap2010:WorkflowViewState.IdRef="Sequence_101">
+            <Sequence DisplayName="get master list of all Rep ID's" sap:VirtualizedContainerService.HintSize="658,769" sap2010:WorkflowViewState.IdRef="Sequence_101">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable">
                   <Variable.Default>
@@ -534,7 +534,7 @@
                 </uix:NApplicationCard.TargetApp>
               </uix:NApplicationCard>
             </Sequence>
-            <Sequence DisplayName="Loop the ID's and grab all global information" sap:VirtualizedContainerService.HintSize="520,733" sap2010:WorkflowViewState.IdRef="Sequence_102">
+            <Sequence DisplayName="Loop the ID's and grab all global information" sap:VirtualizedContainerService.HintSize="658,2644" sap2010:WorkflowViewState.IdRef="Sequence_102">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Int32" Name="TotalRecsToProcess" />
                 <Variable x:TypeArguments="x:String" Name="PropertyName" />
@@ -562,7 +562,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="486,114" sap2010:WorkflowViewState.IdRef="Assign_58">
+              <Assign sap:VirtualizedContainerService.HintSize="624,114" sap2010:WorkflowViewState.IdRef="Assign_58">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Int32">
                     <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_70">TotalRecsToProcess</CSharpReference>
@@ -574,28 +574,28 @@
                   </InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:ForEachRow ColumnNames="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="486,288" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+              <ui:ForEachRow ColumnNames="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="624,2199" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="RepRow" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,108" sap2010:WorkflowViewState.IdRef="Sequence_133">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="622,2019" sap2010:WorkflowViewState.IdRef="Sequence_133">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Extract Rep Level Data" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_109">
+                      <Sequence DisplayName="Extract Rep Level Data" sap:VirtualizedContainerService.HintSize="588,1959" sap2010:WorkflowViewState.IdRef="Sequence_109">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd:DataRow" Name="matchingRow" />
                           <Variable x:TypeArguments="sd:DataTable" Name="matchingProperty" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <Assign DisplayName="pull the rep ID" sap:VirtualizedContainerService.HintSize="554,114" sap2010:WorkflowViewState.IdRef="Assign_62">
@@ -800,7 +800,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ForEachRow>
-              <Sequence DisplayName="Finalize the non incentive records" sap:VirtualizedContainerService.HintSize="486,248" sap2010:WorkflowViewState.IdRef="Sequence_136">
+              <Sequence DisplayName="Finalize the non incentive records" sap:VirtualizedContainerService.HintSize="624,248" sap2010:WorkflowViewState.IdRef="Sequence_136">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1000,7 +1000,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="588,89" sap2010:WorkflowViewState.IdRef="Sequence_165">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="484,89" sap2010:WorkflowViewState.IdRef="Sequence_165">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1010,7 +1010,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <Sequence DisplayName="Nav to payroll snapshot and run report" sap:VirtualizedContainerService.HintSize="590,57" sap2010:WorkflowViewState.IdRef="Sequence_143">
+    <Sequence DisplayName="Nav to payroll snapshot and run report" sap:VirtualizedContainerService.HintSize="1124,57" sap2010:WorkflowViewState.IdRef="Sequence_143">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1167,17 +1167,17 @@
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
     </Sequence>
-    <Sequence DisplayName="Finalize all Remaining recs" sap:VirtualizedContainerService.HintSize="1124,9544" sap2010:WorkflowViewState.IdRef="Sequence_45">
+    <Sequence DisplayName="Finalize all Remaining recs" sap:VirtualizedContainerService.HintSize="1124,8722" sap2010:WorkflowViewState.IdRef="Sequence_45">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="MasterRepList_DT" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="get master list of all Rep ID's" sap:VirtualizedContainerService.HintSize="1090,9484" sap2010:WorkflowViewState.IdRef="Sequence_50">
+      <Sequence DisplayName="get master list of all Rep ID's" sap:VirtualizedContainerService.HintSize="1090,8630" sap2010:WorkflowViewState.IdRef="Sequence_50">
         <Sequence.Variables>
           <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable">
             <Variable.Default>
@@ -1191,13 +1191,13 @@
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Snapshot Payroll(1)" sap:VirtualizedContainerService.HintSize="1056,9401" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="68135ccc-bb2a-49c3-bb39-91b8c2a8eeb1" Version="V2">
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Snapshot Payroll(1)" sap:VirtualizedContainerService.HintSize="1056,8547" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="68135ccc-bb2a-49c3-bb39-91b8c2a8eeb1" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1022,9121" sap2010:WorkflowViewState.IdRef="Sequence_68">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1022,8307" sap2010:WorkflowViewState.IdRef="Sequence_68">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Int32" Name="totalCardsPurchased" />
                 </Sequence.Variables>
@@ -1318,7 +1318,7 @@
                     </scg:List>
                   </ui:FilterDataTable.SelectColumns>
                 </ui:FilterDataTable>
-                <Sequence DisplayName="Loop the ID's and grab all global information" sap:VirtualizedContainerService.HintSize="988,8620" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                <Sequence DisplayName="Loop the ID's and grab all global information" sap:VirtualizedContainerService.HintSize="988,7806" sap2010:WorkflowViewState.IdRef="Sequence_51">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Int32" Name="TotalRecsToProcess" />
                     <Variable x:TypeArguments="x:String" Name="PropertyName" />
@@ -1385,27 +1385,27 @@
                       <InArgument x:TypeArguments="x:Int32">0</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:ForEachRow ColumnNames="{x:Null}" DisplayName="Loop each sales rep and property record" sap:VirtualizedContainerService.HintSize="954,7229" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                  <ui:ForEachRow ColumnNames="{x:Null}" DisplayName="Loop each sales rep and property record" sap:VirtualizedContainerService.HintSize="954,6415" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="RepRow" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="712,7049" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="712,6235" sap2010:WorkflowViewState.IdRef="Sequence_69">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence DisplayName="Extract Rep Level Data" sap:VirtualizedContainerService.HintSize="678,2521" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                          <Sequence DisplayName="Extract Rep Level Data" sap:VirtualizedContainerService.HintSize="678,1707" sap2010:WorkflowViewState.IdRef="Sequence_72">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Assign sap:VirtualizedContainerService.HintSize="454,114" sap2010:WorkflowViewState.IdRef="Assign_49">
+                            <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_49">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">
                                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_43">LeasingAgentName</CSharpReference>
@@ -1417,7 +1417,7 @@
                                 </InArgument>
                               </Assign.Value>
                             </Assign>
-                            <Assign sap:VirtualizedContainerService.HintSize="454,114" sap2010:WorkflowViewState.IdRef="Assign_46">
+                            <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_46">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">
                                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_38">SalesRepName</CSharpReference>
@@ -1429,7 +1429,7 @@
                                 </InArgument>
                               </Assign.Value>
                             </Assign>
-                            <Assign sap:VirtualizedContainerService.HintSize="454,114" sap2010:WorkflowViewState.IdRef="Assign_41">
+                            <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_41">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">
                                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">TotalAmount</CSharpReference>
@@ -1441,7 +1441,7 @@
                                 </InArgument>
                               </Assign.Value>
                             </Assign>
-                            <Assign DisplayName="pull the rep ID" sap:VirtualizedContainerService.HintSize="454,114" sap2010:WorkflowViewState.IdRef="Assign_30">
+                            <Assign DisplayName="pull the rep ID" sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_30">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">
                                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_29">repURL</CSharpReference>
@@ -1453,7 +1453,7 @@
                                 </InArgument>
                               </Assign.Value>
                             </Assign>
-                            <Assign sap:VirtualizedContainerService.HintSize="454,114" sap2010:WorkflowViewState.IdRef="Assign_32">
+                            <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_32">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">
                                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_30">RepID</CSharpReference>
@@ -1465,7 +1465,7 @@
                                 </InArgument>
                               </Assign.Value>
                             </Assign>
-                            <Assign sap:VirtualizedContainerService.HintSize="454,114" sap2010:WorkflowViewState.IdRef="Assign_36">
+                            <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_36">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">
                                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_31">RepNameAndNumber</CSharpReference>
@@ -1477,7 +1477,7 @@
                                 </InArgument>
                               </Assign.Value>
                             </Assign>
-                            <Assign sap:VirtualizedContainerService.HintSize="454,114" sap2010:WorkflowViewState.IdRef="Assign_37">
+                            <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_37">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">
                                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">RepPhone</CSharpReference>
@@ -1489,7 +1489,7 @@
                                 </InArgument>
                               </Assign.Value>
                             </Assign>
-                            <Assign sap:VirtualizedContainerService.HintSize="454,114" sap2010:WorkflowViewState.IdRef="Assign_38">
+                            <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_38">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">
                                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_33">PropertyAndAddress</CSharpReference>
@@ -1501,7 +1501,7 @@
                                 </InArgument>
                               </Assign.Value>
                             </Assign>
-                            <Assign sap:VirtualizedContainerService.HintSize="454,114" sap2010:WorkflowViewState.IdRef="Assign_40">
+                            <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_40">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">
                                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_34">PropertyName</CSharpReference>
@@ -1513,7 +1513,7 @@
                                 </InArgument>
                               </Assign.Value>
                             </Assign>
-                            <Assign sap:VirtualizedContainerService.HintSize="454,114" sap2010:WorkflowViewState.IdRef="Assign_39">
+                            <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_39">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">
                                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_35">Area</CSharpReference>
@@ -1525,14 +1525,14 @@
                                 </InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="454,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
                               <ui:LogMessage.Message>
                                 <InArgument x:TypeArguments="x:Object">
                                   <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55" xml:space="preserve">"Processing " + RowNumber.ToString() + ":" + TotalRecsToProcess.ToString() + "   Rep: " + SalesRepName</CSharpValue>
                                 </InArgument>
                               </ui:LogMessage.Message>
                             </ui:LogMessage>
-                            <If DisplayName="Log any record missing a phone" sap:VirtualizedContainerService.HintSize="454,1066" sap2010:WorkflowViewState.IdRef="If_1">
+                            <If DisplayName="Log any record missing a phone" sap:VirtualizedContainerService.HintSize="450,252" sap2010:WorkflowViewState.IdRef="If_1">
                               <If.Condition>
                                 <InArgument x:TypeArguments="x:Boolean">
                                   <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">string.IsNullOrWhiteSpace(RepPhone)</CSharpValue>
@@ -1545,10 +1545,11 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <If.Then>
-                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="452,839" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_73">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="418,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace">
@@ -1619,7 +1620,7 @@
                                 </Sequence>
                               </If.Then>
                               <If.Else>
-                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="452,89" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_74">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1628,7 +1629,7 @@
                                 </Sequence>
                               </If.Else>
                             </If>
-                            <Sequence DisplayName="Check for Single Transaction Properties" sap:VirtualizedContainerService.HintSize="454,48" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                            <Sequence DisplayName="Check for Single Transaction Properties" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_76">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1728,7 +1729,7 @@
                                     <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_265">"Column1"</CSharpValue>
                                   </InArgument>
                                   <InArgument x:TypeArguments="x:String">
-                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_266">"Column16"</CSharpValue>
+                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_268">"Column17"</CSharpValue>
                                   </InArgument>
                                 </scg:List>
                               </ui:FilterDataTable.SelectColumns>
@@ -1741,7 +1742,7 @@
                               </Assign.To>
                               <Assign.Value>
                                 <InArgument x:TypeArguments="x:String">
-                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_267">LeasingAgent_DT.Rows[0]["Column16"].ToString().Replace("Sales Rep-","").Trim()</CSharpValue>
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_269">LeasingAgent_DT.Rows[0]["Column17"].ToString().Replace("Sales Rep-","").Trim()</CSharpValue>
                                 </InArgument>
                               </Assign.Value>
                             </Assign>
@@ -2683,7 +2684,7 @@
         </uix:NApplicationCard>
       </Sequence>
     </Sequence>
-    <Sequence DisplayName="Create exception report" sap:VirtualizedContainerService.HintSize="590,710" sap2010:WorkflowViewState.IdRef="Sequence_49">
+    <Sequence DisplayName="Create exception report" sap:VirtualizedContainerService.HintSize="1124,710" sap2010:WorkflowViewState.IdRef="Sequence_49">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="ExceptionReportPath" />
       </Sequence.Variables>
