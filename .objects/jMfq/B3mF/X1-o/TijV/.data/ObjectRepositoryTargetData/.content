@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="DfmZXnOpP0mEmk151hjsNw" Reference="edQoiHTr_EubiZ3TXex5dQ/TijVLUvC7kGfkY9sj3r2Ig" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="eeb21053-120e-4d67-a2bb-4094c7ce1d1b" DesignTimeRectangle="1925, 516, 90, 63" DesignTimeScaleFactor="1.100000023841858" ElementType="Text" Guid="58544a09-5dad-439c-946e-102ad6d9c87a" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll - FastGem - CorServe' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.FullSelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;webctrl id='rep_payments_"+in_RepId+"' tag='TABLE' /&gt;&lt;webctrl tag='A' href='"+tmpAppointmentUrl+"' /&gt;&lt;nav up='2' /&gt;&lt;webctrl isleaf='1' tableCol='15' tag='TD' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.FullSelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="d1e993e845f7f8235ff4c78eec3aaf61.png" xmlns="">0AepMnRAZv0e6-wf6BuGjoQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

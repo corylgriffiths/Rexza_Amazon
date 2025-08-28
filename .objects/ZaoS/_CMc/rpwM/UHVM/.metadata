@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Input 'Order Num'",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "UHVMdX0oo0OWwz2HhC_jMg",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/UHVMdX0oo0OWwz2HhC_jMg",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/rpwMsmhvY0CEO7XGwpSwtQ",
+  "Created": "2025-08-04T19:58:01.4696935Z",
+  "Updated": "2025-08-04T19:58:01.4696935Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
