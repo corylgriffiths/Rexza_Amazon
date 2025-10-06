@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Zq1jFmym8k2AwD3mfR5QaA" Reference="edQoiHTr_EubiZ3TXex5dQ/VSgl29J3tUO9DbXq1l6VTg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gc/resend" CVScreenId="d9a8c5c0-b7ce-4fb5-8c0a-63871b8d90b6" CvTextArea="330, 434, 243, 23" CvType="AnyWordGroup" DesignTimeRectangle="331, 431, 865, 36" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='a-size-extra-large a-spacing-small a-spacing-top-extra-large' /&gt;" Guid="abd171ab-ff2b-4a29-8404-9c14e7a909b0" ScopeSelectorArgument="&lt;html app='chrome.exe' title='amazon.com/gc/resend?orderID=112-1703668-9505039&amp;amp;gcID=A00911511YEMS9CUH1YSA&amp;amp;ref_=ppx_hzod_giftCardDetails_dt_b_gc_e_d_0_0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="d9a8c5c0-b7ce-4fb5-8c0a-63871b8d90b6" DesignTimeRectangle="331, 478, 865, 18" ElementType="Text" FuzzyAccuracy="0.87" FuzzySelectorArgument="&lt;webctrl id='gc-resend-count-info' tag='P' type='' class='a-spacing-top-base' aaname='This gift card can only be resent * more time(s).' check:innerText='This gift card can only be resent * more time(s).' /&gt;" Guid="4648af42-37f7-46f4-8f61-05393075d1f0" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="52c3e04b5221255d0d3ff1b68820143f.png" xmlns="">0kKaQSKMeSEaL0bykOtaXFA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

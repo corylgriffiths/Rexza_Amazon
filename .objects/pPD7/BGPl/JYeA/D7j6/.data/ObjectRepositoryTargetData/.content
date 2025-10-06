@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="0G879cub2UC_yzMHuzyy5w" Reference="edQoiHTr_EubiZ3TXex5dQ/D7j6QUXNNUOhdWiofQqKFA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="36cymyzatk-1GRvrFBuxSQ" Reference="edQoiHTr_EubiZ3TXex5dQ/D7j6QUXNNUOhdWiofQqKFA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gp/your-account/order-details" CVScreenId="115beefe-4431-4738-826d-44d091ba5902" CvTextArea="738, 755, 47, 13" CvTextArgument="Resend" CvType="Text" DesignTimeRectangle="1055, 702, 46, 18" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='         Resend     ' parentid='orderDetails' tag='A' type='' class='a-link-normal gcItemAction' check:innerText='Resend' /&gt;" Guid="dff94b90-f802-45ff-8b7a-2ddf72a49040" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Order Details' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
-      <TargetAnchorable.Anchors>
-        <scg:List x:TypeArguments="ITarget" Capacity="4">
-          <Target CVScreenId="115beefe-4431-4738-826d-44d091ba5902" CvTextArea="695, 755, 90, 13" CvTextArgument="* Resend" CvType="Text" DesignTimeRectangle="976, 701, 212, 20" FuzzySelectorArgument="&lt;webctrl type='' class='a-column a-span5 a-span-last' parentid='orderDetails' parentname='a-cardui-deck-autoname-0-card0' tag='DIV' aaname='         Sent          ' check:innerText='* Resend' /&gt;" Guid="0fd06080-40a4-4ab7-b324-4554d2434ee8" ImageBase64="" SearchSteps="FuzzySelector, CV" />
-        </scg:List>
-      </TargetAnchorable.Anchors>
-      <imageRef attrName="InformativeScreenshot" originalValue="07252c4e7a8516e5d23fbb0c415e8ced.png" xmlns="">0VpFT0oslbUSRp59MvX9qrA</imageRef>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gp/your-account/order-details" CVScreenId="115beefe-4431-4738-826d-44d091ba5902" DesignTimeRectangle="1118, 721, 55, 20" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='         Resend     ' parentid='orderDetails' tag='A' type='' class='a-link-normal gcItemAction' check:innerText='Resend' /&gt;" Guid="dff94b90-f802-45ff-8b7a-2ddf72a49040" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Order Details' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="79f1ef925e3daf9dbd848404e273f0fa.png" xmlns="">0q2zDnVepzkiwigBp9qd8Kg</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">None</x:String>
   </ObjectRepositoryTargetData.Data>

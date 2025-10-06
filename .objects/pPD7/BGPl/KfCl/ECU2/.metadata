@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Resend your gift card",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "ECU2AkF4_EGg0MMs58IZyA",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/ECU2AkF4_EGg0MMs58IZyA",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/KfClGJ4uuE-CNRrLiCAA7w",
+  "Created": "2025-10-06T20:23:45.3408267Z",
+  "Updated": "2025-10-06T20:23:45.3408267Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

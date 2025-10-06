@@ -88,6 +88,18 @@
       "IsPrincipal": true,
       "ArgumentType": 0,
       "DataSourceItems": null
+    },
+    {
+      "Name": "in_CardBank_File",
+      "DisplayName": "in_CardBank_File",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "Data\\ReusableCards\\ReusableCards.xlsx",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
     }
   ]
 }

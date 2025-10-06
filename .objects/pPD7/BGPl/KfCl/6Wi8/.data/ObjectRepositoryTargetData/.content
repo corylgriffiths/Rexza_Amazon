@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="fKghaZGNaU2g8WHZzHh18Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gc/resend" CVScreenId="569f1327-524a-4100-88cc-802c53acec59" CvElementArea="470, 700, 118, 32" CvTextArea="482, 708, 93, 13" CvTextArgument="Resend gift card" CvType="Button" DesignTimeRectangle="473, 703, 112, 27" DesignTimeScaleFactor="0.8999999761581421" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='gc-resend-apply' tag='INPUT' type='submit' class='a-button-input' aaname='' /&gt;" Guid="92b95322-75ab-4452-9ddc-7abd07a9ef9b" ScopeSelectorArgument="&lt;html app='chrome.exe' title='amazon.com/gc/resend?orderID=112-1704174-4253035&amp;amp;gcID=AQMM5RIWL4XQH&amp;amp;ref_=ppx_hzod_giftCardDetails_dt_b_gc_e_d_0_0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="569f1327-524a-4100-88cc-802c53acec59" CvElementArea="348, 700, 122, 31" CvTextArea="361, 708, 97, 13" CvTextArgument="Preview gift card" CvType="Button" DesignTimeRectangle="351, 703, 116, 27" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='gc-preview-button' tag='BUTTON' type='button' class='a-button-text' aaname='         Preview gift card       ' check:innerText='Preview gift card' /&gt;" Guid="77993ceb-5e06-430e-9074-22e0e1addfe1" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="661f25bd17d671757c1a14b5711111ef.png" xmlns="">0ME-6ZS2d_UWiR7YGnhisFA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="Ery6Mxl0KEOq-34BUIKhHA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="oy-k-rHeVkmPEGoTkAfGrg" Reference="edQoiHTr_EubiZ3TXex5dQ/wuHNn0M10kOOMGgT9ECm5A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gp/your-account/order-details" CVScreenId="14aaaca0-74a8-4b43-83e4-810f90ab5357" CvTextArea="382, 703, 508, 13" CvType="AnyWordGroup" DesignTimeRectangle="383, 700, 526, 20" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='a-row' isleaf='1' parentid='orderDetails' parentname='a-cardui-deck-autoname-0-card0' tag='DIV' type='' /&gt;" Guid="52a3e60f-fabc-4151-8703-46f15902f3d1" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Order Details' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/your-orders/order-details" CVScreenId="591bb049-a75b-4811-8ecb-36b7a1f39a13" CvTextArea="716, 680, 405, 11" CvType="AnyWordGroup" DesignTimeRectangle="717, 680, 403, 13" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='od-ajax-message-target-jjsonphmmittomp' tag='SPAN' type='' class='a-size-small' /&gt;" Guid="f5db7805-8546-49af-a930-0d4fd04363b4" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Order Details' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
       <TargetAnchorable.Anchors>
         <scg:List x:TypeArguments="ITarget" Capacity="4">
-          <Target CVScreenId="14aaaca0-74a8-4b43-83e4-810f90ab5357" CvTextArea="382, 683, 60, 16" CvTextArgument="Message:" CvType="Text" DesignTimeRectangle="383, 681, 58, 18" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='a-color-secondary' parentid='orderDetails' tag='SPAN' type='' aaname='         Message:     ' check:innerText='Message:' /&gt;" Guid="d3e5f092-153b-46b3-bb8c-4a540824642e" SearchSteps="FuzzySelector, CV" />
+          <Target CVScreenId="591bb049-a75b-4811-8ecb-36b7a1f39a13" DesignTimeRectangle="717, 662, 45, 13" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='od-ajax-message-parent-jjsonphmmittomp' tag='SPAN' type='' class='a-size-small a-color-secondary' aaname='Message:' check:innerText='Message:' /&gt;" Guid="16d9c1dc-1c4e-4192-94eb-47d8d08604f8" SearchSteps="FuzzySelector" />
         </scg:List>
       </TargetAnchorable.Anchors>
-      <imageRef attrName="InformativeScreenshot" originalValue="2abfdabbee5aba1dbf28a7de80ad5acc.png" xmlns="">0tDEWMWwVuUaG6dVCJ6PJuA</imageRef>
+      <imageRef attrName="InformativeScreenshot" originalValue="745e499ad2f158b3485d4d1a7834897b.png" xmlns="">0VcTPWSoWWUO7OaALcsWj0A</imageRef>
     </TargetAnchorable>
-    <x:String x:Key="ActivityType">GetText</x:String>
+    <x:String x:Key="ActivityType">None</x:String>
   </ObjectRepositoryTargetData.Data>
 </ObjectRepositoryTargetData>

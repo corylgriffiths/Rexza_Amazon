@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="fastgem" this:fastgem.in_ExceptionString="Mansions at Timberland" this:fastgem.in_weekOffset="-1" this:fastgem.in_nonIncentiveFinalize_YearOffset="50" this:fastgem.in_SkipNonIncentiveCheck="False" this:fastgem.in_batchSize="150" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="fastgem" this:fastgem.in_ExceptionString="Mansions at Timberland" this:fastgem.in_weekOffset="-1" this:fastgem.in_nonIncentiveFinalize_YearOffset="50" this:fastgem.in_SkipNonIncentiveCheck="False" this:fastgem.in_batchSize="150" this:fastgem.in_CardBank_File="Data\ReusableCards\ReusableCards.xlsx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Out_PullPayrollData" Type="OutArgument(sd:DataTable)" />
     <x:Property Name="Out_PullLeasingAgentsData" Type="OutArgument(sd:DataTable)" />
@@ -10,6 +10,7 @@
     <x:Property Name="in_nonIncentiveFinalize_YearOffset" Type="InArgument(x:Int32)" />
     <x:Property Name="in_SkipNonIncentiveCheck" Type="InArgument(x:Boolean)" />
     <x:Property Name="in_batchSize" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_CardBank_File" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -151,7 +152,7 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="fastgem" sap:VirtualizedContainerService.HintSize="1570,1760" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="fastgem" sap:VirtualizedContainerService.HintSize="1469,1758" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="varUsername" />
       <Variable x:TypeArguments="ss:SecureString" Name="varPassword" />
@@ -173,23 +174,24 @@
         </OutArgument>
       </ui:GetRobotCredential.Username>
     </ui:GetRobotCredential>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome FastGem - CRM" sap:VirtualizedContainerService.HintSize="520,1562" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="856efba4-8bba-4af3-ba3d-0ab11934dcb2" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome FastGem - CRM" sap:VirtualizedContainerService.HintSize="520,1560" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="856efba4-8bba-4af3-ba3d-0ab11934dcb2" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="486,1322" sap2010:WorkflowViewState.IdRef="Sequence_18">
+          <Sequence sap:VirtualizedContainerService.HintSize="486,1320" sap2010:WorkflowViewState.IdRef="Sequence_18">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-            <Sequence sap:VirtualizedContainerService.HintSize="452,1203" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <Sequence sap:VirtualizedContainerService.HintSize="452,1201" sap2010:WorkflowViewState.IdRef="Sequence_9">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="PayrollData_DT" />
                 <Variable x:TypeArguments="x:Boolean" Name="hasMoreRecs" />
+                <Variable x:TypeArguments="sd:DataTable" Name="CardBank_DT" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -247,6 +249,9 @@
                   <OutArgument x:TypeArguments="x:Boolean" x:Key="out_hasMoreRecs">
                     <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_47">hasMoreRecs</CSharpReference>
                   </OutArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_CardBank_File">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_77">in_CardBank_File</CSharpValue>
+                  </InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <If sap:VirtualizedContainerService.HintSize="418,585" sap2010:WorkflowViewState.IdRef="If_1">

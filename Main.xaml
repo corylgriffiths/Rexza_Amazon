@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_ExceptionList="Mansions at Timberland" this:Main.in_weekOffset="0" this:Main.in_nonIncentive_YearOffset="50" this:Main.in_SkipNonIncentiveCheck="False" this:Main.in_alertEmail="gabe.james@fastgem.net" this:Main.in_exceptionEmailList="nicole.north@ftr-rep.com; joel.luciano@rexza.com; jennifer.gill@ftr-rep.com" this:Main.in_BatchSize="200" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_ExceptionList="Mansions at Timberland" this:Main.in_weekOffset="0" this:Main.in_nonIncentive_YearOffset="50" this:Main.in_SkipNonIncentiveCheck="False" this:Main.in_alertEmail="gabe.james@fastgem.net" this:Main.in_exceptionEmailList="nicole.north@ftr-rep.com; joel.luciano@rexza.com; jennifer.gill@ftr-rep.com" this:Main.in_BatchSize="200" this:Main.in_CardBank_File="Data\ReusableCards\ReusableCards.xlsx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_ExceptionList" Type="InArgument(x:String)" />
     <x:Property Name="in_weekOffset" Type="InArgument(x:Int32)" />
@@ -7,6 +7,7 @@
     <x:Property Name="in_alertEmail" Type="InArgument(x:String)" />
     <x:Property Name="in_exceptionEmailList" Type="InArgument(x:String)" />
     <x:Property Name="in_BatchSize" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_CardBank_File" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -131,7 +132,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="617,865.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1486,1113.624" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="userName" />
       <Variable x:TypeArguments="ss:SecureString" Name="password" />
@@ -146,8 +147,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="416,147.66666666666666" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// this process is meant to run on Friday: &#xA;&#xA;Make sure the dates are for Sunday - Saturday before you continue. " />
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Gmail" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Rexza" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="416,146" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// this process is meant to run on Friday: &#xA;&#xA;Make sure the dates are for Sunday - Saturday before you continue. " />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Gmail" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Rexza" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3">
       <ui:GetRobotCredential.Password>
         <OutArgument x:TypeArguments="ss:SecureString">
           <CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">password</CSharpReference>
@@ -195,6 +196,9 @@
         </InArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_batchSize">
           <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">in_BatchSize</CSharpValue>
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_CardBank_File">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">in_CardBank_File</CSharpValue>
         </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>

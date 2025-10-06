@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="Ybn-sfN6_0-D3Ouwd2wu_w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="5RDzQzK0xE6r-lunKeTgfg" Reference="edQoiHTr_EubiZ3TXex5dQ/fxzBi1_50EqEol5rhw-i-g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gp/css/gc-reissue/email-selection.html" CVScreenId="9a9c718e-52dd-45d8-9f24-c1e92f00206a" CvElementArea="381, 650, 122, 35" CvTextArea="394, 660, 97, 13" CvTextArgument="Resend gift card" CvType="Button" DesignTimeRectangle="384, 653, 116, 29" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='gc-resend-apply' tag='INPUT' type='submit' class='a-button-input' aaname='' /&gt;" Guid="7cbfb0aa-89b2-499e-b38c-893e6b88293f" ScopeSelectorArgument="&lt;html app='chrome.exe' title='amazon.com/gp/css/gc-reissue/email-selection.html?ie=UTF8&amp;amp;gcID=A0424908UWOWQ1ASU1KE&amp;amp;orderID=114-5729054-7442647' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gp/css/gc-reissue/email-selection.html" CVScreenId="9a9c718e-52dd-45d8-9f24-c1e92f00206a" DesignTimeRectangle="726, 551, 112, 27" DesignTimeScaleFactor="0.8999999761581421" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='gc-resend-apply' tag='INPUT' type='submit' class='a-button-input' aaname='' /&gt;" Guid="7cbfb0aa-89b2-499e-b38c-893e6b88293f" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='amazon.com/gp/css/gc-reissue/email-selection.html?ie=UTF8&amp;amp;gcID=A0424908UWOWQ1ASU1KE&amp;amp;orderID=114-5729054-7442647' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
       <TargetAnchorable.Anchors>
         <scg:List x:TypeArguments="ITarget" Capacity="4">
-          <Target CVScreenId="9a9c718e-52dd-45d8-9f24-c1e92f00206a" CvElementArea="255, 650, 126, 34" CvTextArea="268, 660, 101, 13" CvTextArgument="Preview gift card" CvType="Button" DesignTimeRectangle="258, 653, 120, 29" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='gc-preview-button' tag='BUTTON' type='button' class='a-button-text' aaname='         Preview gift card       ' check:innerText='Preview gift card' /&gt;" Guid="4a2dc977-6369-4748-80ae-35315f531ae2" SearchSteps="FuzzySelector, CV" />
+          <Target CVScreenId="9a9c718e-52dd-45d8-9f24-c1e92f00206a" CvElementArea="255, 650, 126, 34" CvTextArea="268, 660, 101, 13" CvTextArgument="Preview gift card" CvType="Button" DesignTimeRectangle="605, 551, 116, 27" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='gc-preview-button' tag='BUTTON' type='button' class='a-button-text' aaname='         Preview gift card       ' check:innerText='Preview gift card' /&gt;" Guid="4a2dc977-6369-4748-80ae-35315f531ae2" SearchSteps="FuzzySelector, CV" />
         </scg:List>
       </TargetAnchorable.Anchors>
-      <imageRef attrName="InformativeScreenshot" originalValue="fe075d2227ac0e5eaa2d33d610d4ac9d.png" xmlns="">0tGVm4ffGAkevBkIOaRCSLQ</imageRef>
+      <imageRef attrName="InformativeScreenshot" originalValue="739de56fed9c3346d513b98defebbb2f.png" xmlns="">0ft5Kx0Ruf0KynDRo9IP5-A</imageRef>
     </TargetAnchorable>
-    <x:String x:Key="ActivityType">Click</x:String>
+    <x:String x:Key="ActivityType">None</x:String>
   </ObjectRepositoryTargetData.Data>
 </ObjectRepositoryTargetData>

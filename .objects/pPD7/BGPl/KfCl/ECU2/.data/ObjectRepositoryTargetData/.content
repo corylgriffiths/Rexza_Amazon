@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="M2PpqOrZyU2edv7t5qyStg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gc/resend" CVScreenId="25ae3e31-beab-469d-8f6b-1c7aa4fa9f36" CvTextArea="330, 434, 243, 23" CvTextArgument="Resend your gift card" CvType="Text" DesignTimeRectangle="331, 431, 865, 36" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FuzzyAccuracy="0.92" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' aaname='   Resend your gift card ' check:innerText='Resend your gift card' /&gt;" Guid="76e983b5-7b02-454d-92f3-97b130f1ac2b" ScopeSelectorArgument="&lt;html app='chrome.exe' title='amazon.com/gc/resend?orderID=112-1704174-4253035&amp;amp;gcID=AQMM5RIWL4XQH&amp;amp;ref_=ppx_hzod_giftCardDetails_dt_b_gc_e_d_0_0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="6e82456a44a74b6c31c6408d594a6b68.png" xmlns="">0khLxJ9noCk6oxY4EpAW0Jw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

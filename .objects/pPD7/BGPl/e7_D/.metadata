@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome amazon.comgcresendorderID=112-1704174-",
+  "Type": "Screen",
+  "Id": "e7_DDdBqokau1PzgWlzH-Q",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/e7_DDdBqokau1PzgWlzH-Q",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/BGPlO2wQ2U217jaXnVUl7g",
+  "Created": "2025-10-06T20:34:32.9307542Z",
+  "Updated": "2025-10-06T20:34:32.9307542Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

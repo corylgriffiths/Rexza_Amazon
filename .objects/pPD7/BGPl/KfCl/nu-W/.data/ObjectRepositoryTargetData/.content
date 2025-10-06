@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="gW0jqjwHK0KfCwUczvnKsA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gc/resend" CVScreenId="902afaf2-b768-4147-850c-90628039cb98" CvElementArea="383, 642, 210, 33" CvType="InputBox" DesignTimeRectangle="386, 644, 206, 29" DesignTimeScaleFactor="0.8999999761581421" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='gc-input-newRecipient-MobileSMS' tag='INPUT' type='text' class='a-declarative a-input-text' aaname='' /&gt;" Guid="be059681-6c7e-4007-aa40-24f840b12e2f" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='amazon.com/gc/resend?orderID=112-1704174-4253035&amp;amp;gcID=AQMM5RIWL4XQH&amp;amp;ref_=ppx_hzod_giftCardDetails_dt_b_gc_e_d_0_0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="902afaf2-b768-4147-850c-90628039cb98" CvElementArea="348, 642, 37, 32" CvTextArea="360, 651, 15, 12" CvTextArgument="+1" CvType="Button" DesignTimeRectangle="350, 644, 36, 29" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='gc-delivery-mechanism-form-MobileSMS' tag='SPAN' type='' class='a-input-text-addon' aaname='+1' check:innerText='+1' /&gt;" Guid="718ca8c6-536f-495d-aef6-5f7cff214029" SearchSteps="FuzzySelector, CV" />
+          <Target CVScreenId="902afaf2-b768-4147-850c-90628039cb98" CvElementArea="404, 605, 102, 30" CvTextArea="414, 614, 81, 15" CvTextArgument="Text Message" CvType="Button" DesignTimeRectangle="406, 607, 98, 27" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='gc-delivery-mechanism-button-MobileSMS-announce' tag='BUTTON' type='button' class='a-button-text' aaname='               Text Message             ' check:innerText='Text Message' /&gt;" Guid="c181e342-8143-4169-ad64-a4d993f79bf2" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="89888858d85607be4d55421ffbb6fe97.png" xmlns="">0fDLRro84OEGXcqeg5FsEFA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
