@@ -118,19 +118,19 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="login" sap:VirtualizedContainerService.HintSize="1560,3138" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="login" sap:VirtualizedContainerService.HintSize="1355,3386" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Snapshot Payroll(1)" sap:VirtualizedContainerService.HintSize="1560,3115" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Snapshot Payroll(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1058,3363" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="1526,2875" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <Sequence sap:VirtualizedContainerService.HintSize="1024,3123" sap2010:WorkflowViewState.IdRef="Sequence_13">
             <Sequence.Variables>
               <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="childAllPayrollList" />
               <Variable x:TypeArguments="ui:UiElement" Name="mainFormElement" />
@@ -143,7 +143,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="1492,114" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign sap:VirtualizedContainerService.HintSize="990,114" sap2010:WorkflowViewState.IdRef="Assign_4">
               <Assign.To>
                 <OutArgument x:TypeArguments="s:DateTime">
                   <CSharpReference x:TypeArguments="s:DateTime" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">TodayDateVal</CSharpReference>
@@ -155,7 +155,7 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="1492,114" sap2010:WorkflowViewState.IdRef="Assign_5">
+            <Assign sap:VirtualizedContainerService.HintSize="990,114" sap2010:WorkflowViewState.IdRef="Assign_5">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">EndDate</CSharpReference>
@@ -167,7 +167,7 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <Assign sap:VirtualizedContainerService.HintSize="1492,114" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign sap:VirtualizedContainerService.HintSize="990,114" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">payrollNote</CSharpReference>
@@ -179,7 +179,7 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="1492,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://rexza.fastgem.net/payroll-2/view-payroll" Version="V4">
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="990,122" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Url="https://rexza.fastgem.net/payroll-2/view-payroll" Version="V4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -187,17 +187,17 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NGoToUrl>
-            <uix:NCheckState DisplayName="Check App State 'Date'" sap:VirtualizedContainerService.HintSize="1492,2359" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Timeout="5" Version="V4">
+            <uix:NCheckState DisplayName="Check App State 'Date'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="990,2597" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Timeout="5" Version="V4">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="988,2117" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="988,2115" sap2010:WorkflowViewState.IdRef="Sequence_19">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Payroll (01202025)'" sap:VirtualizedContainerService.HintSize="954,225" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Payroll (01202025)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="954,225" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="dev.fastgem.net/payroll-2/view-payroll" CVScreenId="cf1b248b-bc72-4f79-afc0-5412c312015f" ContentHash="8QNoBnn8hkqeVylpTtRwSA" DesignTimeRectangle="138, 411, 103, 12" DesignTimeScaleFactor="1" ElementType="Text" FuzzyAccuracy="0.91" Guid="8575e7fc-4ce4-457c-914e-14043ba10d58" InformativeScreenshot="c1a336fb105706c2280ec0579dfbcb2f.png" Reference="edQoiHTr_EubiZ3TXex5dQ/yFqTxtXAy0yHo9kY3DTEBg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                      <uix:TargetAnchorable BrowserURL="dev.fastgem.net/payroll-2/view-payroll" CVScreenId="cf1b248b-bc72-4f79-afc0-5412c312015f" ContentHash="8QNoBnn8hkqeVylpTtRwSA" DesignTimeRectangle="138, 411, 103, 12" DesignTimeScaleFactor="1" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzyAccuracy="0.91" Guid="8575e7fc-4ce4-457c-914e-14043ba10d58" InformativeScreenshot="c1a336fb105706c2280ec0579dfbcb2f.png" Reference="edQoiHTr_EubiZ3TXex5dQ/yFqTxtXAy0yHo9kY3DTEBg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="FuzzySelector" Version="V4">
                         <uix:TargetAnchorable.FuzzySelectorArgument>
                           <InArgument x:TypeArguments="x:String">
                             <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">"&lt;webctrl id='snapshotList' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='fg_link' aaname='"+payrollNote+"' check:innerText='"+payrollNote+"' /&gt;"</CSharpValue>
@@ -216,7 +216,7 @@
                       </uix:VerifyExecutionOptions>
                     </uix:NClick.VerifyOptions>
                   </uix:NClick>
-                  <uix:NCheckState DisplayName="Check App State 'Edit Item'" sap:VirtualizedContainerService.HintSize="954,1830" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Timeout="4" Version="V4">
+                  <uix:NCheckState DisplayName="Check App State 'Edit Item'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="954,1830" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Timeout="4" Version="V4">
                     <uix:NCheckState.IfExists>
                       <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,1588" sap2010:WorkflowViewState.IdRef="Sequence_21">
                         <sap:WorkflowViewStateService.ViewState>
@@ -224,9 +224,9 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit Item'" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit Item'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
                           <uix:NClick.Target>
-                            <uix:TargetAnchorable BrowserURL="dev.fastgem.net/payroll-2/view-payroll/snapshot/203" CVScreenId="9866a56d-1379-463c-85e3-9ca31d5e2c4d" ContentHash="M1o7r0a6kkm2awmwVIsXwQ" CvElementArea="16, 244, 70, 28" CvTextArea="28, 251, 47, 12" CvTextArgument="Edit Item" CvType="Button" DesignTimeRectangle="18, 245, 67, 26" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='g-mainbar' tag='A' type='' class='btn btn-small' aaname='                 Edit Item            ' check:innerText='Edit Item' /&gt;" Guid="8866dfb4-53dc-4c73-a7fe-9786fc50e3a3" InformativeScreenshot="bed6ead54404e9aec8c3ca07cc184ac3.png" Reference="edQoiHTr_EubiZ3TXex5dQ/bFYm3ImCS0OBNyaStror_w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                            <uix:TargetAnchorable BrowserURL="dev.fastgem.net/payroll-2/view-payroll/snapshot/203" CVScreenId="9866a56d-1379-463c-85e3-9ca31d5e2c4d" ContentHash="M1o7r0a6kkm2awmwVIsXwQ" CvElementArea="16, 244, 70, 28" CvTextArea="28, 251, 47, 12" CvTextArgument="Edit Item" CvType="Button" DesignTimeRectangle="18, 245, 67, 26" DesignTimeScaleFactor="1" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl parentid='g-mainbar' tag='A' type='' class='btn btn-small' aaname='                 Edit Item            ' check:innerText='Edit Item' /&gt;" Guid="8866dfb4-53dc-4c73-a7fe-9786fc50e3a3" InformativeScreenshot="bed6ead54404e9aec8c3ca07cc184ac3.png" Reference="edQoiHTr_EubiZ3TXex5dQ/bFYm3ImCS0OBNyaStror_w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4">
                               <uix:TargetAnchorable.Anchors>
                                 <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                   <uix:Target CVScreenId="9866a56d-1379-463c-85e3-9ca31d5e2c4d" CvElementArea="87, 244, 83, 28" CvTextArea="99, 251, 60, 12" CvTextArgument="Delete Item" CvType="Button" DesignTimeRectangle="89, 245, 80, 26" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='                 Delete Item            ' parentid='g-mainbar' tag='A' type='' class='btn btn-small delete-button' check:innerText='Delete Item' /&gt;" Guid="76961bfe-d8dc-4c34-a333-8947f80ece21" SearchSteps="FuzzySelector, CV" />
@@ -245,9 +245,9 @@
                             </uix:VerifyExecutionOptions>
                           </uix:NClick.VerifyOptions>
                         </uix:NClick>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SPAN'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
                           <uix:NClick.Target>
-                            <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/view-payroll/snapshotform/188" CVScreenId="f8dbcbdd-ac4c-4df5-a91d-aee7de1ee9ed" ContentHash="gkMQ_P8fJEaDgakPGjdBrg" CvElementArea="1750, 656, 43, 32" CvTextArea="1764, 666, 11, 10" CvType="Icon" DesignTimeRectangle="1753, 659, 38, 27" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl id='head_notes' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" Guid="47b794bc-da52-4bf2-87f2-bf6b8248f102" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAAfCAYAAACRdF9FAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARnSURBVFhH1ZjvT1NnFMf3r5n4hpXa0hZa6Q/AbBo7QqfxHdJGk71gIS4zbAMBtYDAIDBkoz/W0PJLI2ZDN7GyUSU1xG46IAorvS3lu+dcbrv23odb4ouCJ/nm5Nx7nnM+fe7T2+fpR/hA7MMF3dvbOxaSWx40lzDzYgbNwWaYB8ww9BvKKupJvYlBDiyC0oVsNgvv7140+BpwYf4CPL96cOXRlbKKelJvYiAWYsrB5kFn47NigucXDy4uXITznhPn750vq6gn9SYGYiGmPGhuNt3TbrhmXDg3dw710/Won2EinxMvjjhgn7TAPGyCoVcH3U09DIPVMI/Xwhbm5B8yJgbXrAvuiDs/qyLo7u4urGNWNM417idHpEEqvi5ogXHIja7FMObjUcQ2Eki8fYlY4jEeRifQ9ZMTlh/sqDtkPblvnG+EddQqsuVBM5kMqkeq0RBpQF24Li9H2MGNHeyxtMz6sbItPhW+ZTewEu3C5bu1bJx6PV58JnIGphGTyFYMOlwNxxRLnGID1HzwE3geLiCRkYBUTUBidQjuIJvZUnU53sSWlALUNGSCPWTPyxFi60/hbWiaG0M0KXEUWmoNq1u8Kd7CytJXaArs11GvX3zfOGRUgtJF+88sKScaIPdTVzES35AAik34J4BbsWVwV0MyiuH7ztL1ZfeNgzzQASNsARtsQaYDvPOBD7GU1FxmwhsGunIAKFsCL/+8js9L1Jd74x0eKLto80tJci+qAV88W2YPkm/ptyHcXl3Bv1Ist62/J/BlWFa3qH5BLHljPwfU0GdAra8WVp81r+LYiWux52xuJMvE4Q/Wo+J6BdPH0PaZYRmrgvYbipm8rfC/yWdD2JhCe0StvjKu6qvigPYy0EmWOMkGcP2naI29+B+UmZDcwvr2uqh4fBQdS/cRf7cfr7N7QlZKZCasB3AtrFZf6at6OaB6rx6nfzytKvfSAv4qaF5owms/epafHbg0Nl/1we3n1z1IxKQEvc1AJ1iCihxz/Vg44CWvCprdxGLUDQenppqISQGqu6WDZdwCy90CKeImdMbXkJb6F5rwahxfP3jKBRXezaMzzKunHutu6jig7KKYWEL26U6EN9V+O2WWXkX4txbYObVKiQt6qvsUasZqYB4zl/TWSAcC65sSiYql/kD4UQvb8Byurtxru7VKUG2XFjWjNYeX7zJ6nj/B2g5nIWS2sfZ6Cj2zZ/ljDyliUoBW3qgUd1DvJV8z2hYHMfikG22Rz/g57yFi4oOyHZSYdEx8ZScHVNOhEXdQpu+ZjonXfKdRghq6DOJuhZJoJ3XkftAE3Q3Ot/7S6CXovDpxF2UYYNBH7OlXiZiKQOlcEnoagrZDu3/GvnPEYgzEQkxFZyY66aXTabSH2nHi6glovtVA36sXdy/lFPWk3sRALMSUP4XSay83q4IgwP/YD1efCxVtFTjZerKsop7UmxiIJTebZEX/lNAN+hSpVAo7OzuikslkWZTrR72JgVhyswkA/wEm+ALoN3IV2QAAAABJRU5ErkJggg==" InformativeScreenshot="8f49ea47a1aaf42a77d9b96a3c78cc6c.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/2nE9u0GoG0uhqpjd58pDvw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive" />
+                            <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/view-payroll/snapshotform/188" CVScreenId="f8dbcbdd-ac4c-4df5-a91d-aee7de1ee9ed" ContentHash="gkMQ_P8fJEaDgakPGjdBrg" CvElementArea="1750, 656, 43, 32" CvTextArea="1764, 666, 11, 10" CvType="Icon" DesignTimeRectangle="1753, 659, 38, 27" DesignTimeScaleFactor="1.25" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='head_notes' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" Guid="47b794bc-da52-4bf2-87f2-bf6b8248f102" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAAfCAYAAACRdF9FAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAARnSURBVFhH1ZjvT1NnFMf3r5n4hpXa0hZa6Q/AbBo7QqfxHdJGk71gIS4zbAMBtYDAIDBkoz/W0PJLI2ZDN7GyUSU1xG46IAorvS3lu+dcbrv23odb4ouCJ/nm5Nx7nnM+fe7T2+fpR/hA7MMF3dvbOxaSWx40lzDzYgbNwWaYB8ww9BvKKupJvYlBDiyC0oVsNgvv7140+BpwYf4CPL96cOXRlbKKelJvYiAWYsrB5kFn47NigucXDy4uXITznhPn750vq6gn9SYGYiGmPGhuNt3TbrhmXDg3dw710/Won2EinxMvjjhgn7TAPGyCoVcH3U09DIPVMI/Xwhbm5B8yJgbXrAvuiDs/qyLo7u4urGNWNM417idHpEEqvi5ogXHIja7FMObjUcQ2Eki8fYlY4jEeRifQ9ZMTlh/sqDtkPblvnG+EddQqsuVBM5kMqkeq0RBpQF24Li9H2MGNHeyxtMz6sbItPhW+ZTewEu3C5bu1bJx6PV58JnIGphGTyFYMOlwNxxRLnGID1HzwE3geLiCRkYBUTUBidQjuIJvZUnU53sSWlALUNGSCPWTPyxFi60/hbWiaG0M0KXEUWmoNq1u8Kd7CytJXaArs11GvX3zfOGRUgtJF+88sKScaIPdTVzES35AAik34J4BbsWVwV0MyiuH7ztL1ZfeNgzzQASNsARtsQaYDvPOBD7GU1FxmwhsGunIAKFsCL/+8js9L1Jd74x0eKLto80tJci+qAV88W2YPkm/ptyHcXl3Bv1Ist62/J/BlWFa3qH5BLHljPwfU0GdAra8WVp81r+LYiWux52xuJMvE4Q/Wo+J6BdPH0PaZYRmrgvYbipm8rfC/yWdD2JhCe0StvjKu6qvigPYy0EmWOMkGcP2naI29+B+UmZDcwvr2uqh4fBQdS/cRf7cfr7N7QlZKZCasB3AtrFZf6at6OaB6rx6nfzytKvfSAv4qaF5owms/epafHbg0Nl/1we3n1z1IxKQEvc1AJ1iCihxz/Vg44CWvCprdxGLUDQenppqISQGqu6WDZdwCy90CKeImdMbXkJb6F5rwahxfP3jKBRXezaMzzKunHutu6jig7KKYWEL26U6EN9V+O2WWXkX4txbYObVKiQt6qvsUasZqYB4zl/TWSAcC65sSiYql/kD4UQvb8Byurtxru7VKUG2XFjWjNYeX7zJ6nj/B2g5nIWS2sfZ6Cj2zZ/ljDyliUoBW3qgUd1DvJV8z2hYHMfikG22Rz/g57yFi4oOyHZSYdEx8ZScHVNOhEXdQpu+ZjonXfKdRghq6DOJuhZJoJ3XkftAE3Q3Ot/7S6CXovDpxF2UYYNBH7OlXiZiKQOlcEnoagrZDu3/GvnPEYgzEQkxFZyY66aXTabSH2nHi6glovtVA36sXdy/lFPWk3sRALMSUP4XSay83q4IgwP/YD1efCxVtFTjZerKsop7UmxiIJTebZEX/lNAN+hSpVAo7OzuikslkWZTrR72JgVhyswkA/wEm+ALoN3IV2QAAAABJRU5ErkJggg==" InformativeScreenshot="8f49ea47a1aaf42a77d9b96a3c78cc6c.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/2nE9u0GoG0uhqpjd58pDvw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="Selector, CV" Version="V4" />
                           </uix:NClick.Target>
                           <uix:NClick.VerifyOptions>
                             <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -260,9 +260,9 @@
                             </uix:VerifyExecutionOptions>
                           </uix:NClick.VerifyOptions>
                         </uix:NClick>
-                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '---- Rep ----(3)'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_7" InteractionMode="DebuggerApi" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Text="%[k(Down)][k(Enter)]" Version="V4">
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '---- Rep ----(3)'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_7" InteractionMode="DebuggerApi" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Text="%[k(Down)][k(Enter)]" Version="V4">
                           <uix:NTypeInto.Target>
-                            <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/view-payroll/snapshotform/185" CVScreenId="7a5b9cb7-7c7b-4519-8501-eea1fb1a7b0f" ContentHash="PJ0s8D9380KvWaRn2R4mTA" CvElementArea="27, 705, 895, 37" CvType="InputBox" DesignTimeRectangle="27, 598, 804, 25" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='head_notes' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='chzn-single' aaname='---- Rep ----' check:innerText='---- Rep ----' /&gt;" Guid="e9b90b4a-7848-4cb3-a2f3-a57e932f768a" InformativeScreenshot="ce0b8948d47c4f73d3a5c4d4e5073efe.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/6yjIviv3y0eWjCoBGpqbFw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/view-payroll/snapshotform/185" CVScreenId="7a5b9cb7-7c7b-4519-8501-eea1fb1a7b0f" ContentHash="PJ0s8D9380KvWaRn2R4mTA" CvElementArea="27, 705, 895, 37" CvType="InputBox" DesignTimeRectangle="27, 598, 804, 25" DesignTimeScaleFactor="1" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='head_notes' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='chzn-single' aaname='---- Rep ----' check:innerText='---- Rep ----' /&gt;" Guid="e9b90b4a-7848-4cb3-a2f3-a57e932f768a" InformativeScreenshot="ce0b8948d47c4f73d3a5c4d4e5073efe.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/6yjIviv3y0eWjCoBGpqbFw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" />
                           </uix:NTypeInto.Target>
                           <uix:NTypeInto.VerifyOptions>
                             <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
@@ -275,11 +275,11 @@
                             </uix:VerifyExecutionTypeIntoOptions>
                           </uix:NTypeInto.VerifyOptions>
                         </uix:NTypeInto>
-                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Notes'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="DebuggerApi" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Notes'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="DebuggerApi" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
                           <uix:NTypeInto.Target>
-                            <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/view-payroll/snapshotform/185" CVScreenId="e6b71ed2-a21b-44c4-8eb6-c68f43b36e0e" ContentHash="INyVQvTG4kWcQL1Vo1XEYQ" CvElementArea="932, 705, 796, 53" CvType="InputBox" DesignTimeRectangle="848, 598, 736, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='head_notes' tag='TABLE' /&gt;&lt;webctrl type='' tag='TEXTAREA' class='' aaname='' /&gt;" Guid="8427145c-89bf-4db5-b4c7-5d08bfb636ff" InformativeScreenshot="7fb880aba84418834e91c6a85d02bd25.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/w5mRp6WicUyZnrAuslineg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                            <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/view-payroll/snapshotform/185" CVScreenId="e6b71ed2-a21b-44c4-8eb6-c68f43b36e0e" ContentHash="INyVQvTG4kWcQL1Vo1XEYQ" CvElementArea="932, 705, 796, 53" CvType="InputBox" DesignTimeRectangle="848, 598, 736, 38" DesignTimeScaleFactor="1" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='head_notes' tag='TABLE' /&gt;&lt;webctrl type='' tag='TEXTAREA' class='' aaname='' /&gt;" Guid="8427145c-89bf-4db5-b4c7-5d08bfb636ff" InformativeScreenshot="7fb880aba84418834e91c6a85d02bd25.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/w5mRp6WicUyZnrAuslineg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4">
                               <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                   <uix:Target CVScreenId="e6b71ed2-a21b-44c4-8eb6-c68f43b36e0e" CvTextArea="20, 597, 48, 15" CvTextArgument="Notes" CvType="Text" DesignTimeRectangle="18, 505, 1722, 21" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H6' type='' class='' aaname='Notes' check:innerText='Notes' /&gt;" Guid="04d392af-cf69-42ea-8ec6-64b4742c19f1" SearchSteps="FuzzySelector, CV" />
                                 </scg:List>
                               </uix:TargetAnchorable.Anchors>
@@ -301,11 +301,11 @@
                             </uix:VerifyExecutionTypeIntoOptions>
                           </uix:NTypeInto.VerifyOptions>
                         </uix:NTypeInto>
-                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Label'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="DebuggerApi" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Label'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="DebuggerApi" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
                           <uix:NTypeInto.Target>
-                            <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/view-payroll/snapshotform/190" CVScreenId="b1702cf1-ad75-4c3a-8c26-078026f99554" ContentHash="xRU1uhMxtESYFVt1p6e6TQ" CvElementArea="243, 476, 699, 36" CvType="InputBox" DesignTimeRectangle="198, 412, 663, 26" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='jform_label' tag='INPUT' type='text' class='' aaname=' &amp;#x9;Label' /&gt;" Guid="64254f08-ac23-4a53-9cb8-ba5b08e6ec46" InformativeScreenshot="c2c43ba434999bccf4ef27fa89ff2b05.png" IsResponsive="True" Reference="j3RPm-lsJUOk5qq-VZvaQA/mu37BX1heUe5bxkMzx-0sg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                            <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/view-payroll/snapshotform/190" CVScreenId="b1702cf1-ad75-4c3a-8c26-078026f99554" ContentHash="xRU1uhMxtESYFVt1p6e6TQ" CvElementArea="243, 476, 699, 36" CvType="InputBox" DesignTimeRectangle="198, 412, 663, 26" DesignTimeScaleFactor="1" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='jform_label' tag='INPUT' type='text' class='' aaname=' &amp;#x9;Label' /&gt;" Guid="64254f08-ac23-4a53-9cb8-ba5b08e6ec46" InformativeScreenshot="c2c43ba434999bccf4ef27fa89ff2b05.png" IsResponsive="True" Reference="j3RPm-lsJUOk5qq-VZvaQA/mu37BX1heUe5bxkMzx-0sg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4">
                               <uix:TargetAnchorable.Anchors>
-                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                   <uix:Target CVScreenId="b1702cf1-ad75-4c3a-8c26-078026f99554" CvTextArea="185, 487, 36, 13" CvTextArgument="Label" CvType="Text" DesignTimeRectangle="18, 417, 160, 18" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='jform_label-lbl' tag='LABEL' type='' class='' aaname=' &amp;#x9;Label' check:innerText='Label' /&gt;" Guid="62d9f56d-fc19-4bed-8372-2612e2ba30c2" SearchSteps="FuzzySelector, CV" />
                                 </scg:List>
                               </uix:TargetAnchorable.Anchors>
@@ -327,9 +327,9 @@
                             </uix:VerifyExecutionTypeIntoOptions>
                           </uix:NTypeInto.VerifyOptions>
                         </uix:NTypeInto>
-                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save &amp; Close'" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save &amp; Close'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
                           <uix:NClick.Target>
-                            <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/view-payroll/snapshotform/185" CVScreenId="89fd8da9-2bcb-4422-8e39-459a65f18174" ContentHash="6acO8jcClUiUFUbfxE6Gbg" CvElementArea="1655, 281, 142, 36" CvTextArea="1691, 291, 91, 13" CvTextArgument="Save &amp; Close" CvType="Button" DesignTimeRectangle="1547, 255, 112, 26" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='                                                          Save &amp;amp; Close                        ' tag='BUTTON' type='submit' class='btn btn-primary btn-small fg_save' check:innerText='Save &amp;amp; Close' /&gt;" Guid="a3fccc85-6ccf-43fb-ab6d-e86bbc281826" InformativeScreenshot="1a31ba2bf174fc66ec5616ad4330a8e5.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/pVzoZg6-50aK0TEJresR3w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                            <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/payroll-2/view-payroll/snapshotform/185" CVScreenId="89fd8da9-2bcb-4422-8e39-459a65f18174" ContentHash="6acO8jcClUiUFUbfxE6Gbg" CvElementArea="1655, 281, 142, 36" CvTextArea="1691, 291, 91, 13" CvTextArgument="Save &amp; Close" CvType="Button" DesignTimeRectangle="1547, 255, 112, 26" DesignTimeScaleFactor="1" ElementType="Button" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aaname='                                                          Save &amp;amp; Close                        ' tag='BUTTON' type='submit' class='btn btn-primary btn-small fg_save' check:innerText='Save &amp;amp; Close' /&gt;" Guid="a3fccc85-6ccf-43fb-ab6d-e86bbc281826" InformativeScreenshot="1a31ba2bf174fc66ec5616ad4330a8e5.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/pVzoZg6-50aK0TEJresR3w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" />
                           </uix:NClick.Target>
                           <uix:NClick.VerifyOptions>
                             <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -361,9 +361,9 @@
                       </Sequence>
                     </uix:NCheckState.IfNotExists>
                     <uix:NCheckState.Target>
-                      <uix:TargetAnchorable BrowserURL="dev.fastgem.net/payroll-2/view-payroll/snapshot/203" CVScreenId="9866a56d-1379-463c-85e3-9ca31d5e2c4d" ContentHash="M1o7r0a6kkm2awmwVIsXwQ" CvElementArea="16, 244, 70, 28" CvTextArea="28, 251, 47, 12" CvTextArgument="Edit Item" CvType="Button" DesignTimeRectangle="18, 245, 67, 26" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='g-mainbar' tag='A' type='' class='btn btn-small' aaname='                 Edit Item            ' check:innerText='Edit Item' /&gt;" Guid="8866dfb4-53dc-4c73-a7fe-9786fc50e3a3" InformativeScreenshot="bed6ead54404e9aec8c3ca07cc184ac3.png" Reference="edQoiHTr_EubiZ3TXex5dQ/bFYm3ImCS0OBNyaStror_w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                      <uix:TargetAnchorable BrowserURL="dev.fastgem.net/payroll-2/view-payroll/snapshot/203" CVScreenId="9866a56d-1379-463c-85e3-9ca31d5e2c4d" ContentHash="M1o7r0a6kkm2awmwVIsXwQ" CvElementArea="16, 244, 70, 28" CvTextArea="28, 251, 47, 12" CvTextArgument="Edit Item" CvType="Button" DesignTimeRectangle="18, 245, 67, 26" DesignTimeScaleFactor="1" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl parentid='g-mainbar' tag='A' type='' class='btn btn-small' aaname='                 Edit Item            ' check:innerText='Edit Item' /&gt;" Guid="8866dfb4-53dc-4c73-a7fe-9786fc50e3a3" InformativeScreenshot="bed6ead54404e9aec8c3ca07cc184ac3.png" Reference="edQoiHTr_EubiZ3TXex5dQ/bFYm3ImCS0OBNyaStror_w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target CVScreenId="9866a56d-1379-463c-85e3-9ca31d5e2c4d" CvElementArea="87, 244, 83, 28" CvTextArea="99, 251, 60, 12" CvTextArgument="Delete Item" CvType="Button" DesignTimeRectangle="89, 245, 80, 26" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='                 Delete Item            ' parentid='g-mainbar' tag='A' type='' class='btn btn-small delete-button' check:innerText='Delete Item' /&gt;" Guid="76961bfe-d8dc-4c34-a333-8947f80ece21" SearchSteps="FuzzySelector, CV" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
@@ -389,7 +389,7 @@
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="dev.fastgem.net/payroll-2/view-payroll" CVScreenId="cf1b248b-bc72-4f79-afc0-5412c312015f" ContentHash="JjOdPli0jEySxMPD5u3hRw" CvTextArea="137, 410, 105, 14" CvType="Text" DesignTimeRectangle="138, 411, 103, 12" DesignTimeScaleFactor="1" ElementType="Text" Guid="6076f28b-b87d-4e99-87c3-209d684b5d2a" InformativeScreenshot="c1a336fb105706c2280ec0579dfbcb2f.png" Reference="edQoiHTr_EubiZ3TXex5dQ/lYGee1xfsk-RF77eeDu3JA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="dev.fastgem.net/payroll-2/view-payroll" CVScreenId="cf1b248b-bc72-4f79-afc0-5412c312015f" ContentHash="JjOdPli0jEySxMPD5u3hRw" CvTextArea="137, 410, 105, 14" CvType="Text" DesignTimeRectangle="138, 411, 103, 12" DesignTimeScaleFactor="1" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="6076f28b-b87d-4e99-87c3-209d684b5d2a" InformativeScreenshot="c1a336fb105706c2280ec0579dfbcb2f.png" Reference="edQoiHTr_EubiZ3TXex5dQ/lYGee1xfsk-RF77eeDu3JA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='View Payroll Runs' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4">
                   <uix:TargetAnchorable.CvTextArgument>
                     <InArgument x:TypeArguments="x:String">
                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">payrollNote</CSharpValue>
@@ -407,7 +407,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="468, 237, 1464, 1688" BrowserType="Chrome" ContentHash="KikQcomt_0KmIhH1uOwfgg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGZSURBVDhPrZI76M9hFMbdr6GUy4BMFpsnFqXYpJSMNmWThbKIQpHBLdInBgaxWCS3jC7Lh8El9xgMxOieQUfnpz+5DU6det/3e57nnO/znGHD/ldIKkdKZkpmS2b9lPU2QzKian8FHi3ZILknuSu5L3kuedbnersjWScZ9Z2kweMkW7t4vWSl5JbkgeSJ5IZkhWRTk26UjPlGIpks2S15KlklGS/ZI7ktWShZ0hNsk4yVrOlG1XBCEZyQfJY8lpySXJJ8bFDdT/cU7yTn+14EnySHiuCA5IPknGSH5KLkpWSvZFdn1byWnO2ay5L3kp1FMElyVHJNMqfHfiRZ1PpULpU8lMyXzJPclOyv3x0UlD0XukOR1BTbhxDsk5yRzJVc6fPUgYiDLGYlhyWbJdclUyTTu2NZfFxytYm+4YZaWbm4xTvZwi1rS0vgEq/2YMEP4EEMIVktedEqH5Qc63P5v/yX4EH0x+G9TOXMK8kbyVvJ2j+CB9FFtWVl35fekS0/rO/foklKwBLtiGTiP4MrhugxbWDX7wi+AsmBiI6aESUVAAAAAElFTkSuQmCC" InformativeScreenshot="c75ab77cd260cd7993e94836f3bd85a3.jpg" Reference="edQoiHTr_EubiZ3TXex5dQ/X1-omhlidkSEkMfcAQ49-Q" Selector="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" Title="Snapshot Payroll" Url="https://rexza.fastgem.net/*" Version="V1" />
+        <uix:TargetApp Area="468, 237, 1464, 1688" BrowserType="Chrome" ContentHash="KikQcomt_0KmIhH1uOwfgg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGZSURBVDhPrZI76M9hFMbdr6GUy4BMFpsnFqXYpJSMNmWThbKIQpHBLdInBgaxWCS3jC7Lh8El9xgMxOieQUfnpz+5DU6det/3e57nnO/znGHD/ldIKkdKZkpmS2b9lPU2QzKian8FHi3ZILknuSu5L3kuedbnersjWScZ9Z2kweMkW7t4vWSl5JbkgeSJ5IZkhWRTk26UjPlGIpks2S15KlklGS/ZI7ktWShZ0hNsk4yVrOlG1XBCEZyQfJY8lpySXJJ8bFDdT/cU7yTn+14EnySHiuCA5IPknGSH5KLkpWSvZFdn1byWnO2ay5L3kp1FMElyVHJNMqfHfiRZ1PpULpU8lMyXzJPclOyv3x0UlD0XukOR1BTbhxDsk5yRzJVc6fPUgYiDLGYlhyWbJdclUyTTu2NZfFxytYm+4YZaWbm4xTvZwi1rS0vgEq/2YMEP4EEMIVktedEqH5Qc63P5v/yX4EH0x+G9TOXMK8kbyVvJ2j+CB9FFtWVl35fekS0/rO/foklKwBLtiGTiP4MrhugxbWDX7wi+AsmBiI6aESUVAAAAAElFTkSuQmCC" InformativeScreenshot="c75ab77cd260cd7993e94836f3bd85a3.jpg" Reference="edQoiHTr_EubiZ3TXex5dQ/X1-omhlidkSEkMfcAQ49-Q" Selector="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" Url="https://rexza.fastgem.net/*" Version="V1" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>

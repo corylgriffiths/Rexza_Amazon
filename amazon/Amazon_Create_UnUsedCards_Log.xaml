@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="resendUnusedCards" this:resendUnusedCards.in_dataLookBack_days="0" this:resendUnusedCards.in_useLogOnly="True" this:resendUnusedCards.in_Logfile="Data\PreviousOrders.xlsx" this:resendUnusedCards.in_ReusableCardsLogFile="Data\ReusableCards.xlsx" this:resendUnusedCards.in_sheetName_PrevOrders="Previous Orders" this:resendUnusedCards.in_sheetName_ReusableCards="Unclaimed Cards" this:resendUnusedCards.in_DataYear="2025" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="resendUnusedCards" this:resendUnusedCards.in_dataLookBack_days="past 3 months" this:resendUnusedCards.in_useLogOnly="True" this:resendUnusedCards.in_Logfile="Data\PreviousOrders.xlsx" this:resendUnusedCards.in_ReusableCardsLogFile="Data\ReusableCards\ReusableCards.xlsx" this:resendUnusedCards.in_sheetName_PrevOrders="Previous Orders" this:resendUnusedCards.in_sheetName_ReusableCards="Unclaimed Cards" this:resendUnusedCards.in_DataYear="2025" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_dataLookBack_days" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_dataLookBack_days" Type="InArgument(x:String)" />
     <x:Property Name="in_useLogOnly" Type="InArgument(x:Boolean)" />
     <x:Property Name="in_Logfile" Type="InArgument(x:String)" />
     <x:Property Name="in_ReusableCardsLogFile" Type="InArgument(x:String)" />
@@ -150,13 +150,13 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="resendUnusedCards" sap:VirtualizedContainerService.HintSize="1940,11817" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="resendUnusedCards" sap:VirtualizedContainerService.HintSize="1427,6111" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="resend card notification" sap:VirtualizedContainerService.HintSize="1940,11794" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="resend card notification" sap:VirtualizedContainerService.HintSize="1368,6088" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="LastOrderDate" />
       </Sequence.Variables>
@@ -165,20 +165,20 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Your Orders" sap:VirtualizedContainerService.HintSize="1906,11711" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="1810b144-3b40-4879-acfd-211fbac7b3b8" Version="V2">
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Your Orders" sap:VirtualizedContainerService.HintSize="1334,6005" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="1810b144-3b40-4879-acfd-211fbac7b3b8" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1872,11471" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1300,5765" sap2010:WorkflowViewState.IdRef="Sequence_8">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If DisplayName="If NOT use log only then download a fresh log" sap:VirtualizedContainerService.HintSize="1838,2504" sap2010:WorkflowViewState.IdRef="If_2">
+              <If DisplayName="If NOT use log only then download a fresh log" sap:VirtualizedContainerService.HintSize="1266,57" sap2010:WorkflowViewState.IdRef="If_2">
                 <If.Condition>
                   <InArgument x:TypeArguments="x:Boolean">
                     <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">in_useLogOnly == false</CSharpValue>
@@ -186,18 +186,18 @@
                 </If.Condition>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
-                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1210,2341" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1210,2246" sap2010:WorkflowViewState.IdRef="Sequence_18">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Nav to orders" sap:VirtualizedContainerService.HintSize="1176,2281" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence DisplayName="Nav to orders" sap:VirtualizedContainerService.HintSize="1176,2186" sap2010:WorkflowViewState.IdRef="Sequence_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -219,15 +219,15 @@
                           </uix:VerifyExecutionOptions>
                         </uix:NClick.VerifyOptions>
                       </uix:NClick>
-                      <uix:NCheckState DisplayName="Check App State 'Your Orders'" sap:VirtualizedContainerService.HintSize="1142,1973" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="1810b144-3b40-4879-acfd-211fbac7b3b8" Timeout="5" Version="V4">
+                      <uix:NCheckState DisplayName="Check App State 'Your Orders'" sap:VirtualizedContainerService.HintSize="1142,1878" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="1810b144-3b40-4879-acfd-211fbac7b3b8" Timeout="5" Version="V4">
                         <uix:NCheckState.IfExists>
-                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="638,1733" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="638,1638" sap2010:WorkflowViewState.IdRef="Sequence_9">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Sequence DisplayName="Pull all orders for the last 3 months" sap:VirtualizedContainerService.HintSize="604,1671" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <Sequence DisplayName="Pull all orders for the last 3 months" sap:VirtualizedContainerService.HintSize="604,1576" sap2010:WorkflowViewState.IdRef="Sequence_4">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable">
                                   <Variable.Default>
@@ -242,15 +242,57 @@
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Sequence sap2010:Annotation.AnnotationText="set to in_DataYear &#xD;&#xA;2024 has a differnt invoice structue &#xD;&#xA;" DisplayName="set the date filter: corrent year or last year. " sap:VirtualizedContainerService.HintSize="570,180" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                              <Sequence sap2010:Annotation.AnnotationText="set to in_DataYear &#xA;2024 has a differnt invoice structue &#xA;" DisplayName="set the date filter: corrent year or last year. " sap:VirtualizedContainerService.HintSize="570,594" sap2010:WorkflowViewState.IdRef="Sequence_57">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="click the dropdown" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1810b144-3b40-4879-acfd-211fbac7b3b8" Version="V4">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="amazon.com/gp/css/order-history" CVScreenId="ad4a099b-ca12-45dc-9155-7317bd2a5320" ContentHash="4lP5JW4LA0ydRNkHXm_g6g" CvElementArea="481, 389, 118, 33" CvType="InputBox" DesignTimeRectangle="484, 392, 111, 27" DesignTimeScaleFactor="0.8999999761581421" ElementType="Button" FuzzyAccuracy="0.91" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='SPAN' type='' class='a-button-text a-declarative' aaname='' check:innerText='past 3 months' /&gt;" Guid="360ed2d7-4a9b-4f62-9366-55dd6821e885" InformativeScreenshot="d2b7cdbff47e19cbc40db1c6d9b7e3d7.png" Reference="edQoiHTr_EubiZ3TXex5dQ/uKxkrGnAg0ixo6z6iDWIVA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Your Orders' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target CVScreenId="ad4a099b-ca12-45dc-9155-7317bd2a5320" CvTextArea="351, 398, 126, 12" CvTextArgument="1827 orders placed in" CvType="Text" DesignTimeRectangle="350, 396, 127, 19" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='      placed in ' parentid='a-page' tag='LABEL' type='' class='a-form-label time-filter__label aok-inline-block a-text-normal' check:innerText='* orders placed in' /&gt;" Guid="749ce246-6c0c-4799-84c5-081b1a63275c" SearchSteps="FuzzySelector, CV" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NClick.Target>
+                                  <uix:NClick.VerifyOptions>
+                                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                      <uix:VerifyExecutionOptions.Retry>
+                                        <InArgument x:TypeArguments="x:Boolean" />
+                                      </uix:VerifyExecutionOptions.Retry>
+                                      <uix:VerifyExecutionOptions.Timeout>
+                                        <InArgument x:TypeArguments="x:Double" />
+                                      </uix:VerifyExecutionOptions.Timeout>
+                                    </uix:VerifyExecutionOptions>
+                                  </uix:NClick.VerifyOptions>
+                                </uix:NClick>
+                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="click the filter value" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1810b144-3b40-4879-acfd-211fbac7b3b8" Version="V4">
+                                  <uix:NClick.Target>
+                                    <uix:TargetAnchorable BrowserURL="amazon.com/gp/css/order-history" CVScreenId="4d049ebe-c372-4885-9c70-d0d87fc6c936" ContentHash="9Ygchj3Y40K6ExABoPu24g" DesignTimeRectangle="483, 420, 114, 23" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" Guid="db7e111e-1f98-4f84-8adb-8d3d30464a01" InformativeScreenshot="e23940a4d288e82afaf59245b92b4456.png" Reference="edQoiHTr_EubiZ3TXex5dQ/gSRZ4ey1jEWi2TVKoPod9A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Your Orders' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                                      <uix:TargetAnchorable.FuzzySelectorArgument>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_107">"&lt;webctrl id='time-filter_1' tag='A' type='' class='a-dropdown-link a-active' aaname='*"+in_dataLookBack_days+"*' check:innerText='"+in_dataLookBack_days+"' /&gt;"</CSharpValue>
+                                        </InArgument>
+                                      </uix:TargetAnchorable.FuzzySelectorArgument>
+                                    </uix:TargetAnchorable>
+                                  </uix:NClick.Target>
+                                  <uix:NClick.VerifyOptions>
+                                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                      <uix:VerifyExecutionOptions.Retry>
+                                        <InArgument x:TypeArguments="x:Boolean" />
+                                      </uix:VerifyExecutionOptions.Retry>
+                                      <uix:VerifyExecutionOptions.Timeout>
+                                        <InArgument x:TypeArguments="x:Double" />
+                                      </uix:VerifyExecutionOptions.Timeout>
+                                    </uix:VerifyExecutionOptions>
+                                  </uix:NClick.VerifyOptions>
+                                </uix:NClick>
                               </Sequence>
-                              <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract all the orders" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='OrderNumber'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='OrderDate'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='OrderAmount'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='DetailsURL'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h5' idx='1' /&gt;&lt;webctrl tag='ul' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h5' idx='1' /&gt;&lt;webctrl tag='ul' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='li' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h5' idx='1' /&gt;&lt;webctrl tag='ul' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='li' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h5' idx='1' /&gt;&lt;webctrl tag='ul' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='li' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='href'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h5' idx='1' /&gt;&lt;webctrl tag='ul' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='li' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="570,189" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="1810b144-3b40-4879-acfd-211fbac7b3b8" Version="V4">
+                              <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract all the orders" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='OrderNumber'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='OrderDate'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='OrderAmount'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='DetailsURL'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h5' idx='1' /&gt;&lt;webctrl tag='ul' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h5' idx='1' /&gt;&lt;webctrl tag='ul' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='li' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h5' idx='1' /&gt;&lt;webctrl tag='ul' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='li' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h5' idx='1' /&gt;&lt;webctrl tag='ul' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='li' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='href'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h5' idx='1' /&gt;&lt;webctrl tag='ul' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='li' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="570,189" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="1810b144-3b40-4879-acfd-211fbac7b3b8" Version="V4">
                                 <uix:NExtractData.DataTable>
                                   <InOutArgument x:TypeArguments="sd:DataTable">
                                     <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">MasterOrderList_DT</CSharpReference>
@@ -263,44 +305,7 @@
                                   <uix:TargetAnchorable BrowserURL="https://www.amazon.com/your-orders/orders?timeFilter=year-2025&amp;startIndex=20&amp;ref_=ppx_yo2ov_dt_b_pagination_2_3" DesignTimeRectangle="603, 217, 828, 2537" DesignTimeScaleFactor="0.8999999761581421" FullSelectorArgument="&lt;webctrl parentid='a-page' tag='DIV' /&gt;" Guid="372b4a6a-7355-4cf6-ac15-c4287b473a4e" InformativeScreenshot="7a09ec1d192e212f835722f7608fdb43.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Your Orders' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                                 </uix:NExtractData.Target>
                               </uix:NExtractData>
-                              <If sap:VirtualizedContainerService.HintSize="570,471" sap2010:WorkflowViewState.IdRef="If_1">
-                                <If.Condition>
-                                  <InArgument x:TypeArguments="x:Boolean">
-                                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">in_dataLookBack_days &lt; 0</CSharpValue>
-                                  </InArgument>
-                                </If.Condition>
-                                <If.Then>
-                                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,244" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <ui:FilterDataTable Filters="{x:Null}" SelectColumns="{x:Null}" DisplayName="Filter Data Table" sap:VirtualizedContainerService.HintSize="382,184" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" SelectColumnsMode="Remove">
-                                      <ui:FilterDataTable.DataTable>
-                                        <InArgument x:TypeArguments="sd:DataTable">
-                                          <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">MasterOrderList_DT</CSharpValue>
-                                        </InArgument>
-                                      </ui:FilterDataTable.DataTable>
-                                      <ui:FilterDataTable.OutputDataTable>
-                                        <OutArgument x:TypeArguments="sd:DataTable">
-                                          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">MasterOrderList_DT</CSharpReference>
-                                        </OutArgument>
-                                      </ui:FilterDataTable.OutputDataTable>
-                                    </ui:FilterDataTable>
-                                  </Sequence>
-                                </If.Then>
-                                <If.Else>
-                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_12">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </Sequence>
-                                </If.Else>
-                              </If>
-                              <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="write to excel log file" sap:VirtualizedContainerService.HintSize="570,746" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+                              <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="write to excel log file" sap:VirtualizedContainerService.HintSize="570,706" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
                                 <ueab:ExcelProcessScopeX.Body>
                                   <ActivityAction x:TypeArguments="ui:IExcelProcess">
                                     <ActivityAction.Argument>
@@ -410,7 +415,7 @@
                   </Sequence>
                 </If.Else>
               </If>
-              <Sequence DisplayName="Find all non Claimed cards and save to the Reusable cards Log" sap:VirtualizedContainerService.HintSize="1838,8905" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="Find all non Claimed cards and save to the Reusable cards Log" sap:VirtualizedContainerService.HintSize="1266,5646" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="sd:DataTable" Name="PreviousOrders_DT" />
                   <Variable x:TypeArguments="sd:DataTable" Name="reusableCards_DT" />
@@ -422,7 +427,7 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="Read ReuableCardsXLS log into datatable" sap:VirtualizedContainerService.HintSize="1804,207" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                <Sequence DisplayName="Read ReuableCardsXLS log into datatable" sap:VirtualizedContainerService.HintSize="1232,207" sap2010:WorkflowViewState.IdRef="Sequence_34">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -446,7 +451,7 @@
                     </ui:ReadRange.WorkbookPath>
                   </ui:ReadRange>
                 </Sequence>
-                <Sequence DisplayName="Read XLS Log into Datatable" sap:VirtualizedContainerService.HintSize="1804,408" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                <Sequence DisplayName="Read in all the previous Orders to check status on." sap:VirtualizedContainerService.HintSize="1232,408" sap2010:WorkflowViewState.IdRef="Sequence_20">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -489,7 +494,7 @@
                     </Assign>
                   </Sequence>
                 </Sequence>
-                <ui:BuildDataTable DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1804,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;OrderNumber&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;OrderDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DetailsURL&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;OrderAmount&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ResentTicker&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; default=&quot;0&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;OrderNumber&gt;text&lt;/OrderNumber&gt;&#xA;    &lt;ResentTicker&gt;0&lt;/ResentTicker&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;">
+                <ui:BuildDataTable DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1232,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;OrderNumber&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;OrderDate&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DetailsURL&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;OrderAmount&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ResentTicker&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; default=&quot;0&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;OrderNumber&gt;text&lt;/OrderNumber&gt;&#xA;    &lt;ResentTicker&gt;0&lt;/ResentTicker&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;">
                   <ui:BuildDataTable.DataTable>
                     <OutArgument x:TypeArguments="sd:DataTable">
                       <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">OpenOrders_DT</CSharpReference>
@@ -502,7 +507,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:BuildDataTable>
-                <Sequence DisplayName="nav to details link" sap:VirtualizedContainerService.HintSize="1804,7785" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                <Sequence DisplayName="nav to details link" sap:VirtualizedContainerService.HintSize="1232,4526" sap2010:WorkflowViewState.IdRef="Sequence_15">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="sd:DataTable" Name="Cards_DT" />
                   </Sequence.Variables>
@@ -511,13 +516,13 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1770,6948" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                  <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="Loop all the previous orders and look for unClaimed cards" sap:VirtualizedContainerService.HintSize="1198,4382" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="orderInfo" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1768,6768" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1196,4202" sap2010:WorkflowViewState.IdRef="Sequence_22">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="DetailsLink" />
                             <Variable x:TypeArguments="x:String" Name="orderAmount" />
@@ -529,7 +534,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence DisplayName="Extract Row Data" sap:VirtualizedContainerService.HintSize="1734,988" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                          <Sequence DisplayName="Extract Row Data" sap:VirtualizedContainerService.HintSize="1162,596" sap2010:WorkflowViewState.IdRef="Sequence_23">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:String" Name="orderdate_yyyymmdd" />
                             </Sequence.Variables>
@@ -587,55 +592,79 @@
                                 </InArgument>
                               </Assign.Value>
                             </Assign>
-                            <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_18">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:String">
-                                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_36">orderdate_yyyymmdd</CSharpReference>
-                                </OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:String">
-                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_90">DateTime.Parse(orderDate).ToString("yyyyMMdd")</CSharpValue>
-                                </InArgument>
-                              </Assign.Value>
-                            </Assign>
-                            <If sap:VirtualizedContainerService.HintSize="434,326" sap2010:WorkflowViewState.IdRef="If_7">
-                              <If.Condition>
-                                <InArgument x:TypeArguments="x:Boolean">
-                                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_88">int.Parse(orderdate_yyyymmdd) &gt; int.Parse(LastOrderDate)</CSharpValue>
-                                </InArgument>
-                              </If.Condition>
-                              <If.Then>
-                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                            <ui:CommentOut DisplayName="Comment Out check the last order date" sap:VirtualizedContainerService.HintSize="434,48" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                              <ui:CommentOut.Body>
+                                <Sequence sap:VirtualizedContainerService.HintSize="486,583" sap2010:WorkflowViewState.IdRef="Sequence_64">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:Continue sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="Continue_2" />
+                                  <Assign sap:VirtualizedContainerService.HintSize="452,114" sap2010:WorkflowViewState.IdRef="Assign_18">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">
+                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_36">orderdate_yyyymmdd</CSharpReference>
+                                      </OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_90">DateTime.Parse(orderDate).ToString("yyyyMMdd")</CSharpValue>
+                                      </InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="452,409" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <If sap:VirtualizedContainerService.HintSize="418,326" sap2010:WorkflowViewState.IdRef="If_7">
+                                      <If.Condition>
+                                        <InArgument x:TypeArguments="x:Boolean">
+                                          <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_88">int.Parse(orderdate_yyyymmdd) &gt; int.Parse(LastOrderDate)</CSharpValue>
+                                        </InArgument>
+                                      </If.Condition>
+                                      <If.Then>
+                                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:Continue sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="Continue_2" />
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                  </Sequence>
                                 </Sequence>
-                              </If.Then>
-                              <If.Else>
-                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_56">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </Sequence>
-                              </If.Else>
-                            </If>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
                           </Sequence>
-                          <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="1734,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Version="V4">
+                          <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="1162,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Version="V4">
                             <uix:NGoToUrl.Url>
                               <InArgument x:TypeArguments="x:String">
                                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">DetailsLink</CSharpValue>
                               </InArgument>
                             </uix:NGoToUrl.Url>
                           </uix:NGoToUrl>
-                          <uix:NCheckState DisplayName="check for unused cards for each order link" sap:VirtualizedContainerService.HintSize="1734,5606" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="1810b144-3b40-4879-acfd-211fbac7b3b8" Timeout="3" Version="V4">
+                          <uix:NCheckState DisplayName="check for unused cards for each order link" sap:VirtualizedContainerService.HintSize="1162,3432" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="1810b144-3b40-4879-acfd-211fbac7b3b8" Timeout="3" Version="V4">
                             <uix:NCheckState.IfExists>
-                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1230,5366" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="658,3192" sap2010:WorkflowViewState.IdRef="Sequence_24">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="x:Boolean" Name="isMultiOrder" />
                                 </Sequence.Variables>
@@ -645,10 +674,10 @@
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <If sap:VirtualizedContainerService.HintSize="1196,1018" sap2010:WorkflowViewState.IdRef="If_8">
+                                <If sap:VirtualizedContainerService.HintSize="624,1018" sap2010:WorkflowViewState.IdRef="If_8">
                                   <If.Condition>
                                     <InArgument x:TypeArguments="x:Boolean">
-                                      <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_92">in_DataYear != "past 3 month" &amp;&amp; in_DataYear != "2025"</CSharpValue>
+                                      <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_108">1 == 1</CSharpValue>
                                     </InArgument>
                                   </If.Condition>
                                   <sap:WorkflowViewStateService.ViewState>
@@ -678,14 +707,14 @@
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="extract the number of cards on the order" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='CardMessage'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='CardDetails'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="470,189" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="1810b144-3b40-4879-acfd-211fbac7b3b8" Version="V4">
+                                        <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="extract the number of cards on the order" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='CardMessage'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='CardDetails'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='15' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="470,189" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="1810b144-3b40-4879-acfd-211fbac7b3b8" Version="V4">
                                           <uix:NExtractData.DataTable>
                                             <InOutArgument x:TypeArguments="sd:DataTable">
                                               <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">Cards_DT</CSharpReference>
                                             </InOutArgument>
                                           </uix:NExtractData.DataTable>
                                           <uix:NExtractData.Target>
-                                            <uix:TargetAnchorable BrowserURL="https://www.amazon.com/gp/your-account/order-details?ie=UTF8&amp;orderID=114-9423965-2745843&amp;ref=ppx_yo2ov_dt_b_fed_order_details" DesignTimeRectangle="257, 592, 918, 2154" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl class='a-box-inner' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='orderDetails' parentname='a-cardui-deck-autoname-0-card0' tag='DIV' /&gt;" Guid="0d8d98c6-5d73-42dc-a797-a8285eb3358a" InformativeScreenshot="ac30398119aadbbbfb29936ccd564a4a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Order Details' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                            <uix:TargetAnchorable BrowserURL="https://www.amazon.com/your-orders/order-details?orderID=114-9833959-5700239&amp;ref=ppx_yo2ov_dt_b_fed_order_details" DesignTimeRectangle="367, 579, 793, 2888" DesignTimeScaleFactor="0.8999999761581421" FullSelectorArgument="&lt;webctrl class='a-fixed-right-grid-inner' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='orderDetails' parentname='a-cardui-deck-autoname-0-card0' tag='DIV' /&gt;" Guid="09550a47-489f-45c6-8ef8-9f8d2e3767d5" InformativeScreenshot="09119f53ac0a787fef2f56c1f571d362.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='atd-param-exclusion-strategy' title='Order Details' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
                                           </uix:NExtractData.Target>
                                         </uix:NExtractData>
                                         <If DisplayName="Assign isMultiOrder based on linked found" sap:VirtualizedContainerService.HintSize="470,383" sap2010:WorkflowViewState.IdRef="If_3">
@@ -752,10 +781,10 @@
                                     </Sequence>
                                   </If.Else>
                                 </If>
-                                <If DisplayName="extract the links for each type of order" sap:VirtualizedContainerService.HintSize="1196,4288" sap2010:WorkflowViewState.IdRef="If_4">
+                                <If DisplayName="extract the links for each type of order" sap:VirtualizedContainerService.HintSize="624,2112" sap2010:WorkflowViewState.IdRef="If_4">
                                   <If.Condition>
                                     <InArgument x:TypeArguments="x:Boolean">
-                                      <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">isMultiOrder == true</CSharpValue>
+                                      <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_116">1 == 1</CSharpValue>
                                     </InArgument>
                                   </If.Condition>
                                   <sap:WorkflowViewStateService.ViewState>
@@ -765,16 +794,17 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <If.Then>
-                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1194,25" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="622,1873" sap2010:WorkflowViewState.IdRef="Sequence_43">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Sequence DisplayName="Type: Multi Order" sap:VirtualizedContainerService.HintSize="644,2456" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                      <Sequence DisplayName="Type: Multi Order" sap:VirtualizedContainerService.HintSize="588,1813" sap2010:WorkflowViewState.IdRef="Sequence_33">
                                         <Sequence.Variables>
                                           <Variable x:TypeArguments="x:Int32" Name="cardNumber" />
+                                          <Variable x:TypeArguments="sd:DataTable" Name="links_DT" />
                                         </Sequence.Variables>
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -782,254 +812,390 @@
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:ForEachRow ColumnNames="{x:Null}" DisplayName="Loop each order and look for a resend link" sap:VirtualizedContainerService.HintSize="610,2373" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                                        <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Status'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Amount'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='SentToPhone'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='CardMessage'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column4' Name='ResendURL'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='17' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='17' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='17' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='fulltext'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='15' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column4' attr='href'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='17' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="554,189" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="1810b144-3b40-4879-acfd-211fbac7b3b8" Version="V4">
+                                          <uix:NExtractData.DataTable>
+                                            <InOutArgument x:TypeArguments="sd:DataTable">
+                                              <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">links_DT</CSharpReference>
+                                            </InOutArgument>
+                                          </uix:NExtractData.DataTable>
+                                          <uix:NExtractData.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://www.amazon.com/your-orders/order-details?orderID=114-9833959-5700239&amp;ref=ppx_yo2ov_dt_b_fed_order_details" DesignTimeRectangle="367, 579, 793, 2917" DesignTimeScaleFactor="0.8999999761581421" FullSelectorArgument="&lt;webctrl class='a-fixed-right-grid-inner' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='orderDetails' parentname='a-cardui-deck-autoname-0-card0' tag='DIV' /&gt;" Guid="3a5fc2e8-b21d-420d-9b72-5985e54745d2" InformativeScreenshot="b0e3f952b179b4ef7d578157d7c2cbda.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Order Details' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                          </uix:NExtractData.Target>
+                                        </uix:NExtractData>
+                                        <ui:FilterDataTable DisplayName="remove all non links from DT" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="554,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" SelectColumnsMode="Remove">
+                                          <ui:FilterDataTable.DataTable>
+                                            <InArgument x:TypeArguments="sd:DataTable">
+                                              <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">links_DT</CSharpValue>
+                                            </InArgument>
+                                          </ui:FilterDataTable.DataTable>
+                                          <ui:FilterDataTable.Filters>
+                                            <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                                              <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
+                                                <ui:FilterOperationArgument.Column>
+                                                  <InArgument x:TypeArguments="x:String">
+                                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_79">"ResendURL"</CSharpValue>
+                                                  </InArgument>
+                                                </ui:FilterOperationArgument.Column>
+                                              </ui:FilterOperationArgument>
+                                              <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                                <ui:FilterOperationArgument.Column>
+                                                  <InArgument x:TypeArguments="x:String">
+                                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_94">"Status"</CSharpValue>
+                                                  </InArgument>
+                                                </ui:FilterOperationArgument.Column>
+                                                <ui:FilterOperationArgument.Operand>
+                                                  <InArgument x:TypeArguments="x:String">
+                                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_95">"Redeemed"</CSharpValue>
+                                                  </InArgument>
+                                                </ui:FilterOperationArgument.Operand>
+                                              </ui:FilterOperationArgument>
+                                            </scg:List>
+                                          </ui:FilterDataTable.Filters>
+                                          <ui:FilterDataTable.OutputDataTable>
+                                            <OutArgument x:TypeArguments="sd:DataTable">
+                                              <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">links_DT</CSharpReference>
+                                            </OutArgument>
+                                          </ui:FilterDataTable.OutputDataTable>
+                                          <ui:FilterDataTable.SelectColumns>
+                                            <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                              <x:Null />
+                                            </scg:List>
+                                          </ui:FilterDataTable.SelectColumns>
+                                        </ui:FilterDataTable>
+                                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="554,1348" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                                           <ui:ForEachRow.Body>
                                             <ActivityAction x:TypeArguments="sd:DataRow">
                                               <ActivityAction.Argument>
-                                                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="cards" />
+                                                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="linkData" />
                                               </ActivityAction.Argument>
-                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="608,2202" sap2010:WorkflowViewState.IdRef="Sequence_46">
-                                                <Sequence.Variables>
-                                                  <Variable x:TypeArguments="x:String" Name="CardMessage" />
-                                                  <Variable x:TypeArguments="x:String" Name="CardDetails" />
-                                                </Sequence.Variables>
+                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,1177" sap2010:WorkflowViewState.IdRef="Sequence_45">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <Assign sap:VirtualizedContainerService.HintSize="574,114" sap2010:WorkflowViewState.IdRef="Assign_11">
-                                                  <Assign.To>
-                                                    <OutArgument x:TypeArguments="x:String">
-                                                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">CardMessage</CSharpReference>
-                                                    </OutArgument>
-                                                  </Assign.To>
-                                                  <Assign.Value>
-                                                    <InArgument x:TypeArguments="x:String">
-                                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">cards["CardMessage"].ToString()</CSharpValue>
-                                                    </InArgument>
-                                                  </Assign.Value>
-                                                </Assign>
-                                                <Assign sap:VirtualizedContainerService.HintSize="574,114" sap2010:WorkflowViewState.IdRef="Assign_12">
-                                                  <Assign.To>
-                                                    <OutArgument x:TypeArguments="x:String">
-                                                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_27">CardDetails</CSharpReference>
-                                                    </OutArgument>
-                                                  </Assign.To>
-                                                  <Assign.Value>
-                                                    <InArgument x:TypeArguments="x:String">
-                                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">cards["CardDetails"].ToString()</CSharpValue>
-                                                    </InArgument>
-                                                  </Assign.Value>
-                                                </Assign>
-                                                <If DisplayName="check if card details has any resend links" sap:VirtualizedContainerService.HintSize="574,1914" sap2010:WorkflowViewState.IdRef="If_5">
-                                                  <If.Condition>
-                                                    <InArgument x:TypeArguments="x:Boolean">
-                                                      <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56">CardDetails.Contains("Resend")</CSharpValue>
-                                                    </InArgument>
-                                                  </If.Condition>
-                                                  <If.Then>
-                                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="572,1677" sap2010:WorkflowViewState.IdRef="Sequence_48">
-                                                      <sap:WorkflowViewStateService.ViewState>
-                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                        </scg:Dictionary>
-                                                      </sap:WorkflowViewStateService.ViewState>
-                                                      <Sequence DisplayName="Extract data from multi card orders" sap:VirtualizedContainerService.HintSize="538,1617" sap2010:WorkflowViewState.IdRef="Sequence_42">
-                                                        <Sequence.Variables>
-                                                          <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable">
-                                                            <Variable.Default>
-                                                              <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">new System.Data.DataTable();</CSharpValue>
-                                                            </Variable.Default>
-                                                          </Variable>
-                                                          <Variable x:TypeArguments="sd:DataTable" Name="links_DT" />
-                                                          <Variable x:TypeArguments="x:String" Name="orderNumber" />
-                                                          <Variable x:TypeArguments="x:String" Name="detailsText" />
-                                                          <Variable x:TypeArguments="x:String" Name="SentTo" />
-                                                        </Sequence.Variables>
+                                                <Sequence DisplayName="Loop and extract the amount and RepName" sap:VirtualizedContainerService.HintSize="518,1117" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                                  <Sequence.Variables>
+                                                    <Variable x:TypeArguments="x:String" Name="Amount" />
+                                                    <Variable x:TypeArguments="x:String" Name="linkurl" />
+                                                    <Variable x:TypeArguments="x:String" Name="cardA" />
+                                                    <Variable x:TypeArguments="x:String" Name="cardAmount" />
+                                                    <Variable x:TypeArguments="x:String" Name="cardSentTo" />
+                                                    <Variable x:TypeArguments="sd:DataTable" Name="MissingLinks_DT" />
+                                                    <Variable x:TypeArguments="x:String" Name="cardMessage" />
+                                                    <Variable x:TypeArguments="x:String" Name="SentTo" />
+                                                  </Sequence.Variables>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="484,114" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">
+                                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">linkurl</CSharpReference>
+                                                      </OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">
+                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">linkData["ResendURL"].ToString()</CSharpValue>
+                                                      </InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="484,114" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">
+                                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_30">cardAmount</CSharpReference>
+                                                      </OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">
+                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_83">linkData["Amount"].ToString()</CSharpValue>
+                                                      </InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="484,114" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">
+                                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">cardSentTo</CSharpReference>
+                                                      </OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">
+                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_84">linkData["SentToPhone"].ToString()</CSharpValue>
+                                                      </InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="484,114" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">
+                                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_39">cardMessage</CSharpReference>
+                                                      </OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">
+                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_110">linkData["CardMessage"].ToString()</CSharpValue>
+                                                      </InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="484,114" sap2010:WorkflowViewState.IdRef="Assign_20">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">
+                                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_40">SentTo</CSharpReference>
+                                                      </OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">
+                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_111">cardMessage.Split(new[] { "," }, StringSplitOptions.None).Last()</CSharpValue>
+                                                      </InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <Sequence DisplayName="check to see if it is a new link" sap:VirtualizedContainerService.HintSize="484,276" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:FilterDataTable DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="416,184" sap2010:WorkflowViewState.IdRef="FilterDataTable_6" SelectColumnsMode="Remove">
+                                                      <ui:FilterDataTable.DataTable>
+                                                        <InArgument x:TypeArguments="sd:DataTable">
+                                                          <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_102">reusableCards_DT</CSharpValue>
+                                                        </InArgument>
+                                                      </ui:FilterDataTable.DataTable>
+                                                      <ui:FilterDataTable.Filters>
+                                                        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                                                          <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                                                            <ui:FilterOperationArgument.Column>
+                                                              <InArgument x:TypeArguments="x:String">
+                                                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_96">"ResendLink"</CSharpValue>
+                                                              </InArgument>
+                                                            </ui:FilterOperationArgument.Column>
+                                                            <ui:FilterOperationArgument.Operand>
+                                                              <InArgument x:TypeArguments="x:String">
+                                                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_97">linkurl</CSharpValue>
+                                                              </InArgument>
+                                                            </ui:FilterOperationArgument.Operand>
+                                                          </ui:FilterOperationArgument>
+                                                          <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                                                            <ui:FilterOperationArgument.Column>
+                                                              <InArgument x:TypeArguments="x:String">
+                                                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_98">"SendToPhone"</CSharpValue>
+                                                              </InArgument>
+                                                            </ui:FilterOperationArgument.Column>
+                                                            <ui:FilterOperationArgument.Operand>
+                                                              <InArgument x:TypeArguments="x:String">
+                                                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_99">cardSentTo</CSharpValue>
+                                                              </InArgument>
+                                                            </ui:FilterOperationArgument.Operand>
+                                                          </ui:FilterOperationArgument>
+                                                          <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                                                            <ui:FilterOperationArgument.Column>
+                                                              <InArgument x:TypeArguments="x:String">
+                                                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_100">"Amount"</CSharpValue>
+                                                              </InArgument>
+                                                            </ui:FilterOperationArgument.Column>
+                                                            <ui:FilterOperationArgument.Operand>
+                                                              <InArgument x:TypeArguments="x:String">
+                                                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_101">cardAmount</CSharpValue>
+                                                              </InArgument>
+                                                            </ui:FilterOperationArgument.Operand>
+                                                          </ui:FilterOperationArgument>
+                                                        </scg:List>
+                                                      </ui:FilterDataTable.Filters>
+                                                      <ui:FilterDataTable.OutputDataTable>
+                                                        <OutArgument x:TypeArguments="sd:DataTable">
+                                                          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_37">MissingLinks_DT</CSharpReference>
+                                                        </OutArgument>
+                                                      </ui:FilterDataTable.OutputDataTable>
+                                                      <ui:FilterDataTable.SelectColumns>
+                                                        <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                                          <x:Null />
+                                                        </scg:List>
+                                                      </ui:FilterDataTable.SelectColumns>
+                                                    </ui:FilterDataTable>
+                                                  </Sequence>
+                                                  <If DisplayName="Check if card has already been found" sap:VirtualizedContainerService.HintSize="484,57" sap2010:WorkflowViewState.IdRef="If_9">
+                                                    <If.Condition>
+                                                      <InArgument x:TypeArguments="x:Boolean">
+                                                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_104">MissingLinks_DT.RowCount() &gt; 0</CSharpValue>
+                                                      </InArgument>
+                                                    </If.Condition>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <If.Then>
+                                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,226" sap2010:WorkflowViewState.IdRef="Sequence_61">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="LogMessage_7">
+                                                          <ui:LogMessage.Message>
+                                                            <InArgument x:TypeArguments="x:Object">
+                                                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_105">"Duplicate entry found, skipping"</CSharpValue>
+                                                            </InArgument>
+                                                          </ui:LogMessage.Message>
+                                                        </ui:LogMessage>
+                                                      </Sequence>
+                                                    </If.Then>
+                                                    <If.Else>
+                                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,444" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <ui:AddDataRow DataRow="{x:Null}" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="382,218" sap2010:WorkflowViewState.IdRef="AddDataRow_3">
+                                                          <ui:AddDataRow.ArrayRow>
+                                                            <InArgument x:TypeArguments="s:Object[]">
+                                                              <CSharpValue x:TypeArguments="s:Object[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_112">new List&lt;string&gt; { cardAmount, orderNumber, DetailsLink, linkurl, cardSentTo, SentTo, DateTime.Now.ToString("yyyy-MM-dd") }.ToArray()</CSharpValue>
+                                                            </InArgument>
+                                                          </ui:AddDataRow.ArrayRow>
+                                                          <ui:AddDataRow.DataTable>
+                                                            <InOutArgument x:TypeArguments="sd:DataTable">
+                                                              <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">reusableCards_DT</CSharpReference>
+                                                            </InOutArgument>
+                                                          </ui:AddDataRow.DataTable>
+                                                        </ui:AddDataRow>
+                                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,166" sap2010:WorkflowViewState.IdRef="LogMessage_5">
+                                                          <ui:LogMessage.Message>
+                                                            <InArgument x:TypeArguments="x:Object">
+                                                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">"adding new unused card to log."</CSharpValue>
+                                                            </InArgument>
+                                                          </ui:LogMessage.Message>
+                                                        </ui:LogMessage>
+                                                      </Sequence>
+                                                    </If.Else>
+                                                  </If>
+                                                  <Sequence DisplayName="resend the card" sap:VirtualizedContainerService.HintSize="484,131" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <Sequence DisplayName="resend" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Resend window" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="d6ec854d-ba56-4b31-a5eb-6bd1542f7ee1" Version="V2">
+                                                        <uix:NApplicationCard.Body>
+                                                          <ActivityAction x:TypeArguments="x:Object">
+                                                            <ActivityAction.Argument>
+                                                              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                                            </ActivityAction.Argument>
+                                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,805" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <uix:NCheckState DisplayName="Check App State 'Resend your gift card'" sap:VirtualizedContainerService.HintSize="954,745" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="d6ec854d-ba56-4b31-a5eb-6bd1542f7ee1" Timeout="15" Version="V4">
+                                                                <uix:NCheckState.IfExists>
+                                                                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'To the same phone numbe…'" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1810b144-3b40-4879-acfd-211fbac7b3b8" Version="V4">
+                                                                      <uix:NClick.Target>
+                                                                        <uix:TargetAnchorable BrowserURL="amazon.com/gp/css/gc-reissue/email-selection.html" CVScreenId="2f4c0934-78be-4e88-88ef-a05f3c70f741" ContentHash="BIbjeGTrHE28uwdTob4FuQ" DesignTimeRectangle="587, 458, 12, 12" DesignTimeScaleFactor="0.8999999761581421" ElementType="RadioButton" FuzzySelectorArgument="&lt;webctrl id='gc-resend-radio-same-recipient' tag='INPUT' type='radio' class='' aaname='       To the same phone number:*' /&gt;" Guid="d2f41074-806f-4661-bb7e-243aad84ae55" ImageBase64="" InformativeScreenshot="266b360aaea57aabf92a32123c555617.png" Reference="edQoiHTr_EubiZ3TXex5dQ/-hgjdWONYkqed907kGsnvA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='amazon.com/gp/css/gc-reissue/email-selection.html?ie=UTF8&amp;amp;gcID=A0424908UWOWQ1ASU1KE&amp;amp;orderID=114-5729054-7442647' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                                                                          <uix:TargetAnchorable.Anchors>
+                                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                              <uix:Target CVScreenId="2f4c0934-78be-4e88-88ef-a05f3c70f741" DesignTimeRectangle="587, 455, 863, 29" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='gc-resend-form' tag='LABEL' type='' class='' aaname='' check:innerText='To the same phone number: *' /&gt;" Guid="fb43bbb8-d8a9-4e9c-8c63-8db120593aaf" SearchSteps="FuzzySelector" />
+                                                                            </scg:List>
+                                                                          </uix:TargetAnchorable.Anchors>
+                                                                        </uix:TargetAnchorable>
+                                                                      </uix:NClick.Target>
+                                                                      <uix:NClick.VerifyOptions>
+                                                                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                                          <uix:VerifyExecutionOptions.Retry>
+                                                                            <InArgument x:TypeArguments="x:Boolean" />
+                                                                          </uix:VerifyExecutionOptions.Retry>
+                                                                          <uix:VerifyExecutionOptions.Timeout>
+                                                                            <InArgument x:TypeArguments="x:Double" />
+                                                                          </uix:VerifyExecutionOptions.Timeout>
+                                                                        </uix:VerifyExecutionOptions>
+                                                                      </uix:NClick.VerifyOptions>
+                                                                    </uix:NClick>
+                                                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'INPUT gc-resend-apply'" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1810b144-3b40-4879-acfd-211fbac7b3b8" Version="V4">
+                                                                      <uix:NClick.Target>
+                                                                        <uix:TargetAnchorable BrowserURL="amazon.com/gp/css/gc-reissue/email-selection.html" CVScreenId="9a9c718e-52dd-45d8-9f24-c1e92f00206a" ContentHash="5RDzQzK0xE6r-lunKeTgfg" DesignTimeRectangle="726, 551, 112, 27" DesignTimeScaleFactor="0.8999999761581421" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='gc-resend-apply' tag='INPUT' type='submit' class='a-button-input' aaname='' /&gt;" Guid="7cbfb0aa-89b2-499e-b38c-893e6b88293f" ImageBase64="" InformativeScreenshot="739de56fed9c3346d513b98defebbb2f.png" Reference="edQoiHTr_EubiZ3TXex5dQ/fxzBi1_50EqEol5rhw-i-g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='amazon.com/gp/css/gc-reissue/email-selection.html?ie=UTF8&amp;amp;gcID=A0424908UWOWQ1ASU1KE&amp;amp;orderID=114-5729054-7442647' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                                                                          <uix:TargetAnchorable.Anchors>
+                                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                              <uix:Target CVScreenId="9a9c718e-52dd-45d8-9f24-c1e92f00206a" CvElementArea="255, 650, 126, 34" CvTextArea="268, 660, 101, 13" CvTextArgument="Preview gift card" CvType="Button" DesignTimeRectangle="605, 551, 116, 27" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='gc-preview-button' tag='BUTTON' type='button' class='a-button-text' aaname='         Preview gift card       ' check:innerText='Preview gift card' /&gt;" Guid="4a2dc977-6369-4748-80ae-35315f531ae2" SearchSteps="FuzzySelector, CV" />
+                                                                            </scg:List>
+                                                                          </uix:TargetAnchorable.Anchors>
+                                                                        </uix:TargetAnchorable>
+                                                                      </uix:NClick.Target>
+                                                                      <uix:NClick.VerifyOptions>
+                                                                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                                          <uix:VerifyExecutionOptions.Retry>
+                                                                            <InArgument x:TypeArguments="x:Boolean" />
+                                                                          </uix:VerifyExecutionOptions.Retry>
+                                                                          <uix:VerifyExecutionOptions.Timeout>
+                                                                            <InArgument x:TypeArguments="x:Double" />
+                                                                          </uix:VerifyExecutionOptions.Timeout>
+                                                                        </uix:VerifyExecutionOptions>
+                                                                      </uix:NClick.VerifyOptions>
+                                                                    </uix:NClick>
+                                                                  </Sequence>
+                                                                </uix:NCheckState.IfExists>
+                                                                <uix:NCheckState.IfNotExists>
+                                                                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,230" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="LogMessage_8">
+                                                                      <ui:LogMessage.Message>
+                                                                        <InArgument x:TypeArguments="x:Object">
+                                                                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_115">"error loading page"</CSharpValue>
+                                                                        </InArgument>
+                                                                      </ui:LogMessage.Message>
+                                                                    </ui:LogMessage>
+                                                                  </Sequence>
+                                                                </uix:NCheckState.IfNotExists>
+                                                                <uix:NCheckState.Target>
+                                                                  <uix:TargetAnchorable BrowserURL="amazon.com/gc/resend" CVScreenId="28399bc4-ac04-4e88-8a2e-878fc1e04161" ContentHash="rXKF0uY310y87NxLsOhUdA" CvTextArea="330, 434, 243, 23" CvTextArgument="Resend your gift card" CvType="Text" DesignTimeRectangle="331, 431, 865, 36" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='a-size-extra-large a-spacing-small a-spacing-top-extra-large' aaname='   Resend your gift card ' check:innerText='Resend your gift card' /&gt;" Guid="affa5195-9820-4201-b731-7b9d18a574b6" InformativeScreenshot="886052598025fbeaf60832d869e8ba9a.png" Reference="edQoiHTr_EubiZ3TXex5dQ/Cu5CLVBp5EuPiJaJqlMGKA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='amazon.com/gc/resend?orderID=112-5695256-4609008&amp;amp;gcID=A01255911D5759G3W17K1&amp;amp;ref_=ppx_hzod_giftCardDetails_dt_b_gc_e_d_0_0' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                                                                </uix:NCheckState.Target>
+                                                              </uix:NCheckState>
+                                                            </Sequence>
+                                                          </ActivityAction>
+                                                        </uix:NApplicationCard.Body>
+                                                        <uix:NApplicationCard.TargetApp>
+                                                          <uix:TargetApp Area="43, 120, 1542, 2088" BrowserType="Chrome" ContentHash="Etxi2Pa2pUWkE5XJcmuhyg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF0SURBVDhPlZMxS8NAGIYD2vwBR80P0Knt7qTZRZr8A9u9Q3+ASIWCULG4ClnqUi10EWy7qx0cLKQuOrQpOGhJ1cGhr7y5XHokReoLR7jv3u/5vrvcaQB0ACcAhlhe9DJH1wAcx1cHgwFKpRJylgXLtuE4TtwiVSFgrEZ6vR5WUimsxgaBCzQmYKJG8oVCkLBrmnBdN5pvGIZqk5okAJ7nBV10Oh1cN5vBFmQXC5QEcP/pbDaxhaUBsiIh7OasVvsfQJqPyuVgfpDPRzHf91UrlQSkM5kogQep/hF2E1MI+PKiCA9w3TCCBH6ZlLNt7Jgmpu9jzFwHuC+KEQFaW8CHq5IXq7svEh8PgTpTJWDUBi414K4ITOfdJPQ5Al4aolhjjRHlDF6vBITjZltU6VeBpyrQPwW6e6IqfSzI9RAwv8pvD8JICM11DbPwi9YmMLwVvh9fjPAqVyKAFFt8vph3MGzHHVLBY+JzPgfwHV/9Q/QyR/8FZNBNQChmFy8AAAAASUVORK5CYII=" InformativeScreenshot="8edbe9cb7243c9e27e5917f5ce7728b5.jpg" Reference="edQoiHTr_EubiZ3TXex5dQ/BiLGQIZh70KQL7of5xPW9g" Selector="&lt;html app='chrome.exe' title='amazon.com/gc/resend?orderID=112-5695256-4609008&amp;amp;gcID=A01255911D5759G3W17K1&amp;amp;ref_=ppx_hzod_giftCardDetails_dt_b_gc_e_d_0_0' /&gt;" Title="amazon.com/gc/resend?orderID=112-5695256-4609008&amp;gcID=A01255911D5759G3W17K1&amp;ref_=ppx_hzod_giftCardDetails_dt_b_gc_e_d_0_0" Version="V1">
+                                                            <uix:TargetApp.Url>
+                                                              <InArgument x:TypeArguments="x:String">
+                                                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_114">linkurl</CSharpValue>
+                                                              </InArgument>
+                                                            </uix:TargetApp.Url>
+                                                          </uix:TargetApp>
+                                                        </uix:NApplicationCard.TargetApp>
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <Assign sap:VirtualizedContainerService.HintSize="504,114" sap2010:WorkflowViewState.IdRef="Assign_15">
-                                                          <Assign.To>
-                                                            <OutArgument x:TypeArguments="x:String">
-                                                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_31">SentTo</CSharpReference>
-                                                            </OutArgument>
-                                                          </Assign.To>
-                                                          <Assign.Value>
-                                                            <InArgument x:TypeArguments="x:String">
-                                                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_65">CardMessage.Split(new[] { "," }, StringSplitOptions.None).Last()</CSharpValue>
-                                                            </InArgument>
-                                                          </Assign.Value>
-                                                        </Assign>
-                                                        <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Amount'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='SentToPhone'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='ResendURL'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='href'&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' text='Sent' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="504,189" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="1810b144-3b40-4879-acfd-211fbac7b3b8" Version="V4">
-                                                          <uix:NExtractData.DataTable>
-                                                            <InOutArgument x:TypeArguments="sd:DataTable">
-                                                              <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">links_DT</CSharpReference>
-                                                            </InOutArgument>
-                                                          </uix:NExtractData.DataTable>
-                                                          <uix:NExtractData.Target>
-                                                            <uix:TargetAnchorable BrowserURL="https://www.amazon.com/gp/your-account/order-details?ie=UTF8&amp;orderID=114-0506309-8790658&amp;ref=ppx_yo2ov_dt_b_fed_order_details" DesignTimeRectangle="555, 601, 633, 128" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl class='a-fixed-left-grid-inner' parentid='orderDetails' parentname='a-cardui-deck-autoname-0-card0' tag='DIV' /&gt;" Guid="76debf73-58f0-4866-8d42-f220caa8347c" InformativeScreenshot="8d9875d9f6d37fd5d3b5e97c61614809.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Order Details' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
-                                                          </uix:NExtractData.Target>
-                                                        </uix:NExtractData>
-                                                        <ui:FilterDataTable DisplayName="remove all non links from DT" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="504,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" SelectColumnsMode="Remove">
-                                                          <ui:FilterDataTable.DataTable>
-                                                            <InArgument x:TypeArguments="sd:DataTable">
-                                                              <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">links_DT</CSharpValue>
-                                                            </InArgument>
-                                                          </ui:FilterDataTable.DataTable>
-                                                          <ui:FilterDataTable.Filters>
-                                                            <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                                                              <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
-                                                                <ui:FilterOperationArgument.Column>
-                                                                  <InArgument x:TypeArguments="x:String">
-                                                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_79">"ResendURL"</CSharpValue>
-                                                                  </InArgument>
-                                                                </ui:FilterOperationArgument.Column>
-                                                              </ui:FilterOperationArgument>
-                                                              <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
-                                                                <ui:FilterOperationArgument.Column>
-                                                                  <InArgument x:TypeArguments="x:String">
-                                                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_80">"Amount"</CSharpValue>
-                                                                  </InArgument>
-                                                                </ui:FilterOperationArgument.Column>
-                                                                <ui:FilterOperationArgument.Operand>
-                                                                  <InArgument x:TypeArguments="x:String">
-                                                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">"Amount"</CSharpValue>
-                                                                  </InArgument>
-                                                                </ui:FilterOperationArgument.Operand>
-                                                              </ui:FilterOperationArgument>
-                                                            </scg:List>
-                                                          </ui:FilterDataTable.Filters>
-                                                          <ui:FilterDataTable.OutputDataTable>
-                                                            <OutArgument x:TypeArguments="sd:DataTable">
-                                                              <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">links_DT</CSharpReference>
-                                                            </OutArgument>
-                                                          </ui:FilterDataTable.OutputDataTable>
-                                                          <ui:FilterDataTable.SelectColumns>
-                                                            <scg:List x:TypeArguments="InArgument" Capacity="4">
-                                                              <x:Null />
-                                                            </scg:List>
-                                                          </ui:FilterDataTable.SelectColumns>
-                                                        </ui:FilterDataTable>
-                                                        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="504,1038" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
-                                                          <ui:ForEachRow.Body>
-                                                            <ActivityAction x:TypeArguments="sd:DataRow">
-                                                              <ActivityAction.Argument>
-                                                                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="linkData" />
-                                                              </ActivityAction.Argument>
-                                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="502,867" sap2010:WorkflowViewState.IdRef="Sequence_45">
-                                                                <sap:WorkflowViewStateService.ViewState>
-                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                  </scg:Dictionary>
-                                                                </sap:WorkflowViewStateService.ViewState>
-                                                                <Sequence DisplayName="Loop and extract the amount and RepName" sap:VirtualizedContainerService.HintSize="468,807" sap2010:WorkflowViewState.IdRef="Sequence_21">
-                                                                  <Sequence.Variables>
-                                                                    <Variable x:TypeArguments="x:String" Name="Amount" />
-                                                                    <Variable x:TypeArguments="x:String" Name="linkurl" />
-                                                                    <Variable x:TypeArguments="x:String" Name="cardA" />
-                                                                    <Variable x:TypeArguments="x:String" Name="cardAmount" />
-                                                                    <Variable x:TypeArguments="x:String" Name="cardSentTo" />
-                                                                  </Sequence.Variables>
-                                                                  <sap:WorkflowViewStateService.ViewState>
-                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                    </scg:Dictionary>
-                                                                  </sap:WorkflowViewStateService.ViewState>
-                                                                  <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_8">
-                                                                    <Assign.To>
-                                                                      <OutArgument x:TypeArguments="x:String">
-                                                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">linkurl</CSharpReference>
-                                                                      </OutArgument>
-                                                                    </Assign.To>
-                                                                    <Assign.Value>
-                                                                      <InArgument x:TypeArguments="x:String">
-                                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">linkData["ResendURL"].ToString()</CSharpValue>
-                                                                      </InArgument>
-                                                                    </Assign.Value>
-                                                                  </Assign>
-                                                                  <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_13">
-                                                                    <Assign.To>
-                                                                      <OutArgument x:TypeArguments="x:String">
-                                                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_30">cardAmount</CSharpReference>
-                                                                      </OutArgument>
-                                                                    </Assign.To>
-                                                                    <Assign.Value>
-                                                                      <InArgument x:TypeArguments="x:String">
-                                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_83">linkData["Amount"].ToString()</CSharpValue>
-                                                                      </InArgument>
-                                                                    </Assign.Value>
-                                                                  </Assign>
-                                                                  <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_16">
-                                                                    <Assign.To>
-                                                                      <OutArgument x:TypeArguments="x:String">
-                                                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">cardSentTo</CSharpReference>
-                                                                      </OutArgument>
-                                                                    </Assign.To>
-                                                                    <Assign.Value>
-                                                                      <InArgument x:TypeArguments="x:String">
-                                                                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_84">linkData["SentToPhone"].ToString()</CSharpValue>
-                                                                      </InArgument>
-                                                                    </Assign.Value>
-                                                                  </Assign>
-                                                                  <ui:AddDataRow DataRow="{x:Null}" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="AddDataRow_3">
-                                                                    <ui:AddDataRow.ArrayRow>
-                                                                      <InArgument x:TypeArguments="s:Object[]">
-                                                                        <CSharpValue x:TypeArguments="s:Object[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">new List&lt;string&gt; { Amount, DetailsLink, "https://www.amazon.com" +linkurl, cardSentTo, SentTo, DateTime.Now.ToString("yyyy-MM-dd") }.ToArray()</CSharpValue>
-                                                                      </InArgument>
-                                                                    </ui:AddDataRow.ArrayRow>
-                                                                    <ui:AddDataRow.DataTable>
-                                                                      <InOutArgument x:TypeArguments="sd:DataTable">
-                                                                        <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">reusableCards_DT</CSharpReference>
-                                                                      </InOutArgument>
-                                                                    </ui:AddDataRow.DataTable>
-                                                                  </ui:AddDataRow>
-                                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_5">
-                                                                    <ui:LogMessage.Message>
-                                                                      <InArgument x:TypeArguments="x:Object">
-                                                                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">"adding new unused card to log."</CSharpValue>
-                                                                      </InArgument>
-                                                                    </ui:LogMessage.Message>
-                                                                  </ui:LogMessage>
-                                                                </Sequence>
-                                                              </Sequence>
-                                                            </ActivityAction>
-                                                          </ui:ForEachRow.Body>
-                                                          <ui:ForEachRow.DataTable>
-                                                            <InArgument x:TypeArguments="sd:DataTable">
-                                                              <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">links_DT</CSharpValue>
-                                                            </InArgument>
-                                                          </ui:ForEachRow.DataTable>
-                                                        </ui:ForEachRow>
-                                                      </Sequence>
+                                                      </uix:NApplicationCard>
                                                     </Sequence>
-                                                  </If.Then>
-                                                  <If.Else>
-                                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="572,108" sap2010:WorkflowViewState.IdRef="Sequence_47">
-                                                      <sap:WorkflowViewStateService.ViewState>
-                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                        </scg:Dictionary>
-                                                      </sap:WorkflowViewStateService.ViewState>
-                                                      <ui:Continue sap:VirtualizedContainerService.HintSize="538,48" sap2010:WorkflowViewState.IdRef="Continue_1" />
-                                                    </Sequence>
-                                                  </If.Else>
-                                                </If>
+                                                  </Sequence>
+                                                </Sequence>
                                               </Sequence>
                                             </ActivityAction>
                                           </ui:ForEachRow.Body>
-                                          <ui:ForEachRow.CurrentIndex>
-                                            <OutArgument x:TypeArguments="x:Int32">
-                                              <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_33">cardNumber</CSharpReference>
-                                            </OutArgument>
-                                          </ui:ForEachRow.CurrentIndex>
                                           <ui:ForEachRow.DataTable>
                                             <InArgument x:TypeArguments="sd:DataTable">
-                                              <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">Cards_DT</CSharpValue>
+                                              <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">links_DT</CSharpValue>
                                             </InArgument>
                                           </ui:ForEachRow.DataTable>
                                         </ui:ForEachRow>
@@ -1037,35 +1203,35 @@
                                     </Sequence>
                                   </If.Then>
                                   <If.Else>
-                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="1194,4132" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="622,108" sap2010:WorkflowViewState.IdRef="Sequence_44">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Sequence DisplayName="Type: Single order " sap:VirtualizedContainerService.HintSize="1160,4072" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                      <Sequence DisplayName="Type: Single order " sap:VirtualizedContainerService.HintSize="588,48" sap2010:WorkflowViewState.IdRef="Sequence_32">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <Sequence DisplayName="check for Resend" sap:VirtualizedContainerService.HintSize="1126,3989" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                        <Sequence DisplayName="check for Resend" sap:VirtualizedContainerService.HintSize="1126,2587" sap2010:WorkflowViewState.IdRef="Sequence_26">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <uix:NCheckState DisplayName="Check App State 'Status'" sap:VirtualizedContainerService.HintSize="1092,3906" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="1810b144-3b40-4879-acfd-211fbac7b3b8" Timeout="2" Version="V4">
+                                          <uix:NCheckState DisplayName="Check App State 'Status'" sap:VirtualizedContainerService.HintSize="1092,2504" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="1810b144-3b40-4879-acfd-211fbac7b3b8" Timeout="2" Version="V4">
                                             <uix:NCheckState.IfExists>
-                                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="588,3666" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="588,2264" sap2010:WorkflowViewState.IdRef="Sequence_28">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <Sequence DisplayName="Gather resend info" sap:VirtualizedContainerService.HintSize="554,3604" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                                <Sequence DisplayName="Gather resend info" sap:VirtualizedContainerService.HintSize="554,2202" sap2010:WorkflowViewState.IdRef="Sequence_30">
                                                   <Sequence.Variables>
                                                     <Variable x:TypeArguments="x:String" Name="ResendLink" />
                                                     <Variable x:TypeArguments="x:String" Name="sendToPHone" />
@@ -1114,7 +1280,7 @@
                                                   <Assign sap:VirtualizedContainerService.HintSize="520,114" sap2010:WorkflowViewState.IdRef="Assign_9">
                                                     <Assign.To>
                                                       <OutArgument x:TypeArguments="x:String">
-                                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">SentTo</CSharpReference>
+                                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_41">SentTo</CSharpReference>
                                                       </OutArgument>
                                                     </Assign.To>
                                                     <Assign.Value>
@@ -1155,7 +1321,7 @@
                                                       </uix:TargetAnchorable>
                                                     </uix:NGetAttributeGeneric.Target>
                                                   </uix:NGetAttributeGeneric>
-                                                  <Sequence DisplayName="check if already exisits" sap:VirtualizedContainerService.HintSize="520,2597" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                                  <Sequence DisplayName="check if already exisits" sap:VirtualizedContainerService.HintSize="520,1195" sap2010:WorkflowViewState.IdRef="Sequence_50">
                                                     <Sequence.Variables>
                                                       <Variable x:TypeArguments="sd:DataTable" Name="existingCard_DT" />
                                                     </Sequence.Variables>
@@ -1197,14 +1363,14 @@
                                                         </scg:List>
                                                       </ui:FilterDataTable.SelectColumns>
                                                     </ui:FilterDataTable>
-                                                    <If sap:VirtualizedContainerService.HintSize="486,2317" sap2010:WorkflowViewState.IdRef="If_6">
+                                                    <If sap:VirtualizedContainerService.HintSize="486,915" sap2010:WorkflowViewState.IdRef="If_6">
                                                       <If.Condition>
                                                         <InArgument x:TypeArguments="x:Boolean">
                                                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">existingCard_DT.RowCount() &gt; 0</CSharpValue>
                                                         </InArgument>
                                                       </If.Condition>
                                                       <If.Then>
-                                                        <Sequence DisplayName="Update Ticker and click resent" sap:VirtualizedContainerService.HintSize="484,984" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                                                        <Sequence DisplayName="Update Ticker and click resent" sap:VirtualizedContainerService.HintSize="484,283" sap2010:WorkflowViewState.IdRef="Sequence_51">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1217,10 +1383,10 @@
                                                               </InArgument>
                                                             </ui:LogMessage.Message>
                                                           </ui:LogMessage>
-                                                          <Sequence DisplayName="resend" sap:VirtualizedContainerService.HintSize="450,749" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                                                          <Sequence DisplayName="resend" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_53">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
@@ -1285,7 +1451,7 @@
                                                         </Sequence>
                                                       </If.Then>
                                                       <If.Else>
-                                                        <Sequence DisplayName="insert new record and click resnd" sap:VirtualizedContainerService.HintSize="484,1202" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                                                        <Sequence DisplayName="insert new record and click resnd" sap:VirtualizedContainerService.HintSize="484,501" sap2010:WorkflowViewState.IdRef="Sequence_52">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1310,10 +1476,10 @@
                                                               </InArgument>
                                                             </ui:LogMessage.Message>
                                                           </ui:LogMessage>
-                                                          <Sequence DisplayName="resend" sap:VirtualizedContainerService.HintSize="450,749" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                                          <Sequence DisplayName="resend" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_35">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
@@ -1480,10 +1646,11 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ForEachRow>
-                  <Sequence DisplayName="write logs back to files" sap:VirtualizedContainerService.HintSize="1770,743" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                  <Sequence DisplayName="write logs back to files" sap:VirtualizedContainerService.HintSize="1198,50" sap2010:WorkflowViewState.IdRef="Sequence_37">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <Sequence DisplayName="Write reuableCardsXLS log to file" sap:VirtualizedContainerService.HintSize="450,235" sap2010:WorkflowViewState.IdRef="Sequence_38">
@@ -1569,7 +1736,7 @@
                     </Sequence>
                   </Sequence>
                 </Sequence>
-                <Sequence DisplayName="If not claimed: resend" sap:VirtualizedContainerService.HintSize="1804,326" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                <Sequence DisplayName="If not claimed: resend" sap:VirtualizedContainerService.HintSize="1232,326" sap2010:WorkflowViewState.IdRef="Sequence_17">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>

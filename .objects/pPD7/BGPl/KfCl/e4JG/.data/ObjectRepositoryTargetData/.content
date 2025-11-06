@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="5iEnvNpB4EWdJYPzuB_JBA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/dp/B07PCMWTSG" CVScreenId="c9c33d41-60cf-458f-b6be-57200449aaec" CvTextArea="475, 1090, 172, 11" CvTextArgument="Please enter a valid phone number" CvType="Text" DesignTimeRectangle="476, 1090, 170, 14" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='a-alert-content' parentid='recipients-error' tag='DIV' /&gt;" Guid="b87adf15-5faa-4a29-b461-4b3dc40e21e2" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='atd-param-exclusion-strategy' title='Amazon.com: Amazon eGift Card - Amazon Logo | Christmas : Gift Cards' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="c9c33d41-60cf-458f-b6be-57200449aaec" CvTextArea="450, 1029, 214, 16" CvTextArgument="Recipient phone number (required):" CvType="Text" DesignTimeRectangle="451, 1029, 212, 16" ElementType="Text" FuzzyAccuracy="0.88" FuzzySelectorArgument="&lt;webctrl aria-role='heading' parentid='gc-recipients-form-label-MobileSMS' tag='SPAN' type='' class='a-text-bold' aaname='Recipient phone number (required):' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Recipient phone number (required):' /&gt;" Guid="0247f2de-a817-4dd4-9786-e9985750a093" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="afa70817000512617c59258b0d41ae1c.png" xmlns="">0ow6j-H8fckuuQrAfsZ3y-g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

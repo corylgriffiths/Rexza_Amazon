@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="9Ygchj3Y40K6ExABoPu24g" Reference="edQoiHTr_EubiZ3TXex5dQ/gSRZ4ey1jEWi2TVKoPod9A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gp/css/order-history" CVScreenId="4d049ebe-c372-4885-9c70-d0d87fc6c936" DesignTimeRectangle="483, 420, 114, 23" DesignTimeScaleFactor="0.8999999761581421" ElementType="Text" Guid="db7e111e-1f98-4f84-8adb-8d3d30464a01" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Your Orders' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.FuzzySelectorArgument>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;webctrl id='time-filter_1' tag='A' type='' class='a-dropdown-link a-active' aaname='*"+in_dataLookBack_days+"*' check:innerText='"+in_dataLookBack_days+"' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetAnchorable.FuzzySelectorArgument>
+      <imageRef attrName="InformativeScreenshot" originalValue="e23940a4d288e82afaf59245b92b4456.png" xmlns="">0JMQzRRKBa0q0G6ijORq8Vg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

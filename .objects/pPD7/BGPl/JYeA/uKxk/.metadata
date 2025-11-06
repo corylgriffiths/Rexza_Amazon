@@ -1,0 +1,14 @@
+﻿{
+  "Name": "past 3 months",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "uKxkrGnAg0ixo6z6iDWIVA",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/uKxkrGnAg0ixo6z6iDWIVA",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/JYeA4V8g_0a8BZbsWd0jnw",
+  "Created": "2025-10-13T23:03:51.8215066Z",
+  "Updated": "2025-10-13T23:03:51.8215066Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.7.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

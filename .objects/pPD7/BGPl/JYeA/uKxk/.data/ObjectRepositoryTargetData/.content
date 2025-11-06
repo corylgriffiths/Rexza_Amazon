@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="4lP5JW4LA0ydRNkHXm_g6g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gp/css/order-history" CVScreenId="ad4a099b-ca12-45dc-9155-7317bd2a5320" CvElementArea="481, 389, 118, 33" CvType="InputBox" DesignTimeRectangle="484, 392, 111, 27" DesignTimeScaleFactor="0.8999999761581421" ElementType="Button" FuzzyAccuracy="0.91" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='SPAN' type='' class='a-button-text a-declarative' aaname='' check:innerText='past 3 months' /&gt;" Guid="360ed2d7-4a9b-4f62-9366-55dd6821e885" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Your Orders' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="ad4a099b-ca12-45dc-9155-7317bd2a5320" CvTextArea="351, 398, 126, 12" CvTextArgument="1827 orders placed in" CvType="Text" DesignTimeRectangle="350, 396, 127, 19" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='      placed in ' parentid='a-page' tag='LABEL' type='' class='a-form-label time-filter__label aok-inline-block a-text-normal' check:innerText='* orders placed in' /&gt;" Guid="749ce246-6c0c-4799-84c5-081b1a63275c" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="d2b7cdbff47e19cbc40db1c6d9b7e3d7.png" xmlns="">0gCHZ7Xtr7E6mYMhV_E6iww</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
