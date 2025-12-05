@@ -109,7 +109,7 @@
       <AssemblyReference>NPOI.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Fastgem_getDetailLinksForRep" sap:VirtualizedContainerService.HintSize="1139,1568" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Fastgem_getDetailLinksForRep" sap:VirtualizedContainerService.HintSize="938,1568" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
