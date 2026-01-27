@@ -122,19 +122,15 @@
       <AssemblyReference>mscorlib</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1645,1323" sap2010:WorkflowViewState.IdRef="Sequence_181">
+  <Sequence sap:VirtualizedContainerService.HintSize="1559,2052" sap2010:WorkflowViewState.IdRef="Sequence_181">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="DT columns:&#xD;&#xA;Amount,&#xD;&#xA;order ID,&#xD;&#xA;Detailslink,&#xD;&#xA;ResendLink,&#xD;&#xA;SendToPhone,&#xD;&#xA;SentTo,&#xD;&#xA;IdentifiedDate,&#xD;&#xA;ResendTicker,&#xD;&#xA;Claimed" DisplayName="Load Used But Not Claimed Log" sap:VirtualizedContainerService.HintSize="484,1300" sap2010:WorkflowViewState.IdRef="Sequence_180">
+    <Sequence sap2010:Annotation.AnnotationText="DT columns:&#xA;Amount,&#xA;order ID,&#xA;Detailslink,&#xA;ResendLink,&#xA;SendToPhone,&#xA;SentTo,&#xA;IdentifiedDate,&#xA;ResendTicker,&#xA;Claimed" DisplayName="Load Used But Not Claimed Log" sap:VirtualizedContainerService.HintSize="650,2029" sap2010:WorkflowViewState.IdRef="Sequence_180">
       <Sequence.Variables>
-        <Variable x:TypeArguments="x:Boolean" Name="isfile">
-          <Variable.Default>
-            <Literal x:TypeArguments="x:Boolean" />
-          </Variable.Default>
-        </Variable>
+        <Variable x:TypeArguments="x:Boolean" Default="False" Name="isfile" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -142,14 +138,14 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,173" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="616,173" sap2010:WorkflowViewState.IdRef="LogMessage_1">
         <ui:LogMessage.Message>
           <InArgument x:TypeArguments="x:Object">
             <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"Loading log file: " + in_bankLogFile</CSharpValue>
           </InArgument>
         </ui:LogMessage.Message>
       </ui:LogMessage>
-      <Sequence DisplayName="Validate file exits" sap:VirtualizedContainerService.HintSize="450,248" sap2010:WorkflowViewState.IdRef="Sequence_184">
+      <Sequence DisplayName="Validate file exits" sap:VirtualizedContainerService.HintSize="616,248" sap2010:WorkflowViewState.IdRef="Sequence_184">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -168,20 +164,20 @@
           </ui:FileExistsX.Path>
         </ui:FileExistsX>
       </Sequence>
-      <If sap:VirtualizedContainerService.HintSize="450,634" sap2010:WorkflowViewState.IdRef="If_1">
+      <If sap:VirtualizedContainerService.HintSize="616,1363" sap2010:WorkflowViewState.IdRef="If_1">
         <If.Condition>
           <InArgument x:TypeArguments="x:Boolean">
             <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">isfile</CSharpValue>
           </InArgument>
         </If.Condition>
         <If.Then>
-          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,281" sap2010:WorkflowViewState.IdRef="Sequence_185">
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="614,1010" sap2010:WorkflowViewState.IdRef="Sequence_185">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="580,786" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
               <ueab:ExcelProcessScopeX.Body>
                 <ActivityAction x:TypeArguments="ui:IExcelProcess">
                   <ActivityAction.Argument>
@@ -208,7 +204,7 @@
                             <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,192" sap2010:WorkflowViewState.IdRef="ReadRangeX_1">
                               <ueab:ReadRangeX.Range>
                                 <InArgument x:TypeArguments="ue:IReadRangeRef">
-                                  <CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">Excel.Sheet["Unclaimed Cards"].Range["A:I"]</CSharpValue>
+                                  <CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">Excel.Sheet["Unclaimed Cards"].Range["A:K"]</CSharpValue>
                                 </InArgument>
                               </ueab:ReadRangeX.Range>
                               <ueab:ReadRangeX.SaveTo>
@@ -231,12 +227,12 @@
               </ueab:ExcelProcessScopeX.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ueab:ExcelProcessScopeX>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="LogMessage_2">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="580,164" sap2010:WorkflowViewState.IdRef="LogMessage_2">
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
                   <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">"Log File loaded"</CSharpValue>
@@ -246,13 +242,13 @@
           </Sequence>
         </If.Then>
         <If.Else>
-          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="Sequence_186">
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="614,224" sap2010:WorkflowViewState.IdRef="Sequence_186">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,164" sap2010:WorkflowViewState.IdRef="LogMessage_3">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="580,164" sap2010:WorkflowViewState.IdRef="LogMessage_3">
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
                   <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">"Invalid File!..." + in_bankLogFile</CSharpValue>

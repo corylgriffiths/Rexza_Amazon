@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Hs9bft8r4k6uzqWG5jzodA" Reference="edQoiHTr_EubiZ3TXex5dQ/8zNFi7bWdEmkbgD3NX3EOA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="amazon.com/gc/resend" CVScreenId="b1752769-7f36-463c-8655-f45ac58901c6" CvElementArea="454, 769, 162, 43" CvTextArea="471, 781, 130, 16" CvTextArgument="Resend gift card" CvType="Button" DesignTimeRectangle="539, 653, 125, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='gc-resend-apply' tag='INPUT' /&gt;" Guid="bc380143-a43b-4a15-bfe5-07a3a519123a" ScopeSelectorArgument="&lt;html app='chrome.exe' title='amazon.com/gc/resend?orderID=111-9069343-6494622&amp;amp;gcID=A06334471U8Z1KI3RN9YY&amp;amp;ref_=ppx_hzod_giftCardDetails_dt_b_gc_e_d_0_6' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="b1752769-7f36-463c-8655-f45ac58901c6" CvElementArea="286, 769, 168, 42" CvTextArea="303, 781, 135, 16" CvTextArgument="Preview gift card" CvType="Button" DesignTimeRectangle="405, 653, 128, 30" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='gc-preview-button' tag='BUTTON' type='button' class='a-button-text' aaname='         Preview gift card       ' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Preview gift card' /&gt;" Guid="331f7da9-a0f0-4a87-bee8-d62e53280a42" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e00d70fa82dcb1897818ab5999cb4e75.png" xmlns="">0FvKUEHbSNEeg1qXUbPUTJg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

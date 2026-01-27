@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="n6a1drHEREq1MvbiCmguzA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="b437a1e9-1c8c-4df2-bc74-97ba20fa41b2" CvElementArea="1733, 280, 148, 29" CvType="InputBox" DesignTimeRectangle="1734, 281, 145, 27" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='finalize_date' tag='INPUT' /&gt;" Guid="5bb76a76-7fe3-41fb-9e71-06d4221b54ae" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll - FastGem - CorServe' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="b437a1e9-1c8c-4df2-bc74-97ba20fa41b2" CvElementArea="1922, 279, 75, 29" CvTextArea="1933, 287, 53, 12" CvTextArgument="FINALIZE" CvType="Button" DesignTimeRectangle="1924, 281, 72, 26" ElementType="Button" FuzzyAccuracy="0.89" FuzzySelectorArgument="&lt;webctrl id='fg_finalize' tag='INPUT' type='button' class='btn btn-success btn-small' aaname='FINALIZE' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:text='FINALIZE' /&gt;" Guid="43516f9f-81bc-4f2e-9b23-b8212a62688a" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="72ad40b050e7bb5a5ee76b86a977d5d1.png" xmlns="">0HjuM2Jgkc02wvne0QvdjVA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+﻿{
+  "Name": "FINALIZE",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "EVkmqxK_R0SdLHlRB6ZVHw",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/EVkmqxK_R0SdLHlRB6ZVHw",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/mMLitSztYU6Mj-RP_ZbvNA",
+  "Created": "2025-12-19T15:41:40.3752098Z",
+  "Updated": "2025-12-19T15:41:40.3752098Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

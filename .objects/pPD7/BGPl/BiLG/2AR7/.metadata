@@ -1,0 +1,14 @@
+﻿{
+  "Name": "To the same phone numbe…",
+  "Type": "Element",
+  "TaxonomyType": "RadioButton",
+  "Id": "2AR78cD7oUOdbbcvGFVV5A",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/2AR78cD7oUOdbbcvGFVV5A",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/BiLGQIZh70KQL7of5xPW9g",
+  "Created": "2026-01-09T20:03:27.1825516Z",
+  "Updated": "2026-01-09T20:03:27.1825516Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

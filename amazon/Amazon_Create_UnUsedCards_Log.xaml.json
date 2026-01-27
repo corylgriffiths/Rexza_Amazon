@@ -1,0 +1,93 @@
+{
+  "DisplayName": "Amazon_Create_UnUsedCards_Log",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_dataLookBack_days",
+      "DisplayName": "in_dataLookBack_days",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "past 3 months",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_useLogOnly",
+      "DisplayName": "in_useLogOnly",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "False",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_Logfile",
+      "DisplayName": "in_Logfile",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "Data\\PreviousOrders.xlsx",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_ReusableCardsLogFile",
+      "DisplayName": "in_ReusableCardsLogFile",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "Data\\ReusableCards\\ReusableCards.xlsx",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_sheetName_PrevOrders",
+      "DisplayName": "in_sheetName_PrevOrders",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "Previous Orders",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_sheetName_ReusableCards",
+      "DisplayName": "in_sheetName_ReusableCards",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "Unclaimed Cards",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_DataYear",
+      "DisplayName": "in_DataYear",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "2025",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}

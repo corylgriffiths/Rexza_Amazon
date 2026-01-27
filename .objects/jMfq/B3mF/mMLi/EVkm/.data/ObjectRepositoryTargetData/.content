@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Wf-ig0c_XkyDCNdZ_0ptNQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="9103a77c-6d6a-4ec8-8d69-acfc201bb618" CvElementArea="1922, 279, 75, 29" CvTextArea="1933, 287, 53, 12" CvTextArgument="FINALIZE" CvType="Button" DesignTimeRectangle="1924, 281, 72, 26" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='fg_finalize' tag='INPUT' /&gt;" Guid="be4af4d9-2b5c-4128-baba-73e633ff01ce" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll - FastGem - CorServe' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="9103a77c-6d6a-4ec8-8d69-acfc201bb618" CvElementArea="1877, 280, 43, 29" CvType="Button" DesignTimeRectangle="1878, 281, 42, 27" ElementType="Button" FullSelectorArgument="&lt;webctrl id='finalize_date_btn' tag='BUTTON' /&gt;" Guid="bef6d0c3-f559-4554-ad88-a72673935078" SearchSteps="Selector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="27eddf4801c188f5fdb00f4983144364.png" xmlns="">0w9nacgk2yUqkQvnr4psbdg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

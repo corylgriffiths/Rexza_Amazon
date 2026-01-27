@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="MgFhgdh1ykS53QZV_0mE-g" Reference="edQoiHTr_EubiZ3TXex5dQ/U-PVTsbYak2QEeN8P8H98w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" CVScreenId="eeef78b7-5bc9-47c6-b169-1d1d69ae9874" DesignTimeRectangle="1734, 281, 145, 27" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzyAccuracy="0.87" FuzzySelectorArgument="&lt;webctrl id='finalize_date' matching:id='fuzzy' fuzzylevel:id='0.0' tag='INPUT' type='text' value='2025-12-20' check:text='1995-12-20' /&gt;" Guid="c8976025-77dd-4d99-b048-8cafd5b0b482" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll - FastGem - CorServe' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="eeef78b7-5bc9-47c6-b169-1d1d69ae9874" CvElementArea="1922, 279, 75, 29" CvTextArea="1933, 287, 53, 12" CvTextArgument="FINALIZE" CvType="Button" DesignTimeRectangle="1924, 281, 72, 26" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='fg_finalize' tag='INPUT' type='button' class='btn btn-success btn-small' aaname='FINALIZE' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:text='FINALIZE' /&gt;" Guid="fc302ee7-29a7-4641-933a-5f2301607b5a" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="8bf37f4cd583af036527de65f8db94bb.png" xmlns="">0g18WHE_9N0iR7hNysD6LnA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

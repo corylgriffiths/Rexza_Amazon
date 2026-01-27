@@ -139,7 +139,7 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="addCard" sap:VirtualizedContainerService.HintSize="1192,1700" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="addCard" sap:VirtualizedContainerService.HintSize="1194,1963" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="DataTableResendReport" />
       <Variable x:TypeArguments="x:Boolean" Default="False" Name="isFailed" />
@@ -149,8 +149,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="626,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Write your comments in the Text property" />
-    <Assign DisplayName="Set Failed Status" sap:VirtualizedContainerService.HintSize="626,113" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="644,88" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Write your comments in the Text property" />
+    <Assign DisplayName="Set Failed Status" sap:VirtualizedContainerService.HintSize="644,114" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Boolean">
           <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">isFailed</CSharpReference>
@@ -160,13 +160,13 @@
         <InArgument x:TypeArguments="x:Boolean">False</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Amazon.com. Spend less. Smile more." HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="626,1476" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Amazon.com. Spend less. Smile more." HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="644,1738" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="6e5e13dd-0795-491e-88aa-6923ba7ae621" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,1236" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="610,1498" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:UiElement" Name="IsVerifyCardExists" />
               <Variable x:TypeArguments="ui:UiElement" Name="EnterAmountTxtBoxExists" />
@@ -180,7 +180,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="558,57" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="576,57" sap2010:WorkflowViewState.IdRef="CommentOut_7">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_37">
                   <sap:WorkflowViewStateService.ViewState>
@@ -198,20 +198,20 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <Sequence DisplayName="split: new card vrs resend" sap:VirtualizedContainerService.HintSize="558,1117" sap2010:WorkflowViewState.IdRef="Sequence_62">
+            <Sequence DisplayName="split: new card vrs resend" sap:VirtualizedContainerService.HintSize="576,1379" sap2010:WorkflowViewState.IdRef="Sequence_62">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If DisplayName="Split: if resnd or new card" sap:VirtualizedContainerService.HintSize="524,1030" sap2010:WorkflowViewState.IdRef="If_9">
+              <If DisplayName="Split: if resnd or new card" sap:VirtualizedContainerService.HintSize="542,1292" sap2010:WorkflowViewState.IdRef="If_9">
                 <If.Condition>
                   <InArgument x:TypeArguments="x:Boolean">
                     <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">isResend</CSharpValue>
                   </InArgument>
                 </If.Condition>
                 <If.Then>
-                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,25" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="540,25" sap2010:WorkflowViewState.IdRef="Sequence_63">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -311,22 +311,22 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="522,874" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="540,1136" sap2010:WorkflowViewState.IdRef="Sequence_64">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="488,122" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://www.amazon.com/Amazon-eGift-Card-Logo-Animated/dp/B07PCMWTSG/ref=sr_1_1?th=1" Version="V4" />
-                    <uix:NCheckState DisplayName="Enter the gift card inf" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="488,692" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Timeout="10" Version="V4">
+                    <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="506,122" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Url="https://www.amazon.com/Amazon-eGift-Card-Logo-Animated/dp/B07PCMWTSG/ref=sr_1_1?th=1" Version="V4" />
+                    <uix:NCheckState DisplayName="Enter the gift card inf" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="506,954" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Timeout="10" Version="V4">
                       <uix:NCheckState.IfExists>
-                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="486,417" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="504,679" sap2010:WorkflowViewState.IdRef="Sequence_38">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence DisplayName="Enter in the data" sap:VirtualizedContainerService.HintSize="452,57" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                          <Sequence DisplayName="Enter in the data" sap:VirtualizedContainerService.HintSize="470,57" sap2010:WorkflowViewState.IdRef="Sequence_54">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -453,12 +453,12 @@
                               </uix:NTypeInto.VerifyOptions>
                             </uix:NTypeInto>
                           </Sequence>
-                          <uix:NCheckState DisplayName="check for invalid phone, if yes, then set order to invalid phone." HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,300" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Timeout="0.5" Version="V5">
+                          <uix:NCheckState DisplayName="check for invalid phone, if yes, then set order to invalid phone." HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="470,562" sap2010:WorkflowViewState.IdRef="NCheckState_10" ScopeIdentifier="6e5e13dd-0795-491e-88aa-6923ba7ae621" Timeout="0.5" Version="V5">
                             <uix:NCheckState.IfExists>
-                              <Sequence DisplayName="if it is an invalid phone" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                              <Sequence DisplayName="if it is an invalid phone" sap:VirtualizedContainerService.HintSize="468,287" sap2010:WorkflowViewState.IdRef="Sequence_71">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
@@ -476,7 +476,7 @@
                               </Sequence>
                             </uix:NCheckState.IfExists>
                             <uix:NCheckState.IfNotExists>
-                              <Sequence DisplayName="If phone number is valid proceed to purchase the card" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_96">
+                              <Sequence DisplayName="If phone number is valid proceed to purchase the card" sap:VirtualizedContainerService.HintSize="468,25" sap2010:WorkflowViewState.IdRef="Sequence_96">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1405,7 +1405,7 @@
                         </Sequence>
                       </uix:NCheckState.IfExists>
                       <uix:NCheckState.IfNotExists>
-                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="486,25" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="504,25" sap2010:WorkflowViewState.IdRef="Sequence_39">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>

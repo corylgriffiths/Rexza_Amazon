@@ -1,0 +1,14 @@
+﻿{
+  "Name": "INPUT gc-resend-apply",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "8zNFi7bWdEmkbgD3NX3EOA",
+  "Reference": "edQoiHTr_EubiZ3TXex5dQ/8zNFi7bWdEmkbgD3NX3EOA",
+  "ParentRef": "edQoiHTr_EubiZ3TXex5dQ/BiLGQIZh70KQL7of5xPW9g",
+  "Created": "2026-01-09T20:04:58.5296766Z",
+  "Updated": "2026-01-09T20:04:58.5296766Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
