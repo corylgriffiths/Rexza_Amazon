@@ -1,0 +1,81 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "entryPoints": [
+    {
+      "filePath": "amazon\\Amazon_Create_UnUsedCards_Log.xaml",
+      "uniqueId": "86f16b49-7ea4-4b4e-8da8-4e6da2aeac0f",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_dataLookBack_days": {
+            "type": "string"
+          },
+          "in_useLogOnly": {
+            "type": "boolean"
+          },
+          "in_Logfile": {
+            "type": "string"
+          },
+          "in_ReusableCardsLogFile": {
+            "type": "string"
+          },
+          "in_sheetName_PrevOrders": {
+            "type": "string"
+          },
+          "in_sheetName_ReusableCards": {
+            "type": "string"
+          },
+          "in_DataYear": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    },
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "fc0ac1c6-3f9a-49ff-b518-165a1e64ae39",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_ExceptionList": {
+            "type": "string"
+          },
+          "in_weekOffset": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "in_nonIncentive_YearOffset": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "in_SkipNonIncentiveCheck": {
+            "type": "boolean"
+          },
+          "in_alertEmail": {
+            "type": "string"
+          },
+          "in_exceptionEmailList": {
+            "type": "string"
+          },
+          "in_BatchSize": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "in_CardBank_File": {
+            "type": "string"
+          },
+          "in_isUseCardBank": {
+            "type": "boolean"
+          }
+        },
+        "required": []
+      }
+    }
+  ]
+}
