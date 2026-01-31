@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryScreenData ContentHash="KikQcomt_0KmIhH1uOwfgg" Reference="edQoiHTr_EubiZ3TXex5dQ/X1-omhlidkSEkMfcAQ49-Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryScreenData ContentHash="PHF3JLfljkWEQWag1AJwiA" Reference="edQoiHTr_EubiZ3TXex5dQ/X1-omhlidkSEkMfcAQ49-Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryScreenData.Data>
-    <TargetApp x:Key="TargetApp" Area="468, 237, 1464, 1688" BrowserType="Chrome" ContentHash="x1aQPOu-XEWnmBnm8wwX0g" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGZSURBVDhPrZI76M9hFMbdr6GUy4BMFpsnFqXYpJSMNmWThbKIQpHBLdInBgaxWCS3jC7Lh8El9xgMxOieQUfnpz+5DU6det/3e57nnO/znGHD/ldIKkdKZkpmS2b9lPU2QzKian8FHi3ZILknuSu5L3kuedbnersjWScZ9Z2kweMkW7t4vWSl5JbkgeSJ5IZkhWRTk26UjPlGIpks2S15KlklGS/ZI7ktWShZ0hNsk4yVrOlG1XBCEZyQfJY8lpySXJJ8bFDdT/cU7yTn+14EnySHiuCA5IPknGSH5KLkpWSvZFdn1byWnO2ay5L3kp1FMElyVHJNMqfHfiRZ1PpULpU8lMyXzJPclOyv3x0UlD0XukOR1BTbhxDsk5yRzJVc6fPUgYiDLGYlhyWbJdclUyTTu2NZfFxytYm+4YZaWbm4xTvZwi1rS0vgEq/2YMEP4EEMIVktedEqH5Qc63P5v/yX4EH0x+G9TOXMK8kbyVvJ2j+CB9FFtWVl35fekS0/rO/foklKwBLtiGTiP4MrhugxbWDX7wi+AsmBiI6aESUVAAAAAElFTkSuQmCC" Reference="edQoiHTr_EubiZ3TXex5dQ/X1-omhlidkSEkMfcAQ49-Q" Selector="&lt;html app='chrome.exe' title='Snapshot Payroll' /&gt;" Title="Snapshot Payroll" Url="https://rexza.fastgem.net/*" Version="V1">
-      <imageRef attrName="InformativeScreenshot" originalValue="c75ab77cd260cd7993e94836f3bd85a3.jpg" xmlns="">0Ql5asRUiU0KyIQIHyW78ig</imageRef>
+    <TargetApp x:Key="TargetApp" Area="1715, 0, 2140, 2119" BrowserType="Chrome" ContentHash="VzydEL6Dh0O2mRDeOzUR1w" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGZSURBVDhPrZI76M9hFMbdr6GUy4BMFpsnFqXYpJSMNmWThbKIQpHBLdInBgaxWCS3jC7Lh8El9xgMxOieQUfnpz+5DU6det/3e57nnO/znGHD/ldIKkdKZkpmS2b9lPU2QzKian8FHi3ZILknuSu5L3kuedbnersjWScZ9Z2kweMkW7t4vWSl5JbkgeSJ5IZkhWRTk26UjPlGIpks2S15KlklGS/ZI7ktWShZ0hNsk4yVrOlG1XBCEZyQfJY8lpySXJJ8bFDdT/cU7yTn+14EnySHiuCA5IPknGSH5KLkpWSvZFdn1byWnO2ay5L3kp1FMElyVHJNMqfHfiRZ1PpULpU8lMyXzJPclOyv3x0UlD0XukOR1BTbhxDsk5yRzJVc6fPUgYiDLGYlhyWbJdclUyTTu2NZfFxytYm+4YZaWbm4xTvZwi1rS0vgEq/2YMEP4EEMIVktedEqH5Qc63P5v/yX4EH0x+G9TOXMK8kbyVvJ2j+CB9FFtWVl35fekS0/rO/foklKwBLtiGTiP4MrhugxbWDX7wi+AsmBiI6aESUVAAAAAElFTkSuQmCC" Reference="edQoiHTr_EubiZ3TXex5dQ/X1-omhlidkSEkMfcAQ49-Q" Version="V2">
+      <TargetApp.Arguments>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.Arguments>
+      <TargetApp.FilePath>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.FilePath>
+      <TargetApp.Selector>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"&lt;html app='chrome.exe' url='https://"+in_CompanyName.ToLower()+".fastgem.net/*' /&gt;"</p:CSharpValue>
+        </p:InArgument>
+      </TargetApp.Selector>
+      <TargetApp.Url>
+        <p:InArgument x:TypeArguments="x:String">
+          <p:CSharpValue x:TypeArguments="x:String">"https://"+in_CompanyName.ToLower()+".fastgem.net/payroll-2/view-payroll"</p:CSharpValue>
+        </p:InArgument>
+      </TargetApp.Url>
+      <TargetApp.WorkingDirectory>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.WorkingDirectory>
+      <imageRef attrName="InformativeScreenshot" originalValue="2a13f44c756b08b157ac51772af029ed.jpg" xmlns="">0Q7Wt7VKwwEGzF2dvMG_sQw</imageRef>
     </TargetApp>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData DefaultValue="Fundato" IsVariable="False" Name="in_CompanyName" />
+    </scg:List>
   </ObjectRepositoryScreenData.Data>
 </ObjectRepositoryScreenData>

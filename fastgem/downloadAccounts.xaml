@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="pullPayroll" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="pullPayroll" this:pullPayroll.in_CompanyName="Fundato" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="In_Browser" Type="InArgument(ui:UiElement)" />
+    <x:Property Name="in_CompanyName" Type="InArgument(x:String)" />
     <x:Property Name="Out_PullAccountsData" Type="OutArgument(sd:DataTable)" />
     <x:Property Name="Out_PullLeasingAgentsData" Type="OutArgument(sd:DataTable)" />
   </x:Members>
@@ -131,6 +131,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -138,42 +139,60 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="pullPayroll" sap:VirtualizedContainerService.HintSize="1594,3020" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="pullPayroll" sap:VirtualizedContainerService.HintSize="1562,3470" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1594,2997" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V2">
+    <Assign sap:VirtualizedContainerService.HintSize="1562,175" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">in_CompanyName</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">in_CompanyName.ToLower()</CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Browser(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1562,3272" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="1560,2837" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1560,3130" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Do - Go to Payroll Screen - Download Accounts Excel" sap:VirtualizedContainerService.HintSize="1526,2775" sap2010:WorkflowViewState.IdRef="Sequence_42">
+            <Sequence DisplayName="Do - Go to Payroll Screen - Download Accounts Excel" sap:VirtualizedContainerService.HintSize="1526,3070" sap2010:WorkflowViewState.IdRef="Sequence_42">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="1492,122" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Url="https://rexza.fastgem.net/accounts" Version="V4" />
-              <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="1492,122" sap2010:WorkflowViewState.IdRef="Delay_5" />
-              <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="1492,112" sap2010:WorkflowViewState.IdRef="DeleteFileX_2">
+              <uix:NGoToUrl DisplayName="Go To URL - " sap:VirtualizedContainerService.HintSize="1492,127" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
+                <uix:NGoToUrl.Url>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">"https://"+in_CompanyName+".fastgem.net/accounts"</CSharpValue>
+                  </InArgument>
+                </uix:NGoToUrl.Url>
+              </uix:NGoToUrl>
+              <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="1492,127" sap2010:WorkflowViewState.IdRef="Delay_5" />
+              <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="1492,117" sap2010:WorkflowViewState.IdRef="DeleteFileX_2">
                 <ui:DeleteFileX.Path>
                   <InArgument x:TypeArguments="x:String">
                     <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">Environment.ExpandEnvironmentVariables("%USERPROFILE%\\Downloads\\data.csv")</CSharpValue>
                   </InArgument>
                 </ui:DeleteFileX.Path>
               </ui:DeleteFileX>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Excel'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1492,225" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Excel'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="1492,317" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/accounts" CVScreenId="155fb477-d337-4626-83e3-64ba882f21d8" ContentHash="B1eXhu8ozkKXyRlX7o-c5g" CvElementArea="979, 204, 67, 35" CvTextArea="994, 214, 38, 13" CvTextArgument="Excel" CvType="Button" DesignTimeRectangle="982, 206, 63, 32" DesignTimeScaleFactor="1.25" ElementType="Button" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='button' class='btn btn-small btn-info' aaname='Excel' check:text='Excel' /&gt;" Guid="fc0d8eee-0ec6-4a92-b4fb-945885c61ae9" InformativeScreenshot="47fc3dfd46d5fbf34dc4d35f947308f0.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/WTbhjbW-ckiJqwB2fUOm7g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" />
                 </uix:NClick.Target>
@@ -188,15 +207,15 @@
                   </uix:VerifyExecutionOptions>
                 </uix:NClick.VerifyOptions>
               </uix:NClick>
-              <uix:NCheckState DisplayName="Check App State 'File name'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="1492,1450" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Timeout="120" Version="V4">
+              <uix:NCheckState DisplayName="Check App State 'File name'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="1492,1641" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Timeout="120" Version="V4">
                 <uix:NCheckState.IfExists>
-                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="486,1100" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="486,1201" sap2010:WorkflowViewState.IdRef="Sequence_44">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NSetText DisplayName="Set Text 'File name'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,194" sap2010:WorkflowViewState.IdRef="NSetText_1" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
+                    <uix:NSetText DisplayName="Set Text 'File name'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,199" sap2010:WorkflowViewState.IdRef="NSetText_1" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
                       <uix:NSetText.Target>
                         <uix:TargetAnchorable CVScreenId="4ee7a521-aca5-483c-8b71-aab1e516f45e" ContentHash="IUYirAo-oEeBi7vbJUyaaw" CvElementArea="132, 325, 626, 25" CvType="InputBox" DesignTimeRectangle="136, 329, 599, 17" DesignTimeScaleFactor="1" ElementType="InputBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="f331d1bf-d4a3-46d9-a4d5-69275ce8b4f1" InformativeScreenshot="44dccae13d7ccca0a21f349900cf12e0.png" IsResponsive="True" Reference="edQoiHTr_EubiZ3TXex5dQ/xD6cP9STV0Ooq6TC1Ons8Q" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4">
                           <uix:TargetAnchorable.Anchors>
@@ -212,7 +231,7 @@
                         </InArgument>
                       </uix:NSetText.Text>
                     </uix:NSetText>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,225" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,317" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0ef229fb-b0a5-4c95-92f7-ae1b2ac301ba" Version="V4">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable CVScreenId="4ee7a521-aca5-483c-8b71-aab1e516f45e" ContentHash="-NVo7oTW10OOHP9lfOqLVw" CvElementArea="555, 429, 88, 26" CvTextArea="586, 435, 26, 12" CvTextArgument="Save" CvType="Button" DesignTimeRectangle="555, 429, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Save' check:text='&amp;amp;Save' /&gt;" Guid="37c1dbc4-0996-496e-93cc-54fd5ca45532" InformativeScreenshot="bf2f636c7fb031cf046e655ede9d2017.png" Reference="edQoiHTr_EubiZ3TXex5dQ/cyMhIsfLv0Kyw_SqQh694g" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4">
                           <uix:TargetAnchorable.Anchors>
@@ -304,7 +323,7 @@
                   </uix:TargetAnchorable>
                 </uix:NCheckState.Target>
               </uix:NCheckState>
-              <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="1492,303" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+              <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While" sap:VirtualizedContainerService.HintSize="1492,308" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
                 <ui:InterruptibleWhile.Body>
                   <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,173" sap2010:WorkflowViewState.IdRef="Sequence_15">
                     <sap:WorkflowViewStateService.ViewState>
@@ -325,7 +344,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:InterruptibleWhile>
-              <ui:ReadCsvFile PathResource="{x:Null}" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV" sap:VirtualizedContainerService.HintSize="1492,186" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" IncludeColumnNames="False">
+              <ui:ReadCsvFile PathResource="{x:Null}" Delimitator="Comma" DelimitatorForViewModel="Comma" DisplayName="Read CSV" sap:VirtualizedContainerService.HintSize="1492,174" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" IncludeColumnNames="False">
                 <ui:ReadCsvFile.DataTable>
                   <OutArgument x:TypeArguments="sd:DataTable">
                     <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">Out_PullAccountsData</CSharpReference>
@@ -348,13 +367,33 @@
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
-      <uix:NApplicationCard.InUiElement>
-        <InArgument x:TypeArguments="ui:UiElement">
-          <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">In_Browser</CSharpValue>
-        </InArgument>
-      </uix:NApplicationCard.InUiElement>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 0, 0" Version="V1" />
+        <uix:TargetApp Area="1680, 0, 2153, 2119" BrowserType="Chrome" ContentHash="HX7F4CMX4ESarTdRrVK4_g" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGZSURBVDhPrZI76M9hFMbdr6GUy4BMFpsnFqXYpJSMNmWThbKIQpHBLdInBgaxWCS3jC7Lh8El9xgMxOieQUfnpz+5DU6det/3e57nnO/znGHD/ldIKkdKZkpmS2b9lPU2QzKian8FHi3ZILknuSu5L3kuedbnersjWScZ9Z2kweMkW7t4vWSl5JbkgeSJ5IZkhWRTk26UjPlGIpks2S15KlklGS/ZI7ktWShZ0hNsk4yVrOlG1XBCEZyQfJY8lpySXJJ8bFDdT/cU7yTn+14EnySHiuCA5IPknGSH5KLkpWSvZFdn1byWnO2ay5L3kp1FMElyVHJNMqfHfiRZ1PpULpU8lMyXzJPclOyv3x0UlD0XukOR1BTbhxDsk5yRzJVc6fPUgYiDLGYlhyWbJdclUyTTu2NZfFxytYm+4YZaWbm4xTvZwi1rS0vgEq/2YMEP4EEMIVktedEqH5Qc63P5v/yX4EH0x+G9TOXMK8kbyVvJ2j+CB9FFtWVl35fekS0/rO/foklKwBLtiGTiP4MrhugxbWDX7wi+AsmBiI6aESUVAAAAAElFTkSuQmCC" InformativeScreenshot="92cdd20abb3d1f10ce86605fa079ab25.jpg" Reference="edQoiHTr_EubiZ3TXex5dQ/2BfkWtjGp0qLniwSzM76eA" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.FilePath>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.FilePath>
+          <uix:TargetApp.Selector>
+            <InArgument x:TypeArguments="x:String">
+              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">"&lt;html app='chrome.exe' title='FastGem - CRM' url='https://"+in_CompanyName+".fastgem.net*' /&gt;"</CSharpValue>
+            </InArgument>
+          </uix:TargetApp.Selector>
+          <uix:TargetApp.Url>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Url>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>

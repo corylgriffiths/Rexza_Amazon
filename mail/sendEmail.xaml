@@ -95,31 +95,31 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="sendEmail" sap:VirtualizedContainerService.HintSize="1492,894.6239999999999" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="sendEmail" sap:VirtualizedContainerService.HintSize="1110,988.6566666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="536,821" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap:VirtualizedContainerService.HintSize="536,831" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <umab:ExchangeApplicationCard Account="{x:Null}" ApplicationId="{x:Null}" EmailAddress="{x:Null}" SharedMailbox="{x:Null}" TenantId="{x:Null}" ConnectionAccountName="cory@fastgem.net #2" ConnectionId="a404c26f-17b0-4fb3-b9e1-acc4a3b13c47" DisplayName="Use Outlook 365" sap:VirtualizedContainerService.HintSize="502,738" sap2010:WorkflowViewState.IdRef="ExchangeApplicationCard_1" UseConnectionService="True">
+      <umab:ExchangeApplicationCard Account="{x:Null}" ApplicationId="{x:Null}" EmailAddress="{x:Null}" SharedMailbox="{x:Null}" TenantId="{x:Null}" ConnectionAccountName="cory@fastgem.net" ConnectionId="29226586-7e1e-4284-ae98-dbdcededb72c" DisplayName="Use Outlook 365" sap:VirtualizedContainerService.HintSize="502,748" sap2010:WorkflowViewState.IdRef="ExchangeApplicationCard_1" UseConnectionService="True">
         <umab:ExchangeApplicationCard.Body>
           <ActivityAction x:TypeArguments="um:IMailQuickHandle">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="mail" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,493" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,497" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Body="Here is the exception report from the Amazon Card Incentive bot" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,433" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" UseDocumentAsBody="False">
+              <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Body="Here is the exception report from the Amazon Card Incentive bot" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,437" sap2010:WorkflowViewState.IdRef="SendMailX_1" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" UseDocumentAsBody="False">
                 <umab:SendMailX.Account>
                   <InArgument x:TypeArguments="um:IMailQuickHandle">
                     <CSharpValue x:TypeArguments="um:IMailQuickHandle" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">mail</CSharpValue>

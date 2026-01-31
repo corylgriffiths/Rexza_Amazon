@@ -1,5 +1,7 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="login" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="login" this:login.in_CompanyName="Fundato" this:login.In_AssetFolderName="Rexza/Fundato" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
+    <x:Property Name="in_CompanyName" Type="InArgument(x:String)" />
+    <x:Property Name="In_AssetFolderName" Type="InArgument(x:String)" />
     <x:Property Name="In_Browser" Type="InArgument(ui:UiElement)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
@@ -108,19 +110,27 @@
       <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>fd01998238266.uPsLo2BfC4O1A9ka64kngjU1</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="login" sap:VirtualizedContainerService.HintSize="1401,1932" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="login" sap:VirtualizedContainerService.HintSize="1104,2624" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="varUsername" />
       <Variable x:TypeArguments="ss:SecureString" Name="varPassword" />
+      <Variable x:TypeArguments="x:String" Name="AssetFolderPath" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Fastgem" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Rexza" sap:VirtualizedContainerService.HintSize="1160,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Fastgem_Credentials" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="558,176" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1">
+      <ui:GetRobotCredential.FolderPath>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">In_AssetFolderName</CSharpValue>
+        </InArgument>
+      </ui:GetRobotCredential.FolderPath>
       <ui:GetRobotCredential.Password>
         <OutArgument x:TypeArguments="ss:SecureString">
           <CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">varPassword</CSharpReference>
@@ -132,35 +142,47 @@
         </OutArgument>
       </ui:GetRobotCredential.Username>
     </ui:GetRobotCredential>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="1160,1734" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V2">
+    <Assign sap:VirtualizedContainerService.HintSize="558,175" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">in_CompanyName</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">in_CompanyName.ToLower()</CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="558,2250" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="1126,1574" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="556,2056" sap2010:WorkflowViewState.IdRef="Sequence_13">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Properties'" sap:VirtualizedContainerService.HintSize="1092,1512" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
+            <uix:NCheckState DisplayName="Check App State 'Properties'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="522,1992" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="520,334" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="520,344" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,272" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,280" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                     <ui:CommentOut.Body>
-                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,168" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,174" sap2010:WorkflowViewState.IdRef="Sequence_14">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="MessageBox_1">
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="MessageBox_1">
                           <ui:MessageBox.Text>
                             <InArgument x:TypeArguments="x:Object">
                               <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">"Already Loggedin"</CSharpValue>
@@ -173,29 +195,29 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="518,1270" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="520,1308" sap2010:WorkflowViewState.IdRef="Sequence_12">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence sap:VirtualizedContainerService.HintSize="484,1208" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <Sequence sap:VirtualizedContainerService.HintSize="484,1244" sap2010:WorkflowViewState.IdRef="Sequence_10">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1121" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1153" sap2010:WorkflowViewState.IdRef="Sequence_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'By logging into this si…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'By logging into this si…'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
                         <uix:NTypeInto.Target>
-                          <uix:TargetAnchorable BrowserURL="rexza.fastgem.net" CVScreenId="b9239978-d386-4892-85f9-7b2d8e0d28ed" ContentHash="Bgw0QTmJNEa7OaWhibjVDA" CvElementArea="1392, 296, 219, 44" CvType="InputBox" DesignTimeRectangle="1399, 297, 211, 41" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='modlgn-username' tag='INPUT' type='text' class='input-small' placeholder='Username' aaname='Username' /&gt;" Guid="83c9e2e8-0553-4d4e-866d-1c8de4c6a77c" InformativeScreenshot="399b2018a79aa3bc398b7d9c2082cd23.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/EgIAlBVkQUGXZhplB4fqkg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FastGem - CRM' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                          <uix:TargetAnchorable BrowserURL="rexza.fastgem.net" CVScreenId="b9239978-d386-4892-85f9-7b2d8e0d28ed" ContentHash="Bgw0QTmJNEa7OaWhibjVDA" CvElementArea="1392, 296, 219, 44" CvType="InputBox" DesignTimeRectangle="1399, 297, 211, 41" DesignTimeScaleFactor="1.25" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='modlgn-username' tag='INPUT' type='text' class='input-small' placeholder='Username' aaname='Username' /&gt;" Guid="83c9e2e8-0553-4d4e-866d-1c8de4c6a77c" InformativeScreenshot="399b2018a79aa3bc398b7d9c2082cd23.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/EgIAlBVkQUGXZhplB4fqkg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FastGem - CRM' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" />
                         </uix:NTypeInto.Target>
                         <uix:NTypeInto.Text>
                           <InArgument x:TypeArguments="x:String">
@@ -213,14 +235,14 @@
                           </uix:VerifyExecutionTypeIntoOptions>
                         </uix:NTypeInto.VerifyOptions>
                       </uix:NTypeInto>
-                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'LetsGoBots!!'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'LetsGoBots!!'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,250" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
                         <uix:NTypeInto.SecureText>
                           <InArgument x:TypeArguments="ss:SecureString">
                             <CSharpValue x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">varPassword</CSharpValue>
                           </InArgument>
                         </uix:NTypeInto.SecureText>
                         <uix:NTypeInto.Target>
-                          <uix:TargetAnchorable BrowserURL="rexza.fastgem.net" CVScreenId="4cd7a7a2-7107-4658-9cbd-07ea225d1e7b" ContentHash="eYX85KwDBEunp86Y_9COyg" CvElementArea="34, 278, 234, 45" CvType="InputBox" DesignTimeRectangle="55, 280, 211, 41" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FuzzySelectorArgument="&lt;webctrl id='modlgn-passwd' tag='INPUT' type='password' class='input-small' placeholder='Password' aaname='Password ' /&gt;" Guid="e1935d85-1db5-4b5d-870b-111b6463c485" InformativeScreenshot="91a9a14595a9eb050a382a69c89baca1.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/SYu48-xj9EWc72dudrIgaA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FastGem - CRM' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                          <uix:TargetAnchorable BrowserURL="rexza.fastgem.net" CVScreenId="4cd7a7a2-7107-4658-9cbd-07ea225d1e7b" ContentHash="eYX85KwDBEunp86Y_9COyg" CvElementArea="34, 278, 234, 45" CvType="InputBox" DesignTimeRectangle="55, 280, 211, 41" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='modlgn-passwd' tag='INPUT' type='password' class='input-small' placeholder='Password' aaname='Password ' /&gt;" Guid="e1935d85-1db5-4b5d-870b-111b6463c485" InformativeScreenshot="91a9a14595a9eb050a382a69c89baca1.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/SYu48-xj9EWc72dudrIgaA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FastGem - CRM' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" />
                         </uix:NTypeInto.Target>
                         <uix:NTypeInto.VerifyOptions>
                           <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
@@ -233,10 +255,10 @@
                           </uix:VerifyExecutionTypeIntoOptions>
                         </uix:NTypeInto.VerifyOptions>
                       </uix:NTypeInto>
-                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="416,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log in'" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
+                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="416,127" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log in'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,317" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f18c3af4-46e4-42b4-8a84-e2197aeaef50" Version="V4">
                         <uix:NClick.Target>
-                          <uix:TargetAnchorable BrowserURL="rexza.fastgem.net" CVScreenId="b9239978-d386-4892-85f9-7b2d8e0d28ed" ContentHash="zkE2oHP8gku_XpdaOKYYyQ" CvElementArea="1364, 433, 75, 41" CvTextArea="1379, 445, 41, 17" CvTextArgument="Log in" CvType="Button" DesignTimeRectangle="1366, 434, 71, 37" DesignTimeScaleFactor="1.25" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-primary login-button' aaname='Log in' check:innerText='Log in' /&gt;" Guid="677319e1-83fd-47a7-a48d-d7700e7ce81d" InformativeScreenshot="52f69d27cf54a71df688cac77a48e3f6.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/9GVzug2giUyI7MXMOqNhRw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FastGem - CRM' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                          <uix:TargetAnchorable BrowserURL="rexza.fastgem.net" CVScreenId="b9239978-d386-4892-85f9-7b2d8e0d28ed" ContentHash="zkE2oHP8gku_XpdaOKYYyQ" CvElementArea="1364, 433, 75, 41" CvTextArea="1379, 445, 41, 17" CvTextArgument="Log in" CvType="Button" DesignTimeRectangle="1366, 434, 71, 37" DesignTimeScaleFactor="1.25" ElementType="Button" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='btn btn-primary login-button' aaname='Log in' check:innerText='Log in' /&gt;" Guid="677319e1-83fd-47a7-a48d-d7700e7ce81d" InformativeScreenshot="52f69d27cf54a71df688cac77a48e3f6.png" Reference="j3RPm-lsJUOk5qq-VZvaQA/9GVzug2giUyI7MXMOqNhRw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FastGem - CRM' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" />
                         </uix:NClick.Target>
                         <uix:NClick.VerifyOptions>
                           <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -249,25 +271,57 @@
                           </uix:VerifyExecutionOptions>
                         </uix:NClick.VerifyOptions>
                       </uix:NClick>
-                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="416,115" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="416,118" sap2010:WorkflowViewState.IdRef="Delay_2" />
                     </Sequence>
                   </Sequence>
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="rexza.fastgem.net" CVScreenId="17d49036-5c08-4a82-8e10-faaace1f0267" CvTextArea="431, 151, 93, 12" CvTextArgument="PROPERTIES" CvType="Text" DesignTimeRectangle="432, 149, 93, 16" DesignTimeScaleFactor="1.25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Properties' class='g-menu-item-title' tag='SPAN' type='' check:innerText='PROPERTIES' /&gt;" Guid="189b3246-2854-4d46-8a55-4163909bc582" InformativeScreenshot="dd2d0c6f1c4ee9595f6567a8eff69838.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FastGem - CRM' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                <uix:TargetAnchorable BrowserURL="rexza.fastgem.net" CVScreenId="17d49036-5c08-4a82-8e10-faaace1f0267" CvTextArea="431, 151, 93, 12" CvTextArgument="PROPERTIES" CvType="Text" DesignTimeRectangle="432, 149, 93, 16" DesignTimeScaleFactor="1.25" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl aaname='Properties' class='g-menu-item-title' tag='SPAN' type='' check:innerText='PROPERTIES' /&gt;" Guid="189b3246-2854-4d46-8a55-4163909bc582" InformativeScreenshot="dd2d0c6f1c4ee9595f6567a8eff69838.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FastGem - CRM' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" />
               </uix:NCheckState.Target>
             </uix:NCheckState>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
-      <uix:NApplicationCard.InUiElement>
-        <InArgument x:TypeArguments="ui:UiElement">
-          <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">In_Browser</CSharpValue>
+      <uix:NApplicationCard.CloseMode>
+        <InArgument x:TypeArguments="uix:NAppCloseMode">
+          <CSharpValue x:TypeArguments="uix:NAppCloseMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">UiPath.UIAutomationNext.Enums.NAppCloseMode.Never</CSharpValue>
         </InArgument>
-      </uix:NApplicationCard.InUiElement>
+      </uix:NApplicationCard.CloseMode>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.OpenMode>
+        <InArgument x:TypeArguments="uix:NAppOpenMode">
+          <CSharpValue x:TypeArguments="uix:NAppOpenMode" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen</CSharpValue>
+        </InArgument>
+      </uix:NApplicationCard.OpenMode>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 0, 0" Version="V1" />
+        <uix:TargetApp Area="1827, 664, 1729, 1414" BrowserType="Chrome" ContentHash="Tr0ZWeU_c0e7eQsMLGWQxw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGZSURBVDhPrZI76M9hFMbdr6GUy4BMFpsnFqXYpJSMNmWThbKIQpHBLdInBgaxWCS3jC7Lh8El9xgMxOieQUfnpz+5DU6det/3e57nnO/znGHD/ldIKkdKZkpmS2b9lPU2QzKian8FHi3ZILknuSu5L3kuedbnersjWScZ9Z2kweMkW7t4vWSl5JbkgeSJ5IZkhWRTk26UjPlGIpks2S15KlklGS/ZI7ktWShZ0hNsk4yVrOlG1XBCEZyQfJY8lpySXJJ8bFDdT/cU7yTn+14EnySHiuCA5IPknGSH5KLkpWSvZFdn1byWnO2ay5L3kp1FMElyVHJNMqfHfiRZ1PpULpU8lMyXzJPclOyv3x0UlD0XukOR1BTbhxDsk5yRzJVc6fPUgYiDLGYlhyWbJdclUyTTu2NZfFxytYm+4YZaWbm4xTvZwi1rS0vgEq/2YMEP4EEMIVktedEqH5Qc63P5v/yX4EH0x+G9TOXMK8kbyVvJ2j+CB9FFtWVl35fekS0/rO/foklKwBLtiGTiP4MrhugxbWDX7wi+AsmBiI6aESUVAAAAAElFTkSuQmCC" InformativeScreenshot="8a6ead21398650bd975921f594c6a2cf.jpg" Reference="edQoiHTr_EubiZ3TXex5dQ/dYtFa5BlOEiYGCxSrioHEw" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.FilePath>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.FilePath>
+          <uix:TargetApp.Selector>
+            <InArgument x:TypeArguments="x:String">
+              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">"&lt;html app='chrome.exe' title='FastGem*' url='https://"+in_CompanyName+".fastgem.net/*' /&gt;"</CSharpValue>
+            </InArgument>
+          </uix:TargetApp.Selector>
+          <uix:TargetApp.Url>
+            <InArgument x:TypeArguments="x:String">
+              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">"https://"+in_CompanyName+".fastgem.net/"</CSharpValue>
+            </InArgument>
+          </uix:TargetApp.Url>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>

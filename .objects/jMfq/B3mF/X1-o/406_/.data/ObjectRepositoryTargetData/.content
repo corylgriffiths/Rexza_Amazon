@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="1HXGTQw7YU6tpwsyvVqLFw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rexza.fastgem.net/payroll-2/manage-payroll/snapshot-payrolls" DesignTimeRectangle="2302, 1192, 192, 62" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='rep_payments_14794' tag='TABLE' /&gt;&lt;webctrl tableCol='15' tag='TD' /&gt;" Guid="cc91d831-535b-44f5-b2b6-1a9bb3f27dd7" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Snapshot Payroll - FastGem - CorServe' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="9f6f6053-e058-4296-a999-1c2194e4025f" CvTextArea="27, 1204, 94, 15" CvTextArgument="Morton, Danielle" CvType="Text" DesignTimeRectangle="28, 1205, 92, 14" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='rep_payments_14794' matching:id='fuzzy' fuzzylevel:id='0.0' tag='TABLE' /&gt;&lt;webctrl tag='A' href='/orders-2/appointment/29531' /&gt;" Guid="08a4a565-4434-4535-a8fe-8db810569f93" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="4dc6ac2de706009d33bbd0d3fd62442f.png" xmlns="">0r7gZU8wqqkqIrOSdxMhKfA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

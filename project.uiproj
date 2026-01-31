@@ -1,0 +1,6 @@
+{
+  "Name": "Rexza",
+  "ProjectType": "Process",
+  "Description": "Rexza automation using fastgem and amazon",
+  "MainFile": "Main.xaml"
+}

@@ -1,5 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="FastGem_GetList_NonIncentiveProperties" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="FastGem_GetList_NonIncentiveProperties" this:FastGem_GetList_NonIncentiveProperties.in_CompanyName="Fundato" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
+    <x:Property Name="in_CompanyName" Type="InArgument(x:String)" />
     <x:Property Name="Out_NonIncentiveProperties_DT" Type="OutArgument(sd:DataTable)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
@@ -132,33 +133,47 @@
       <AssemblyReference>netstandard</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1628,5078" sap2010:WorkflowViewState.IdRef="Sequence_101">
+  <Sequence sap:VirtualizedContainerService.HintSize="1104,5619" sap2010:WorkflowViewState.IdRef="Sequence_101">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="pull json from API" sap:VirtualizedContainerService.HintSize="1628,5055" sap2010:WorkflowViewState.IdRef="Sequence_100">
+    <Sequence DisplayName="pull json from API" sap:VirtualizedContainerService.HintSize="644,5596" sap2010:WorkflowViewState.IdRef="Sequence_100">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="nonIncetiveAccountsAPI" />
         <Variable x:TypeArguments="sd:DataTable" Name="NonGiftCardProperties_DT" />
         <Variable x:TypeArguments="x:String" Name="Result" />
         <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="Header" />
+        <Variable x:TypeArguments="x:String" Name="accounts_url" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Chrome rexza.fastgem.netproperty-no-giftsfilt" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1594,4972" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="e307072e-c652-492c-8322-18601c2e2d5a" Version="V2">
+      <Assign sap:VirtualizedContainerService.HintSize="610,175" sap2010:WorkflowViewState.IdRef="Assign_65">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">
+            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_79">accounts_url</CSharpReference>
+          </OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">"https://"+in_CompanyName.ToLower()+".fastgem.net/accounts"</CSharpValue>
+          </InArgument>
+        </Assign.Value>
+      </Assign>
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Chrome rexza.fastgem.netproperty-no-giftsfilt" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="610,5338" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="e307072e-c652-492c-8322-18601c2e2d5a" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1560,4732" sap2010:WorkflowViewState.IdRef="Sequence_102">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="608,5092" sap2010:WorkflowViewState.IdRef="Sequence_102">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="HTML_Response" />
                 <Variable x:TypeArguments="njl:JObject" Name="html_response_json" />
@@ -171,29 +186,29 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1526,175" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="574,179" sap2010:WorkflowViewState.IdRef="LogMessage_1">
                 <ui:LogMessage.Message>
                   <InArgument x:TypeArguments="x:Object">
                     <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">"getting property list"</CSharpValue>
                   </InArgument>
                 </ui:LogMessage.Message>
               </ui:LogMessage>
-              <Sequence DisplayName="Set Filter" sap:VirtualizedContainerService.HintSize="1526,4195" sap2010:WorkflowViewState.IdRef="Sequence_104">
+              <Sequence DisplayName="Set Filter" sap:VirtualizedContainerService.HintSize="574,4480" sap2010:WorkflowViewState.IdRef="Sequence_104">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NCheckState DisplayName="Check App State 'Search Tools(1)'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="540,4101" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="e307072e-c652-492c-8322-18601c2e2d5a" Timeout="5" Version="V4">
+                <uix:NCheckState DisplayName="Check App State 'Search Tools(1)'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="540,4380" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="e307072e-c652-492c-8322-18601c2e2d5a" Timeout="5" Version="V4">
                   <uix:NCheckState.IfExists>
-                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="538,3619" sap2010:WorkflowViewState.IdRef="Sequence_108">
+                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="538,3810" sap2010:WorkflowViewState.IdRef="Sequence_108">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search Tools'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,225" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e307072e-c652-492c-8322-18601c2e2d5a" Version="V4">
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search Tools'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="504,317" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e307072e-c652-492c-8322-18601c2e2d5a" Version="V4">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable BrowserURL="rexza.fastgem.net/accounts" ContentHash="ZZcvpHato06X-iUWCHcY7g" DesignTimeRectangle="346, 231, 79, 21" DesignTimeScaleFactor="0.800000011920929" ElementType="Button" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl parentid='adminForm' tag='BUTTON' type='button' class='btn btn-small js-stools-btn-filter btn-info' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;Search Tools                          ' check:innerText='Search Tools' /&gt;" Guid="eecbf3aa-3399-4540-8beb-257422bbba84" InformativeScreenshot="0bdfdc1bf0eefb236a6a92619b4ec935.png" Reference="edQoiHTr_EubiZ3TXex5dQ/eL8gOnn2K0iAnskNnb1k1w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Properties' /&gt;" SearchSteps="FuzzySelector" Version="V4" />
                         </uix:NClick.Target>
@@ -208,9 +223,9 @@
                           </uix:VerifyExecutionOptions>
                         </uix:NClick.VerifyOptions>
                       </uix:NClick>
-                      <uix:NCheckState DisplayName="check if gift card filter is already set to no" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="504,1074" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e307072e-c652-492c-8322-18601c2e2d5a" Version="V4">
+                      <uix:NCheckState DisplayName="check if gift card filter is already set to no" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="504,1169" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e307072e-c652-492c-8322-18601c2e2d5a" Version="V4">
                         <uix:NCheckState.IfExists>
-                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,89" sap2010:WorkflowViewState.IdRef="Sequence_105">
+                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,94" sap2010:WorkflowViewState.IdRef="Sequence_105">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -520,7 +535,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NCheckState>
               </Sequence>
-              <ui:FilterDataTable DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="1526,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" SelectColumnsMode="Remove">
+              <ui:FilterDataTable DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="574,199" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" SelectColumnsMode="Remove">
                 <ui:FilterDataTable.DataTable>
                   <InArgument x:TypeArguments="sd:DataTable">
                     <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">NonGiftCardProperties_DT</CSharpValue>
@@ -548,7 +563,7 @@
                   </scg:List>
                 </ui:FilterDataTable.SelectColumns>
               </ui:FilterDataTable>
-              <Assign sap:VirtualizedContainerService.HintSize="1526,107" sap2010:WorkflowViewState.IdRef="Assign_64">
+              <Assign sap:VirtualizedContainerService.HintSize="574,170" sap2010:WorkflowViewState.IdRef="Assign_64">
                 <Assign.To>
                   <OutArgument x:TypeArguments="sd:DataTable">
                     <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_78">Out_NonIncentiveProperties_DT</CSharpReference>
@@ -563,8 +578,33 @@
             </Sequence>
           </ActivityAction>
         </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.OCREngine>
+          <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
+            <ActivityFunc.Argument>
+              <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+            </ActivityFunc.Argument>
+          </ActivityFunc>
+        </uix:NApplicationCard.OCREngine>
         <uix:NApplicationCard.TargetApp>
-          <uix:TargetApp Area="153, 248, 1303, 1722" BrowserType="Chrome" ContentHash="tGUQbHvHQUu3K-IQJ1insQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGZSURBVDhPrZI76M9hFMbdr6GUy4BMFpsnFqXYpJSMNmWThbKIQpHBLdInBgaxWCS3jC7Lh8El9xgMxOieQUfnpz+5DU6det/3e57nnO/znGHD/ldIKkdKZkpmS2b9lPU2QzKian8FHi3ZILknuSu5L3kuedbnersjWScZ9Z2kweMkW7t4vWSl5JbkgeSJ5IZkhWRTk26UjPlGIpks2S15KlklGS/ZI7ktWShZ0hNsk4yVrOlG1XBCEZyQfJY8lpySXJJ8bFDdT/cU7yTn+14EnySHiuCA5IPknGSH5KLkpWSvZFdn1byWnO2ay5L3kp1FMElyVHJNMqfHfiRZ1PpULpU8lMyXzJPclOyv3x0UlD0XukOR1BTbhxDsk5yRzJVc6fPUgYiDLGYlhyWbJdclUyTTu2NZfFxytYm+4YZaWbm4xTvZwi1rS0vgEq/2YMEP4EEMIVktedEqH5Qc63P5v/yX4EH0x+G9TOXMK8kbyVvJ2j+CB9FFtWVl35fekS0/rO/foklKwBLtiGTiP4MrhugxbWDX7wi+AsmBiI6aESUVAAAAAElFTkSuQmCC" InformativeScreenshot="7f047a88383847a14ba9ab1aaccaefd3.jpg" Reference="edQoiHTr_EubiZ3TXex5dQ/-7yPghsNoEeEcPneMbBhvA" Selector="&lt;html app='chrome.exe' title='Properties' /&gt;" Url="https://rexza.fastgem.net/accounts" Version="V1" />
+          <uix:TargetApp Area="153, 248, 1303, 1722" BrowserType="Chrome" ContentHash="tGUQbHvHQUu3K-IQJ1insQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGZSURBVDhPrZI76M9hFMbdr6GUy4BMFpsnFqXYpJSMNmWThbKIQpHBLdInBgaxWCS3jC7Lh8El9xgMxOieQUfnpz+5DU6det/3e57nnO/znGHD/ldIKkdKZkpmS2b9lPU2QzKian8FHi3ZILknuSu5L3kuedbnersjWScZ9Z2kweMkW7t4vWSl5JbkgeSJ5IZkhWRTk26UjPlGIpks2S15KlklGS/ZI7ktWShZ0hNsk4yVrOlG1XBCEZyQfJY8lpySXJJ8bFDdT/cU7yTn+14EnySHiuCA5IPknGSH5KLkpWSvZFdn1byWnO2ay5L3kp1FMElyVHJNMqfHfiRZ1PpULpU8lMyXzJPclOyv3x0UlD0XukOR1BTbhxDsk5yRzJVc6fPUgYiDLGYlhyWbJdclUyTTu2NZfFxytYm+4YZaWbm4xTvZwi1rS0vgEq/2YMEP4EEMIVktedEqH5Qc63P5v/yX4EH0x+G9TOXMK8kbyVvJ2j+CB9FFtWVl35fekS0/rO/foklKwBLtiGTiP4MrhugxbWDX7wi+AsmBiI6aESUVAAAAAElFTkSuQmCC" InformativeScreenshot="7f047a88383847a14ba9ab1aaccaefd3.jpg" Reference="edQoiHTr_EubiZ3TXex5dQ/-7yPghsNoEeEcPneMbBhvA" Version="V1">
+            <uix:TargetApp.Arguments>
+              <InArgument x:TypeArguments="x:String" />
+            </uix:TargetApp.Arguments>
+            <uix:TargetApp.FilePath>
+              <InArgument x:TypeArguments="x:String" />
+            </uix:TargetApp.FilePath>
+            <uix:TargetApp.Selector>
+              <InArgument x:TypeArguments="x:String">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">"&lt;html app='chrome.exe' title='Properties' url='"+accounts_url+"' /&gt;"</CSharpValue>
+              </InArgument>
+            </uix:TargetApp.Selector>
+            <uix:TargetApp.Url>
+              <InArgument x:TypeArguments="x:String" />
+            </uix:TargetApp.Url>
+            <uix:TargetApp.WorkingDirectory>
+              <InArgument x:TypeArguments="x:String" />
+            </uix:TargetApp.WorkingDirectory>
+          </uix:TargetApp>
         </uix:NApplicationCard.TargetApp>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">

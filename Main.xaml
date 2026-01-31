@@ -1,5 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_ExceptionList="Mansions at Timberland" this:Main.in_weekOffset="-1" this:Main.in_nonIncentive_YearOffset="50" this:Main.in_SkipNonIncentiveCheck="False" this:Main.in_alertEmail="gabe.james@fastgem.net" this:Main.in_exceptionEmailList="nicole.north@ftr-rep.com; joel.luciano@rexza.com; jennifer.gill@ftr-rep.com" this:Main.in_BatchSize="200" this:Main.in_CardBank_File="Data\ReusableCards\ReusableCards.xlsx" this:Main.in_isUseCardBank="False" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_CompanyName="Fundato" this:Main.in_ExceptionList="Mansions at Timberland" this:Main.in_weekOffset="0" this:Main.in_nonIncentive_YearOffset="50" this:Main.in_SkipNonIncentiveCheck="True" this:Main.in_alertEmail="cory@fastgem.net" this:Main.in_exceptionEmailList="nicole.north@ftr-rep.com; joel.luciano@rexza.com; jennifer.gill@ftr-rep.com" this:Main.in_BatchSize="200" this:Main.in_isUseCardBank="False" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
+    <x:Property Name="in_CompanyName" Type="InArgument(x:String)" />
     <x:Property Name="in_ExceptionList" Type="InArgument(x:String)" />
     <x:Property Name="in_weekOffset" Type="InArgument(x:Int32)" />
     <x:Property Name="in_nonIncentive_YearOffset" Type="InArgument(x:Int32)" />
@@ -7,7 +8,6 @@
     <x:Property Name="in_alertEmail" Type="InArgument(x:String)" />
     <x:Property Name="in_exceptionEmailList" Type="InArgument(x:String)" />
     <x:Property Name="in_BatchSize" Type="InArgument(x:Int32)" />
-    <x:Property Name="in_CardBank_File" Type="InArgument(x:String)" />
     <x:Property Name="in_isUseCardBank" Type="InArgument(x:Boolean)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
@@ -131,9 +131,12 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1499,863" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1104,1411" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="userName" />
       <Variable x:TypeArguments="ss:SecureString" Name="password" />
@@ -142,14 +145,47 @@
       <Variable x:TypeArguments="sd:DataTable" Name="PullAccountsDataFastgem" />
       <Variable x:TypeArguments="ui:UiElement" Name="FastgemBrowser" />
       <Variable x:TypeArguments="ui:UiElement" Name="Out_AmazonBrowser" />
+      <Variable x:TypeArguments="x:String" Name="AssetFolderName" />
+      <Variable x:TypeArguments="x:String" Name="cardBank_File" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment sap:VirtualizedContainerService.HintSize="416,146" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// this process is meant to run on Friday: &#xA;&#xA;Make sure the dates are for Sunday - Saturday before you continue. " />
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Gmail" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Rexza" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3">
+    <ui:Comment sap:VirtualizedContainerService.HintSize="450,147" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// this process is meant to run on Friday: &#xA;&#xA;Make sure the dates are for Sunday - Saturday before you continue. " />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+      <ui:LogMessage.Message>
+        <InArgument x:TypeArguments="x:Object">
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">"Processing company: " + in_CompanyName</CSharpValue>
+        </InArgument>
+      </ui:LogMessage.Message>
+    </ui:LogMessage>
+    <Assign sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">cardBank_File</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">"Data\\"+in_CompanyName+"\\ReusableCards\\ReusableCards.xlsx"</CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">AssetFolderName</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">"Rexza/" + in_CompanyName</CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Gmail" CacheStrategy="None" DisplayName="Get Credential" FolderPath="Rexza" sap:VirtualizedContainerService.HintSize="450,181" sap2010:WorkflowViewState.IdRef="GetRobotCredential_3">
       <ui:GetRobotCredential.Password>
         <OutArgument x:TypeArguments="ss:SecureString">
           <CSharpReference x:TypeArguments="ss:SecureString" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">password</CSharpReference>
@@ -161,15 +197,21 @@
         </OutArgument>
       </ui:GetRobotCredential.Username>
     </ui:GetRobotCredential>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="amazonBrowser - Invoke Workflow File (amazon\amazonBrowser.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="amazon\amazonBrowser.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="amazonBrowser - Invoke Workflow File (amazon\amazonBrowser.xaml)" sap:VirtualizedContainerService.HintSize="450,182" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="amazon\amazonBrowser.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="ui:UiElement" x:Key="Out_BrowserAmazon">
           <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">Out_AmazonBrowser</CSharpReference>
         </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="fastgem - Invoke Workflow File (fastgem.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="fastgem\fastgem.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="fastgem - Invoke Workflow File (fastgem.xaml)" sap:VirtualizedContainerService.HintSize="450,182" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="fastgem\fastgem.xaml">
       <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_AssetFolderName">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">AssetFolderName</CSharpValue>
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_CompanyName">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">in_CompanyName</CSharpValue>
+        </InArgument>
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_PullPayrollData">
           <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">PullPayrollDataFastgem</CSharpReference>
         </OutArgument>
@@ -182,7 +224,9 @@
         <InArgument x:TypeArguments="ui:UiElement" x:Key="In_BrowserAmazon">
           <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">Out_AmazonBrowser</CSharpValue>
         </InArgument>
-        <InOutArgument x:TypeArguments="ui:UiElement" x:Key="Out_BrowserFastGem" />
+        <InOutArgument x:TypeArguments="ui:UiElement" x:Key="Out_BrowserFastGem">
+          <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">FastgemBrowser</CSharpReference>
+        </InOutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_ExceptionString">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">in_ExceptionList</CSharpValue>
         </InArgument>
@@ -199,14 +243,14 @@
           <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">in_BatchSize</CSharpValue>
         </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_CardBank_File">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">in_CardBank_File</CSharpValue>
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">cardBank_File</CSharpValue>
         </InArgument>
         <InArgument x:TypeArguments="x:Boolean" x:Key="in_isUseCardBank">
           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">in_isUseCardBank</CSharpValue>
         </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="416,117" sap2010:WorkflowViewState.IdRef="MessageBox_1">
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="450,123" sap2010:WorkflowViewState.IdRef="MessageBox_1">
       <ui:MessageBox.Text>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35" xml:space="preserve">"send the exception report to: " + Environment.NewLine +
@@ -214,7 +258,7 @@
         </InArgument>
       </ui:MessageBox.Text>
     </ui:MessageBox>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="CommentOut_4">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,228" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
@@ -222,7 +266,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="fetchResendGiftCards - Invoke Workflow File (amazon\fetchResendGiftCards.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="amazon\\Depreciated_fetchResendGiftCards.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="fetchResendGiftCards - Invoke Workflow File (amazon\fetchResendGiftCards.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="amazon\\Depreciated_fetchResendGiftCards.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="ui:UiElement" x:Key="In_Browser">
                 <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">Out_AmazonBrowser</CSharpValue>

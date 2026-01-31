@@ -90,11 +90,11 @@
       "DataSourceItems": null
     },
     {
-      "Name": "in_CardBank_File",
-      "DisplayName": "in_CardBank_File",
+      "Name": "in_isUseCardBank",
+      "DisplayName": "in_isUseCardBank",
       "Category": null,
       "Tooltip": null,
-      "Placeholder": "Data\\ReusableCards\\ReusableCards.xlsx",
+      "Placeholder": "False",
       "Widget": null,
       "IsRequired": false,
       "IsPrincipal": true,
@@ -102,11 +102,11 @@
       "DataSourceItems": null
     },
     {
-      "Name": "in_isUseCardBank",
-      "DisplayName": "in_isUseCardBank",
+      "Name": "in_CompanyName",
+      "DisplayName": "in_CompanyName",
       "Category": null,
       "Tooltip": null,
-      "Placeholder": "False",
+      "Placeholder": "Fundato",
       "Widget": null,
       "IsRequired": false,
       "IsPrincipal": true,
